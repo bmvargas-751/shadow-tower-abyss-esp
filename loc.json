@@ -1,23 +1,46 @@
 {
   "name": "Shadow Tower Abyss",
-  "source_language": "en",
+  "source_language": "ja",
   "target_language": "es",
-  "source": "../NOMBRE-local/source.jsonl",
+  "source": "../shadow-tower-abyss-esp-local/source.jsonl",
   "translation": "translation",
   "work": "build/work/batches",
   "sections": [
     {
-      "name": "Interfaz",
-      "prefixes": []
+      "name": "Interfaz y ayudas del menú",
+      "prefixes": [
+        "sys/menu#"
+      ]
+    },
+    {
+      "name": "Lugares",
+      "prefixes": [
+        "sys/lugares#"
+      ]
+    },
+    {
+      "name": "Criaturas",
+      "prefixes": [
+        "sys/criaturas#"
+      ]
+    },
+    {
+      "name": "Objetos y equipo",
+      "prefixes": [
+        "sys/objetos#"
+      ]
+    },
+    {
+      "name": "Mapas (eventos y diálogos)",
+      "prefixes": [
+        "mapa/"
+      ]
     }
   ],
   "excluded": [],
-  "codes": [
-    "\\{[^{}]*\\}",
-    "%[-+0-9.]*[sdifxXu]"
-  ],
+  "codes": [],
   "fixed_break": null,
-  "encoding": "utf-8",
+  "encoding": "cp932",
   "spanish_checks": true,
   "hooks": null
 }

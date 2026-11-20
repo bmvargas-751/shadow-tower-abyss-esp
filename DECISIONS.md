@@ -9,3 +9,6 @@ Lo que el usuario decidió, con fecha, para no volver a discutirlo. Una regla de
 - **2026-11-20** Shadow Tower PS1 (`shadow-tower-esp`): solo referencia. No se copia ni su glosario ni su estilo ni sus decisiones hasta ver cómo está armado Abyss.
 - **2026-11-20** Pruebas en PCSX2. El formato de entrega queda abierto hasta la fase 1.
 - **2026-11-20** STYLE.md: se deja la base completa y solo se ajusta E-1 (el original es el japonés y el inglés fan es de consulta). El cambio es solo de este repo; el kit no se toca.
+- **2026-11-20** Entrega: parche xdelta sobre la ISO japonesa. Hace falta porque `STAZ.STZ` tiene que crecer y moverse dentro de la ISO (TECH.md, T-4).
+- **2026-11-20** Alcance: todo el texto del juego, en este orden: 1) tablas de texto, 2) subtítulos de los vídeos, 3) texturas con texto. La versión 0.9.0 sale con las tablas de texto traducidas.
+- **2026-11-20** Pruebas: el usuario prueba en PCSX2 cuando las tablas estén traducidas al 100%, con el xdelta aplicado a su ISO. Antes, una ISO de prueba (pseudolocalización) para revisar las cajas y que se dibujen todas las letras.

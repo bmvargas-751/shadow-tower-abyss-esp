@@ -4,16 +4,35 @@ Lo que el juego necesita para que el texto no se rompa. Cada regla tiene un núm
 
 Plantilla del kit: los números quedan; lo de cada regla se completa con lo que muestre la prueba técnica de este juego (PLAN, fase 1). Lo que no aplique se borra.
 
+## Cómo está hecho el juego
+
+Lo que mostró la fase 1 (2026-11-20). Lo que dice *por confirmar* todavía no se probó en el juego.
+
+- **Imagen:** ISO japonesa de 1 561 624 576 bytes, sectores de 2048. Ejecutable `SLPS_252.17`. Casi todo el juego está en `TARGET/STAZ.STZ` (LBA 525217, 253 MB). Los vídeos (`OPENING.PSS`, `PROLOGUE.PSS`, `ENDING.PSS`) y el audio (`*.ADX`) van aparte. `DUMMY.OUT` y `DUMMY01.OUT` (512 MB cada uno) son relleno.
+- **`STAZ.STZ`:** cabecera `STAZ` y tabla de 2290 entradas de 32 bytes (`STZ0`, tamaño, tamaño, tamaño con cabecera, 8 bytes de suma, sector de inicio). Cada archivo empieza en su propio sector. El PPF en inglés cambia el contenido sin tocar las sumas, así que el juego probablemente no las comprueba (*por confirmar*).
+- **Texto:** tablas `STA ` en Shift-JIS (cp932). Cabecera de 16 bytes y registros `{id, desplazamiento}` (8 bytes) o `{id, nombre, descripción}` (12 bytes), con desplazamientos desde el inicio de la tabla. Cadenas terminadas en `\0`, guardadas seguidas y en el orden de los registros.
+  - Tablas sueltas: entradas 15 (`sys/criaturas`), 16 (`sys/objetos`), 17 (`sys/lugares`) y 18 (`sys/menu`).
+  - Tablas de los mapas: dentro del bloque `MSGa` de cada `STAM` (entradas 2248 a 2289, `mapa/NNNN`). El bloque guarda en +0x14 el largo de sus datos, que es el espacio disponible. 6 mapas tienen la tabla vacía.
+  - Después de la última cadena de muchas tablas de mapa quedan cadenas que ninguna tabla apunta: restos de versiones viejas del texto. No se exportan; el adaptador las conserva y las pisa solo si necesita el espacio.
+- **Otro texto** (todavía sin adaptador): unas 900 cadenas japonesas en el ejecutable, texturas con texto (por ejemplo, la entrada 29, `KOKUTI`) y subtítulos dibujados en los vídeos `OPENING.PSS` y `PROLOGUE.PSS`, que el PPF en inglés reemplaza enteros.
+- **Reconstrucción:** `tools/stz.py` rearma `STAZ.STZ` con entradas de otro tamaño (cada una en su sector; se conserva la diferencia entre el tamaño y el tamaño con cabecera). `tools/ps2iso.py` lo mete en una copia de la ISO: si crece k sectores, empieza k sectores antes y `DUMMY01.OUT` (relleno, justo antes) pierde esos k sectores. Actualiza ISO9660 y UDF (File Entry con su CRC). El juego abre el archivo por nombre (`\\TARGET\\STAZ.STZ` en el ejecutable), no por sector. Sin cambios, las dos dan archivos idénticos; con todas las tablas sueltas alargadas (+162 KB), el `STAZ.STZ` que sale de la ISO es el nuevo y `PROLOGUE.PSS` queda intacto (2026-11-20). *Por confirmar en el juego.*
+- **Fuente:** entrada 6 (`TTIX`), tres texturas de 512×512 a 4 bits (`dq_FONT`, `dp_FONT`, `ds_FONT`): ASCII, símbolos, kana y solo los kanji que usa el juego (876 en el texto), más una segunda fuente latina grande al final de `ds_FONT`. Abajo de `ds_FONT` queda espacio libre. Falta la tabla que conecta cada código con su glifo: no está guardada como lista de códigos (Shift-JIS ni Unicode) ni como matriz de índices; hay que buscarla en el código del ejecutable. La tabla Shift-JIS→Unicode completa del ejecutable (0xfec50 en el archivo) es de la biblioteca estándar, no de la fuente.
+- **Adaptador:** `tools/sta_text.py` (`export`, `import`, `roundtrip`). La ida y vuelta da `STAZ.STZ` idéntico byte por byte (2026-11-20). El inglés del PPF se aplica en memoria y se exporta aparte, como referencia, a `ref_en.jsonl`: 1676 de 1768 textos.
+
 ## Códigos y saltos
 
 - **T-1** Los códigos (variables, etiquetas, colores, nombres insertados) quedan intactos y en el mismo orden que en el original. Los reconoce la lista `codes` de `loc.json`. (`codigos`)
-  - Completar: qué hace cada código de este juego.
+  - En las tablas `STA ` no hay códigos: el único byte de control es `0x0a` (salto de línea). Falta revisar el texto del ejecutable.
 - **T-2** Saltos de línea: los fijos (`fixed_break` en `loc.json`) van exactamente donde están en el original, ni más ni menos. Los demás, si el adaptador parte los renglones, los pone el adaptador. (`saltos`)
+  - Los saltos del japonés están pensados para su ancho. `fixed_break` queda en `null` hasta medir las cajas (T-3).
 
 ## Espacio
 
 - **T-3** La caja: ningún renglón puede pasar del ancho que permite el juego. Si el límite medido es el del original y no el de la pantalla, el aviso no obliga a recortar: se permiten abreviaturas reconocibles, pero nunca se quitan palabras ni se acorta de forma que se pierda el sentido. Si la forma completa no cabe, va completa y con su aviso, y se revisa en el juego. [IVA] (chequeo del proyecto, en `hooks`)
-- **T-4** Los textos con largo máximo en bytes (`max` en el lote) no pueden pasarlo: es un límite duro. Completar: cuántos bytes ocupa cada letra en este juego. (`bytes`)
+- **T-4** Los textos con largo máximo en bytes (`max` en el lote) no pueden pasarlo: es un límite duro. (`bytes`)
+  - En Shift-JIS, las letras ASCII ocupan 1 byte y las japonesas 2. No hay límite por texto; el límite es el de cada tabla.
+  - Tablas sueltas: no les sobra ningún byte, y antes del archivo siguiente quedan menos de 2 KB de relleno. El inglés del PPF ocupa casi los mismos bytes que el japonés. El español, que suele ser más largo, crece reconstruyendo el contenedor (`tools/stz.py` y `tools/ps2iso.py`), así que en las tablas sueltas no hay límite práctico de bytes.
+  - Tablas de los mapas: les queda un 36% libre en total, pero cada una tiene su propio límite (el largo de datos de su `MSGa`); el adaptador avisa si una no entra. Hacerlas crecer obligaría a cambiar los tamaños de los bloques que contienen al `MSGa` (*sin hacer*).
 
 ## Caracteres
 
