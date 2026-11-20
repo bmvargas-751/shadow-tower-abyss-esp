@@ -22,6 +22,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from stz import Stz  # noqa: E402
+import sta_font  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LOCAL = os.path.join(os.path.dirname(ROOT), "shadow-tower-abyss-esp-local")
@@ -187,14 +188,18 @@ def load_translation():
     return out
 
 
-def encode(text, key):
-    try:
+def encode(text, key, font=True):
+    """Con `font` (la fuente con letras españolas), usa los códigos prestados y
+    rechaza lo que no se puede mostrar. Sin ella (ida y vuelta), Shift-JIS tal cual."""
+    if not font:
         return text.encode(ENC)
-    except UnicodeEncodeError as e:
-        raise SystemExit("%s: carácter sin código en la fuente: %r" % (key, text[e.start:e.end]))
+    bad = sta_font.missing(text)
+    if bad:
+        raise SystemExit("%s: caracteres que la fuente no tiene: %s" % (key, "".join(sorted(set(bad)))))
+    return sta_font.encode(text)
 
 
-def pack_strings(buf, o, name, texts):
+def pack_strings(buf, o, name, texts, font=True):
     """Cadenas de una tabla empaquetadas desde el final de los registros.
     Devuelve (registros nuevos como bytes, cadenas como bytes)."""
     cnt, rs, recs = parse_table(buf, o)
@@ -203,55 +208,75 @@ def pack_strings(buf, o, name, texts):
     head = bytearray(buf[o:o + start])
     blob = bytearray()
     for k, r, f in keys:
-        s = encode(texts[k], k) if k in texts else cstr(buf, o + recs[r][f])
+        s = encode(texts[k], k, font) if k in texts else cstr(buf, o + recs[r][f])
         struct.pack_into("<I", head, 16 + r * rs + 4 * f, start + len(blob))
         blob += s + b"\0"
     return bytes(head), bytes(blob)
 
 
-def rebuild_map_table(buf, o, name, texts):
-    """Tabla de un mapa: se reescribe en su lugar, dentro del largo de datos del
-    MSGa. Lo que queda después de la última cadena conserva los bytes de antes
-    (restos sin apuntar, como en el original), así que el mismo texto da los
-    mismos bytes. Devuelve los bytes libres que quedan."""
-    head, blob = pack_strings(buf, o, name, texts)
-    cap = struct.unpack_from("<I", buf, o - 0x20 + 20)[0]  # largo de datos del MSGa
-    if len(head) + len(blob) > cap:
-        raise SystemExit("%s: el texto no entra (%d bytes de %d)" % (name, len(head) + len(blob), cap))
-    buf[o:o + len(head)] = head
-    buf[o + len(head):o + len(head) + len(blob)] = blob
-    return cap - len(head) - len(blob)
+def rebuild_map_table(body, o, name, texts, font=True):
+    """Tabla de un mapa (body = la entrada STAM completa, o = inicio de STA).
+
+    Si el texto entra en el MSGa, se reescribe en su lugar: lo que queda después
+    de la última cadena conserva los bytes de antes (restos sin apuntar, como en
+    el original), así que el mismo texto da los mismos bytes.
+    Si no entra, el MSGa crece en múltiplos de 16 bytes y se actualizan los
+    tamaños de MSGa, STEM y STAM (TECH.md). Devuelve (body, bytes libres)."""
+    head, blob = pack_strings(body, o, name, texts, font)
+    m = o - 0x20                                   # MSGa
+    msize = struct.unpack_from("<I", body, m + 4)[0]
+    used = len(head) + len(blob)
+    cap = struct.unpack_from("<I", body, m + 20)[0]  # largo de datos actual
+    if used <= cap:
+        body[o:o + len(head)] = head
+        body[o + len(head):o + used] = blob
+        return body, cap - used
+    room = msize - 0x20                            # espacio real hasta el final del MSGa
+    grow = 0 if used <= room else ((used - room + 15) // 16) * 16
+    stem = m - 0x10
+    assert body[stem:stem + 4] == b"STEM" and body[:4] == b"STAM", name
+    new = bytearray(body[:o]) + head + blob + b"\0" * (room + grow - used) + body[m + msize:]
+    msize += grow
+    struct.pack_into("<II", new, m + 4, msize, (msize << 8) | 0x43)
+    struct.pack_into("<II", new, m + 16, msize - 0x10, used)
+    struct.pack_into("<I", new, stem + 4, struct.unpack_from("<I", new, stem + 4)[0] + grow)
+    struct.pack_into("<I", new, 4, len(new))
+    return new, room + grow - used
 
 
-def build_stz(texts):
-    """STAZ.STZ con los textos dados. Las tablas sueltas pueden crecer (se
-    reconstruye el contenedor); las de los mapas se reescriben en su lugar."""
+def build_stz(texts, font=True):
+    """STAZ.STZ con los textos dados. Las tablas sueltas y las de los mapas
+    pueden crecer (se reconstruye el contenedor).
+    Con `font`, agrega las letras españolas a la fuente (sta_font.py)."""
     data = open(STZ, "rb").read()
     c = Stz(data)
-    buf = bytearray(data)
     bodies, free = {}, {}
+    if font:
+        t, x = sta_font.apply(c.body(sta_font.FONT_TABLE), c.body(sta_font.FONT_TEX))
+        bodies[sta_font.FONT_TABLE], bodies[sta_font.FONT_TEX] = t, x
     for name, o, kind in find_tables(data):
         if kind == "suelta":
             i = next(i for i, n in LOOSE.items() if n == name)
-            head, blob = pack_strings(data, o, name, texts)
+            head, blob = pack_strings(data, o, name, texts, font)
             bodies[i] = head + blob
             free[name] = len(c.body(i)) - len(bodies[i])
         else:
-            free[name] = rebuild_map_table(buf, o, name, texts)
-    for i, r in enumerate(c.recs):  # los mapas cambian en su lugar, sin cambiar de tamaño
-        if r[6] * SECTOR < len(buf) and i not in bodies and bytes(buf[r[6] * SECTOR:r[6] * SECTOR + r[1]]) != c.body(i):
-            bodies[i] = bytes(buf[r[6] * SECTOR:r[6] * SECTOR + r[1]])
+            i = int(name.split("/")[1])
+            base = c.recs[i][6] * SECTOR
+            body, free[name] = rebuild_map_table(bytearray(c.body(i)), o - base, name, texts, font)
+            if bytes(body) != c.body(i):
+                bodies[i] = bytes(body)
     return c.build(bodies), free
 
 
-def import_(out=OUT, texts=None):
+def import_(out=OUT, texts=None, font=True):
     if texts is None:
         texts = load_translation()
-    new, free = build_stz(texts)
+    new, free = build_stz(texts, font)
     os.makedirs(os.path.dirname(out), exist_ok=True)
     with open(out, "wb") as f:
         f.write(new)
-    grow = {k: -v for k, v in free.items() if k.startswith("sys/") and v < 0}
+    grow = {k: -v for k, v in free.items() if v < 0}
     print("import: %d textos -> %s" % (len(texts), out))
     if grow:
         print("  tablas que crecen (bytes):", grow)
@@ -267,7 +292,7 @@ def roundtrip():
         for line in f:
             d = json.loads(line)
             texts[d["key"]] = d["en"]
-    out, _free = import_(os.path.join(LOCAL, "build", "roundtrip.STZ"), texts)
+    out, _free = import_(os.path.join(LOCAL, "build", "roundtrip.STZ"), texts, font=False)
     ok = open(out, "rb").read() == open(STZ, "rb").read()
     print("ida y vuelta:", "IDÉNTICA" if ok else "DISTINTA")
     return ok

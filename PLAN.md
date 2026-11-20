@@ -27,9 +27,9 @@ Antes de esto no se decide nada más.
 - [x] Extraer los archivos del juego, a una carpeta fuera del repo.
 - [x] Adaptador: exportar el texto al formato común (`source` de `loc.json`) e importarlo de vuelta.
 - [x] Ida y vuelta idéntica: exportar e importar sin cambios da los mismos archivos.
-- [ ] Caracteres: si la fuente tiene las letras españolas, o cómo se agregan (T-5).
+- [ ] Caracteres: si la fuente tiene las letras españolas, o cómo se agregan (T-5). Agregadas con `tools/sta_font.py`; falta verlas en el juego.
 - [ ] Límites: bytes, ancho y renglones de cada tipo de texto (T-3, T-4), y sus chequeos en `hooks`.
-- [ ] Pseudolocalización: todo el texto más largo y con letras españolas, en el juego, para ver cortes y glifos que faltan.
+- [ ] Pseudolocalización: todo el texto más largo y con letras españolas, en el juego, para ver cortes y glifos que faltan. ISO de prueba armada con `tools/pseudo.py`; falta probarla.
 - [ ] Completar TECH.md y `loc.json` (`codes`, `fixed_break`, `excluded`, `sections`).
 
 ### Fase 2. Inventario y presupuesto

@@ -42,5 +42,5 @@
   "fixed_break": null,
   "encoding": "cp932",
   "spanish_checks": true,
-  "hooks": null
+  "hooks": "tools/hooks.py"
 }
