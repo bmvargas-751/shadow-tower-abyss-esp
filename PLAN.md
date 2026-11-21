@@ -8,7 +8,8 @@ Se cierran en la fase 0, porque son caras de cambiar después.
 - **Original:** versión japonesa de PS2 (única edición), imagen `Shadow Tower Abyss.iso`. [DECISIONS 2026-11-20]
 - **Otra versión de apoyo:** la traducción fan al inglés `STATest0.3.ppf` (en progreso), solo de consulta. [DECISIONS 2026-11-20]
 - **Terminología oficial:** no hay traducción oficial al español. Shadow Tower PS1 (`shadow-tower-esp`) es solo referencia hasta comparar cómo está armado Abyss. [DECISIONS 2026-11-20]
-- **Pruebas:** PCSX2. La entrega (xdelta propuesto, o PPF) se cierra en la fase 1.
+- **Pruebas:** PCSX2; la traducción se instala con un parche xdelta sobre la ISO japonesa. [DECISIONS 2026-11-20]
+- **Alcance:** tablas de texto (0.9.0), después subtítulos de los vídeos y al final texturas con texto. [DECISIONS 2026-11-20]
 - **Sin spoilers:** los documentos, los commits y el chat nombran zonas o archivos, nunca hechos de la historia.
 - **Contenido del repo:** solo la traducción y las herramientas propias; nunca archivos del juego.
 
@@ -23,13 +24,13 @@ Se cierran en la fase 0, porque son caras de cambiar después.
 
 Antes de esto no se decide nada más.
 
-- [ ] Extraer los archivos del juego, a una carpeta fuera del repo.
-- [ ] Adaptador: exportar el texto al formato común (`source` de `loc.json`) e importarlo de vuelta.
-- [ ] Ida y vuelta idéntica: exportar e importar sin cambios da los mismos archivos.
-- [ ] Caracteres: si la fuente tiene las letras españolas, o cómo se agregan (T-5).
-- [ ] Límites: bytes, ancho y renglones de cada tipo de texto (T-3, T-4), y sus chequeos en `hooks`.
-- [ ] Pseudolocalización: todo el texto más largo y con letras españolas, en el juego, para ver cortes y glifos que faltan.
-- [ ] Completar TECH.md y `loc.json` (`codes`, `fixed_break`, `excluded`, `sections`).
+- [x] Extraer los archivos del juego, a una carpeta fuera del repo.
+- [x] Adaptador: exportar el texto al formato común (`source` de `loc.json`) e importarlo de vuelta.
+- [x] Ida y vuelta idéntica: exportar e importar sin cambios da los mismos archivos.
+- [x] Caracteres: si la fuente tiene las letras españolas, o cómo se agregan (T-5). Agregadas con `tools/sta_font.py`; se ven bien en PCSX2.
+- [x] Límites: bytes, ancho y renglones de cada tipo de texto (T-3, T-4), y sus chequeos en `hooks`. Medidos y en `hooks.check`; el de los mapas es provisional (PENDING.md).
+- [x] Pseudolocalización: todo el texto más largo y con letras españolas, en el juego, para ver cortes y glifos que faltan. ISO de prueba (`tools/pseudo.py`) probada en PCSX2.
+- [x] Completar TECH.md y `loc.json` (`codes`, `fixed_break`, `excluded`, `sections`).
 
 ### Fase 2. Inventario y presupuesto
 

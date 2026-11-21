@@ -1,23 +1,75 @@
 {
   "name": "Shadow Tower Abyss",
-  "source_language": "en",
+  "source_language": "ja",
   "target_language": "es",
-  "source": "../NOMBRE-local/source.jsonl",
+  "source": "../shadow-tower-abyss-esp-local/source.jsonl",
   "translation": "translation",
   "work": "build/work/batches",
   "sections": [
     {
-      "name": "Interfaz",
-      "prefixes": []
+      "name": "Interfaz y ayudas del menú",
+      "prefixes": [
+        "sys/menu#"
+      ]
+    },
+    {
+      "name": "Lugares",
+      "prefixes": [
+        "sys/lugares#"
+      ]
+    },
+    {
+      "name": "Criaturas",
+      "prefixes": [
+        "sys/criaturas#"
+      ]
+    },
+    {
+      "name": "Objetos y equipo",
+      "prefixes": [
+        "sys/objetos#"
+      ]
+    },
+    {
+      "name": "Mapas (eventos y diálogos)",
+      "prefixes": [
+        "mapa/"
+      ]
     }
   ],
-  "excluded": [],
-  "codes": [
-    "\\{[^{}]*\\}",
-    "%[-+0-9.]*[sdifxXu]"
+  "excluded": [
+    "sys/menu#0000",
+    "sys/menu#0099",
+    "sys/menu#0128",
+    "sys/menu#0205",
+    "sys/menu#0299",
+    "sys/menu#0300",
+    "sys/menu#0301",
+    "sys/menu#0302",
+    "sys/menu#0303",
+    "sys/menu#0304",
+    "sys/menu#0305",
+    "sys/menu#0306",
+    "sys/menu#0307",
+    "sys/menu#0308",
+    "sys/menu#0318",
+    "sys/menu#0319",
+    "sys/menu#0328",
+    "sys/menu#0329",
+    "sys/menu#0330",
+    "sys/menu#0332",
+    "sys/menu#0333",
+    "sys/menu#0336",
+    "sys/menu#0337",
+    "sys/menu#0338",
+    "sys/menu#0339",
+    "sys/menu#0340",
+    "sys/menu#0341",
+    "sys/menu#0401"
   ],
+  "codes": [],
   "fixed_break": null,
-  "encoding": "utf-8",
+  "encoding": "cp932",
   "spanish_checks": true,
-  "hooks": null
+  "hooks": "tools/hooks.py"
 }
