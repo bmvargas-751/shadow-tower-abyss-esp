@@ -12,3 +12,5 @@ Lo que el usuario decidió, con fecha, para no volver a discutirlo. Una regla de
 - **2026-11-20** Entrega: parche xdelta sobre la ISO japonesa. Hace falta porque `STAZ.STZ` tiene que crecer y moverse dentro de la ISO (TECH.md, T-4).
 - **2026-11-20** Alcance: todo el texto del juego, en este orden: 1) tablas de texto, 2) subtítulos de los vídeos, 3) texturas con texto. La versión 0.9.0 sale con las tablas de texto traducidas.
 - **2026-11-20** Pruebas: el usuario prueba en PCSX2 cuando las tablas estén traducidas al 100%, con el xdelta aplicado a su ISO. Antes, una ISO de prueba (pseudolocalización) para revisar las cajas y que se dibujen todas las letras.
+- **2026-11-20** No se traducen (`excluded` de `loc.json`): los 46 textos vacíos del original, el copyright (`sys/menu#0128`), el resto de la demo (`sys/menu#0401`) y el mensaje de error para los programadores (`sys/menu#0099`).
+- **2026-11-20** El límite de los textos de mapa (300 de ancho, 3 renglones) queda provisional: en la ISO de prueba no se llegó a ver ninguno. Se confirma en la prueba en el juego (TECH.md, T-3).

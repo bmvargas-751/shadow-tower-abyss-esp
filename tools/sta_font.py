@@ -179,6 +179,24 @@ def apply(table, tex):
     return bytes(f.t), bytes(f.x)
 
 
+def advances(table):
+    """{carácter: avance} de todos los glifos de la fuente. Las letras
+    españolas avanzan lo mismo que su letra base (make_glyph)."""
+    f = Font(table, b"")
+    out = {}
+    for lo, hi, base in f.ranges:
+        for u in range(lo, hi + 1):
+            out[chr(u)] = f.rec(base + u - lo)[6]
+    for ch in SPANISH:
+        out[ch] = out[BASE[ch]]
+    return out
+
+
+def width(text, adv):
+    """Ancho de un renglón en unidades de la fuente (TECH.md, T-3)."""
+    return sum(adv.get(ch, 0) for ch in text)
+
+
 def check(stz_body, exe, source_chars):
     """Comprueba que los kanji prestados sirven (ver BORROWED)."""
     f = Font(stz_body(FONT_TABLE), stz_body(FONT_TEX))

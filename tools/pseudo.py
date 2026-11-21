@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """ISO de prueba (pseudolocalización) de Shadow Tower Abyss.
 
-Cada texto pasa a ser: [número] + el inglés del PPF (o un relleno si no hay)
+Cada texto pasa a ser: [número] + el inglés del PPF (o el original si no hay)
 con las vocales acentuadas y cada renglón ~30% más largo, más ¿¡ñÑü para
-probar todos los glifos nuevos. Las tablas de los mapas tienen un límite: lo que no entra baja de nivel
-(ver main).
+probar todos los glifos nuevos. Los vacíos quedan vacíos. Las tablas de los
+mapas tienen un límite: lo que no entra baja de nivel (ver main).
 
     python3 tools/pseudo.py ISO_ORIGINAL ISO_SALIDA
 """
@@ -49,7 +49,10 @@ def main(iso_in, iso_out):
     texts = {}
     for d in src:
         k = d["key"]
-        base = ref.get(k) or "Texto de prueba"
+        if d["en"] == "":
+            continue  # vacío en el original: el juego no muestra nada, queda vacío
+        # sin inglés del PPF: el original (muchos ya están en inglés, con ○×△□←→)
+        base = ref.get(k) or d["en"]
         texts[k] = pseudo(k, base)
     # las tablas de los mapas tienen límite: cada una baja de nivel por separado
     #   1: número + «á» + inglés del PPF; 2: inglés del PPF tal cual; 3: solo el número
@@ -78,7 +81,7 @@ def main(iso_in, iso_out):
         f.write(data)
     with open(os.path.join(S.LOCAL, "build", "pseudo.jsonl"), "w", encoding="utf-8") as f:
         for d in src:
-            f.write(json.dumps({"key": d["key"], "es": texts[d["key"]]}, ensure_ascii=False) + "\n")
+            f.write(json.dumps({"key": d["key"], "es": texts.get(d["key"], "")}, ensure_ascii=False) + "\n")
     ps2iso.build(iso_in, stz, iso_out)
 
 
