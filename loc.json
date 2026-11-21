@@ -67,9 +67,7 @@
     "sys/menu#0341",
     "sys/menu#0401"
   ],
-  "codes": [
-    "(?!)"
-  ],
+  "codes": [],
   "fixed_break": null,
   "encoding": "cp932",
   "spanish_checks": true,

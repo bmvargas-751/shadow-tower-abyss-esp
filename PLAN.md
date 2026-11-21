@@ -60,9 +60,9 @@ Más el editor, las líneas delicadas, el terminólogo y el perfilador (fase 3) 
 
 Obligatorio: sin él, `loc.py prepare` no arma lotes.
 
-- [ ] Elegir con el usuario los casos reales (al menos uno de cada tipo; mejor dos o tres).
-- [ ] Aprobarlo (`loc.py golden approve`).
-- [ ] Probar a los agentes (`loc.py golden prepare`, traductor, revisor y corrector, `loc.py golden score`) hasta que pase.
+- [x] Elegir con el usuario los casos reales (al menos uno de cada tipo; mejor dos o tres). 16 casos.
+- [x] Aprobarlo (`loc.py golden approve`).
+- [x] Probar a los agentes (`loc.py golden prepare`, traductor, revisor y corrector, `loc.py golden score`) hasta que pase. oro-002, 14 de 16, aceptada; antes de volver a pasarlo, corregir O-7 y O-13 (DECISIONS 2026-11-20).
 
 ### Fase 5. Piloto
 

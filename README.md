@@ -30,7 +30,7 @@ Actualizado: 2026-11-20.
 | 1. Prueba técnica | ✅ (límite de los textos de mapa provisional, PENDING.md) |
 | 2. Inventario y costo | ✅ 1719 líneas (1407 únicas), ~900k tokens estimados |
 | 3. Glosario y fichas | ✅ 341 términos, 3 personajes y 5 voces |
-| 4. Set de oro | ⬜ |
+| 4. Set de oro | ✅ 16 casos; oro-002, 14 de 16 (aceptada) |
 | 5. Piloto | ⬜ |
 | 6. Traducción | ⬜ |
 | 7. Prueba en el juego | ⬜ |
@@ -39,7 +39,7 @@ Actualizado: 2026-11-20.
 ### Secciones
 
 <!-- loc:progress -->
-**Etapa actual:** Fase 4. Set de oro: Elegir con el usuario los casos reales (al menos uno de cada tipo; mejor dos o tres).
+**Etapa actual:** Fase 5. Piloto: Un primer lote de cada tipo de texto con el equipo completo.
 
 | Sección | Líneas | Traducidas | Avance |
 |---|---:|---:|---:|
