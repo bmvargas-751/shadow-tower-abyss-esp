@@ -17,6 +17,6 @@ Gritos y frases escritos casi solo en katakana: voces deformadas, que no suenan 
   - Repetición obsesiva de la misma palabra (ワガ槍, `mapa/2261#0030`): se repite igual, sin sinónimos.
   - Vocativo オロカナル　モノヨ (`mapa/2254#0020`, `#0030`): la misma traducción las dos veces.
   - Puntos suspensivos en casi todas las líneas: `...`.
-- **Groserías:** 貴様ァ usado solo, como insulto gritado (`mapa/2261#0020`): un insulto de intensidad media, no una palabrota (E-22), y sin género, porque va al jugador («MISERABLE», no «MALDITO»; `jugador.md`). El inglés fan pone «Bastard»; no se copia (E-1).
+- **Groserías:** 貴様ァ usado solo, como insulto gritado (`mapa/2261#0020`): un insulto de intensidad media (del nivel de «maldito»), no una palabrota (E-22); va al jugador, en masculino (`jugador.md`). El inglés fan pone «Bastard»; no se copia (E-1).
 - **Ejemplos:** `mapa/2254#0020` (katakana con espacios, arcaico), `mapa/2261#0020` (sílabas cortadas, vocal alargada, insulto), `mapa/2261#0021` (grito con ！！！).
 - **Fuente:** `mapa/2249#0000`; `mapa/2254#0020`, `#0030`; `mapa/2261#0020`, `#0021`, `#0030` (las 6, completas).

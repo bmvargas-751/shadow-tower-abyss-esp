@@ -2,7 +2,7 @@
 
 Seres antiguos, inscripciones y criaturas que hablan en japonés arcaico. Una sola ficha para todos (voz compartida).
 
-- **Género:** voz compartida: nunca se marca el género de quien habla (E-41). Las líneas no lo marcan (我, 我ら, この身). Riesgo alto: muchas líneas hablan de sí mismos con participios (囚われし者 `mapa/2253#0091`, 追われた者 `mapa/2251#0000`, 打ち捨てられたもの `mapa/2258#0090`, 生み出され `mapa/2276#0020`). Se prefieren sustantivos de género fijo («seres», «almas», «criaturas») o construcciones sin participio. Lo mismo con el jugador cuando lo nombran con adjetivos (力ある者よ, 卑しき者): el género del jugador no se marca mientras el juego no lo haga.
+- **Género:** voz compartida: nunca se marca el género de quien habla (E-41). Las líneas no lo marcan (我, 我ら, この身). Riesgo alto: muchas líneas hablan de sí mismos con participios (囚われし者 `mapa/2253#0091`, 追われた者 `mapa/2251#0000`, 打ち捨てられたもの `mapa/2258#0090`, 生み出され `mapa/2276#0020`). Se prefieren sustantivos de género fijo («seres», «almas», «criaturas») o construcciones sin participio. El jugador, en cambio, es masculino cuando lo nombran con adjetivos (力ある者よ, 卑しき者; `jugador.md`).
 - **Trato:** *aprobado [DECISIONS 2026-11-20]:*
   - 汝, そなた → **tú** (`mapa/2253#0080`, `#0102`; `mapa/2258#0111`; `mapa/2261#0000`; `mapa/2283#0002`; `mapa/2289#0010`). Ni *vos* (en América es voseo regional, E-13) ni *usted*: 汝 es arcaico, no respetuoso.
   - 汝ら → **ustedes**, nunca *vosotros* (E-11): imperativos en subjuntivo, posesivo *su* o *de ustedes* (`mapa/2248#0022`, `mapa/2252#0000`, `mapa/2253#0050`, `#0120`, `mapa/2289#0000`). Si *ustedes* suena demasiado moderno, se reformula con un vocativo (como «humanos», cuando el original lo permite) en vez de cambiar de pronombre.
