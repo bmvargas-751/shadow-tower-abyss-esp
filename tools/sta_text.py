@@ -33,6 +33,7 @@ SOURCE = os.path.join(LOCAL, "source.jsonl")
 REF_EN = os.path.join(LOCAL, "ref_en.jsonl")
 OUT = os.path.join(LOCAL, "build", "STAZ.STZ")
 TRANSLATION = os.path.join(ROOT, "translation")
+SPEAKERS = os.path.join(ROOT, "characters", "hablantes.json")  # quién habla en los mapas (fichas)
 
 ENC = "cp932"
 SECTOR = 0x800
@@ -151,11 +152,17 @@ def export():
     tables = find_tables(stz)
     rows = read_texts(stz, tables)
     os.makedirs(LOCAL, exist_ok=True)
+    speakers = {}
+    if os.path.exists(SPEAKERS):
+        with open(SPEAKERS, encoding="utf-8") as f:
+            speakers = json.load(f)
     with open(SOURCE, "w", encoding="utf-8") as f:
         for key, text, kind in rows:
             d = {"key": key, "en": text}
             if kind == "suelta":
                 d["note"] = "tabla de sistema"
+            if key in speakers:
+                d["speaker"] = speakers[key]
             f.write(json.dumps(d, ensure_ascii=False) + "\n")
     print("source: %d textos en %d tablas -> %s" % (len(rows), len(tables), SOURCE))
     if os.path.exists(PPF):
