@@ -23,6 +23,7 @@ Lo que mostró la fase 1 (2026-11-20). Lo que dice *por confirmar* todavía no s
 
 - **T-1** Los códigos (variables, etiquetas, colores, nombres insertados) quedan intactos y en el mismo orden que en el original. Los reconoce la lista `codes` de `loc.json`. (`codigos`)
   - En las tablas `STA ` no hay códigos: el único byte de control es `0x0a` (salto de línea). Falta revisar el texto del ejecutable.
+  - Por eso `codes` de `loc.json` lleva solo `(?!)`, un patrón que nunca encuentra nada: con la lista vacía, el kit arma una expresión vacía que encuentra «códigos» entre cada par de letras.
   - El juego no parte los renglones solo: un renglón largo se sale de la caja o de la pantalla (visto en PCSX2, 2026-11-20). Los saltos los pone la traducción.
 - **T-2** Saltos de línea: los fijos (`fixed_break` en `loc.json`) van exactamente donde están en el original, ni más ni menos. Los demás, si el adaptador parte los renglones, los pone el adaptador. (`saltos`)
   - Los saltos del japonés están pensados para su ancho, y el juego no parte los renglones solo. No hay saltos fijos (`fixed_break` en `null`): la traducción pone los suyos según el ancho de la caja (T-3).
