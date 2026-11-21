@@ -424,3 +424,12 @@ Concuerdan con el objeto. El afijo de ST1 con el mismo elemento (coherencia de l
 | 破損ファイル | archivo dañado | decidido 2026-11-20 | Ranuras de la memory card. ST1 llamaba NUEVO ARCHIVO a la ranura vacía; alternativa para 未使用. |
 | 未使用 | sin usar | decidido 2026-11-20 | Ranuras de la memory card. ST1 llamaba NUEVO ARCHIVO a la ranura vacía; alternativa para 未使用. |
 | クリアデータ | datos de partida completada | decidido 2026-11-20 | Lo que se guarda al terminar el juego. |
+
+### Hablantes de los mapas (decidido)
+
+| Original | Español | Fuente | Nota |
+|---|---|---|---|
+| 我が主 | mi amo | decidido 2026-11-20 | Lo dice el siervo (`characters/siervo-del-rey.md`). No «mi señor»: «señor» es 長. |
+| 主 (amo de los seres creados) | amo | decidido 2026-11-20 | `mapa/2280`. Sin control: 主 forma otras palabras. |
+| 神様 | Dios | decidido 2026-11-20 | Como nombre, con mayúscula y sin artículo (voz quebrada). |
+| 神 (fuera de 神様) | dios | decidido 2026-11-20 | En minúscula. Sin control: 神 está en 精神. |

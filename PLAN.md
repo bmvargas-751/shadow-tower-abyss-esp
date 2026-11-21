@@ -53,7 +53,7 @@ Más el editor, las líneas delicadas, el terminólogo y el perfilador (fase 3) 
 ### Fase 3. Documentos
 
 - [x] Glosario: el terminólogo propone las filas. 337 términos: 73 de Shadow Tower PS1 y 264 decididos (2026-11-20).
-- [ ] Fichas de personajes: el perfilador, antes de cada sección. Solo hacen falta para los mapas: el menú, los lugares, las criaturas y los objetos no tienen personajes que hablen.
+- [x] Fichas de personajes: el perfilador, antes de cada sección. 8 voces de los mapas (`characters/hablantes.json`). Solo hacen falta para los mapas: el menú, los lugares, las criaturas y los objetos no tienen personajes que hablen.
 - [x] DECISIONS.md y PENDING.md al día.
 
 ### Fase 4. Set de oro

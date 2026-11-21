@@ -29,7 +29,7 @@ Actualizado: 2026-11-20.
 | 0. Decisiones | ✅ |
 | 1. Prueba técnica | ✅ (límite de los textos de mapa provisional, PENDING.md) |
 | 2. Inventario y costo | ✅ 1719 líneas (1407 únicas), ~900k tokens estimados |
-| 3. Glosario y fichas | ⏳ 337 términos; las fichas, antes de la sección de mapas |
+| 3. Glosario y fichas | ✅ 341 términos, 3 personajes y 5 voces |
 | 4. Set de oro | ⬜ |
 | 5. Piloto | ⬜ |
 | 6. Traducción | ⬜ |
@@ -39,7 +39,7 @@ Actualizado: 2026-11-20.
 ### Secciones
 
 <!-- loc:progress -->
-**Etapa actual:** Fase 3. Documentos: Fichas de personajes: el perfilador, antes de cada sección. Solo hacen falta para los mapas: el menú, los lugares, las criaturas y los objetos no tienen personajes que hablen.
+**Etapa actual:** Fase 4. Set de oro: Elegir con el usuario los casos reales (al menos uno de cada tipo; mejor dos o tres).
 
 | Sección | Líneas | Traducidas | Avance |
 |---|---:|---:|---:|
