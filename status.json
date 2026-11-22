@@ -4,7 +4,7 @@
  "stage": "Traducción (Objetos y equipo)",
  "version": null,
  "lines": 1719,
- "done": 401,
+ "done": 1572,
  "sections": [
   {
    "name": "Interfaz",
@@ -15,7 +15,7 @@
   {
    "name": "Objetos y equipo",
    "lines": 1210,
-   "done": 60,
+   "done": 1063,
    "common": true
   },
   {
@@ -33,7 +33,7 @@
   {
    "name": "Historia",
    "lines": 212,
-   "done": 44,
+   "done": 212,
    "common": true
   }
  ],
@@ -78,7 +78,7 @@
    "n": 6,
    "name": "Traducción",
    "state": "in_progress",
-   "note": "23,3 %"
+   "note": "91,4 %"
   },
   {
    "n": 7,

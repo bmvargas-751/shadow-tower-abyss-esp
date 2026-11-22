@@ -55,6 +55,1009 @@
 {"key": "sys/objetos#0827/nombre", "es": "Espada de placas"}
 {"key": "sys/objetos#0827/desc", "es": "Espada ancha fácil de\nmanejar y excelente\npara cortar"}
 {"key": "sys/objetos#0828/nombre", "es": "Espada de placas"}
+{"key": "sys/objetos#0828/desc", "es": "Espada ancha fácil de\nmanejar y de gran poder\npara aplastar"}
 {"key": "sys/objetos#0829/nombre", "es": "Espada de placas"}
+{"key": "sys/objetos#0829/desc", "es": "Espada ancha de punta\naguda, excelente\npara atravesar"}
 {"key": "sys/objetos#0830/nombre", "es": "Espada de placas"}
+{"key": "sys/objetos#0830/desc", "es": "Espada ancha de gran\npoder, pero algo pesada"}
 {"key": "sys/objetos#0831/nombre", "es": "Espada de placas"}
+{"key": "sys/objetos#0831/desc", "es": "Espada ancha con una gema con\npoder mágico incrustada\nEspecial: Sella\nCeguera"}
+{"key": "sys/objetos#0832/nombre", "es": "Espada de guerra aplastante"}
+{"key": "sys/objetos#0832/desc", "es": "Espada de guerrero que\ndestaca al aplastar"}
+{"key": "sys/objetos#0833/nombre", "es": "Espada de guerra tajante"}
+{"key": "sys/objetos#0833/desc", "es": "Espada de guerrero de\nfilo excelente\nEspecial: Ciega"}
+{"key": "sys/objetos#0834/nombre", "es": "Espada de guerra"}
+{"key": "sys/objetos#0834/desc", "es": "Espada de guerrero que\nprotege a su dueño\nEspecial: Resiste daño físico"}
+{"key": "sys/objetos#0835/nombre", "es": "Guiverno"}
+{"key": "sys/objetos#0835/desc", "es": "Muy poderosa, pero le quita\nvigor a su dueño\nObjeto raro\nEspecial: Consumo de PV media"}
+{"key": "sys/objetos#0836/nombre", "es": "Guiverno"}
+{"key": "sys/objetos#0836/desc", "es": "Gran poder mágico, pero le quita\nfuerza mental a su dueño\nObjeto raro\nEspecial: Consumo de PM media"}
+{"key": "sys/objetos#0837/nombre", "es": "Espada de cazador"}
+{"key": "sys/objetos#0837/desc", "es": "Espada larga de una mano\nde buen equilibrio"}
+{"key": "sys/objetos#0838/nombre", "es": "Espada de cazador"}
+{"key": "sys/objetos#0838/desc", "es": "Espada larga de una mano\nque refuerza la magia\nde su dueño"}
+{"key": "sys/objetos#0839/nombre", "es": "Espada de cazador oscura"}
+{"key": "sys/objetos#0839/desc", "es": "Espada larga de una mano\ncon poder mágico de oscuridad\nEspecial: Ciega\nRecuperación de PM baja"}
+{"key": "sys/objetos#0840/nombre", "es": "Espada de cazador venenosa"}
+{"key": "sys/objetos#0840/desc", "es": "Espada larga de una mano\ncon poder mágico de veneno\nEspecial: Envenena\nRecuperación de PM baja"}
+{"key": "sys/objetos#0841/nombre", "es": "Espada de cazador cáustica"}
+{"key": "sys/objetos#0841/desc", "es": "Espada larga de una mano con\npoder mágico de ácido\nObjeto raro\nEspecial: Recup. de PV/PM baja"}
+{"key": "sys/objetos#0842/nombre", "es": "Espada segadora ígnea"}
+{"key": "sys/objetos#0842/desc", "es": "Espada mágica envuelta\nen llamas ardientes\nEspecial: Sella\nRecuperación de PV media"}
+{"key": "sys/objetos#0843/nombre", "es": "Espada segadora gélida"}
+{"key": "sys/objetos#0843/desc", "es": "Espada mágica envuelta\nen hielo glacial\nEspecial: Ralentiza\nRecuperación de PV media"}
+{"key": "sys/objetos#0844/nombre", "es": "Espada segadora radiante"}
+{"key": "sys/objetos#0844/desc", "es": "Espada mágica envuelta en\nluz brillante\nEspecial: Recuperación\nde PV media, Crítico"}
+{"key": "sys/objetos#0845/nombre", "es": "Espada segadora"}
+{"key": "sys/objetos#0845/desc", "es": "Espada demoníaca afilada\nhecha de huesos de monstruos"}
+{"key": "sys/objetos#0846/nombre", "es": "Rombarm"}
+{"key": "sys/objetos#0846/desc", "es": "Espada demoníaca que emite una\noscuridad intensa\nObjeto raro\nEspecial: Ciega, Sellado"}
+{"key": "sys/objetos#0847/nombre", "es": "Rombarm"}
+{"key": "sys/objetos#0847/desc", "es": "Espada demoníaca que emite una\noscuridad intensa\nObjeto raro\nEspecial: Ciega, Sellado"}
+{"key": "sys/objetos#0848/nombre", "es": "Estallido agudo"}
+{"key": "sys/objetos#0848/desc", "es": "Espada de una mano grande\nque sana la mente\nObjeto raro\nEspecial: Recup. de PM baja"}
+{"key": "sys/objetos#0849/nombre", "es": "Espada maciza"}
+{"key": "sys/objetos#0849/desc", "es": "Espada de dos manos, más\npesada que una de una mano,\npero de gran ataque"}
+{"key": "sys/objetos#0850/nombre", "es": "Espada maciza tajante"}
+{"key": "sys/objetos#0850/desc", "es": "Espada de dos manos afilada\ncon un corte excelente"}
+{"key": "sys/objetos#0851/nombre", "es": "Espada maciza aplastante"}
+{"key": "sys/objetos#0851/desc", "es": "Espada de dos manos gruesa\ncon más poder para aplastar"}
+{"key": "sys/objetos#0852/nombre", "es": "Espada maciza punzante"}
+{"key": "sys/objetos#0852/desc", "es": "Espada de dos manos\nespecializada en estocadas"}
+{"key": "sys/objetos#0853/nombre", "es": "Espada maciza ígnea"}
+{"key": "sys/objetos#0853/desc", "es": "Espada de dos manos con poder\nde fuego que sella la magia\nenemiga\nEspecial: Sella"}
+{"key": "sys/objetos#0854/nombre", "es": "Espada maciza gélida"}
+{"key": "sys/objetos#0854/desc", "es": "Espada de dos manos con poder\nde hielo que ralentiza\nal enemigo\nEspecial: Ralentiza"}
+{"key": "sys/objetos#0855/nombre", "es": "Zweihander"}
+{"key": "sys/objetos#0855/desc", "es": "Espada de dos manos de\nrendimiento estable\ny largo alcance"}
+{"key": "sys/objetos#0856/nombre", "es": "Zweihander"}
+{"key": "sys/objetos#0856/desc", "es": "Mandoble de dos manos cuya\nhoja se envuelve en rayos"}
+{"key": "sys/objetos#0857/nombre", "es": "Zweihander"}
+{"key": "sys/objetos#0857/desc", "es": "Mandoble de dos manos cuya\nhoja se envuelve en relámpagos\nObjeto raro\nEspecial: Crítico"}
+{"key": "sys/objetos#0858/nombre", "es": "Colmillo maligno"}
+{"key": "sys/objetos#0858/desc", "es": "Espada de dos manos que quita\nvigor y fuerza mental al enemigo\nObjeto raro\nEspecial: Absorción de PV y PM"}
+{"key": "sys/objetos#0859/nombre", "es": "Ram Dao"}
+{"key": "sys/objetos#0859/desc", "es": "Espada de dos manos en forma\nde machete, excelente\npara cortar"}
+{"key": "sys/objetos#0860/nombre", "es": "Ram Dao"}
+{"key": "sys/objetos#0860/desc", "es": "Espada de dos manos en forma\nde machete, excelente\npara cortar"}
+{"key": "sys/objetos#0861/nombre", "es": "Raja Ram Dao"}
+{"key": "sys/objetos#0861/desc", "es": "Mandoble adornado con oro\nexcelente para cortar\nObjeto raro\nEspecial: Crítico"}
+{"key": "sys/objetos#0862/nombre", "es": "Kris"}
+{"key": "sys/objetos#0862/desc", "es": "Cuchillo de hoja ondulada\nEspecial: Envenena"}
+{"key": "sys/objetos#0863/nombre", "es": "Kris"}
+{"key": "sys/objetos#0863/desc", "es": "Cuchillo de hoja ondulada\nEspecial: Envenena"}
+{"key": "sys/objetos#0864/nombre", "es": "Kris Naga"}
+{"key": "sys/objetos#0864/desc", "es": "Cuchillo afilado de hoja\nondulada\nEspecial: Envenena\nCrítico"}
+{"key": "sys/objetos#0865/nombre", "es": "Bijiacha"}
+{"key": "sys/objetos#0865/desc", "es": "Arma de estocada de madera,\nde poco poder pero muy ligera"}
+{"key": "sys/objetos#0866/nombre", "es": "Bijiacha"}
+{"key": "sys/objetos#0866/desc", "es": "Arma de estocada de metal,\nligera y de poder aceptable"}
+{"key": "sys/objetos#0867/nombre", "es": "Chaku"}
+{"key": "sys/objetos#0867/desc", "es": "Espada aberrante con hoja\nen forma de peine\nObjeto raro\nEspecial: Absorción de PV"}
+{"key": "sys/objetos#0868/nombre", "es": "Falx"}
+{"key": "sys/objetos#0868/desc", "es": "Espada curva de filo invertido\ny buen corte"}
+{"key": "sys/objetos#0869/nombre", "es": "Falx tajante"}
+{"key": "sys/objetos#0869/desc", "es": "Espada curva de filo invertido\nque destaca al cortar"}
+{"key": "sys/objetos#0870/nombre", "es": "Falx"}
+{"key": "sys/objetos#0870/desc", "es": "Espada curva de filo invertido\nhecha de metal de calidad"}
+{"key": "sys/objetos#0871/nombre", "es": "Harpe"}
+{"key": "sys/objetos#0871/desc", "es": "Espada en forma de hoz con\nhoja fina y afilada\nEspecial: Absorción de PM"}
+{"key": "sys/objetos#0872/nombre", "es": "Harpe tajante"}
+{"key": "sys/objetos#0872/desc", "es": "Espada en forma de hoz\nespecializada en cortar\nEspecial: Absorción de PM"}
+{"key": "sys/objetos#0873/nombre", "es": "Harpe"}
+{"key": "sys/objetos#0873/desc", "es": "Espada en forma de hoz con\nhoja fina y afilada\nEspecial: Absorción de PM"}
+{"key": "sys/objetos#0874/nombre", "es": "Ejecutor"}
+{"key": "sys/objetos#0874/desc", "es": "Mandoble de pomo anular que\nesconde un poder maldito\nObjeto raro\nEspecial: Envenena, Sellado"}
+{"key": "sys/objetos#0979/nombre", "es": "Cuchillo"}
+{"key": "sys/objetos#0979/desc", "es": "Cuchillo de combate pequeño,\nligero pero de poco poder"}
+{"key": "sys/objetos#0980/nombre", "es": "Alfanje"}
+{"key": "sys/objetos#0980/desc", "es": "Espada curva fácil de\nmanejar y excelente\npara cortar"}
+{"key": "sys/objetos#0981/nombre", "es": "Alfanje"}
+{"key": "sys/objetos#0981/desc", "es": "Espada curva de punta afilada\nque combina corte y estocada"}
+{"key": "sys/objetos#0982/nombre", "es": "Alfanje"}
+{"key": "sys/objetos#0982/desc", "es": "Espada curva de golpe más\npoderoso, pero más frágil"}
+{"key": "sys/objetos#0983/nombre", "es": "Alfanje"}
+{"key": "sys/objetos#0983/desc", "es": "Espada curva con un\nleve poder mágico\nObjeto raro"}
+{"key": "sys/objetos#0984/nombre", "es": "Sable pirata"}
+{"key": "sys/objetos#0984/desc", "es": "Espada curva ancha, muy\nusada por piratas\nEspecial: Ralentiza"}
+{"key": "sys/objetos#0985/nombre", "es": "Sable pirata"}
+{"key": "sys/objetos#0985/desc", "es": "Espada curva ancha, muy\nusada por piratas\nEspecial: Ciega"}
+{"key": "sys/objetos#0986/nombre", "es": "Sable del Cáucaso"}
+{"key": "sys/objetos#0986/desc", "es": "Espada curva de hoja larga\nespecializada en cortar\nEspecial: Envenena"}
+{"key": "sys/objetos#0987/nombre", "es": "Sable del Cáucaso"}
+{"key": "sys/objetos#0987/desc", "es": "Espada curva de hoja larga\nespecializada en cortar\nEspecial: Envenena"}
+{"key": "sys/objetos#0988/nombre", "es": "Espada larga militar"}
+{"key": "sys/objetos#0988/desc", "es": "Espada militar que usaban\nlos comandantes del ejército\nen otros tiempos"}
+{"key": "sys/objetos#0989/nombre", "es": "Pallasch"}
+{"key": "sys/objetos#0989/desc", "es": "Espada recta de largo alcance\nexcelente para estocadas\nEspecial: Crítico"}
+{"key": "sys/objetos#0990/nombre", "es": "Pallasch"}
+{"key": "sys/objetos#0990/desc", "es": "Espada recta de largo alcance\nexcelente para estocadas\nEspecial: Crítico"}
+{"key": "sys/objetos#0991/nombre", "es": "Daga"}
+{"key": "sys/objetos#0991/desc", "es": "Daga de defensa personal\nde gran durabilidad"}
+{"key": "sys/objetos#0992/nombre", "es": "Daga de caballero santo"}
+{"key": "sys/objetos#0992/desc", "es": "Daga de defensa personal\nde gran durabilidad\nEspecial: Ciega"}
+{"key": "sys/objetos#0993/nombre", "es": "Daga de caballero santo"}
+{"key": "sys/objetos#0993/desc", "es": "Daga de defensa personal\ncon un leve poder mágico"}
+{"key": "sys/objetos#0994/nombre", "es": "Dirk"}
+{"key": "sys/objetos#0994/desc", "es": "Daga de combate\nespecializada en estocadas"}
+{"key": "sys/objetos#0995/nombre", "es": "Dirk"}
+{"key": "sys/objetos#0995/desc", "es": "Daga de metal de calidad\nespecializada en estocadas"}
+{"key": "sys/objetos#0996/nombre", "es": "Dirk"}
+{"key": "sys/objetos#0996/desc", "es": "Daga de combate\nespecializada en estocadas\nEspecial: Crítico"}
+{"key": "sys/objetos#0997/nombre", "es": "Kinjadol"}
+{"key": "sys/objetos#0997/desc", "es": "Daga ceremonial imbuida\nde poder mágico\nEspecial: Sella"}
+{"key": "sys/objetos#0998/nombre", "es": "Kinjadol"}
+{"key": "sys/objetos#0998/desc", "es": "Daga ceremonial\nfrágil\nEspecial: Sella"}
+{"key": "sys/objetos#0999/nombre", "es": "Kinjadol"}
+{"key": "sys/objetos#0999/desc", "es": "Daga ceremonial imbuida de\nun gran poder mágico\nEspecial: Sella"}
+{"key": "sys/objetos#1000/nombre", "es": "Baselard"}
+{"key": "sys/objetos#1000/desc", "es": "Daga de hoja negra\ncon poder mágico"}
+{"key": "sys/objetos#1001/nombre", "es": "Baselard"}
+{"key": "sys/objetos#1001/desc", "es": "Daga de hoja negra\ncon poder mágico"}
+{"key": "sys/objetos#1002/nombre", "es": "Espada de cruz"}
+{"key": "sys/objetos#1002/desc", "es": "Espada fina con una plegaria\nque protege a su dueño\nEspecial: Resiste magia"}
+{"key": "sys/objetos#1003/nombre", "es": "Espada de cruz"}
+{"key": "sys/objetos#1003/desc", "es": "Espada fina con una plegaria\nque protege a su dueño\nEspecial: Resiste magia\nReduce el peso"}
+{"key": "sys/objetos#1004/nombre", "es": "Espada de cruz"}
+{"key": "sys/objetos#1004/desc", "es": "Espada fina con una plegaria\nque protege a su dueño\nEspecial: Ralentiza\nResiste magia"}
+{"key": "sys/objetos#1006/nombre", "es": "Sable"}
+{"key": "sys/objetos#1006/desc", "es": "Sacrifica el vigor de su dueño y\nperfora puntos vitales. Objeto raro\nEspecial: Consumo de PV media\nCrítico"}
+{"key": "sys/objetos#1007/nombre", "es": "Espada de Alejandro"}
+{"key": "sys/objetos#1007/desc", "es": "Espada de una mano resistente\nde hoja ancha\nEspecial: Sella"}
+{"key": "sys/objetos#1008/nombre", "es": "Espada de Alejandro"}
+{"key": "sys/objetos#1008/desc", "es": "Espada de una mano grande\nde hoja ancha\nEspecial: Sella"}
+{"key": "sys/objetos#1009/nombre", "es": "Espada de Damasco"}
+{"key": "sys/objetos#1009/desc", "es": "Espada de filo asombroso hecha\nde una aleación especial\nObjeto raro"}
+{"key": "sys/objetos#0875/nombre", "es": "Maza de combate cercano"}
+{"key": "sys/objetos#0875/desc", "es": "Garrote para golpear, usado\nen ataques que aplastan"}
+{"key": "sys/objetos#0876/nombre", "es": "Maza de combate cercano"}
+{"key": "sys/objetos#0876/desc", "es": "Garrote viejo, pero\nde buen rendimiento"}
+{"key": "sys/objetos#0877/nombre", "es": "Maza de combate cercano"}
+{"key": "sys/objetos#0877/desc", "es": "Garrote con la parte metálica\noxidada y menos durabilidad"}
+{"key": "sys/objetos#0878/nombre", "es": "Maza de combate cercano"}
+{"key": "sys/objetos#0878/desc", "es": "Garrote de metal para golpear,\nresistente y de gran poder\npara aplastar"}
+{"key": "sys/objetos#0879/nombre", "es": "Maza aplastante"}
+{"key": "sys/objetos#0879/desc", "es": "Garrote de cabeza grande\ny gran poder para aplastar"}
+{"key": "sys/objetos#0880/nombre", "es": "Maza aplastante"}
+{"key": "sys/objetos#0880/desc", "es": "Garrote con la cabeza de\nmetal pesado para\nmás poder"}
+{"key": "sys/objetos#0881/nombre", "es": "Maza aplastante"}
+{"key": "sys/objetos#0881/desc", "es": "Garrote para golpear\nhecho para ser ligero"}
+{"key": "sys/objetos#0882/nombre", "es": "Maza de paz"}
+{"key": "sys/objetos#0882/desc", "es": "Garrote con un poder de\nespíritu muy leve"}
+{"key": "sys/objetos#0883/nombre", "es": "Maza de paz"}
+{"key": "sys/objetos#0883/desc", "es": "Garrote para golpear con un\nleve poder de oscuridad\nEspecial: Ciega"}
+{"key": "sys/objetos#0884/nombre", "es": "Púa de batalla"}
+{"key": "sys/objetos#0884/desc", "es": "Garrote con púas afiladas\nque aumentan su poder letal"}
+{"key": "sys/objetos#0885/nombre", "es": "Púa de batalla"}
+{"key": "sys/objetos#0885/desc", "es": "Arma de golpe con púas,\nmuy resistente"}
+{"key": "sys/objetos#0886/nombre", "es": "Púa de batalla ígnea"}
+{"key": "sys/objetos#0886/desc", "es": "Maza de gran durabilidad\ncon poder de fuego\nEspecial: Sella"}
+{"key": "sys/objetos#0887/nombre", "es": "Púa de batalla gélida"}
+{"key": "sys/objetos#0887/desc", "es": "Maza de gran durabilidad\ncon poder de hielo\nEspecial: Ralentiza"}
+{"key": "sys/objetos#0888/nombre", "es": "Púa de batalla venenosa"}
+{"key": "sys/objetos#0888/desc", "es": "Maza de gran durabilidad\ncon poder de veneno\nEspecial: Envenena"}
+{"key": "sys/objetos#0889/nombre", "es": "Púa de batalla cáustica"}
+{"key": "sys/objetos#0889/desc", "es": "Maza de gran durabilidad\ncon poder de ácido\nEspecial: Crítico"}
+{"key": "sys/objetos#0890/nombre", "es": "Martillo de guerra"}
+{"key": "sys/objetos#0890/desc", "es": "Martillo de guerra de dos manos\nque aplasta a los enemigos"}
+{"key": "sys/objetos#0891/nombre", "es": "Martillo de guerra"}
+{"key": "sys/objetos#0891/desc", "es": "Martillo de guerra de dos manos\nde poca durabilidad"}
+{"key": "sys/objetos#0892/nombre", "es": "Martillo de guerra"}
+{"key": "sys/objetos#0892/desc", "es": "Martillo de guerra de dos manos\ncon poder mágico de rayo\nEspecial: Crítico"}
+{"key": "sys/objetos#0893/nombre", "es": "Martillo reforzado"}
+{"key": "sys/objetos#0893/desc", "es": "Martillo de guerra de dos manos\nespecializado en ataque"}
+{"key": "sys/objetos#0894/nombre", "es": "Martillo reforzado"}
+{"key": "sys/objetos#0894/desc", "es": "Martillo de guerra de dos manos\ncon menos fuerza y poder\npara aplastar"}
+{"key": "sys/objetos#0895/nombre", "es": "Hécate"}
+{"key": "sys/objetos#0895/desc", "es": "Bastón de madera con un\nleve poder mágico\nEspecial: Ciega"}
+{"key": "sys/objetos#0896/nombre", "es": "Hécate"}
+{"key": "sys/objetos#0896/desc", "es": "Bastón de material duro\ny muy resistente\nEspecial: Ciega"}
+{"key": "sys/objetos#0897/nombre", "es": "Hécate"}
+{"key": "sys/objetos#0897/desc", "es": "Bastón de madera envuelto\nen una fuerte oscuridad\nEspecial: Ciega\nResiste magia"}
+{"key": "sys/objetos#0898/nombre", "es": "Colmillo lunar perforante"}
+{"key": "sys/objetos#0898/desc", "es": "Arma de golpe de dos manos\ncuya punta se compara\ncon la luna\nObjeto raro"}
+{"key": "sys/objetos#0899/nombre", "es": "Colmillo de sombra perforante"}
+{"key": "sys/objetos#0899/desc", "es": "Arma de dos manos maldita con\nun resplandor rojo en la punta\nObjeto raro\nEspecial: Maldición"}
+{"key": "sys/objetos#0900/nombre", "es": "Chupasangre"}
+{"key": "sys/objetos#0900/desc", "es": "Arma de dos manos que quita\nvigor y fuerza mental al enemigo\nObjeto raro\nEspecial: Absorción de PV y PM"}
+{"key": "sys/objetos#0901/nombre", "es": "Garrote"}
+{"key": "sys/objetos#0901/desc", "es": "Garrote pequeño reforzado\ncon hierro\nEspecial: Crítico"}
+{"key": "sys/objetos#0902/nombre", "es": "Garrote"}
+{"key": "sys/objetos#0902/desc", "es": "Garrote pequeño reforzado\ncon acero\nEspecial: Crítico"}
+{"key": "sys/objetos#0903/nombre", "es": "Aturdidor"}
+{"key": "sys/objetos#0903/desc", "es": "Porra electromagnética\nde alto voltaje\nObjeto raro\nEspecial: Ralentiza"}
+{"key": "sys/objetos#0904/nombre", "es": "Aturdidor"}
+{"key": "sys/objetos#0904/desc", "es": "Porra electromagnética\nde alto voltaje\nObjeto raro\nEspecial: Ralentiza"}
+{"key": "sys/objetos#0905/nombre", "es": "Hacha corta"}
+{"key": "sys/objetos#0905/desc", "es": "Hacha de mano pequeña, fácil de\nmanejar, hecha en origen para\ntalar árboles"}
+{"key": "sys/objetos#0906/nombre", "es": "Hacha corta"}
+{"key": "sys/objetos#0906/desc", "es": "Hacha de mano afilada\ny bien cuidada"}
+{"key": "sys/objetos#0907/nombre", "es": "Hacha corta"}
+{"key": "sys/objetos#0907/desc", "es": "Hacha de mano de filo romo\nque destaca al aplastar"}
+{"key": "sys/objetos#0908/nombre", "es": "Hacha de metal"}
+{"key": "sys/objetos#0908/desc", "es": "Hacha de mano de acero,\nafilada y resistente"}
+{"key": "sys/objetos#0909/nombre", "es": "Hacha de metal"}
+{"key": "sys/objetos#0909/desc", "es": "Hacha de mano que prioriza el\npoder de aplastar por su peso\nEspecial: Resiste daño físico"}
+{"key": "sys/objetos#0910/nombre", "es": "Hacha"}
+{"key": "sys/objetos#0910/desc", "es": "Hacha hecha para el combate\nPesada, pero de gran poder\npara aplastar"}
+{"key": "sys/objetos#0911/nombre", "es": "Hacha"}
+{"key": "sys/objetos#0911/desc", "es": "Hacha hecha para el combate\nSu virtud es la resistencia"}
+{"key": "sys/objetos#0912/nombre", "es": "Hacha"}
+{"key": "sys/objetos#0912/desc", "es": "Hacha con poder de hielo y\ngran poder para aplastar\nEspecial: Ralentiza"}
+{"key": "sys/objetos#0913/nombre", "es": "Hacha"}
+{"key": "sys/objetos#0913/desc", "es": "Hacha de guerra ornamentada\nde gran poder, pero frágil"}
+{"key": "sys/objetos#0914/nombre", "es": "Hacha cortesana"}
+{"key": "sys/objetos#0914/desc", "es": "Hacha de guerra de hermosa\ndecoración, preferida por\nlos nobles\nEspecial: Reduce el peso"}
+{"key": "sys/objetos#0915/nombre", "es": "Hacha cortesana"}
+{"key": "sys/objetos#0915/desc", "es": "Hacha excelente hecha\nde metal de calidad"}
+{"key": "sys/objetos#0916/nombre", "es": "Gran hendedura"}
+{"key": "sys/objetos#0916/desc", "es": "Hacha de dos manos de combate\ncon poder mágico de ácido\nObjeto raro\nEspecial: Absorción de PV"}
+{"key": "sys/objetos#0917/nombre", "es": "Hacha pesada"}
+{"key": "sys/objetos#0917/desc", "es": "Hacha de dos manos algo\npesada, pero de gran poder\npara aplastar"}
+{"key": "sys/objetos#0918/nombre", "es": "Hacha pesada"}
+{"key": "sys/objetos#0918/desc", "es": "Hacha de dos manos de combate\nque prioriza el filo"}
+{"key": "sys/objetos#0919/nombre", "es": "Hacha pesada"}
+{"key": "sys/objetos#0919/desc", "es": "Hacha de dos manos de combate\nque prioriza el poder de aplastar"}
+{"key": "sys/objetos#0920/nombre", "es": "Hacha pesada"}
+{"key": "sys/objetos#0920/desc", "es": "Hacha de guerra de dos manos\noxidada en rojo que enferma\na su dueño\nEspecial: Envenenado"}
+{"key": "sys/objetos#0921/nombre", "es": "Hacha pesada tajante"}
+{"key": "sys/objetos#0921/desc", "es": "Hacha de guerra de dos manos\nde gran ataque, pero frágil"}
+{"key": "sys/objetos#0922/nombre", "es": "Hacha pesada tajante"}
+{"key": "sys/objetos#0922/desc", "es": "Hacha de guerra de dos manos\ncon poder mágico de veneno\nque enferma al enemigo\nEspecial: Envenena"}
+{"key": "sys/objetos#0923/nombre", "es": "Hacha pesada tajante"}
+{"key": "sys/objetos#0923/desc", "es": "Hacha de guerra de dos manos\ncon poder mágico de ácido\nEspecial: Crítico"}
+{"key": "sys/objetos#0924/nombre", "es": "Hacha pesada tajante"}
+{"key": "sys/objetos#0924/desc", "es": "Hacha de guerra de dos manos\ncon poder mágico de oscuridad\nEspecial: Ciega"}
+{"key": "sys/objetos#0925/nombre", "es": "Hacha pesada ígnea"}
+{"key": "sys/objetos#0925/desc", "es": "Hacha de guerra de dos manos\ncon poder mágico de fuego\nEspecial: Sella"}
+{"key": "sys/objetos#0926/nombre", "es": "Hacha pesada gélida"}
+{"key": "sys/objetos#0926/desc", "es": "Hacha de guerra de dos manos\ncon poder mágico de hielo\nEspecial: Ralentiza"}
+{"key": "sys/objetos#0927/nombre", "es": "Guja del dragón azul"}
+{"key": "sys/objetos#0927/desc", "es": "Guja de dragón de dos manos,\npesada pero de gran poder\nObjeto raro\nEspecial: Crítico"}
+{"key": "sys/objetos#0928/nombre", "es": "Alabarda"}
+{"key": "sys/objetos#0928/desc", "es": "Alabarda de dos manos con las\ncaracterísticas de la lanza\ny del hacha"}
+{"key": "sys/objetos#0929/nombre", "es": "Alabarda venenosa"}
+{"key": "sys/objetos#0929/desc", "es": "Alabarda de dos manos con las\ncaracterísticas de la lanza\ny del hacha\nEspecial: Envenena"}
+{"key": "sys/objetos#0930/nombre", "es": "Tabar"}
+{"key": "sys/objetos#0930/desc", "es": "Hacha de guerra con poder\nmágico, de forma de media luna\nEspecial: Absorción de PM"}
+{"key": "sys/objetos#0931/nombre", "es": "Tabar"}
+{"key": "sys/objetos#0931/desc", "es": "Hacha de guerra con poder\nmágico, de forma de media luna\nEspecial: Absorción de PM"}
+{"key": "sys/objetos#0932/nombre", "es": "Munda Bullova"}
+{"key": "sys/objetos#0932/desc", "es": "Hacha de guerra de dos manos\npotente, ligera para su tamaño\nObjeto raro"}
+{"key": "sys/objetos#0933/nombre", "es": "Pesadilla"}
+{"key": "sys/objetos#0933/desc", "es": "Hacha aberrante con un\nresplandor rojo en la cabeza\nObjeto raro\nEspecial: Ciega, Resiste magia"}
+{"key": "sys/objetos#0934/nombre", "es": "Deseo"}
+{"key": "sys/objetos#0934/desc", "es": "Hacha aberrante con un\nresplandor azul en la cabeza\nObjeto raro\nEspecial: Resiste magia, Crítico"}
+{"key": "sys/objetos#1005/nombre", "es": "Hacha de guerra"}
+{"key": "sys/objetos#1005/desc", "es": "Hacha de dos manos de combate\ncon hoja doble\nObjeto raro"}
+{"key": "sys/objetos#0935/nombre", "es": "Arco de madera"}
+{"key": "sys/objetos#0935/desc", "es": "Arco de madera común\nhecho para cazar"}
+{"key": "sys/objetos#0936/nombre", "es": "Arco de madera"}
+{"key": "sys/objetos#0936/desc", "es": "Arco de madera común\nfrágil"}
+{"key": "sys/objetos#0937/nombre", "es": "Arco de madera"}
+{"key": "sys/objetos#0937/desc", "es": "Arco hecho de madera dura\nque se rompe con dificultad"}
+{"key": "sys/objetos#0938/nombre", "es": "Arco de reverencia"}
+{"key": "sys/objetos#0938/desc", "es": "Arco de madera con un leve\npoder mágico\nObjeto raro\nEspecial: Crítico"}
+{"key": "sys/objetos#0939/nombre", "es": "Pit Tanu"}
+{"key": "sys/objetos#0939/desc", "es": "Arco antiguo imbuido\nde veneno\nObjeto raro\nEspecial: Envenena"}
+{"key": "sys/objetos#0940/nombre", "es": "Arco catapulta"}
+{"key": "sys/objetos#0940/desc", "es": "Ballesta de gran\npoder de penetración"}
+{"key": "sys/objetos#0941/nombre", "es": "Arco catapulta"}
+{"key": "sys/objetos#0941/desc", "es": "Ballesta de combate\nmuy resistente"}
+{"key": "sys/objetos#0942/nombre", "es": "Arco catapulta"}
+{"key": "sys/objetos#0942/desc", "es": "Ballesta frágil con las partes\nmetálicas muy oxidadas"}
+{"key": "sys/objetos#0943/nombre", "es": "Cetrería ígnea"}
+{"key": "sys/objetos#0943/desc", "es": "Ballesta que dispara flechas\ncon poder de fuego\nEspecial: Sella"}
+{"key": "sys/objetos#0944/nombre", "es": "Cetrería gélida"}
+{"key": "sys/objetos#0944/desc", "es": "Ballesta que dispara flechas\ncon poder de hielo\nEspecial: Ralentiza"}
+{"key": "sys/objetos#0945/nombre", "es": "Kamasa"}
+{"key": "sys/objetos#0945/desc", "es": "Arco mágico que oculta un\ngran poder mágico\nObjeto raro\nEspecial: Recup. de PV alta"}
+{"key": "sys/objetos#0946/nombre", "es": "Kamasa"}
+{"key": "sys/objetos#0946/desc", "es": "Arco mágico que oculta un\ngran poder mágico\nObjeto raro\nEspecial: Recup. de PM alta"}
+{"key": "sys/objetos#0947/nombre", "es": "Traspasa todo radiante"}
+{"key": "sys/objetos#0947/desc", "es": "Arco mágico que dispara flechas\ncon poder de luz\nEspecial: Crítico"}
+{"key": "sys/objetos#0948/nombre", "es": "Traspasa todo oscuro"}
+{"key": "sys/objetos#0948/desc", "es": "Arco mágico que dispara flechas\ncon poder de oscuridad\nObjeto raro\nEspecial: Ciega"}
+{"key": "sys/objetos#0949/nombre", "es": "Traspasa todo"}
+{"key": "sys/objetos#0949/desc", "es": "Arco mágico que dispara flechas\ncon poder de fuego\nEspecial: Sella"}
+{"key": "sys/objetos#0950/nombre", "es": "Government M1911"}
+{"key": "sys/objetos#0950/desc", "es": "Pistola fácil de usar,\nsin rasgos destacados\nCapacidad: 7 disparos"}
+{"key": "sys/objetos#0951/nombre", "es": "Government M1911"}
+{"key": "sys/objetos#0951/desc", "es": "Pistola fácil de usar,\nsin rasgos destacados\nCapacidad: 7 disparos"}
+{"key": "sys/objetos#0952/nombre", "es": "Government M1911"}
+{"key": "sys/objetos#0952/desc", "es": "Pistola fácil de usar,\nsin rasgos destacados\nCapacidad: 7 disparos"}
+{"key": "sys/objetos#0953/nombre", "es": "Government M1911"}
+{"key": "sys/objetos#0953/desc", "es": "Arma personalizada con\ndecoración lujosa\nCapacidad: 7 disparos\nObjeto raro"}
+{"key": "sys/objetos#0954/nombre", "es": "M3 Super 90"}
+{"key": "sys/objetos#0954/desc", "es": "Escopeta que dispara muchos\nproyectiles a la vez\nCapacidad: 7 disparos"}
+{"key": "sys/objetos#0955/nombre", "es": "M3 Super 90"}
+{"key": "sys/objetos#0955/desc", "es": "Escopeta que dispara muchos\nproyectiles a la vez\nCapacidad: 7 disparos\nObjeto raro"}
+{"key": "sys/objetos#0956/nombre", "es": "SSG69"}
+{"key": "sys/objetos#0956/desc", "es": "Rifle de francotirador\nequipado con mira\nCapacidad: 5 disparos\nObjeto raro"}
+{"key": "sys/objetos#0957/nombre", "es": "Lanzagranadas"}
+{"key": "sys/objetos#0957/desc", "es": "Explota al impactar y\ncausa daño enorme\nCapacidad: 2 disparos\nObjeto raro"}
+{"key": "sys/objetos#0958/nombre", "es": "Derringer"}
+{"key": "sys/objetos#0958/desc", "es": "Pistola pequeña de\ndefensa personal\nCapacidad: 2 disparos"}
+{"key": "sys/objetos#0959/nombre", "es": "Derringer"}
+{"key": "sys/objetos#0959/desc", "es": "Pistola pequeña de\ndefensa personal\nCapacidad: 2 disparos"}
+{"key": "sys/objetos#0960/nombre", "es": "Nambu Tipo 14"}
+{"key": "sys/objetos#0960/desc", "es": "Pistola automática antigua\nCapacidad: 8 disparos"}
+{"key": "sys/objetos#0961/nombre", "es": "Nambu Tipo 14"}
+{"key": "sys/objetos#0961/desc", "es": "Pistola automática antigua\nCapacidad: 8 disparos"}
+{"key": "sys/objetos#0962/nombre", "es": "Nambu Tipo 14"}
+{"key": "sys/objetos#0962/desc", "es": "Pistola automática antigua\nCapacidad: 8 disparos"}
+{"key": "sys/objetos#0963/nombre", "es": "Super Blackhawk"}
+{"key": "sys/objetos#0963/desc", "es": "Revólver que dispara balas\nmagnum de gran poder\nCapacidad: 6 disparos"}
+{"key": "sys/objetos#0964/nombre", "es": "Super Blackhawk"}
+{"key": "sys/objetos#0964/desc", "es": "Revólver que dispara balas\nmagnum de gran poder\nCapacidad: 6 disparos"}
+{"key": "sys/objetos#0965/nombre", "es": "Super Blackhawk"}
+{"key": "sys/objetos#0965/desc", "es": "Revólver que dispara balas\nmagnum de gran poder\nCapacidad: 6 disparos"}
+{"key": "sys/objetos#0966/nombre", "es": "Super Blackhawk"}
+{"key": "sys/objetos#0966/desc", "es": "Revólver que dispara balas\nmagnum de gran poder\nCapacidad: 6 disparos"}
+{"key": "sys/objetos#0967/nombre", "es": "S&W No.2"}
+{"key": "sys/objetos#0967/desc", "es": "Revólver antiguo que puede\nconsiderarse el prototipo\nde las pistolas\nCapacidad: 6 disparos"}
+{"key": "sys/objetos#0968/nombre", "es": "S&W No.2"}
+{"key": "sys/objetos#0968/desc", "es": "Revólver antiguo que puede\nconsiderarse el prototipo\nde las pistolas\nCapacidad: 6 disparos"}
+{"key": "sys/objetos#0969/nombre", "es": "Pistola de chispa"}
+{"key": "sys/objetos#0969/desc", "es": "Arma de fuego con pedernal\nde los albores de las armas\nCapacidad: 1 disparo"}
+{"key": "sys/objetos#0970/nombre", "es": "Pistola de chispa"}
+{"key": "sys/objetos#0970/desc", "es": "Arma de fuego con pedernal\nde los albores de las armas\nCapacidad: 1 disparo"}
+{"key": "sys/objetos#0971/nombre", "es": "Ingram M11"}
+{"key": "sys/objetos#0971/desc", "es": "Subametralladora que dispara\nbalas a gran velocidad\nCapacidad: 32 disparos"}
+{"key": "sys/objetos#0972/nombre", "es": "Ingram M11"}
+{"key": "sys/objetos#0972/desc", "es": "Subametralladora que dispara\nbalas a gran velocidad\nCapacidad: 32 disparos"}
+{"key": "sys/objetos#0973/nombre", "es": "RPK"}
+{"key": "sys/objetos#0973/desc", "es": "Ametralladora potente que\ndispara balas de rifle\nCapacidad: 40 disparos\nObjeto raro"}
+{"key": "sys/objetos#0974/nombre", "es": "AR-15"}
+{"key": "sys/objetos#0974/desc", "es": "Rifle de gran versatilidad\nCapacidad: 20 disparos"}
+{"key": "sys/objetos#0975/nombre", "es": "AR-15"}
+{"key": "sys/objetos#0975/desc", "es": "Rifle de gran versatilidad\nCapacidad: 20 disparos"}
+{"key": "sys/objetos#0976/nombre", "es": "M14"}
+{"key": "sys/objetos#0976/desc", "es": "Fusil de asalto usado\npor el ejército\nCapacidad: 20 disparos"}
+{"key": "sys/objetos#0977/nombre", "es": "M14"}
+{"key": "sys/objetos#0977/desc", "es": "Fusil de asalto usado\npor el ejército\nCapacidad: 20 disparos"}
+{"key": "sys/objetos#0978/nombre", "es": "Panzerfaust"}
+{"key": "sys/objetos#0978/desc", "es": "Cañón antitanque desechable\nde poder asombroso\nCapacidad: 1 disparo\nObjeto raro"}
+{"key": "sys/objetos#0100/nombre", "es": "Diadema"}
+{"key": "sys/objetos#0100/desc", "es": "Corona con una piedra roja\nengastada que guarda\npoder mágico"}
+{"key": "sys/objetos#0101/nombre", "es": "Diadema"}
+{"key": "sys/objetos#0101/desc", "es": "Corona con una piedra verde\nengastada que guarda\npoder mágico"}
+{"key": "sys/objetos#0102/nombre", "es": "Diadema robusta"}
+{"key": "sys/objetos#0102/desc", "es": "Corona de cobre con un\nmonstruo grabado\nEspecial: Resiste lentitud\ny sellado"}
+{"key": "sys/objetos#0103/nombre", "es": "Diadema robusta"}
+{"key": "sys/objetos#0103/desc", "es": "Corona de piedra con un\nmonstruo grabado\nEspecial: Resiste veneno\ny maldición"}
+{"key": "sys/objetos#0104/nombre", "es": "Diadema robusta"}
+{"key": "sys/objetos#0104/desc", "es": "Corona de madera con un\nmonstruo grabado\nEspecial: Resiste ceguera\ny parálisis"}
+{"key": "sys/objetos#0105/nombre", "es": "Espíritu sombrío"}
+{"key": "sys/objetos#0105/desc", "es": "Corona oscura que suprime todo\nestado alterado, Objeto raro\nEspecial: Resiste estados\nalterados"}
+{"key": "sys/objetos#0106/nombre", "es": "Yelmo redondo"}
+{"key": "sys/objetos#0106/desc", "es": "Yelmo de combate con lo\nmínimo indispensable"}
+{"key": "sys/objetos#0107/nombre", "es": "Yelmo redondo"}
+{"key": "sys/objetos#0107/desc", "es": "Yelmo de combate con lo\nmínimo indispensable"}
+{"key": "sys/objetos#0108/nombre", "es": "Yelmo redondo"}
+{"key": "sys/objetos#0108/desc", "es": "Yelmo de combate de la\ncategoría más baja,\nde poca capacidad y frágil"}
+{"key": "sys/objetos#0109/nombre", "es": "Yelmo redondo"}
+{"key": "sys/objetos#0109/desc", "es": "Yelmo de combate con lo\nmínimo indispensable"}
+{"key": "sys/objetos#0110/nombre", "es": "Yelmo redondo sensible"}
+{"key": "sys/objetos#0110/desc", "es": "Yelmo con carrilleras que\nguarda un leve poder mágico"}
+{"key": "sys/objetos#0111/nombre", "es": "Yelmo redondo sensible"}
+{"key": "sys/objetos#0111/desc", "es": "Yelmo antiguo con carrilleras\nque guarda un leve poder mágico"}
+{"key": "sys/objetos#0112/nombre", "es": "Yelmo de barril"}
+{"key": "sys/objetos#0112/desc", "es": "Yelmo de combate con\nbuen equilibrio"}
+{"key": "sys/objetos#0113/nombre", "es": "Yelmo de barril"}
+{"key": "sys/objetos#0113/desc", "es": "Yelmo de combate con excelente\ndefensa contra cortes"}
+{"key": "sys/objetos#0114/nombre", "es": "Yelmo de barril"}
+{"key": "sys/objetos#0114/desc", "es": "Yelmo de combate con excelente\ndefensa contra golpes"}
+{"key": "sys/objetos#0115/nombre", "es": "Yelmo de barril"}
+{"key": "sys/objetos#0115/desc", "es": "Yelmo de combate con excelente\ndefensa contra estocadas"}
+{"key": "sys/objetos#0116/nombre", "es": "Yelmo de barril"}
+{"key": "sys/objetos#0116/desc", "es": "Yelmo de combate oxidado,\ninferior a su capacidad original"}
+{"key": "sys/objetos#0117/nombre", "es": "Yelmo de barril radiante"}
+{"key": "sys/objetos#0117/desc", "es": "Yelmo mágico que guarda\nel poder de la luz\nEspecial: Inmune a parálisis"}
+{"key": "sys/objetos#0118/nombre", "es": "Yelmo de barril oscuro"}
+{"key": "sys/objetos#0118/desc", "es": "Yelmo mágico que guarda\nel poder de la oscuridad\nEspecial: Inmune a ceguera"}
+{"key": "sys/objetos#0119/nombre", "es": "Yelmo de barril ígneo"}
+{"key": "sys/objetos#0119/desc", "es": "Yelmo mágico que guarda\nel poder del fuego\nEspecial: Inmune a sellado"}
+{"key": "sys/objetos#0120/nombre", "es": "Yelmo cruzado"}
+{"key": "sys/objetos#0120/desc", "es": "Yelmo de caballero con\ndecoraciones detalladas"}
+{"key": "sys/objetos#0121/nombre", "es": "Yelmo cruzado"}
+{"key": "sys/objetos#0121/desc", "es": "Yelmo de caballero que\ndestaca por su equilibrio"}
+{"key": "sys/objetos#0122/nombre", "es": "Yelmo cruzado rápido"}
+{"key": "sys/objetos#0122/desc", "es": "Yelmo de caballero hecho\nde metal ligero"}
+{"key": "sys/objetos#0123/nombre", "es": "Yelmo cruzado sólido"}
+{"key": "sys/objetos#0123/desc", "es": "Yelmo de caballero de alto rango\nresistente a ataques físicos\nEspecial: Recuperación de PV\nbaja"}
+{"key": "sys/objetos#0124/nombre", "es": "Yelmo cruzado sólido"}
+{"key": "sys/objetos#0124/desc", "es": "Yelmo de caballero de alto rango\nresistente a ataques físicos"}
+{"key": "sys/objetos#0125/nombre", "es": "Yelmo cruzado sólido"}
+{"key": "sys/objetos#0125/desc", "es": "Yelmo de caballero de alto\nrango, algo frágil"}
+{"key": "sys/objetos#0126/nombre", "es": "Tizón bendito"}
+{"key": "sys/objetos#0126/desc", "es": "Yelmo mágico que mejora mucho\nel vigor y la fuerza mental\nObjeto raro"}
+{"key": "sys/objetos#0127/nombre", "es": "Señor de la gloria"}
+{"key": "sys/objetos#0127/desc", "es": "Yelmo de gran capacidad base\npara caballeros de más alto\nrango\nObjeto raro"}
+{"key": "sys/objetos#0128/nombre", "es": "Señor de la gloria"}
+{"key": "sys/objetos#0128/desc", "es": "Yelmo de caballero manchado\nde sangre que trae desgracia\nal portador, Objeto raro\nEspecial: Maldición"}
+{"key": "sys/objetos#0129/nombre", "es": "Shishak"}
+{"key": "sys/objetos#0129/desc", "es": "Yelmo extranjero ligero\ny de gran capacidad"}
+{"key": "sys/objetos#0130/nombre", "es": "Shishak"}
+{"key": "sys/objetos#0130/desc", "es": "Yelmo extranjero antiguo, de\ngran capacidad pero frágil"}
+{"key": "sys/objetos#0131/nombre", "es": "Shishak"}
+{"key": "sys/objetos#0131/desc", "es": "Yelmo mágico que usó el general\nde un país extranjero\nObjeto raro\nEspecial: Reduce el peso"}
+{"key": "sys/objetos#0132/nombre", "es": "Yelmo estelar de hierro"}
+{"key": "sys/objetos#0132/desc", "es": "Yelmo de hierro usado por un\nsamurái. Sus almas se buscan\nentre sí\nObjeto raro"}
+{"key": "sys/objetos#0133/nombre", "es": "Yelmo estelar de plata"}
+{"key": "sys/objetos#0133/desc", "es": "Yelmo de plata usado por un\nsamurái. Sus almas se buscan\nentre sí\nObjeto raro"}
+{"key": "sys/objetos#0134/nombre", "es": "Mammon"}
+{"key": "sys/objetos#0134/desc", "es": "Corona de araña con poder\ncurativo\nEspecial: Inmune a veneno\nRecuperación de PV media"}
+{"key": "sys/objetos#0135/nombre", "es": "Mammon"}
+{"key": "sys/objetos#0135/desc", "es": "Corona de araña con poder\ncurativo\nEspecial: Inmune a veneno\nRecuperación de PM baja"}
+{"key": "sys/objetos#0136/nombre", "es": "Mammon"}
+{"key": "sys/objetos#0136/desc", "es": "Corona de araña con poder\nregenerador\nEspecial: Inmune a veneno\nRecuperación de PV/PM alta"}
+{"key": "sys/objetos#0137/nombre", "es": "Mar profundo"}
+{"key": "sys/objetos#0137/desc", "es": "Corona enjoyada de aire helado\nque guarda gran poder mágico\nEspecial: Resiste lentitud"}
+{"key": "sys/objetos#0138/nombre", "es": "Mar profundo"}
+{"key": "sys/objetos#0138/desc", "es": "Corona enjoyada de aire helado\nque guarda gran poder mágico\nEspecial: Resiste lentitud\nRecuperación de PM baja"}
+{"key": "sys/objetos#0139/nombre", "es": "Rostro de oro"}
+{"key": "sys/objetos#0139/desc", "es": "Máscara de oro de poder mágico\nsin igual, Objeto raro\nEspecial: Resiste estados\nalterados, Recup. de PM alta"}
+{"key": "sys/objetos#0140/nombre", "es": "Sombrero"}
+{"key": "sys/objetos#0140/desc", "es": "Sombrero de tela con ala,\nmuy común"}
+{"key": "sys/objetos#0141/nombre", "es": "Sombrero"}
+{"key": "sys/objetos#0141/desc", "es": "Sombrero de cuero con ala,\nmuy común"}
+{"key": "sys/objetos#0142/nombre", "es": "Casco Fritz"}
+{"key": "sys/objetos#0142/desc", "es": "Casco ligero hecho\nde un material especial"}
+{"key": "sys/objetos#0143/nombre", "es": "Casco Fritz"}
+{"key": "sys/objetos#0143/desc", "es": "Casco resistente hecho\nde un material especial"}
+{"key": "sys/objetos#0144/nombre", "es": "Lentes protectores"}
+{"key": "sys/objetos#0144/desc", "es": "Lentes protectores que cuidan\nlos ojos de la luz y la sombra\nObjeto raro\nEspecial: Inmune a ceguera"}
+{"key": "sys/objetos#0145/nombre", "es": "Máscara antigás"}
+{"key": "sys/objetos#0145/desc", "es": "Máscara protectora contra el\nveneno, la parálisis y más\nEspecial: Inmune a veneno,\nparálisis y ceguera"}
+{"key": "sys/objetos#0200/nombre", "es": "Acolchado de cuero"}
+{"key": "sys/objetos#0200/desc", "es": "Armadura sencilla hecha\nde cuero curtido"}
+{"key": "sys/objetos#0201/nombre", "es": "Acolchado de cuero"}
+{"key": "sys/objetos#0201/desc", "es": "Armadura resistente hecha\nde capas de cuero"}
+{"key": "sys/objetos#0202/nombre", "es": "Acolchado de cuero"}
+{"key": "sys/objetos#0202/desc", "es": "Armadura de mucho peso hecha\nde cuero grueso"}
+{"key": "sys/objetos#0203/nombre", "es": "Acolchado de cuero"}
+{"key": "sys/objetos#0203/desc", "es": "Armadura tosca hecha\nde cuero barato"}
+{"key": "sys/objetos#0204/nombre", "es": "Acolchado de cuero"}
+{"key": "sys/objetos#0204/desc", "es": "Armadura de cuero con poder\nmágico, resiste el veneno\nEspecial: Inmune a veneno"}
+{"key": "sys/objetos#0205/nombre", "es": "Acolchado de cuero sensible"}
+{"key": "sys/objetos#0205/desc", "es": "Armadura de cuero que\naumenta la fuerza mental"}
+{"key": "sys/objetos#0206/nombre", "es": "Acolchado de cuero sensible"}
+{"key": "sys/objetos#0206/desc", "es": "Armadura de cuero que\naumenta la fuerza mental"}
+{"key": "sys/objetos#0207/nombre", "es": "Acolchado de cuero sensible"}
+{"key": "sys/objetos#0207/desc", "es": "Armadura de cuero que\naumenta la fuerza mental"}
+{"key": "sys/objetos#0208/nombre", "es": "Lorica hamata"}
+{"key": "sys/objetos#0208/desc", "es": "Cota de malla de gran\ndefensa física"}
+{"key": "sys/objetos#0209/nombre", "es": "Lorica hamata"}
+{"key": "sys/objetos#0209/desc", "es": "Cota de malla de eslabones\nlisos, fuerte contra el corte"}
+{"key": "sys/objetos#0210/nombre", "es": "Lorica hamata"}
+{"key": "sys/objetos#0210/desc", "es": "Cota de malla de eslabones\ngruesos, fuerte contra el golpe"}
+{"key": "sys/objetos#0211/nombre", "es": "Lorica hamata"}
+{"key": "sys/objetos#0211/desc", "es": "Cota de malla de eslabones\ndensos, fuerte contra la estocada"}
+{"key": "sys/objetos#0212/nombre", "es": "Lorica hamata"}
+{"key": "sys/objetos#0212/desc", "es": "Cota de malla de plata\nque resiste la magia"}
+{"key": "sys/objetos#0213/nombre", "es": "Jacerina"}
+{"key": "sys/objetos#0213/desc", "es": "Armadura de escamas resistente\nhecha de piezas de hierro"}
+{"key": "sys/objetos#0214/nombre", "es": "Jacerina"}
+{"key": "sys/objetos#0214/desc", "es": "Armadura de escamas hecha de\npiezas de acero, de mayor\nresistencia"}
+{"key": "sys/objetos#0215/nombre", "es": "Jacerina radiante"}
+{"key": "sys/objetos#0215/desc", "es": "Armadura de escamas con poder\nmágico de luz\nEspecial: Inmune a parálisis"}
+{"key": "sys/objetos#0216/nombre", "es": "Jacerina oscura"}
+{"key": "sys/objetos#0216/desc", "es": "Armadura de escamas con poder\nde la oscuridad\nEspecial: Inmune a ceguera"}
+{"key": "sys/objetos#0217/nombre", "es": "Jacerina robusta"}
+{"key": "sys/objetos#0217/desc", "es": "Armadura de piezas de hierro\ncombinadas con una placa\nmetálica"}
+{"key": "sys/objetos#0218/nombre", "es": "Jacerina venenosa"}
+{"key": "sys/objetos#0218/desc", "es": "Armadura mágica de piezas de\nhierro combinadas con una placa\nmetálica\nEspecial: Inmune a veneno"}
+{"key": "sys/objetos#0219/nombre", "es": "Jacerina cáustica"}
+{"key": "sys/objetos#0219/desc", "es": "Armadura mágica de piezas de\nhierro combinadas con una placa\nmetálica\nEspecial: Inmune a maldición"}
+{"key": "sys/objetos#0220/nombre", "es": "Armadura reforzada"}
+{"key": "sys/objetos#0220/desc", "es": "Armadura de caballero hecha\nde metal de calidad"}
+{"key": "sys/objetos#0221/nombre", "es": "Armadura reforzada firme"}
+{"key": "sys/objetos#0221/desc", "es": "Armadura de caballero con\nun leve poder mágico"}
+{"key": "sys/objetos#0222/nombre", "es": "Armadura reforzada ígnea"}
+{"key": "sys/objetos#0222/desc", "es": "Armadura de fuego con poder\nmágico que resiste el sellado\nEspecial: Inmune a sellado"}
+{"key": "sys/objetos#0223/nombre", "es": "Armadura reforzada gélida"}
+{"key": "sys/objetos#0223/desc", "es": "Armadura de hielo con poder\nmágico que resiste la lentitud\nEspecial: Inmune a lentitud"}
+{"key": "sys/objetos#0224/nombre", "es": "Armadura reforzada cáustica"}
+{"key": "sys/objetos#0224/desc", "es": "Armadura que resiste estados\nalterados, sobre todo maldición\nEspecial: Resiste estados\nalterados"}
+{"key": "sys/objetos#0225/nombre", "es": "Armadura reforzada radiante"}
+{"key": "sys/objetos#0225/desc", "es": "Armadura que resiste estados\nalterados, sobre todo parálisis\nEspecial: Resiste estados\nalterados"}
+{"key": "sys/objetos#0226/nombre", "es": "Armadura reforzada oscura"}
+{"key": "sys/objetos#0226/desc", "es": "Armadura que resiste estados\nalterados, sobre todo ceguera\nEspecial: Resiste estados\nalterados"}
+{"key": "sys/objetos#0227/nombre", "es": "Armadura reforzada venenosa"}
+{"key": "sys/objetos#0227/desc", "es": "Armadura que resiste estados\nalterados, sobre todo veneno\nEspecial: Resiste estados\nalterados"}
+{"key": "sys/objetos#0228/nombre", "es": "Hechizo invisible"}
+{"key": "sys/objetos#0228/desc", "es": "Armadura curativa con gran\npoder mágico, Objeto raro\nEspecial: Recuperación de PM\nbaja"}
+{"key": "sys/objetos#0229/nombre", "es": "Hechizo invisible"}
+{"key": "sys/objetos#0229/desc", "es": "Armadura curativa con gran\npoder mágico, Objeto raro\nEspecial: Recuperación de PM\nmedia"}
+{"key": "sys/objetos#0230/nombre", "es": "Alarido estridente"}
+{"key": "sys/objetos#0230/desc", "es": "Armadura aberrante que sella a\nun monstruo, de gran capacidad"}
+{"key": "sys/objetos#0231/nombre", "es": "Alarido estridente aria"}
+{"key": "sys/objetos#0231/desc", "es": "Armadura aberrante que sella a\nun monstruo y trae desgracia\nEspecial: Resiste estados\nalterados, Maldición"}
+{"key": "sys/objetos#0232/nombre", "es": "Pesadilla clara"}
+{"key": "sys/objetos#0232/desc", "es": "Armadura que combina ligereza\ny defensa, Objeto raro\nEspecial: Inmune a estados\nalterados"}
+{"key": "sys/objetos#0233/nombre", "es": "Armadura de ratán"}
+{"key": "sys/objetos#0233/desc", "es": "Armadura tejida con plantas\nflexibles\nEspecial: Resiste lentitud"}
+{"key": "sys/objetos#0234/nombre", "es": "Armadura de ratán"}
+{"key": "sys/objetos#0234/desc", "es": "Armadura vieja tejida con\nplantas flexibles\nEspecial: Resiste lentitud"}
+{"key": "sys/objetos#0235/nombre", "es": "Armadura de ratán"}
+{"key": "sys/objetos#0235/desc", "es": "Armadura tejida con plantas\nresistentes\nEspecial: Resiste lentitud"}
+{"key": "sys/objetos#0236/nombre", "es": "Armadura de algodón"}
+{"key": "sys/objetos#0236/desc", "es": "Armadura de algodón que resiste\nel hielo\nEspecial: Resiste lentitud"}
+{"key": "sys/objetos#0237/nombre", "es": "Armadura de algodón"}
+{"key": "sys/objetos#0237/desc", "es": "Armadura de algodón que resiste\nel hielo, algo frágil\nEspecial: Resiste lentitud"}
+{"key": "sys/objetos#0238/nombre", "es": "Armadura de algodón"}
+{"key": "sys/objetos#0238/desc", "es": "Armadura de algodón con poder\nmágico\nEspecial: Resiste lentitud\nInmune a ceguera"}
+{"key": "sys/objetos#0239/nombre", "es": "Do-maru negro"}
+{"key": "sys/objetos#0239/desc", "es": "Armadura usada por un samurái\nSus almas se buscan entre sí\nObjeto raro"}
+{"key": "sys/objetos#0240/nombre", "es": "Cota de bandas"}
+{"key": "sys/objetos#0240/desc", "es": "Armadura de bandas de hierro\nunidas, muy resistente a la magia"}
+{"key": "sys/objetos#0241/nombre", "es": "Cota de bandas sólida"}
+{"key": "sys/objetos#0241/desc", "es": "Armadura de bandas de hierro\nunidas, resiste el fuego y el hielo"}
+{"key": "sys/objetos#0242/nombre", "es": "Cota de bandas firme"}
+{"key": "sys/objetos#0242/desc", "es": "Armadura de bandas de hierro\nunidas, resiste el veneno y el\nácido"}
+{"key": "sys/objetos#0243/nombre", "es": "Cota de bandas"}
+{"key": "sys/objetos#0243/desc", "es": "Armadura de bandas de hierro\nunidas, resiste la luz y la\noscuridad"}
+{"key": "sys/objetos#0244/nombre", "es": "Peto bendito"}
+{"key": "sys/objetos#0244/desc", "es": "Ligero y de buena defensa,\npero algo frágil"}
+{"key": "sys/objetos#0245/nombre", "es": "Peto bendito"}
+{"key": "sys/objetos#0245/desc", "es": "Peto dorado muy ligero\nObjeto raro"}
+{"key": "sys/objetos#0246/nombre", "es": "Peto bendito rápido"}
+{"key": "sys/objetos#0246/desc", "es": "Peto ligero con\nbuena defensa"}
+{"key": "sys/objetos#0247/nombre", "es": "Brigandina"}
+{"key": "sys/objetos#0247/desc", "es": "Armadura de defensa excelente\npero extremadamente pesada\nObjeto raro"}
+{"key": "sys/objetos#0248/nombre", "es": "Brigandina"}
+{"key": "sys/objetos#0248/desc", "es": "Armadura de defensa excelente\npero muy pesada\nObjeto raro"}
+{"key": "sys/objetos#0249/nombre", "es": "Armadura de desfile"}
+{"key": "sys/objetos#0249/desc", "es": "Gran capacidad, pero frágil\nen extremo, Objeto raro\nEspecial: Resiste estados\nalterados, daño físico y magia"}
+{"key": "sys/objetos#0250/nombre", "es": "Cota de guerra"}
+{"key": "sys/objetos#0250/desc", "es": "Armadura de caballero de alto\nrango con gran defensa"}
+{"key": "sys/objetos#0251/nombre", "es": "Cota de guerra sólida"}
+{"key": "sys/objetos#0251/desc", "es": "Armadura de caballero de alto\nrango que resiste el corte"}
+{"key": "sys/objetos#0252/nombre", "es": "Cota de guerra robusta"}
+{"key": "sys/objetos#0252/desc", "es": "Armadura de caballero de alto\nrango que resiste el golpe"}
+{"key": "sys/objetos#0253/nombre", "es": "Cota de guerra rápida"}
+{"key": "sys/objetos#0253/desc", "es": "Armadura de caballero de alto\nrango que resiste la estocada"}
+{"key": "sys/objetos#0254/nombre", "es": "Cota de guerra de vigor"}
+{"key": "sys/objetos#0254/desc", "es": "Armadura de caballero oxidada\nque perdió su fuerza original\nEspecial: Maldición"}
+{"key": "sys/objetos#0255/nombre", "es": "Aullido de polvo estelar"}
+{"key": "sys/objetos#0255/desc", "es": "Armadura curativa con un\nleve brillo\nEspecial: Inmune a parálisis\nRecuperación de PV media"}
+{"key": "sys/objetos#0256/nombre", "es": "Aullido de polvo estelar"}
+{"key": "sys/objetos#0256/desc", "es": "Armadura curativa con un\nbrillo intenso\nEspecial: Inmune a parálisis\nRecuperación de PV alta"}
+{"key": "sys/objetos#0257/nombre", "es": "Aullido de polvo estelar"}
+{"key": "sys/objetos#0257/desc", "es": "Armadura curativa luminosa, algo\nfrágil\nEspecial: Inmune a parálisis\nRecuperación de PV media"}
+{"key": "sys/objetos#0258/nombre", "es": "Aullido de polvo estelar"}
+{"key": "sys/objetos#0258/desc", "es": "Armadura curativa con luz de\npoder mágico, Objeto raro\nEspecial: Inmune a parálisis\nRecuperación de PV media"}
+{"key": "sys/objetos#0259/nombre", "es": "Saga brillante"}
+{"key": "sys/objetos#0259/desc", "es": "Armadura con gema secreta de\ngran poder mágico, Objeto raro\nEspecial: Resiste parálisis\nRecuperación de PV/PM alta"}
+{"key": "sys/objetos#0260/nombre", "es": "Chaqueta de campaña"}
+{"key": "sys/objetos#0260/desc", "es": "Chaqueta militar ligera\ny cómoda\nEspecial: Reduce el peso"}
+{"key": "sys/objetos#0261/nombre", "es": "Chaqueta de vuelo"}
+{"key": "sys/objetos#0261/desc", "es": "Chaqueta militar que resiste\nel fuego\nEspecial: Resiste sellado"}
+{"key": "sys/objetos#0262/nombre", "es": "Chaqueta de cubierta"}
+{"key": "sys/objetos#0262/desc", "es": "Chaqueta militar que resiste\nel hielo\nEspecial: Resiste lentitud"}
+{"key": "sys/objetos#0263/nombre", "es": "Armadura corporal"}
+{"key": "sys/objetos#0263/desc", "es": "Armadura militar hecha\nde material especial"}
+{"key": "sys/objetos#0264/nombre", "es": "Armadura corporal"}
+{"key": "sys/objetos#0264/desc", "es": "Armadura reforzada hecha\nde material especial"}
+{"key": "sys/objetos#0265/nombre", "es": "Chaleco salvavidas"}
+{"key": "sys/objetos#0265/desc", "es": "Chaleco que aligera el cuerpo\nal moverse bajo el agua\nObjeto raro\nEspecial: Aptitud acuática"}
+{"key": "sys/objetos#0300/nombre", "es": "Guantes de cuero"}
+{"key": "sys/objetos#0300/desc", "es": "Guantes de cuero ligeros,\nde poca defensa"}
+{"key": "sys/objetos#0301/nombre", "es": "Guantes de cuero"}
+{"key": "sys/objetos#0301/desc", "es": "Guantes de cuero con la defensa\ncontra cortes reforzada"}
+{"key": "sys/objetos#0302/nombre", "es": "Guantes de cuero"}
+{"key": "sys/objetos#0302/desc", "es": "Guantes de cuero con la defensa\ncontra golpes reforzada"}
+{"key": "sys/objetos#0303/nombre", "es": "Guantes de cuero"}
+{"key": "sys/objetos#0303/desc", "es": "Guantes de cuero con la defensa\ncontra estocadas reforzada"}
+{"key": "sys/objetos#0304/nombre", "es": "Guantes de astillas"}
+{"key": "sys/objetos#0304/desc", "es": "Guantes de cuero con el dorso\nreforzado con trozos de madera"}
+{"key": "sys/objetos#0305/nombre", "es": "Guantes de astillas"}
+{"key": "sys/objetos#0305/desc", "es": "Guantes de cuero reforzados con\nmadera, más defensa contra\ncortes"}
+{"key": "sys/objetos#0306/nombre", "es": "Guantes de astillas"}
+{"key": "sys/objetos#0306/desc", "es": "Guantes de cuero reforzados con\nmadera, más defensa contra\ngolpes"}
+{"key": "sys/objetos#0307/nombre", "es": "Guantes de astillas"}
+{"key": "sys/objetos#0307/desc", "es": "Guantes de cuero reforzados con\nmadera, más defensa contra\nestocadas"}
+{"key": "sys/objetos#0308/nombre", "es": "Guantes de astillas"}
+{"key": "sys/objetos#0308/desc", "es": "Guantes de material resistente\nque aumenta la defensa"}
+{"key": "sys/objetos#0309/nombre", "es": "Guantes laminares"}
+{"key": "sys/objetos#0309/desc", "es": "Guantes con piezas de metal\nde gran defensa mágica"}
+{"key": "sys/objetos#0310/nombre", "es": "Guantes laminares"}
+{"key": "sys/objetos#0310/desc", "es": "Guantes de fuego con poder\nmágico que resisten el sellado\nEspecial: Inmune a sellado"}
+{"key": "sys/objetos#0311/nombre", "es": "Guantes laminares"}
+{"key": "sys/objetos#0311/desc", "es": "Guantes de hielo con poder\nmágico que resisten la lentitud\nEspecial: Inmune a lentitud"}
+{"key": "sys/objetos#0312/nombre", "es": "Muñequeras"}
+{"key": "sys/objetos#0312/desc", "es": "Guantelete de metal\nresistente pero algo pesado"}
+{"key": "sys/objetos#0313/nombre", "es": "Muñequeras"}
+{"key": "sys/objetos#0313/desc", "es": "Guantelete de metal hecho\nde materiales excelentes\nObjeto raro"}
+{"key": "sys/objetos#0314/nombre", "es": "Muñequeras"}
+{"key": "sys/objetos#0314/desc", "es": "Guantelete de metal\nde gran durabilidad"}
+{"key": "sys/objetos#0315/nombre", "es": "Muñequeras"}
+{"key": "sys/objetos#0315/desc", "es": "Gran capacidad, pero trae\ndesgracia a quien lo lleva\nEspecial: Resiste veneno\nMaldición"}
+{"key": "sys/objetos#0316/nombre", "es": "Muñequeras ígneas"}
+{"key": "sys/objetos#0316/desc", "es": "Guantelete de metal con poder\nmágico de fuego\nEspecial: Resiste sellado"}
+{"key": "sys/objetos#0317/nombre", "es": "Muñequeras cáusticas"}
+{"key": "sys/objetos#0317/desc", "es": "Guantelete de metal con poder\nmágico de ácido\nEspecial: Resiste maldición"}
+{"key": "sys/objetos#0318/nombre", "es": "Guanteletes de metal"}
+{"key": "sys/objetos#0318/desc", "es": "Guantelete de caballero\nbien hecho"}
+{"key": "sys/objetos#0319/nombre", "es": "Guanteletes de metal"}
+{"key": "sys/objetos#0319/desc", "es": "Guantelete de caballero,\nalgo frágil"}
+{"key": "sys/objetos#0320/nombre", "es": "Guanteletes de metal"}
+{"key": "sys/objetos#0320/desc", "es": "Guantelete de caballero de\ngran capacidad\nObjeto raro"}
+{"key": "sys/objetos#0321/nombre", "es": "Guanteletes de metal gélidos"}
+{"key": "sys/objetos#0321/desc", "es": "Guantelete de caballero con\npoder mágico de hielo\nEspecial: Resiste lentitud"}
+{"key": "sys/objetos#0322/nombre", "es": "Guanteletes de metal venenosos"}
+{"key": "sys/objetos#0322/desc", "es": "Guantelete de caballero con\npoder mágico de veneno\nEspecial: Resiste veneno"}
+{"key": "sys/objetos#0323/nombre", "es": "Guanteletes de metal sólidos"}
+{"key": "sys/objetos#0323/desc", "es": "Guantelete de caballero con\npoder mágico de oscuridad\nEspecial: Resiste ceguera"}
+{"key": "sys/objetos#0324/nombre", "es": "Guanteletes de metal firmes"}
+{"key": "sys/objetos#0324/desc", "es": "Brazal mágico con una gema\nsecreta roja engastada\nEspecial: Inmune a sellado"}
+{"key": "sys/objetos#0325/nombre", "es": "Guanteletes de metal rápidos"}
+{"key": "sys/objetos#0325/desc", "es": "Brazal mágico con una gema\nsecreta azul engastada\nEspecial: Inmune a lentitud"}
+{"key": "sys/objetos#0326/nombre", "es": "Guanteletes de metal robustos"}
+{"key": "sys/objetos#0326/desc", "es": "Brazal mágico con una gema\nsecreta verde engastada\nEspecial: Inmune a ceguera"}
+{"key": "sys/objetos#0327/nombre", "es": "Brazales de acero"}
+{"key": "sys/objetos#0327/desc", "es": "Brazal que cubre hasta la parte\nalta del brazo\nPesado, pero de gran defensa"}
+{"key": "sys/objetos#0328/nombre", "es": "Brazales de acero gélidos"}
+{"key": "sys/objetos#0328/desc", "es": "Brazal de hielo con poder gélido\nexcelente defensa mágica\nEspecial: Inmune a lentitud"}
+{"key": "sys/objetos#0329/nombre", "es": "Brazales de acero"}
+{"key": "sys/objetos#0329/desc", "es": "Brazal que cubre hasta la parte\nalta del brazo, algo frágil"}
+{"key": "sys/objetos#0330/nombre", "es": "Pléyades en ascenso"}
+{"key": "sys/objetos#0330/desc", "es": "Brazal sagrado que cura el cuerpo\ny la mente, Objeto raro\nEspecial: Resiste estados\nalterados, Recup. PV/PM baja"}
+{"key": "sys/objetos#0331/nombre", "es": "Brazal de cordón rojo"}
+{"key": "sys/objetos#0331/desc", "es": "Brazal de cordón rojo usado por\nun samurái. Sus almas se buscan\nentre sí\nObjeto raro"}
+{"key": "sys/objetos#0332/nombre", "es": "Brazal de cordón azul"}
+{"key": "sys/objetos#0332/desc", "es": "Brazal de cordón azul usado por\nun samurái. Sus almas se buscan\nentre sí\nObjeto raro"}
+{"key": "sys/objetos#0333/nombre", "es": "Brazal real feroz"}
+{"key": "sys/objetos#0333/desc", "es": "Brazal de un guerrero,\nligero para su defensa\nObjeto raro"}
+{"key": "sys/objetos#0334/nombre", "es": "Brazal real ilusorio"}
+{"key": "sys/objetos#0334/desc", "es": "Brazal de fuego que resiste\nel sellado\nObjeto raro\nEspecial: Inmune a sellado"}
+{"key": "sys/objetos#0335/nombre", "es": "Brazal real ágil"}
+{"key": "sys/objetos#0335/desc", "es": "Brazal de un noble que aligera\nel cuerpo de su portador\nObjeto raro\nEspecial: Reduce el peso"}
+{"key": "sys/objetos#0336/nombre", "es": "Manopla de nudillos"}
+{"key": "sys/objetos#0336/desc", "es": "Guantelete de cuero que\nayuda a sujetar el arma"}
+{"key": "sys/objetos#0337/nombre", "es": "Manopla de nudillos"}
+{"key": "sys/objetos#0337/desc", "es": "Guantelete de cuero de calidad\nque ayuda a sujetar el arma\nObjeto raro"}
+{"key": "sys/objetos#0338/nombre", "es": "Brazales radiantes"}
+{"key": "sys/objetos#0338/desc", "es": "Brazal aberrante de gran\npoder curativo, Objeto raro\nEspecial: Recup. de PV alta"}
+{"key": "sys/objetos#0339/nombre", "es": "Brazales lúgubres"}
+{"key": "sys/objetos#0339/desc", "es": "Brazal aberrante curativo\nObjeto raro\nEspecial: Resiste estados\nalterados, Recup. de PV baja"}
+{"key": "sys/objetos#0340/nombre", "es": "Guante táctico"}
+{"key": "sys/objetos#0340/desc", "es": "Guantes militares hechos\nde un material especial"}
+{"key": "sys/objetos#0341/nombre", "es": "Guante táctico"}
+{"key": "sys/objetos#0341/desc", "es": "Guantes militares hechos\nde un material especial"}
+{"key": "sys/objetos#0342/nombre", "es": "Guante táctico"}
+{"key": "sys/objetos#0342/desc", "es": "Guantes militares hechos\nde un material especial"}
+{"key": "sys/objetos#0343/nombre", "es": "Guante de vuelo"}
+{"key": "sys/objetos#0343/desc", "es": "Guantes resistentes al fuego\nEspecial: Inmune a sellado"}
+{"key": "sys/objetos#0344/nombre", "es": "Protector de brazo"}
+{"key": "sys/objetos#0344/desc", "es": "Protector de brazo usado\npor fuerzas especiales"}
+{"key": "sys/objetos#0400/nombre", "es": "Botas de cuero"}
+{"key": "sys/objetos#0400/desc", "es": "Botas de cuero curtido\nde poca defensa"}
+{"key": "sys/objetos#0401/nombre", "es": "Botas de cuero"}
+{"key": "sys/objetos#0401/desc", "es": "Botas de calidad hechas\ncon capas de cuero"}
+{"key": "sys/objetos#0402/nombre", "es": "Botas de cuero"}
+{"key": "sys/objetos#0402/desc", "es": "Botas de mala calidad\nhechas con cuero barato"}
+{"key": "sys/objetos#0403/nombre", "es": "Botas de cuero"}
+{"key": "sys/objetos#0403/desc", "es": "Botas resistentes hechas\ncon cuero grueso"}
+{"key": "sys/objetos#0404/nombre", "es": "Botas de metal"}
+{"key": "sys/objetos#0404/desc", "es": "Botas de caballero hechas\ncon metal de buena calidad"}
+{"key": "sys/objetos#0405/nombre", "es": "Botas de metal"}
+{"key": "sys/objetos#0405/desc", "es": "Botas de caballero con\nmayor resistencia al corte"}
+{"key": "sys/objetos#0406/nombre", "es": "Botas de metal"}
+{"key": "sys/objetos#0406/desc", "es": "Botas de caballero con\nmayor resistencia al golpe"}
+{"key": "sys/objetos#0407/nombre", "es": "Botas de metal"}
+{"key": "sys/objetos#0407/desc", "es": "Botas de caballero con\nmayor resistencia a la estocada"}
+{"key": "sys/objetos#0408/nombre", "es": "Botas de metal radiantes"}
+{"key": "sys/objetos#0408/desc", "es": "Botas de caballero con poder\nmágico de luz\nEspecial: Inmune a parálisis\nRecuperación de PV media"}
+{"key": "sys/objetos#0409/nombre", "es": "Botas de metal sólidas"}
+{"key": "sys/objetos#0409/desc", "es": "Botas de caballero con\nalta defensa"}
+{"key": "sys/objetos#0410/nombre", "es": "Botas de metal firmes"}
+{"key": "sys/objetos#0410/desc", "es": "Botas de caballero de alto\nrango con forma de unicornio"}
+{"key": "sys/objetos#0411/nombre", "es": "Botas de metal gélidas"}
+{"key": "sys/objetos#0411/desc", "es": "Botas de caballero de alto rango\ncon poder mágico oculto\nEspecial: Inmune a lentitud"}
+{"key": "sys/objetos#0412/nombre", "es": "Botas de metal venenosas"}
+{"key": "sys/objetos#0412/desc", "es": "Botas de caballero de alto rango\ncon poder mágico oculto\nEspecial: Inmune a veneno"}
+{"key": "sys/objetos#0413/nombre", "es": "Botas de metal cáusticas"}
+{"key": "sys/objetos#0413/desc", "es": "Botas de caballero de alto rango\ncon poder mágico oculto\nEspecial: Inmune a maldición"}
+{"key": "sys/objetos#0414/nombre", "es": "Botas de acero"}
+{"key": "sys/objetos#0414/desc", "es": "Botas mágicas con\nexcelentes capacidades"}
+{"key": "sys/objetos#0415/nombre", "es": "Botas de acero aria"}
+{"key": "sys/objetos#0415/desc", "es": "Botas mágicas que curan\nel cuerpo de quien las usa\nEspecial: Recup. de PV baja"}
+{"key": "sys/objetos#0416/nombre", "es": "Botas de acero rápidas"}
+{"key": "sys/objetos#0416/desc", "es": "Botas mágicas que curan\nla mente de quien las usa\nEspecial: Recup. de PM baja"}
+{"key": "sys/objetos#0417/nombre", "es": "Botas de acero"}
+{"key": "sys/objetos#0417/desc", "es": "Botas mágicas con\nalta defensa"}
+{"key": "sys/objetos#0418/nombre", "es": "Grebas"}
+{"key": "sys/objetos#0418/desc", "es": "Grebas que protegen debajo\nde la rodilla, ligeras y resistentes"}
+{"key": "sys/objetos#0419/nombre", "es": "Grebas"}
+{"key": "sys/objetos#0419/desc", "es": "Grebas que protegen debajo\nde la rodilla, algo frágiles"}
+{"key": "sys/objetos#0420/nombre", "es": "Grebas sólidas"}
+{"key": "sys/objetos#0420/desc", "es": "Grebas de hierro de calidad que\nprotegen debajo de la rodilla"}
+{"key": "sys/objetos#0421/nombre", "es": "Grebas ígneas"}
+{"key": "sys/objetos#0421/desc", "es": "Grebas mágicas envueltas\nen fuego negro\nEspecial: Inmune a veneno"}
+{"key": "sys/objetos#0422/nombre", "es": "Grebas ígneas"}
+{"key": "sys/objetos#0422/desc", "es": "Grebas mágicas envueltas\nen fuego rojo\nEspecial: Inmune a sellado"}
+{"key": "sys/objetos#0423/nombre", "es": "Grebas gélidas"}
+{"key": "sys/objetos#0423/desc", "es": "Grebas mágicas envueltas\nen fuego azul\nEspecial: Inmune a lentitud"}
+{"key": "sys/objetos#0424/nombre", "es": "Grebas robustas"}
+{"key": "sys/objetos#0424/desc", "es": "Grebas plateadas de un metal\nraro\nEspecial: Resiste estados\nalterados"}
+{"key": "sys/objetos#0425/nombre", "es": "Grebas robustas"}
+{"key": "sys/objetos#0425/desc", "es": "Grebas negras de un metal\nraro\nEspecial: Resiste estados\nalterados"}
+{"key": "sys/objetos#0426/nombre", "es": "Nube nova"}
+{"key": "sys/objetos#0426/desc", "es": "Grebas curativas con poder\nde luz, Objeto raro\nEspecial: Recup. de PV baja"}
+{"key": "sys/objetos#0427/nombre", "es": "Nube nova"}
+{"key": "sys/objetos#0427/desc", "es": "Grebas curativas de luz\nbrillante, Objeto raro\nEspecial: Recup. de PV media"}
+{"key": "sys/objetos#0428/nombre", "es": "Gandharva"}
+{"key": "sys/objetos#0428/desc", "es": "Botas occidentales de cuero\ncon cadenas de hierro"}
+{"key": "sys/objetos#0429/nombre", "es": "Gandharva de vigor"}
+{"key": "sys/objetos#0429/desc", "es": "Botas occidentales que\nelevan mucho el vigor\nObjeto raro"}
+{"key": "sys/objetos#0430/nombre", "es": "Gandharva sensible"}
+{"key": "sys/objetos#0430/desc", "es": "Botas occidentales que elevan\nmucho el poder mágico\nObjeto raro"}
+{"key": "sys/objetos#0431/nombre", "es": "Gandharva"}
+{"key": "sys/objetos#0431/desc", "es": "Botas occidentales resistentes\nde cuero con cadenas de hierro"}
+{"key": "sys/objetos#0432/nombre", "es": "Grebas de cordón rojo"}
+{"key": "sys/objetos#0432/desc", "es": "Grebas de cordón rojo de un\nsamurái. Sus almas se buscan\nentre sí\nObjeto raro"}
+{"key": "sys/objetos#0433/nombre", "es": "Grebas de cordón azul"}
+{"key": "sys/objetos#0433/desc", "es": "Grebas de cordón azul de un\nsamurái. Sus almas se buscan\nentre sí\nObjeto raro"}
+{"key": "sys/objetos#0434/nombre", "es": "Botas de Hades"}
+{"key": "sys/objetos#0434/desc", "es": "Botas pesadas imbuidas\nde poder oscuro\nObjeto raro\nEspecial: Pérdida de PM media"}
+{"key": "sys/objetos#0435/nombre", "es": "Botas de Hades sólidas"}
+{"key": "sys/objetos#0435/desc", "es": "Botas oscuras con mayor\ndefensa física\nObjeto raro\nEspecial: Pérdida de PM baja"}
+{"key": "sys/objetos#0436/nombre", "es": "Botas de Hades firmes"}
+{"key": "sys/objetos#0436/desc", "es": "Botas oscuras con mayor\ndefensa mágica\nObjeto raro\nEspecial: Pérdida de PM baja"}
+{"key": "sys/objetos#0437/nombre", "es": "Doble Raise"}
+{"key": "sys/objetos#0437/desc", "es": "Grebas de cadenas tejidas,\nligeras pero de gran defensa"}
+{"key": "sys/objetos#0438/nombre", "es": "Doble Raise rápido"}
+{"key": "sys/objetos#0438/desc", "es": "Grebas de cadenas tejidas\nresistentes al corte"}
+{"key": "sys/objetos#0439/nombre", "es": "Doble Raise aria"}
+{"key": "sys/objetos#0439/desc", "es": "Grebas de cadenas tejidas\nresistentes al golpe"}
+{"key": "sys/objetos#0440/nombre", "es": "Botas de combate"}
+{"key": "sys/objetos#0440/desc", "es": "Botas militares comunes\nmuy ligeras"}
+{"key": "sys/objetos#0441/nombre", "es": "Botas de combate"}
+{"key": "sys/objetos#0441/desc", "es": "Botas militares comunes\nligeras y resistentes"}
+{"key": "sys/objetos#0442/nombre", "es": "Botas de combate"}
+{"key": "sys/objetos#0442/desc", "es": "Botas militares antiguas\nde poca capacidad"}
+{"key": "sys/objetos#0443/nombre", "es": "Protector de pierna"}
+{"key": "sys/objetos#0443/desc", "es": "Protector de pierna usado\npor fuerzas especiales"}
+{"key": "sys/objetos#0444/nombre", "es": "Tenis de lona"}
+{"key": "sys/objetos#0444/desc", "es": "Zapatos deportivos cómodos\nObjeto raro\nEspecial: Recup. de PV/PM\nbaja"}
+{"key": "sys/objetos#0500/nombre", "es": "Brazalete firme"}
+{"key": "sys/objetos#0500/desc", "es": "Brazalete con gema mágica roja\nque ayuda a la defensa mágica"}
+{"key": "sys/objetos#0501/nombre", "es": "Brazalete firme"}
+{"key": "sys/objetos#0501/desc", "es": "Brazalete con gema mágica roja\nque ayuda a la defensa mágica"}
+{"key": "sys/objetos#0502/nombre", "es": "Brazalete ecuánime"}
+{"key": "sys/objetos#0502/desc", "es": "Brazalete con gema mágica verde\nque aumenta el poder mágico"}
+{"key": "sys/objetos#0503/nombre", "es": "Brazalete ecuánime"}
+{"key": "sys/objetos#0503/desc", "es": "Brazalete con gema mágica verde\nque aumenta el poder mágico"}
+{"key": "sys/objetos#0504/nombre", "es": "Brazalete firme"}
+{"key": "sys/objetos#0504/desc", "es": "Brazalete negro que dicen\natrae la desgracia\nEspecial: Maldición"}
+{"key": "sys/objetos#0505/nombre", "es": "Brazalete rápido"}
+{"key": "sys/objetos#0505/desc", "es": "Brazalete que sube la defensa\npero roba vigor\nEspecial: Pérdida de PV baja"}
+{"key": "sys/objetos#0506/nombre", "es": "Brazalete rápido"}
+{"key": "sys/objetos#0506/desc", "es": "Brazalete que sube la defensa\npero roba vigor\nObjeto raro\nEspecial: Pérdida de PV baja"}
+{"key": "sys/objetos#0507/nombre", "es": "Brazalete rápido"}
+{"key": "sys/objetos#0507/desc", "es": "Brazalete que sube la defensa\npero roba vigor\nEspecial: Pérdida de PV baja"}
+{"key": "sys/objetos#0508/nombre", "es": "Brazalete rápido"}
+{"key": "sys/objetos#0508/desc", "es": "Brazalete que refuerza la defensa\na cambio de vigor\nEspecial: Pérdida de PV baja"}
+{"key": "sys/objetos#0509/nombre", "es": "Brazalete sólido"}
+{"key": "sys/objetos#0509/desc", "es": "Brazalete de piedra morada que\naumenta la defensa física"}
+{"key": "sys/objetos#0510/nombre", "es": "Brazalete sólido"}
+{"key": "sys/objetos#0510/desc", "es": "Brazalete de piedra morada que\nrefuerza la defensa contra corte"}
+{"key": "sys/objetos#0511/nombre", "es": "Brazalete sólido"}
+{"key": "sys/objetos#0511/desc", "es": "Brazalete de piedra roja que\nrefuerza la defensa contra golpe"}
+{"key": "sys/objetos#0512/nombre", "es": "Brazalete sólido"}
+{"key": "sys/objetos#0512/desc", "es": "Brazalete de piedra roja que\nrefuerza la defensa contra\nestocada"}
+{"key": "sys/objetos#0513/nombre", "es": "Brazalete robusto"}
+{"key": "sys/objetos#0513/desc", "es": "Brazalete de piedra azul de\ndefensa física, Objeto raro\nEspecial: Resiste estados\nalterados"}
+{"key": "sys/objetos#0514/nombre", "es": "Aro de hechizo"}
+{"key": "sys/objetos#0514/desc", "es": "Brazalete de mal de ojo que\namplifica un poco la fuerza\nmental"}
+{"key": "sys/objetos#0515/nombre", "es": "Aro de hechizo"}
+{"key": "sys/objetos#0515/desc", "es": "Brazalete de mal de ojo que\namplifica la fuerza mental"}
+{"key": "sys/objetos#0516/nombre", "es": "Aro de hechizo sensible"}
+{"key": "sys/objetos#0516/desc", "es": "Brazalete de cerámica que\namplifica mucho la fuerza\nmental\nObjeto raro"}
+{"key": "sys/objetos#0517/nombre", "es": "Aro de hechizo"}
+{"key": "sys/objetos#0517/desc", "es": "Brazalete plateado que\namplifica la fuerza mental\nEspecial: Recup. de PM baja"}
+{"key": "sys/objetos#0518/nombre", "es": "Triple brazalete"}
+{"key": "sys/objetos#0518/desc", "es": "Triple brazalete resistente a\nlos estados alterados\nEspecial: Inmune a veneno,\nceguera y parálisis"}
+{"key": "sys/objetos#0519/nombre", "es": "Triple brazalete"}
+{"key": "sys/objetos#0519/desc", "es": "Triple brazalete resistente a\nlos estados alterados\nEspecial: Inmune a maldición,\nsellado y lentitud"}
+{"key": "sys/objetos#0520/nombre", "es": "Triple brazalete robusto"}
+{"key": "sys/objetos#0520/desc", "es": "Triple brazalete muy resistente\na los estados alterados\nEspecial: Resiste estados\nalterados"}
+{"key": "sys/objetos#0521/nombre", "es": "Brazalete de vigor"}
+{"key": "sys/objetos#0521/desc", "es": "Brazalete de piedra verde que\naumenta la capacidad mágica"}
+{"key": "sys/objetos#0522/nombre", "es": "Brazalete alerta"}
+{"key": "sys/objetos#0522/desc", "es": "Brazalete de piedra roja que\nayuda a la capacidad mágica"}
+{"key": "sys/objetos#0523/nombre", "es": "Brazalete alerta"}
+{"key": "sys/objetos#0523/desc", "es": "Brazalete de piedra roja que\naumenta la capacidad mágica"}
+{"key": "sys/objetos#0524/nombre", "es": "Brazalete sabio"}
+{"key": "sys/objetos#0524/desc", "es": "Brazalete de piedra azul que\naumenta mucho la capacidad\nmágica\nObjeto raro"}
+{"key": "sys/objetos#0525/nombre", "es": "Réquiem"}
+{"key": "sys/objetos#0525/desc", "es": "Brazalete con forma de monstruo\ncon poder mágico de luz\nObjeto raro\nEspecial: Recuperación de PV alta"}
+{"key": "sys/objetos#0526/nombre", "es": "Nocturno"}
+{"key": "sys/objetos#0526/desc", "es": "Brazalete con forma de monstruo\ncon poder mágico de oscuridad\nObjeto raro\nEspecial: Pérdida de PV baja"}
+{"key": "sys/objetos#0527/nombre", "es": "Daratome"}
+{"key": "sys/objetos#0527/desc", "es": "Brazalete que aumenta mucho\ntodas las capacidades físicas\nObjeto raro"}
+{"key": "sys/objetos#0528/nombre", "es": "Ruarune"}
+{"key": "sys/objetos#0528/desc", "es": "Brazalete que aumenta mucho\ntodas las capacidades mágicas\nObjeto raro"}
+{"key": "sys/objetos#0529/nombre", "es": "Luk Prakan"}
+{"key": "sys/objetos#0529/desc", "es": "Cuentas de oración que\naumentan mucho la defensa\nfísica, Objeto raro\nEspecial: Resiste daño físico"}
+{"key": "sys/objetos#0530/nombre", "es": "Luk Prakan"}
+{"key": "sys/objetos#0530/desc", "es": "Cuentas de oración que\naumentan mucho la defensa\nmágica, Objeto raro\nEspecial: Resiste magia"}
+{"key": "sys/objetos#0531/nombre", "es": "Pulsera tajante"}
+{"key": "sys/objetos#0531/desc", "es": "Aumenta las capacidades físicas\na cambio de la magia\nEspecial: Sellado"}
+{"key": "sys/objetos#0532/nombre", "es": "Pulsera tajante"}
+{"key": "sys/objetos#0532/desc", "es": "Aumenta las capacidades físicas\na cambio de la magia\nObjeto raro\nEspecial: Sellado"}
+{"key": "sys/objetos#0533/nombre", "es": "Pulsera tajante"}
+{"key": "sys/objetos#0533/desc", "es": "Aumenta las capacidades físicas\na cambio de la magia\nEspecial: Sellado"}
+{"key": "sys/objetos#0534/nombre", "es": "Aro aplastante"}
+{"key": "sys/objetos#0534/desc", "es": "Gema mágica azul que ayuda\na las capacidades físicas"}
+{"key": "sys/objetos#0535/nombre", "es": "Aro aplastante venenoso"}
+{"key": "sys/objetos#0535/desc", "es": "Gema mágica morada que ayuda\nmucho a las capacidades\nfísicas\nObjeto raro"}
+{"key": "sys/objetos#0536/nombre", "es": "Aro aplastante"}
+{"key": "sys/objetos#0536/desc", "es": "Gema mágica roja que ayuda\na las capacidades físicas"}
+{"key": "sys/objetos#0537/nombre", "es": "Banda punzante"}
+{"key": "sys/objetos#0537/desc", "es": "Brazalete de cuero con gema\nmágica que aumenta los PV"}
+{"key": "sys/objetos#0538/nombre", "es": "Banda punzante cáustica"}
+{"key": "sys/objetos#0538/desc", "es": "Brazalete de cuero con gema\nmágica que aumenta mucho\nlos PV\nObjeto raro"}
+{"key": "sys/objetos#0539/nombre", "es": "Banda punzante de vigor"}
+{"key": "sys/objetos#0539/desc", "es": "Brazalete de cuero con gema\nmágica que aumenta los PV"}
+{"key": "sys/objetos#0600/nombre", "es": "Talismán de vigor"}
+{"key": "sys/objetos#0600/desc", "es": "Talismán redondo que aumenta\nla defensa física\nEspecial: Resiste daño físico"}
+{"key": "sys/objetos#0601/nombre", "es": "Talismán de vigor"}
+{"key": "sys/objetos#0601/desc", "es": "Talismán redondo que aumenta un\npoco la defensa física\nEspecial: Resiste daño físico"}
+{"key": "sys/objetos#0602/nombre", "es": "Talismán de vigor"}
+{"key": "sys/objetos#0602/desc", "es": "Talismán redondo que aumenta\napenas la defensa física\nEspecial: Resiste daño físico"}
+{"key": "sys/objetos#0603/nombre", "es": "Talismán venenoso"}
+{"key": "sys/objetos#0603/desc", "es": "Talismán redondo resistente\nal veneno\nEspecial: Resiste daño físico\nInmune a veneno"}
+{"key": "sys/objetos#0604/nombre", "es": "Talismán cáustico"}
+{"key": "sys/objetos#0604/desc", "es": "Talismán redondo que aumenta la\ndefensa física\nEspecial: Resiste daño físico\nInmune a maldición"}
+{"key": "sys/objetos#0605/nombre", "es": "Reliquia de uña"}
+{"key": "sys/objetos#0605/desc", "es": "Amuleto curativo que favorece\nla recuperación del cuerpo\nEspecial: Recup. de PV baja"}
+{"key": "sys/objetos#0606/nombre", "es": "Reliquia de uña"}
+{"key": "sys/objetos#0606/desc", "es": "Amuleto curativo que favorece\nla recuperación del cuerpo\nEspecial: Recup. de PV baja"}
+{"key": "sys/objetos#0607/nombre", "es": "Reliquia de uña de vigor"}
+{"key": "sys/objetos#0607/desc", "es": "Amuleto curativo que favorece\nla regeneración del cuerpo\nObjeto raro\nEspecial: Recup. de PV baja"}
+{"key": "sys/objetos#0608/nombre", "es": "Flujo de lágrimas"}
+{"key": "sys/objetos#0608/desc", "es": "Amuleto de gota verde que\ncura la mente\nEspecial: Recup. de PM baja"}
+{"key": "sys/objetos#0609/nombre", "es": "Flujo de lágrimas"}
+{"key": "sys/objetos#0609/desc", "es": "Amuleto de gota verde que\ncura la mente\nEspecial: Recup. de PM baja"}
+{"key": "sys/objetos#0610/nombre", "es": "Flujo de lágrimas sensible"}
+{"key": "sys/objetos#0610/desc", "es": "Amuleto de gota bermellón\nque revive la mente\nObjeto raro\nEspecial: Recup. de PM baja"}
+{"key": "sys/objetos#0611/nombre", "es": "Cabeza de ira"}
+{"key": "sys/objetos#0611/desc", "es": "Amuleto de deidad maligna que\nresiste estados alterados\nEspecial: Resiste estados\nalterados"}
+{"key": "sys/objetos#0612/nombre", "es": "Cabeza de ira"}
+{"key": "sys/objetos#0612/desc", "es": "Amuleto de deidad maligna que\nresiste estados alterados\nEspecial: Resiste estados\nalterados"}
+{"key": "sys/objetos#0613/nombre", "es": "Cabeza de ira sensible"}
+{"key": "sys/objetos#0613/desc", "es": "Amuleto contra estados\nalterados, poder de disolución\nEspecial: Inmune a veneno\ny maldición"}
+{"key": "sys/objetos#0614/nombre", "es": "Cabeza de ira sensible"}
+{"key": "sys/objetos#0614/desc", "es": "Amuleto contra estados\nalterados, poder de espíritu\nEspecial: Inmune a parálisis\ny ceguera"}
+{"key": "sys/objetos#0615/nombre", "es": "Cabeza de ira sensible"}
+{"key": "sys/objetos#0615/desc", "es": "Amuleto contra estados\nalterados, poder de partícula\nEspecial: Inmune a sellado\ny lentitud"}
+{"key": "sys/objetos#0616/nombre", "es": "Amuleto ecuánime"}
+{"key": "sys/objetos#0616/desc", "es": "Amuleto que cura el cuerpo a\ncosta de la fuerza mental\nEspecial: Recup. de PV baja\nPérdida de PM baja"}
+{"key": "sys/objetos#0617/nombre", "es": "Amuleto ecuánime"}
+{"key": "sys/objetos#0617/desc", "es": "Amuleto que cura el cuerpo a\ncosta de la fuerza mental\nEspecial: Recup. de PV media\nPérdida de PM baja"}
+{"key": "sys/objetos#0618/nombre", "es": "Amuleto de restauración"}
+{"key": "sys/objetos#0618/desc", "es": "Amuleto que cura el cuerpo a\ncosta de la fuerza mental\nObjeto raro, Recup. de PV alta\nPérdida de PM media"}
+{"key": "sys/objetos#0619/nombre", "es": "Otra pieza"}
+{"key": "sys/objetos#0619/desc", "es": "Cristal con poder mágico que\naumenta mucho el vigor\nObjeto raro"}
+{"key": "sys/objetos#0620/nombre", "es": "Polvo de aurora"}
+{"key": "sys/objetos#0620/desc", "es": "Cristal con poder mágico que\naumenta mucho el poder mágico\nObjeto raro"}
+{"key": "sys/objetos#0621/nombre", "es": "Señuelo nocturno"}
+{"key": "sys/objetos#0621/desc", "es": "Amuleto de hechicería que\naligera a quien lo porta\nObjeto raro\nEspecial: Reduce el peso"}
+{"key": "sys/objetos#0622/nombre", "es": "Señuelo nocturno"}
+{"key": "sys/objetos#0622/desc", "es": "Amuleto de hechicería que\naligera mucho a quien lo porta\nObjeto raro\nEspecial: Reduce el peso"}
+{"key": "sys/objetos#0623/nombre", "es": "Udyat"}
+{"key": "sys/objetos#0623/desc", "es": "Piedra con un mal de ojo\ndibujado que aumenta el poder\nmágico\nEspecial: Resiste magia"}
+{"key": "sys/objetos#0624/nombre", "es": "Udyat sensible"}
+{"key": "sys/objetos#0624/desc", "es": "Piedra con un mal de ojo\ndibujado, resiste partículas\nEspecial: Resiste magia"}
+{"key": "sys/objetos#0625/nombre", "es": "Udyat alerta"}
+{"key": "sys/objetos#0625/desc", "es": "Piedra con un mal de ojo\ndibujado, resiste espíritu\nEspecial: Resiste magia"}
+{"key": "sys/objetos#0626/nombre", "es": "Udyat sabio"}
+{"key": "sys/objetos#0626/desc", "es": "Piedra con un mal de ojo\ndibujado que aumenta mucho\nel poder mágico, Objeto raro\nEspecial: Resiste magia"}
+{"key": "sys/objetos#0627/nombre", "es": "Ankh"}
+{"key": "sys/objetos#0627/desc", "es": "Amuleto antiguo de rituales\nObjeto raro\nEspecial: Recup. de PV/PM alta"}
+{"key": "sys/objetos#0628/nombre", "es": "Mensaje extraño"}
+{"key": "sys/objetos#0628/desc", "es": "Amuleto en forma de disco que\ncura la mente a costa del vigor\nEspecial: Pérdida de PV baja\nRecup. de PM baja"}
+{"key": "sys/objetos#0629/nombre", "es": "Mensaje extraño"}
+{"key": "sys/objetos#0629/desc", "es": "Cura la mente a costa del vigor\nObjeto raro\nEspecial: Pérdida de PV baja\nRecuperación de PM media"}
+{"key": "sys/objetos#0700/nombre", "es": "Ala de rubí"}
+{"key": "sys/objetos#0700/desc", "es": "Anillo de gema roja con una\naguda flecha de fuego\nObjeto raro"}
+{"key": "sys/objetos#0701/nombre", "es": "Ala de rubí"}
+{"key": "sys/objetos#0701/desc", "es": "Anillo de gema roja con una\naguda flecha de fuego"}
+{"key": "sys/objetos#0702/nombre", "es": "Ala de rubí"}
+{"key": "sys/objetos#0702/desc", "es": "Anillo de gema roja con una\nmasa de fuego ardiente"}
+{"key": "sys/objetos#0703/nombre", "es": "Ala de rubí"}
+{"key": "sys/objetos#0703/desc", "es": "Anillo de gema roja con una\nmasa de fuego ardiente"}
+{"key": "sys/objetos#0704/nombre", "es": "Ala de rubí"}
+{"key": "sys/objetos#0704/desc", "es": "Anillo de gema roja con una\naguda flecha de fuego"}
+{"key": "sys/objetos#0705/nombre", "es": "Ala de rubí firme"}
+{"key": "sys/objetos#0705/desc", "es": "Anillo de gema mágica roja\ncon una masa de fuego ardiente"}
+{"key": "sys/objetos#0706/nombre", "es": "Ala de rubí ecuánime"}
+{"key": "sys/objetos#0706/desc", "es": "Anillo de gema mágica roja\ncon una lanza de fuego que\npersigue al enemigo"}
+{"key": "sys/objetos#0707/nombre", "es": "Ala de rubí alerta"}
+{"key": "sys/objetos#0707/desc", "es": "Anillo de gema mágica roja\ncon una lanza de fuego que\npersigue al enemigo"}
+{"key": "sys/objetos#0708/nombre", "es": "Ala de rubí sabia"}
+{"key": "sys/objetos#0708/desc", "es": "Anillo de gema mágica roja con\nuna lanza de fuego que persigue\nal enemigo\nObjeto raro"}
+{"key": "sys/objetos#0709/nombre", "es": "Zafiro funesto"}
+{"key": "sys/objetos#0709/desc", "es": "Anillo de gema azul con\ninnumerables flechas de hielo"}
+{"key": "sys/objetos#0710/nombre", "es": "Zafiro funesto"}
+{"key": "sys/objetos#0710/desc", "es": "Anillo de gema azul con\ninnumerables flechas de hielo\nObjeto raro"}
+{"key": "sys/objetos#0711/nombre", "es": "Zafiro funesto"}
+{"key": "sys/objetos#0711/desc", "es": "Anillo de gema azul con una\ncolumna de hielo que\navanza por el suelo"}
+{"key": "sys/objetos#0712/nombre", "es": "Zafiro funesto"}
+{"key": "sys/objetos#0712/desc", "es": "Anillo de gema azul con\ninnumerables flechas de hielo"}
+{"key": "sys/objetos#0713/nombre", "es": "Zafiro funesto"}
+{"key": "sys/objetos#0713/desc", "es": "Anillo de gema azul con una\ncolumna de hielo que\navanza por el suelo"}
+{"key": "sys/objetos#0714/nombre", "es": "Zafiro funesto firme"}
+{"key": "sys/objetos#0714/desc", "es": "Anillo de gema mágica azul\ncon una columna de hielo que\navanza por el suelo"}
+{"key": "sys/objetos#0715/nombre", "es": "Zafiro funesto ecuánime"}
+{"key": "sys/objetos#0715/desc", "es": "Anillo mágico de brillo azul\ncon un enorme bloque de hielo"}
+{"key": "sys/objetos#0716/nombre", "es": "Zafiro funesto alerta"}
+{"key": "sys/objetos#0716/desc", "es": "Anillo mágico de brillo azul\ncon un enorme bloque de hielo"}
+{"key": "sys/objetos#0717/nombre", "es": "Zafiro funesto sabio"}
+{"key": "sys/objetos#0717/desc", "es": "Anillo mágico de brillo azul\ncon un enorme bloque de hielo\nObjeto raro"}
+{"key": "sys/objetos#0718/nombre", "es": "Vidrio de topacio"}
+{"key": "sys/objetos#0718/desc", "es": "Anillo de gema amarilla\ncon tres aros de luz"}
+{"key": "sys/objetos#0719/nombre", "es": "Vidrio de topacio"}
+{"key": "sys/objetos#0719/desc", "es": "Anillo de gema amarilla\ncon tres aros de luz"}
+{"key": "sys/objetos#0720/nombre", "es": "Vidrio de topacio"}
+{"key": "sys/objetos#0720/desc", "es": "Anillo de gema amarilla\ncon tres aros de luz"}
+{"key": "sys/objetos#0721/nombre", "es": "Vidrio de topacio"}
+{"key": "sys/objetos#0721/desc", "es": "Anillo de gema amarilla\ncon tres aros de luz\nObjeto raro"}
+{"key": "sys/objetos#0722/nombre", "es": "Vidrio de topacio firme"}
+{"key": "sys/objetos#0722/desc", "es": "Anillo de gema mágica amarilla\ncon un rayo esférico"}
+{"key": "sys/objetos#0723/nombre", "es": "Vidrio de topacio alerta"}
+{"key": "sys/objetos#0723/desc", "es": "Anillo de gema mágica amarilla\ncon un destello que persigue\nal enemigo"}
+{"key": "sys/objetos#0724/nombre", "es": "Vidrio de topacio sabio"}
+{"key": "sys/objetos#0724/desc", "es": "Anillo de gema mágica amarilla\ncon un destello que persigue\nal enemigo"}
+{"key": "sys/objetos#0725/nombre", "es": "Jade triste"}
+{"key": "sys/objetos#0725/desc", "es": "Anillo de gema de jade con\ncuatro espadas de oscuridad"}
+{"key": "sys/objetos#0726/nombre", "es": "Jade triste"}
+{"key": "sys/objetos#0726/desc", "es": "Anillo de gema de jade con\ncuatro espadas de oscuridad"}
+{"key": "sys/objetos#0727/nombre", "es": "Jade triste"}
+{"key": "sys/objetos#0727/desc", "es": "Anillo de gema de jade con\ncuatro espadas de oscuridad\nObjeto raro"}
+{"key": "sys/objetos#0728/nombre", "es": "Jade triste"}
+{"key": "sys/objetos#0728/desc", "es": "Anillo de gema de jade con\ncuatro espadas de oscuridad"}
+{"key": "sys/objetos#0729/nombre", "es": "Jade triste firme"}
+{"key": "sys/objetos#0729/desc", "es": "Anillo de gema mágica jade\ncon partículas de oscuridad\nexplosivas"}
+{"key": "sys/objetos#0730/nombre", "es": "Jade triste alerta"}
+{"key": "sys/objetos#0730/desc", "es": "Anillo de gema mágica jade\ncon una calavera envuelta\nen oscuridad"}
+{"key": "sys/objetos#0731/nombre", "es": "Jade triste sabio"}
+{"key": "sys/objetos#0731/desc", "es": "Anillo de gema mágica jade\ncon una calavera envuelta\nen oscuridad"}
+{"key": "sys/objetos#0732/nombre", "es": "Ojo de amatista"}
+{"key": "sys/objetos#0732/desc", "es": "Anillo de gema morada con\nuna bala de veneno"}
+{"key": "sys/objetos#0733/nombre", "es": "Ojo de amatista"}
+{"key": "sys/objetos#0733/desc", "es": "Anillo de gema mágica morada\ncon una columna de veneno que\navanza por el suelo"}
+{"key": "sys/objetos#0734/nombre", "es": "Ojo de amatista"}
+{"key": "sys/objetos#0734/desc", "es": "Anillo de gema morada con\nuna bala de veneno"}
+{"key": "sys/objetos#0735/nombre", "es": "Ojo de amatista"}
+{"key": "sys/objetos#0735/desc", "es": "Anillo de gema morada con\nuna bala de veneno"}
+{"key": "sys/objetos#0736/nombre", "es": "Ojo de amatista firme"}
+{"key": "sys/objetos#0736/desc", "es": "Anillo de gema mágica morada\ncon una columna de veneno que\navanza por el suelo"}
+{"key": "sys/objetos#0737/nombre", "es": "Ojo de amatista alerta"}
+{"key": "sys/objetos#0737/desc", "es": "Anillo de gema mágica morada\ncon un colmillo de veneno que\npersigue al enemigo"}
+{"key": "sys/objetos#0738/nombre", "es": "Ojo de amatista sabio"}
+{"key": "sys/objetos#0738/desc", "es": "Anillo de gema mágica morada\ncon un colmillo de veneno que\npersigue al enemigo"}
+{"key": "sys/objetos#0739/nombre", "es": "Ámbar perdido"}
+{"key": "sys/objetos#0739/desc", "es": "Anillo de gema color tierra con\ncuatro burbujas de ácido"}
+{"key": "sys/objetos#0740/nombre", "es": "Ámbar perdido"}
+{"key": "sys/objetos#0740/desc", "es": "Anillo de gema mágica color\ntierra con humo de ácido que\navanza por el suelo"}
+{"key": "sys/objetos#0741/nombre", "es": "Ámbar perdido"}
+{"key": "sys/objetos#0741/desc", "es": "Anillo de gema color tierra con\ncuatro burbujas de ácido"}
+{"key": "sys/objetos#0742/nombre", "es": "Ámbar perdido"}
+{"key": "sys/objetos#0742/desc", "es": "Anillo de gema color tierra con\ncuatro burbujas de ácido\nObjeto raro"}
+{"key": "sys/objetos#0743/nombre", "es": "Ámbar perdido firme"}
+{"key": "sys/objetos#0743/desc", "es": "Anillo de gema mágica color\ntierra con humo de ácido que\navanza por el suelo"}
+{"key": "sys/objetos#0744/nombre", "es": "Ámbar perdido alerta"}
+{"key": "sys/objetos#0744/desc", "es": "Anillo de gema mágica color\ntierra con una esfera de\nácido explosiva"}
+{"key": "sys/objetos#0745/nombre", "es": "Ámbar perdido sabio"}
+{"key": "sys/objetos#0745/desc", "es": "Anillo de gema mágica color\ntierra con una esfera de\nácido explosiva"}
+{"key": "sys/objetos#0746/nombre", "es": "Ceniza de calamidad"}
+{"key": "sys/objetos#0746/desc", "es": "Gema luminosa verde de vida\ncon un enorme tornado de\nveneno\nObjeto raro"}
+{"key": "sys/objetos#0747/nombre", "es": "Ceniza de calamidad"}
+{"key": "sys/objetos#0747/desc", "es": "Gema luminosa verde de vida\ncon un manantial de ácido\nabrasador\nObjeto raro"}
+{"key": "sys/objetos#0748/nombre", "es": "Hoja de sangre"}
+{"key": "sys/objetos#0748/desc", "es": "Gema luminosa de sangre\ncarmesí con una columna de\nfuego abrasador\nObjeto raro"}
+{"key": "sys/objetos#0749/nombre", "es": "Hoja de sangre"}
