@@ -4,7 +4,7 @@
  "stage": "Piloto",
  "version": null,
  "lines": 1719,
- "done": 140,
+ "done": 184,
  "sections": [
   {
    "name": "Interfaz",
@@ -33,7 +33,7 @@
   {
    "name": "Historia",
    "lines": 212,
-   "done": 0,
+   "done": 44,
    "common": true
   }
  ],
@@ -71,14 +71,14 @@
   {
    "n": 5,
    "name": "Piloto",
-   "state": "pending",
+   "state": "in_progress",
    "note": null
   },
   {
    "n": 6,
    "name": "Traducción",
    "state": "in_progress",
-   "note": "8,1 %"
+   "note": "10,7 %"
   },
   {
    "n": 7,

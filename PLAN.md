@@ -68,7 +68,7 @@ Obligatorio: sin él, `loc.py prepare` no arma lotes.
 
 ### Fase 5. Piloto
 
-- [ ] Un primer lote de cada tipo de texto con el equipo completo.
+- [x] Un primer lote de cada tipo de texto con el equipo completo. 4 lotes de 40 (2026-11-22).
 - [ ] Ajustar documentos y roles con lo que salga (y volver a pasar el set de oro si cambia un prompt).
 
 ### Fase 6. Traducción
