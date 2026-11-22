@@ -67,7 +67,7 @@ def box(key, en):
 
 def check(key, item, es):
     adv = _advances()
-    width, lines, note = box(key, item["en"])
+    width, lines, note = box(key, item["src"])
     out = []
     for n, ln in enumerate(es.split("\n"), 1):
         w = sta_font.width(ln, adv)

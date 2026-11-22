@@ -90,6 +90,7 @@ Aquí no se agrega ninguna regla sin fuente.
 ## Trato
 
 - **E-30** *Tú* por defecto; *usted* solo si la ficha del personaje lo dice. El trato depende de con quién habla, y se mantiene igual entre dos personajes durante todo el juego. [THL]
+- **E-31** Los honoríficos japoneses (*-san*, *-sama*, *-kun*, *-chan*, *-sensei*, *-senpai*, *-dono*) no se conservan, aunque los traiga el original o la versión en inglés: el respeto pasa al trato (E-30), a un tratamiento en español (*señor*, *señorita*) o al nombre solo, según la ficha. Apoyarse en el japonés no es japonizar la traducción. [THL] (`loc.py check`: `honorifico`)
 
 ## Género
 

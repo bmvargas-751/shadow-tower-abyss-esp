@@ -6,7 +6,9 @@ Se cierran en la fase 0, porque son caras de cambiar después.
 
 - **Variante:** español neutro (*tú*/*ustedes*, sin regionalismos de ningún país).
 - **Original:** versión japonesa de PS2 (única edición), imagen `Shadow Tower Abyss.iso`. [DECISIONS 2026-11-20]
-- **Otra versión de apoyo:** la traducción fan al inglés `STATest0.3.ppf` (en progreso), solo de consulta. [DECISIONS 2026-11-20]
+- **Versión en inglés:** la traducción fan `STATest0.3.ppf` (en progreso), solo de consulta (E-1). Va en `support` de `loc.json`, con el campo `en`. [DECISIONS 2026-11-20] [DECISIONS 2026-11-22]
+- **Nombres:** los inventados en katakana toman la forma del inglés fan si es fiel a la pronunciación japonesa; si no, una transcripción propia legible en español, caso por caso. [DECISIONS 2026-11-20]
+- **Texto en inglés dentro del original:** se traduce (*ITEM* → *OBJETO*). [DECISIONS 2026-11-20] (TECH.md, T-6)
 - **Terminología oficial:** no hay traducción oficial al español. Shadow Tower PS1 (`shadow-tower-esp`) es solo referencia hasta comparar cómo está armado Abyss. [DECISIONS 2026-11-20]
 - **Pruebas:** PCSX2; la traducción se instala con un parche xdelta sobre la ISO japonesa. [DECISIONS 2026-11-20]
 - **Alcance:** tablas de texto (0.9.0), después subtítulos de los vídeos y al final texturas con texto. [DECISIONS 2026-11-20]
@@ -41,11 +43,11 @@ Estimación (2026-11-20), con la misma cuenta que `shadow-tower-esp`: ~43 000 to
 
 | Sección | Líneas | Únicas | Caracteres (japonés) | Caracteres (español, estimado) | Lotes | Tokens estimados |
 |---|---:|---:|---:|---:|---:|---:|
-| Interfaz y ayudas del menú | 131 | 117 | 2166 | ~5200 | 1 | ~96k |
+| Interfaz (menú y ayudas) | 131 | 117 | 2166 | ~5200 | 1 | ~96k |
 | Lugares | 30 | 30 | 420 | ~1000 | 1 | ~55k |
 | Criaturas | 136 | 135 | 2029 | ~4900 | 1 | ~93k |
 | Objetos y equipo | 1210 | 920 | 13732 | ~33000 | 4 | ~506k |
-| Mapas (eventos y diálogos) | 212 | 205 | 4371 | ~10500 | 1 | ~149k |
+| Historia (eventos y diálogos de los mapas) | 212 | 205 | 4371 | ~10500 | 1 | ~149k |
 | **Total** | **1719** | **1407** | **22718** | **~54500** | **8** | **~900k** |
 
 Más el editor, las líneas delicadas, el terminólogo y el perfilador (fase 3) y el set de oro (fase 4). Lugares es chica: conviene ir en el mismo lote que la interfaz (`loc.py prepare --prefix sys/menu# --prefix sys/lugares#`) para no pagar dos veces el costo fijo (~45k menos).
@@ -66,12 +68,15 @@ Obligatorio: sin él, `loc.py prepare` no arma lotes.
 
 ### Fase 5. Piloto
 
-- [ ] Un primer lote de cada tipo de texto con el equipo completo.
+- [x] Un primer lote de cada tipo de texto con el equipo completo. 4 lotes de 40 (2026-11-22).
 - [ ] Ajustar documentos y roles con lo que salga (y volver a pasar el set de oro si cambia un prompt).
 
 ### Fase 6. Traducción
-
-- [ ] (una casilla por sección de `loc.json`)
+- [ ] Interfaz
+- [ ] Objetos y equipo
+- [ ] Criaturas
+- [x] Lugares
+- [ ] Historia
 
 ### Fase 7. Prueba en el juego
 
