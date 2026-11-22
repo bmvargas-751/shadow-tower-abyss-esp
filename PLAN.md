@@ -75,7 +75,7 @@ Obligatorio: sin él, `loc.py prepare` no arma lotes.
 - [ ] Interfaz
 - [ ] Objetos y equipo
 - [ ] Criaturas
-- [ ] Lugares
+- [x] Lugares
 - [ ] Historia
 
 ### Fase 7. Prueba en el juego

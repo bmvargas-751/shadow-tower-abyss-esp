@@ -1,15 +1,15 @@
 {
  "updated": "2026-11-22",
- "status": "preparation",
+ "status": "translation",
  "stage": "Piloto",
  "version": null,
  "lines": 1719,
- "done": 0,
+ "done": 40,
  "sections": [
   {
    "name": "Interfaz",
    "lines": 131,
-   "done": 0,
+   "done": 10,
    "common": true
   },
   {
@@ -27,7 +27,7 @@
   {
    "name": "Lugares",
    "lines": 30,
-   "done": 0,
+   "done": 30,
    "common": true
   },
   {
@@ -66,7 +66,7 @@
    "n": 4,
    "name": "Set de oro",
    "state": "done",
-   "note": "14 de 16 (oro-002)"
+   "note": "16 de 16 (oro-003)"
   },
   {
    "n": 5,
@@ -77,8 +77,8 @@
   {
    "n": 6,
    "name": "Traducción",
-   "state": "pending",
-   "note": null
+   "state": "in_progress",
+   "note": "2,3 %"
   },
   {
    "n": 7,
