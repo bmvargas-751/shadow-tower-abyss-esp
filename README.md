@@ -21,11 +21,11 @@ Etapa: Piloto · Actualizado el 22 nov 2026
 | Sección | Líneas | Traducidas | Avance |
 |---|---:|---:|---:|
 | Interfaz | 131 | 10 | 7,6 % |
-| Objetos y equipo | 1.210 | 0 | 0,0 % |
+| Objetos y equipo | 1.210 | 60 | 5,0 % |
 | Criaturas | 136 | 40 | 29,4 % |
 | Lugares | 30 | 30 | 100,0 % |
 | Historia | 212 | 0 | 0,0 % |
-| **Total** | **1.719** | **80** | **4,7 %** |
+| **Total** | **1.719** | **140** | **8,1 %** |
 <!-- /loc:progress -->
 
 ## Para colaborar

@@ -4,7 +4,7 @@
  "stage": "Piloto",
  "version": null,
  "lines": 1719,
- "done": 80,
+ "done": 140,
  "sections": [
   {
    "name": "Interfaz",
@@ -15,7 +15,7 @@
   {
    "name": "Objetos y equipo",
    "lines": 1210,
-   "done": 0,
+   "done": 60,
    "common": true
   },
   {
@@ -78,7 +78,7 @@
    "n": 6,
    "name": "Traducción",
    "state": "in_progress",
-   "note": "4,7 %"
+   "note": "8,1 %"
   },
   {
    "n": 7,

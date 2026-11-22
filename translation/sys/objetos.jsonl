@@ -1,0 +1,60 @@
+{"key": "sys/objetos#0800/nombre", "es": "Espada baja"}
+{"key": "sys/objetos#0800/desc", "es": "Espada corta de hoja\nreducida y más ligera"}
+{"key": "sys/objetos#0801/nombre", "es": "Espada baja"}
+{"key": "sys/objetos#0801/desc", "es": "Espada corta ligera y\nresistente, de menor poder"}
+{"key": "sys/objetos#0802/nombre", "es": "Espada baja"}
+{"key": "sys/objetos#0802/desc", "es": "Espada corta algo frágil,\npero de gran rendimiento"}
+{"key": "sys/objetos#0803/nombre", "es": "Espada de combate cercano"}
+{"key": "sys/objetos#0803/desc", "es": "Espada corta con un leve\npoder de partícula"}
+{"key": "sys/objetos#0804/nombre", "es": "Espada de combate cercano"}
+{"key": "sys/objetos#0804/desc", "es": "Espada corta con un leve\npoder de disolución"}
+{"key": "sys/objetos#0805/nombre", "es": "Espada de combate cercano"}
+{"key": "sys/objetos#0805/desc", "es": "Espada corta con un leve\npoder de espíritu"}
+{"key": "sys/objetos#0806/nombre", "es": "Espada alta"}
+{"key": "sys/objetos#0806/desc", "es": "Espada de una mano de\namplio uso en combate"}
+{"key": "sys/objetos#0807/nombre", "es": "Espada alta"}
+{"key": "sys/objetos#0807/desc", "es": "Espada de una mano\nmuy apta para cortar"}
+{"key": "sys/objetos#0808/nombre", "es": "Espada alta"}
+{"key": "sys/objetos#0808/desc", "es": "Espada de una mano\ncreada para tajar"}
+{"key": "sys/objetos#0809/nombre", "es": "Espada alta"}
+{"key": "sys/objetos#0809/desc", "es": "Espada de una mano de\nfilo muy afilado y más cortante"}
+{"key": "sys/objetos#0810/nombre", "es": "Espada alta tajante"}
+{"key": "sys/objetos#0810/desc", "es": "Espada de una mano de\nfilo agudo, excelente\npara el corte"}
+{"key": "sys/objetos#0811/nombre", "es": "Espada alta ígnea"}
+{"key": "sys/objetos#0811/desc", "es": "Espada de una mano de filo\nagudo, con poder de fuego\nEspecial: Sella"}
+{"key": "sys/objetos#0812/nombre", "es": "Espada alta radiante"}
+{"key": "sys/objetos#0812/desc", "es": "Espada de una mano de filo\nagudo, con poder de luz\nEspecial: Crítico"}
+{"key": "sys/objetos#0813/nombre", "es": "Espada alta oscura"}
+{"key": "sys/objetos#0813/desc", "es": "Espada de una mano de filo\nagudo, con poder de oscuridad\nEspecial: Ciega"}
+{"key": "sys/objetos#0814/nombre", "es": "Malicia cornígera"}
+{"key": "sys/objetos#0814/desc", "es": "Espada de otro mundo que\nsella la magia de su dueño\npara mostrar su poder\nEspecial: Sellado"}
+{"key": "sys/objetos#0815/nombre", "es": "Malicia cornígera"}
+{"key": "sys/objetos#0815/desc", "es": "Espada de otro mundo que\nsella la magia de su dueño\npara mostrar su poder\nEspecial: Sellado"}
+{"key": "sys/objetos#0816/nombre", "es": "Espada de esgrima"}
+{"key": "sys/objetos#0816/desc", "es": "Estoque que busca el\nmáximo filo en la punta"}
+{"key": "sys/objetos#0817/nombre", "es": "Espada de esgrima"}
+{"key": "sys/objetos#0817/desc", "es": "Estoque de punta\nmuy afilada"}
+{"key": "sys/objetos#0818/nombre", "es": "Espada de esgrima"}
+{"key": "sys/objetos#0818/desc", "es": "Estoque con filo y\nresistencia reforzados"}
+{"key": "sys/objetos#0819/nombre", "es": "Espada aguja"}
+{"key": "sys/objetos#0819/desc", "es": "Estoque que lleva el\nfilo al extremo,\nsin más"}
+{"key": "sys/objetos#0820/nombre", "es": "Espada aguja"}
+{"key": "sys/objetos#0820/desc", "es": "Estoque con poder mágico\nque aligera a su dueño\nEspecial: Reduce el peso"}
+{"key": "sys/objetos#0821/nombre", "es": "Espada serpentina"}
+{"key": "sys/objetos#0821/desc", "es": "Espada ondulada excelente\npara el corte y la estocada"}
+{"key": "sys/objetos#0822/nombre", "es": "Espada serpentina"}
+{"key": "sys/objetos#0822/desc", "es": "Espada ondulada excelente\npara el corte y la estocada"}
+{"key": "sys/objetos#0823/nombre", "es": "Espada serpentina"}
+{"key": "sys/objetos#0823/desc", "es": "Espada ondulada de gran\nresistencia, pero de\ncorte algo romo"}
+{"key": "sys/objetos#0824/nombre", "es": "Viento celestial"}
+{"key": "sys/objetos#0824/desc", "es": "Hoja de gran filo que\nparte en dos al enemigo\nObjeto raro"}
+{"key": "sys/objetos#0825/nombre", "es": "Rayo infernal"}
+{"key": "sys/objetos#0825/desc", "es": "Hoja de filo sin igual\npero con maldición de sangre\nObjeto raro\nEspecial: Maldición"}
+{"key": "sys/objetos#0826/nombre", "es": "Espada de placas"}
+{"key": "sys/objetos#0826/desc", "es": "Espada ancha fácil de\nmanejar y de rendimiento\nestable"}
+{"key": "sys/objetos#0827/nombre", "es": "Espada de placas"}
+{"key": "sys/objetos#0827/desc", "es": "Espada ancha fácil de\nmanejar y excelente\npara cortar"}
+{"key": "sys/objetos#0828/nombre", "es": "Espada de placas"}
+{"key": "sys/objetos#0829/nombre", "es": "Espada de placas"}
+{"key": "sys/objetos#0830/nombre", "es": "Espada de placas"}
+{"key": "sys/objetos#0831/nombre", "es": "Espada de placas"}
