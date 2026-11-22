@@ -6,7 +6,9 @@ Se cierran en la fase 0, porque son caras de cambiar después.
 
 - **Variante:** español neutro (*tú*/*ustedes*, sin regionalismos de ningún país).
 - **Original:** versión japonesa de PS2 (única edición), imagen `Shadow Tower Abyss.iso`. [DECISIONS 2026-11-20]
-- **Otra versión de apoyo:** la traducción fan al inglés `STATest0.3.ppf` (en progreso), solo de consulta. [DECISIONS 2026-11-20]
+- **Versión en inglés:** la traducción fan `STATest0.3.ppf` (en progreso), solo de consulta (E-1). Va en `support` de `loc.json`, con el campo `en`. [DECISIONS 2026-11-20] [DECISIONS 2026-11-22]
+- **Nombres:** los inventados en katakana toman la forma del inglés fan si es fiel a la pronunciación japonesa; si no, una transcripción propia legible en español, caso por caso. [DECISIONS 2026-11-20]
+- **Texto en inglés dentro del original:** se traduce (*ITEM* → *OBJETO*). [DECISIONS 2026-11-20] (TECH.md, T-6)
 - **Terminología oficial:** no hay traducción oficial al español. Shadow Tower PS1 (`shadow-tower-esp`) es solo referencia hasta comparar cómo está armado Abyss. [DECISIONS 2026-11-20]
 - **Pruebas:** PCSX2; la traducción se instala con un parche xdelta sobre la ISO japonesa. [DECISIONS 2026-11-20]
 - **Alcance:** tablas de texto (0.9.0), después subtítulos de los vídeos y al final texturas con texto. [DECISIONS 2026-11-20]

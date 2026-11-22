@@ -3,6 +3,10 @@
   "source_language": "ja",
   "target_language": "es",
   "source": "../shadow-tower-abyss-esp-local/source.jsonl",
+  "support": {
+    "file": "../shadow-tower-abyss-esp-local/ref_en.jsonl",
+    "field": "en"
+  },
   "translation": "translation",
   "work": "build/work/batches",
   "sections": [

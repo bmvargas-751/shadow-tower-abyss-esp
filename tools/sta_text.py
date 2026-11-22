@@ -9,7 +9,7 @@ Todo el texto del juego está en `TARGET/STAZ.STZ`, en tablas `STA `:
 
 Comandos (desde la raíz del repo):
 
-    python3 tools/sta_text.py export      # original -> source.jsonl (+ ref_en.jsonl)
+    python3 tools/sta_text.py export      # original -> source.jsonl ({key, ja}) + ref_en.jsonl ({key, en}: versión de apoyo)
     python3 tools/sta_text.py import      # translation/ -> build/STAZ.STZ
     python3 tools/sta_text.py roundtrip   # export + import sin cambios == original
 
@@ -158,7 +158,7 @@ def export():
             speakers = json.load(f)
     with open(SOURCE, "w", encoding="utf-8") as f:
         for key, text, kind in rows:
-            d = {"key": key, "en": text}
+            d = {"key": key, "ja": text}
             if kind == "suelta":
                 d["note"] = "tabla de sistema"
             if key in speakers:
@@ -175,7 +175,7 @@ def export():
                 if e == text:
                     same += 1
                     continue
-                f.write(json.dumps({"key": key, "ref_en": e}, ensure_ascii=False) + "\n")
+                f.write(json.dumps({"key": key, "en": e}, ensure_ascii=False) + "\n")
         print("ref_en: %d de %d textos con inglés del PPF (%d sin traducir) -> %s"
               % (len(rows) - same, len(rows), same, REF_EN))
 
@@ -298,7 +298,7 @@ def roundtrip():
     with open(SOURCE, encoding="utf-8") as f:
         for line in f:
             d = json.loads(line)
-            texts[d["key"]] = d["en"]
+            texts[d["key"]] = d["ja"]
     out, _free = import_(os.path.join(LOCAL, "build", "roundtrip.STZ"), texts, font=False)
     ok = open(out, "rb").read() == open(STZ, "rb").read()
     print("ida y vuelta:", "IDÉNTICA" if ok else "DISTINTA")

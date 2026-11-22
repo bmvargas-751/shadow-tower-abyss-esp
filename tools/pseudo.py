@@ -45,14 +45,14 @@ def main(iso_in, iso_out):
     src = [json.loads(l) for l in open(S.SOURCE, encoding="utf-8")]
     ref = {}
     if os.path.exists(S.REF_EN):
-        ref = {d["key"]: d["ref_en"] for d in map(json.loads, open(S.REF_EN, encoding="utf-8"))}
+        ref = {d["key"]: d["en"] for d in map(json.loads, open(S.REF_EN, encoding="utf-8"))}
     texts = {}
     for d in src:
         k = d["key"]
-        if d["en"] == "":
+        if d["ja"] == "":
             continue  # vacío en el original: el juego no muestra nada, queda vacío
         # sin inglés del PPF: el original (muchos ya están en inglés, con ○×△□←→)
-        base = ref.get(k) or d["en"]
+        base = ref.get(k) or d["ja"]
         texts[k] = pseudo(k, base)
     # las tablas de los mapas tienen límite: cada una baja de nivel por separado
     #   1: número + «á» + inglés del PPF; 2: inglés del PPF tal cual; 3: solo el número
