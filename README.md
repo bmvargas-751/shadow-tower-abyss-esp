@@ -22,10 +22,10 @@ Etapa: Piloto · Actualizado el 22 nov 2026
 |---|---:|---:|---:|
 | Interfaz | 131 | 10 | 7,6 % |
 | Objetos y equipo | 1.210 | 0 | 0,0 % |
-| Criaturas | 136 | 0 | 0,0 % |
+| Criaturas | 136 | 40 | 29,4 % |
 | Lugares | 30 | 30 | 100,0 % |
 | Historia | 212 | 0 | 0,0 % |
-| **Total** | **1.719** | **40** | **2,3 %** |
+| **Total** | **1.719** | **80** | **4,7 %** |
 <!-- /loc:progress -->
 
 ## Para colaborar

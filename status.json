@@ -4,7 +4,7 @@
  "stage": "Piloto",
  "version": null,
  "lines": 1719,
- "done": 40,
+ "done": 80,
  "sections": [
   {
    "name": "Interfaz",
@@ -21,7 +21,7 @@
   {
    "name": "Criaturas",
    "lines": 136,
-   "done": 0,
+   "done": 40,
    "common": true
   },
   {
@@ -78,7 +78,7 @@
    "n": 6,
    "name": "Traducción",
    "state": "in_progress",
-   "note": "2,3 %"
+   "note": "4,7 %"
   },
   {
    "n": 7,
