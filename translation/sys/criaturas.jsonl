@@ -85,7 +85,7 @@
 {"key": "sys/criaturas#0110/nombre", "es": "Gare Baluva"}
 {"key": "sys/criaturas#0110/desc", "es": "De cuerpo robusto,\nespecie aberrante\nimpulsada por la locura"}
 {"key": "sys/criaturas#0063/nombre", "es": "Quiddle Baluva"}
-{"key": "sys/criaturas#0063/desc", "es": "Lideró a su especie durante\nmucho tiempo, pero hace\nmucho que decae junto con ella"}
+{"key": "sys/criaturas#0063/desc", "es": "Lideró a su especie durante\nmucho tiempo, pero desde\nhace tiempo decae junto con ella"}
 {"key": "sys/criaturas#0033/nombre", "es": "Mandas"}
 {"key": "sys/criaturas#0033/desc", "es": "Forma de vida aberrante\nque desafió el orden natural\ny perdió su voluntad"}
 {"key": "sys/criaturas#0034/nombre", "es": "Gare Mandas"}
@@ -101,7 +101,7 @@
 {"key": "sys/criaturas#0109/nombre", "es": "Gare Falto"}
 {"key": "sys/criaturas#0109/desc", "es": "De cuerpo robusto,\naniquila a todo aquel que\nse refleja en sus ojos vacíos"}
 {"key": "sys/criaturas#0059/nombre", "es": "Nega Falto"}
-{"key": "sys/criaturas#0059/desc", "es": "Forma parte del líder y,\nal mismo tiempo, es el\nallegado que le sirve"}
+{"key": "sys/criaturas#0059/desc", "es": "Forma parte del líder y,\nal mismo tiempo, es el\nsubordinado que le sirve"}
 {"key": "sys/criaturas#0060/nombre", "es": "Quiddle Falto"}
 {"key": "sys/criaturas#0060/desc", "es": "Ser que protege y consuela\na los desdichados que\ncayeron a medio camino"}
 {"key": "sys/criaturas#0069/nombre", "es": "Del Gardia"}
@@ -121,16 +121,16 @@
 {"key": "sys/criaturas#0081/nombre", "es": "Mira Pestis"}
 {"key": "sys/criaturas#0081/desc", "es": "Sirve al soberano supremo\ny tiene la orden de\nadministrar su entorno"}
 {"key": "sys/criaturas#0066/nombre", "es": "Nega Némesis"}
-{"key": "sys/criaturas#0066/desc", "es": "Sombra engendrada por el\nsoberano supremo, que se\nmueve a su antojo"}
+{"key": "sys/criaturas#0066/desc", "es": "Sombra engendrada por el\nsoberano supremo, que se\nmueve a voluntad de este"}
 {"key": "sys/criaturas#0082/nombre", "es": "Gu Nega Némesis"}
-{"key": "sys/criaturas#0082/desc", "es": "Apostado en distintos\nlugares, toda su información\nllega al soberano supremo"}
+{"key": "sys/criaturas#0082/desc", "es": "Apostado en distintos\nlugares, envía toda su información\nal soberano supremo"}
 {"key": "sys/criaturas#0083/nombre", "es": "Ru Nega Némesis"}
-{"key": "sys/criaturas#0083/desc", "es": "Apostado en distintos\nlugares, toda su información\nllega al soberano supremo"}
+{"key": "sys/criaturas#0083/desc", "es": "Apostado en distintos\nlugares, envía toda su información\nal soberano supremo"}
 {"key": "sys/criaturas#0067/nombre", "es": "Némesis"}
 {"key": "sys/criaturas#0067/desc", "es": "Posee gran poder en todo\neste mundo; es el\nverdadero soberano"}
 {"key": "sys/criaturas#0091/nombre", "es": "Orbe"}
 {"key": "sys/criaturas#0091/desc", "es": "Centro de este mundo, es la\nvoluntad que guía y\ngobierna a quienes lo habitan"}
 {"key": "sys/criaturas#0118/nombre", "es": "Nega Rurufon"}
-{"key": "sys/criaturas#0118/desc", "es": "Ser tan esperado, logrado\nal final de una larga\nreflexión"}
+{"key": "sys/criaturas#0118/desc", "es": "Ser muy esperado, fruto\nde una larga\nreflexión"}
 {"key": "sys/criaturas#0119/nombre", "es": "Rurufon"}
 {"key": "sys/criaturas#0119/desc", "es": "Distinta de los demás,\nmujer que guarda un enigma\ny actúa de forma inexplicable"}
