@@ -16,7 +16,7 @@ Todavía no hay una versión para descargar.
 ## Avance
 
 <!-- loc:progress -->
-Etapa: Piloto · Actualizado el 22 nov 2026
+Etapa: Traducción (Interfaz) · Actualizado el 22 nov 2026
 
 | Sección | Líneas | Traducidas | Avance |
 |---|---:|---:|---:|

@@ -10,6 +10,7 @@ Se deciden al ver la pantalla.
 
 - [ ] `mapa/` (técnico, límite provisional): la caja de los textos de mapa no se midió; el chequeo usa 300 de ancho y 3 renglones (TECH.md, T-3). Ver en el juego si entran o si sobra espacio, y ajustar `hooks.box`. [DECISIONS 2026-11-20]
 - [ ] `sys/objetos#0803/nombre` (traductor, T-3): «Espada de combate cercano» mide 263 y la caja de nombres es de 215. Va completa, con el término del glosario (インファイト → «de combate cercano»), y con su aviso. Ver en el juego si se lee bajo la barra de desplazamiento o si hace falta un término más corto en el glosario para toda la serie.
+- [ ] `mapa/2253#0120` (editor, T-3): al aplicar R-1 y C-2, el primer renglón quedó en 320 de 300 (límite provisional de los mapas). Propuesta del editor, que entra (269, 272 y 277): «Antaño, alguien de los suyos / dejó esta tierra con la lanza / y con ella volvió a esta tierra». `loc.py edits` no la aplica porque responde a un aviso y no a un hallazgo.
 
 ## De los lotes
 

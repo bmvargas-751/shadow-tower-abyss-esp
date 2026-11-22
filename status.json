@@ -1,7 +1,7 @@
 {
  "updated": "2026-11-22",
  "status": "translation",
- "stage": "Piloto",
+ "stage": "Traducción (Interfaz)",
  "version": null,
  "lines": 1719,
  "done": 184,
@@ -71,7 +71,7 @@
   {
    "n": 5,
    "name": "Piloto",
-   "state": "in_progress",
+   "state": "done",
    "note": null
   },
   {
