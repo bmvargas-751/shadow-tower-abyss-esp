@@ -43,11 +43,11 @@ Estimación (2026-11-20), con la misma cuenta que `shadow-tower-esp`: ~43 000 to
 
 | Sección | Líneas | Únicas | Caracteres (japonés) | Caracteres (español, estimado) | Lotes | Tokens estimados |
 |---|---:|---:|---:|---:|---:|---:|
-| Interfaz y ayudas del menú | 131 | 117 | 2166 | ~5200 | 1 | ~96k |
+| Interfaz (menú y ayudas) | 131 | 117 | 2166 | ~5200 | 1 | ~96k |
 | Lugares | 30 | 30 | 420 | ~1000 | 1 | ~55k |
 | Criaturas | 136 | 135 | 2029 | ~4900 | 1 | ~93k |
 | Objetos y equipo | 1210 | 920 | 13732 | ~33000 | 4 | ~506k |
-| Mapas (eventos y diálogos) | 212 | 205 | 4371 | ~10500 | 1 | ~149k |
+| Historia (eventos y diálogos de los mapas) | 212 | 205 | 4371 | ~10500 | 1 | ~149k |
 | **Total** | **1719** | **1407** | **22718** | **~54500** | **8** | **~900k** |
 
 Más el editor, las líneas delicadas, el terminólogo y el perfilador (fase 3) y el set de oro (fase 4). Lugares es chica: conviene ir en el mismo lote que la interfaz (`loc.py prepare --prefix sys/menu# --prefix sys/lugares#`) para no pagar dos veces el costo fijo (~45k menos).
@@ -72,8 +72,11 @@ Obligatorio: sin él, `loc.py prepare` no arma lotes.
 - [ ] Ajustar documentos y roles con lo que salga (y volver a pasar el set de oro si cambia un prompt).
 
 ### Fase 6. Traducción
-
-- [ ] (una casilla por sección de `loc.json`)
+- [ ] Interfaz
+- [ ] Objetos y equipo
+- [ ] Criaturas
+- [ ] Lugares
+- [ ] Historia
 
 ### Fase 7. Prueba en el juego
 

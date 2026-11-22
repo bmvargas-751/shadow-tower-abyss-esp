@@ -1,0 +1,97 @@
+{
+ "updated": "2026-11-22",
+ "status": "preparation",
+ "stage": "Piloto",
+ "version": null,
+ "lines": 1719,
+ "done": 0,
+ "sections": [
+  {
+   "name": "Interfaz",
+   "lines": 131,
+   "done": 0,
+   "common": true
+  },
+  {
+   "name": "Objetos y equipo",
+   "lines": 1210,
+   "done": 0,
+   "common": true
+  },
+  {
+   "name": "Criaturas",
+   "lines": 136,
+   "done": 0,
+   "common": true
+  },
+  {
+   "name": "Lugares",
+   "lines": 30,
+   "done": 0,
+   "common": true
+  },
+  {
+   "name": "Historia",
+   "lines": 212,
+   "done": 0,
+   "common": true
+  }
+ ],
+ "phases": [
+  {
+   "n": 0,
+   "name": "Antes de empezar",
+   "state": "done",
+   "note": null
+  },
+  {
+   "n": 1,
+   "name": "Prueba técnica",
+   "state": "done",
+   "note": null
+  },
+  {
+   "n": 2,
+   "name": "Inventario y presupuesto",
+   "state": "done",
+   "note": "1.719 líneas"
+  },
+  {
+   "n": 3,
+   "name": "Documentos",
+   "state": "done",
+   "note": null
+  },
+  {
+   "n": 4,
+   "name": "Set de oro",
+   "state": "done",
+   "note": "14 de 16 (oro-002)"
+  },
+  {
+   "n": 5,
+   "name": "Piloto",
+   "state": "pending",
+   "note": null
+  },
+  {
+   "n": 6,
+   "name": "Traducción",
+   "state": "pending",
+   "note": null
+  },
+  {
+   "n": 7,
+   "name": "Prueba en el juego",
+   "state": "pending",
+   "note": null
+  },
+  {
+   "n": 8,
+   "name": "Entrega",
+   "state": "pending",
+   "note": null
+  }
+ ],
+ "changes": []
+}

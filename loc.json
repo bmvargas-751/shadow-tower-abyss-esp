@@ -11,7 +11,7 @@
   "work": "build/work/batches",
   "sections": [
     {
-      "name": "Interfaz y ayudas del menú",
+      "name": "Interfaz",
       "prefixes": [
         "sys/menu#"
       ]
@@ -35,7 +35,7 @@
       ]
     },
     {
-      "name": "Mapas (eventos y diálogos)",
+      "name": "Historia",
       "prefixes": [
         "mapa/"
       ]
