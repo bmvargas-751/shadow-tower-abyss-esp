@@ -72,9 +72,9 @@ Obligatorio: sin él, `loc.py prepare` no arma lotes.
 - [x] Ajustar documentos y roles con lo que salga (y volver a pasar el set de oro si cambia un prompt). Ni los documentos ni los roles cambiaron. Las dudas quedan en PENDING.md y se deciden al final de la traducción [DECISIONS 2026-11-22].
 
 ### Fase 6. Traducción
-- [ ] Interfaz
+- [x] Interfaz
 - [ ] Objetos y equipo
-- [ ] Criaturas
+- [x] Criaturas
 - [x] Lugares
 - [ ] Historia
 

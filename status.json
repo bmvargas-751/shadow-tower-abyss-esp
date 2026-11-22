@@ -1,15 +1,15 @@
 {
  "updated": "2026-11-22",
  "status": "translation",
- "stage": "Traducción (Interfaz)",
+ "stage": "Traducción (Objetos y equipo)",
  "version": null,
  "lines": 1719,
- "done": 184,
+ "done": 401,
  "sections": [
   {
    "name": "Interfaz",
    "lines": 131,
-   "done": 10,
+   "done": 131,
    "common": true
   },
   {
@@ -21,7 +21,7 @@
   {
    "name": "Criaturas",
    "lines": 136,
-   "done": 40,
+   "done": 136,
    "common": true
   },
   {
@@ -78,7 +78,7 @@
    "n": 6,
    "name": "Traducción",
    "state": "in_progress",
-   "note": "10,7 %"
+   "note": "23,3 %"
   },
   {
    "n": 7,

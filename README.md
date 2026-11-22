@@ -16,16 +16,16 @@ Todavía no hay una versión para descargar.
 ## Avance
 
 <!-- loc:progress -->
-Etapa: Traducción (Interfaz) · Actualizado el 22 nov 2026
+Etapa: Traducción (Objetos y equipo) · Actualizado el 22 nov 2026
 
 | Sección | Líneas | Traducidas | Avance |
 |---|---:|---:|---:|
-| Interfaz | 131 | 10 | 7,6 % |
+| Interfaz | 131 | 131 | 100,0 % |
 | Objetos y equipo | 1.210 | 60 | 5,0 % |
-| Criaturas | 136 | 40 | 29,4 % |
+| Criaturas | 136 | 136 | 100,0 % |
 | Lugares | 30 | 30 | 100,0 % |
 | Historia | 212 | 44 | 20,8 % |
-| **Total** | **1.719** | **184** | **10,7 %** |
+| **Total** | **1.719** | **401** | **23,3 %** |
 <!-- /loc:progress -->
 
 ## Para colaborar

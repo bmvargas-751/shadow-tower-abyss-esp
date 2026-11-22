@@ -38,3 +38,99 @@
 {"key": "sys/criaturas#0037/desc", "es": "Controlado y oprimido\ncomo un esclavo.\nDe carácter algo cobarde"}
 {"key": "sys/criaturas#0038/nombre", "es": "Nega Mordor"}
 {"key": "sys/criaturas#0038/desc", "es": "Controlado y oprimido\ncomo un esclavo.\nDe carácter algo agresivo"}
+{"key": "sys/criaturas#0039/nombre", "es": "Mira Mordory"}
+{"key": "sys/criaturas#0039/desc", "es": "De sentidos agudos,\nlidera un grupo pequeño.\nDe carácter algo agresivo"}
+{"key": "sys/criaturas#0040/nombre", "es": "Gare Mordor"}
+{"key": "sys/criaturas#0040/desc", "es": "De cuerpo robusto,\nes el supervisor que\nlidera a toda la manada"}
+{"key": "sys/criaturas#0041/nombre", "es": "Quiddle Mordor"}
+{"key": "sys/criaturas#0041/desc", "es": "Bestia enorme y\nfrenética, que parece\nreflejar ira y dolor"}
+{"key": "sys/criaturas#0101/nombre", "es": "Para Galp"}
+{"key": "sys/criaturas#0101/desc", "es": "La criatura de su brazo\nizquierdo se apoderó de su\ncuerpo y lo controla por completo"}
+{"key": "sys/criaturas#0102/nombre", "es": "Para Raldo"}
+{"key": "sys/criaturas#0102/desc", "es": "La criatura enroscada en su\nvientre se apoderó de su\ncuerpo y lo controla por completo"}
+{"key": "sys/criaturas#0104/nombre", "es": "Para Mordor"}
+{"key": "sys/criaturas#0104/desc", "es": "La criatura sobre su ojo\nse apoderó de su cuerpo\ny lo controla por completo"}
+{"key": "sys/criaturas#0103/nombre", "es": "Para Mandas"}
+{"key": "sys/criaturas#0103/desc", "es": "La criatura de su brazo\nderecho se apoderó de su\ncuerpo y lo controla por completo"}
+{"key": "sys/criaturas#0047/nombre", "es": "Paraferm"}
+{"key": "sys/criaturas#0047/desc", "es": "Inmóvil en su sitio,\nataca a la presa que\nse acerca sin saberlo"}
+{"key": "sys/criaturas#0108/nombre", "es": "Gare Paraferm"}
+{"key": "sys/criaturas#0108/desc", "es": "De cuerpo robusto,\ncalcina todo lo\nque se le acerca"}
+{"key": "sys/criaturas#0105/nombre", "es": "Quiddle Paraferm"}
+{"key": "sys/criaturas#0105/desc", "es": "Sigue invadiendo el lugar\ny, para protegerse, cierra\nfirmemente su cuerpo"}
+{"key": "sys/criaturas#0049/nombre", "es": "Birassis"}
+{"key": "sys/criaturas#0049/desc", "es": "Se mueve veloz bajo el agua\ny ataca a las criaturas\nterrestres que caen"}
+{"key": "sys/criaturas#0048/nombre", "es": "Birash"}
+{"key": "sys/criaturas#0048/desc", "es": "Suele actuar en manada;\nvarios atacan a una presa\nde forma concentrada"}
+{"key": "sys/criaturas#0050/nombre", "es": "Gare Birash"}
+{"key": "sys/criaturas#0050/desc", "es": "Su aleta dura y enorme\nlo protege, así que\nsu torso se ha atrofiado"}
+{"key": "sys/criaturas#0056/nombre", "es": "A Grundamis"}
+{"key": "sys/criaturas#0056/desc", "es": "Larva en desarrollo.\nSu rasgo es la rapidez\nque le da su cuerpo pequeño"}
+{"key": "sys/criaturas#0054/nombre", "es": "A Grundam"}
+{"key": "sys/criaturas#0054/desc", "es": "Criatura anfibia capaz\nde curar bajo el agua\nlas heridas que recibe"}
+{"key": "sys/criaturas#0055/nombre", "es": "A Grundami"}
+{"key": "sys/criaturas#0055/desc", "es": "Puede moverse tanto en\nel agua como en tierra,\ny agita su dura cola"}
+{"key": "sys/criaturas#0053/nombre", "es": "Mi Grundamis"}
+{"key": "sys/criaturas#0053/desc", "es": "Larva en desarrollo.\nMuy hábil para\npercibir el peligro"}
+{"key": "sys/criaturas#0051/nombre", "es": "Mi Grundam"}
+{"key": "sys/criaturas#0051/desc", "es": "Se adaptó a la tierra y\nataca veloz a los enemigos\nque entran en su territorio"}
+{"key": "sys/criaturas#0052/nombre", "es": "Migare Grundam"}
+{"key": "sys/criaturas#0052/desc", "es": "De cuerpo robusto,\npersigue hasta el fin\na quien devasta su territorio"}
+{"key": "sys/criaturas#0064/nombre", "es": "Baluvis"}
+{"key": "sys/criaturas#0064/desc", "es": "Por ser aún una larva,\nno puede moverse sola\ny vive bajo protección"}
+{"key": "sys/criaturas#0062/nombre", "es": "Baluvi"}
+{"key": "sys/criaturas#0062/desc", "es": "Protege a las larvas,\nsobre todo cazando\npresas"}
+{"key": "sys/criaturas#0061/nombre", "es": "Baluva"}
+{"key": "sys/criaturas#0061/desc", "es": "Protege a las larvas,\nsobre todo derrotando\na los enemigos externos"}
+{"key": "sys/criaturas#0110/nombre", "es": "Gare Baluva"}
+{"key": "sys/criaturas#0110/desc", "es": "De cuerpo robusto,\nespecie aberrante\nimpulsada por la locura"}
+{"key": "sys/criaturas#0063/nombre", "es": "Quiddle Baluva"}
+{"key": "sys/criaturas#0063/desc", "es": "Lideró a su especie durante\nmucho tiempo, pero hace\nmucho que decae junto con ella"}
+{"key": "sys/criaturas#0033/nombre", "es": "Mandas"}
+{"key": "sys/criaturas#0033/desc", "es": "Forma de vida aberrante\nque desafió el orden natural\ny perdió su voluntad"}
+{"key": "sys/criaturas#0034/nombre", "es": "Gare Mandas"}
+{"key": "sys/criaturas#0034/desc", "es": "De cuerpo robusto,\nforma de vida aberrante\nque actúa por instinto"}
+{"key": "sys/criaturas#0036/nombre", "es": "Quiddle Mandas"}
+{"key": "sys/criaturas#0036/desc", "es": "De aspecto aberrante, tiene\ninteligencia y voluntad,\ny pone a prueba a quienes llegan"}
+{"key": "sys/criaturas#0035/nombre", "es": "Sorgand"}
+{"key": "sys/criaturas#0035/desc", "es": "Con su colosal cuerpo,\ndestruye por completo\ntodo a su alrededor"}
+{"key": "sys/criaturas#0057/nombre", "es": "Faltis"}
+{"key": "sys/criaturas#0057/desc", "es": "Vuela, cruza incluso el\nespacio y conduce a la\noscuridad a quienes llegan"}
+{"key": "sys/criaturas#0058/nombre", "es": "Falto"}
+{"key": "sys/criaturas#0058/desc", "es": "Se mueve ágil por el aire\ny merodea por la zona,\ncruzando también el espacio"}
+{"key": "sys/criaturas#0109/nombre", "es": "Gare Falto"}
+{"key": "sys/criaturas#0109/desc", "es": "De cuerpo robusto,\naniquila a todo aquel que\nse refleja en sus ojos vacíos"}
+{"key": "sys/criaturas#0059/nombre", "es": "Nega Falto"}
+{"key": "sys/criaturas#0059/desc", "es": "Forma parte del líder y,\nal mismo tiempo, es el\nallegado que le sirve"}
+{"key": "sys/criaturas#0060/nombre", "es": "Quiddle Falto"}
+{"key": "sys/criaturas#0060/desc", "es": "Ser que protege y consuela\na los desdichados que\ncayeron a medio camino"}
+{"key": "sys/criaturas#0069/nombre", "es": "Del Gardia"}
+{"key": "sys/criaturas#0069/desc", "es": "Al detectar intrusos, intenta\neliminarlos aunque tenga\nque autodestruirse"}
+{"key": "sys/criaturas#0070/nombre", "es": "Sol Gardia"}
+{"key": "sys/criaturas#0070/desc", "es": "Lleva el frío en su cuerpo\ny congela a quien invade\nsu territorio"}
+{"key": "sys/criaturas#0071/nombre", "es": "Gil Gardia"}
+{"key": "sys/criaturas#0071/desc", "es": "Actúa en grupo y se\ncoordina para eliminar\na los intrusos"}
+{"key": "sys/criaturas#0072/nombre", "es": "Nor Gardia"}
+{"key": "sys/criaturas#0072/desc", "es": "Su dura armadura impide\nque se le acerque\ncualquier intruso"}
+{"key": "sys/criaturas#0068/nombre", "es": "Gare Gardia"}
+{"key": "sys/criaturas#0068/desc", "es": "De cuerpo robusto, se cubre\ncon espinas afiladas\ny un caparazón duro"}
+{"key": "sys/criaturas#0073/nombre", "es": "Nada Gardia"}
+{"key": "sys/criaturas#0073/desc", "es": "En lo más profundo de la\nsala, su misión es\nproteger el tesoro"}
+{"key": "sys/criaturas#0065/nombre", "es": "Pestis"}
+{"key": "sys/criaturas#0065/desc", "es": "Cerca del soberano supremo,\nespera sin descanso\nel momento por venir"}
+{"key": "sys/criaturas#0081/nombre", "es": "Mira Pestis"}
+{"key": "sys/criaturas#0081/desc", "es": "Sirve al soberano supremo\ny tiene la orden de\nadministrar su entorno"}
+{"key": "sys/criaturas#0066/nombre", "es": "Nega Némesis"}
+{"key": "sys/criaturas#0066/desc", "es": "Sombra engendrada por el\nsoberano supremo, que se\nmueve a su antojo"}
+{"key": "sys/criaturas#0082/nombre", "es": "Gu Nega Némesis"}
+{"key": "sys/criaturas#0082/desc", "es": "Apostado en distintos\nlugares, toda su información\nllega al soberano supremo"}
+{"key": "sys/criaturas#0083/nombre", "es": "Ru Nega Némesis"}
+{"key": "sys/criaturas#0083/desc", "es": "Apostado en distintos\nlugares, toda su información\nllega al soberano supremo"}
+{"key": "sys/criaturas#0067/nombre", "es": "Némesis"}
+{"key": "sys/criaturas#0067/desc", "es": "Posee gran poder en todo\neste mundo; es el\nverdadero soberano"}
+{"key": "sys/criaturas#0091/nombre", "es": "Orbe"}
+{"key": "sys/criaturas#0091/desc", "es": "Centro de este mundo, es la\nvoluntad que guía y\ngobierna a quienes lo habitan"}
+{"key": "sys/criaturas#0118/nombre", "es": "Nega Rurufon"}
+{"key": "sys/criaturas#0118/desc", "es": "Ser tan esperado, logrado\nal final de una larga\nreflexión"}
+{"key": "sys/criaturas#0119/nombre", "es": "Rurufon"}
+{"key": "sys/criaturas#0119/desc", "es": "Distinta de los demás,\nmujer que guarda un enigma\ny actúa de forma inexplicable"}

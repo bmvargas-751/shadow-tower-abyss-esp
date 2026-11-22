@@ -11,6 +11,7 @@ Se deciden al ver la pantalla.
 - [ ] `mapa/` (técnico, límite provisional): la caja de los textos de mapa no se midió; el chequeo usa 300 de ancho y 3 renglones (TECH.md, T-3). Ver en el juego si entran o si sobra espacio, y ajustar `hooks.box`. [DECISIONS 2026-11-20]
 - [ ] `sys/objetos#0803/nombre` (traductor, T-3): «Espada de combate cercano» mide 263 y la caja de nombres es de 215. Va completa, con el término del glosario (インファイト → «de combate cercano»), y con su aviso. Ver en el juego si se lee bajo la barra de desplazamiento o si hace falta un término más corto en el glosario para toda la serie.
 - [ ] `mapa/2253#0120` (editor, T-3): al aplicar R-1 y C-2, el primer renglón quedó en 320 de 300 (límite provisional de los mapas). Propuesta del editor, que entra (269, 272 y 277): «Antaño, alguien de los suyos / dejó esta tierra con la lanza / y con ella volvió a esta tierra». `loc.py edits` no la aplica porque responde a un aviso y no a un hallazgo.
+- [ ] `sys/menu#0400` (editor, T-3): al aplicar R-1 («Aun si llegara a producirse…»), el renglón 6 quedó en 495 de 480. Hay que mover los saltos; `loc.py edits` no acepta un cambio que responde solo a un aviso.
 
 ## De los lotes
 
@@ -24,3 +25,8 @@ Se deciden al ver la pantalla.
 - [ ] `sys/objetos#0814/desc`, `#0820/desc` (revisor, sin regla): 使い手 → «su dueño», pero el glosario usa «portador» cuando el efecto cae sobre quien lleva el objeto (封印, 呪い). ¿Se unifica en «portador» para todos los objetos? El sentido sirve con los dos.
 - [ ] `mapa/2253#0101`, `#0030` (traductor, sin regla en el glosario): 破壊者 → «destructor» y 千尋 → «hondura insondable», provisionales. ¿Se fijan en GLOSSARY.md?
 - [ ] `mapa/2248#0020`, `#0021`, `#0023` (traductor y revisor, sin regla): «el Rey» con mayúscula y «nuestro rey» con minúscula. El glosario fija «Rey de la Lanza», pero no «Rey» solo. ¿Mayúscula siempre que nombra a ese rey?
+
+### Lote interfaz-001 (2026-11-22)
+
+- [ ] `sys/menu#0044` (proofreader, sin regla): «Configura las opciones» → «Configurar las opciones». Las descripciones vecinas del menú (#0040-#0042, #0071) usan infinitivo; esta es la única en imperativo.
+- [ ] `sys/menu#0145` (revisor, choca con el glosario): «Recuperación de PV y recuperación de PM» → «Recuperación de PV y PM». El glosario fija `MP回復` → «recuperación de PM» y el chequeo pide el término entero; falta una entrada para el compuesto `HP・MP回復`. También `消費HP` «Costo en PV» frente a `HP消費` «Consumo de PV» (traductor): ¿se unifican?
