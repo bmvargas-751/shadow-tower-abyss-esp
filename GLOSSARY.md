@@ -277,7 +277,7 @@ Lo que lleva un paréntesis en «Original» no lo controla `loc.py check` (ese t
 | MP消費 | Consumo de PM | decidido 2026-11-20 | El equipo le quita PV o PM a quien lo lleva. El fan dice «Drain», que chocaría con 吸収 → absorción (ST1 DRAIN). |
 | 重量軽減 | Reduce el peso | decidido 2026-11-20 | Efecto (8 textos); 重量 → peso es fila de ST1. |
 | 破砕 | aplastar | decidido 2026-11-20 | 破砕力 → fuerza para aplastar. Va con el prefijo ブレイク, cuyas armas lo describen; distinto de 打撃 → golpe. 10 textos. |
-| 装弾数 | Capacidad | decidido 2026-11-20 | «装弾数7発» → «Capacidad: 7 balas». 29 textos. |
+| 装弾数 | Capacidad | decidido 2026-11-20 | «装弾数7発» → «Capacidad: 7 disparos» (singular con 1: «Capacidad: 1 disparo»). «Disparos» sirve también para el Panzerfaust y el lanzagranadas [DECISIONS 2026-11-23]. 29 textos. |
 
 ### Equipo: familias sin equivalente en ST1 (decidido)
 
