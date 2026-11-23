@@ -16,16 +16,16 @@ Todavía no hay una versión para descargar.
 ## Avance
 
 <!-- loc:progress -->
-Etapa: Traducción (Objetos y equipo) · Actualizado el 22 nov 2026
+Etapa: Prueba en el juego · Actualizado el 22 nov 2026
 
 | Sección | Líneas | Traducidas | Avance |
 |---|---:|---:|---:|
 | Interfaz | 131 | 131 | 100,0 % |
-| Objetos y equipo | 1.210 | 1.063 | 87,9 % |
+| Objetos y equipo | 1.210 | 1.210 | 100,0 % |
 | Criaturas | 136 | 136 | 100,0 % |
 | Lugares | 30 | 30 | 100,0 % |
 | Historia | 212 | 212 | 100,0 % |
-| **Total** | **1.719** | **1.572** | **91,4 %** |
+| **Total** | **1.719** | **1.719** | **100,0 %** |
 <!-- /loc:progress -->
 
 ## Para colaborar

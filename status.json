@@ -1,10 +1,10 @@
 {
  "updated": "2026-11-22",
- "status": "translation",
- "stage": "Traducción (Objetos y equipo)",
+ "status": "beta",
+ "stage": "Prueba en el juego",
  "version": null,
  "lines": 1719,
- "done": 1572,
+ "done": 1719,
  "sections": [
   {
    "name": "Interfaz",
@@ -15,7 +15,7 @@
   {
    "name": "Objetos y equipo",
    "lines": 1210,
-   "done": 1063,
+   "done": 1210,
    "common": true
   },
   {
@@ -77,8 +77,8 @@
   {
    "n": 6,
    "name": "Traducción",
-   "state": "in_progress",
-   "note": "91,4 %"
+   "state": "done",
+   "note": "100,0 %"
   },
   {
    "n": 7,

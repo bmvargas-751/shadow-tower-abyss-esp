@@ -73,7 +73,7 @@ Obligatorio: sin él, `loc.py prepare` no arma lotes.
 
 ### Fase 6. Traducción
 - [x] Interfaz
-- [ ] Objetos y equipo
+- [x] Objetos y equipo
 - [x] Criaturas
 - [x] Lugares
 - [x] Historia

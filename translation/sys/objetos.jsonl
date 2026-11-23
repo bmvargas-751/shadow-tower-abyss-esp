@@ -94,7 +94,7 @@
 {"key": "sys/objetos#0846/desc", "es": "Espada demoníaca que emite una\noscuridad intensa\nObjeto raro\nEspecial: Ciega, Sellado"}
 {"key": "sys/objetos#0847/nombre", "es": "Rombarm"}
 {"key": "sys/objetos#0847/desc", "es": "Espada demoníaca que emite una\noscuridad intensa\nObjeto raro\nEspecial: Ciega, Sellado"}
-{"key": "sys/objetos#0848/nombre", "es": "Estallido agudo"}
+{"key": "sys/objetos#0848/nombre", "es": "Ráfaga cortante"}
 {"key": "sys/objetos#0848/desc", "es": "Espada de una mano grande\nque sana la mente\nObjeto raro\nEspecial: Recup. de PM baja"}
 {"key": "sys/objetos#0849/nombre", "es": "Espada maciza"}
 {"key": "sys/objetos#0849/desc", "es": "Espada de dos manos, más\npesada que una de una mano,\npero de gran ataque"}
@@ -128,9 +128,9 @@
 {"key": "sys/objetos#0863/desc", "es": "Cuchillo de hoja ondulada\nEspecial: Envenena"}
 {"key": "sys/objetos#0864/nombre", "es": "Kris Naga"}
 {"key": "sys/objetos#0864/desc", "es": "Cuchillo afilado de hoja\nondulada\nEspecial: Envenena\nCrítico"}
-{"key": "sys/objetos#0865/nombre", "es": "Bijiacha"}
+{"key": "sys/objetos#0865/nombre", "es": "Sai"}
 {"key": "sys/objetos#0865/desc", "es": "Arma de estocada de madera,\nde poco poder pero muy ligera"}
-{"key": "sys/objetos#0866/nombre", "es": "Bijiacha"}
+{"key": "sys/objetos#0866/nombre", "es": "Sai"}
 {"key": "sys/objetos#0866/desc", "es": "Arma de estocada de metal,\nligera y de poder aceptable"}
 {"key": "sys/objetos#0867/nombre", "es": "Chaku"}
 {"key": "sys/objetos#0867/desc", "es": "Espada aberrante con hoja\nen forma de peine\nObjeto raro\nEspecial: Absorción de PV"}
@@ -241,7 +241,7 @@
 {"key": "sys/objetos#0890/nombre", "es": "Martillo de guerra"}
 {"key": "sys/objetos#0890/desc", "es": "Martillo de guerra de dos manos\nque aplasta a los enemigos"}
 {"key": "sys/objetos#0891/nombre", "es": "Martillo de guerra"}
-{"key": "sys/objetos#0891/desc", "es": "Martillo de guerra de dos manos\nde poca durabilidad"}
+{"key": "sys/objetos#0891/desc", "es": "Martillo de guerra de dos manos\nde durabilidad algo baja"}
 {"key": "sys/objetos#0892/nombre", "es": "Martillo de guerra"}
 {"key": "sys/objetos#0892/desc", "es": "Martillo de guerra de dos manos\ncon poder mágico de rayo\nEspecial: Crítico"}
 {"key": "sys/objetos#0893/nombre", "es": "Martillo reforzado"}
@@ -256,7 +256,7 @@
 {"key": "sys/objetos#0897/desc", "es": "Bastón de madera envuelto\nen una fuerte oscuridad\nEspecial: Ciega\nResiste magia"}
 {"key": "sys/objetos#0898/nombre", "es": "Colmillo lunar perforante"}
 {"key": "sys/objetos#0898/desc", "es": "Arma de golpe de dos manos\ncuya punta se compara\ncon la luna\nObjeto raro"}
-{"key": "sys/objetos#0899/nombre", "es": "Colmillo de sombra perforante"}
+{"key": "sys/objetos#0899/nombre", "es": "Colmillo umbrío perforante"}
 {"key": "sys/objetos#0899/desc", "es": "Arma de dos manos maldita con\nun resplandor rojo en la punta\nObjeto raro\nEspecial: Maldición"}
 {"key": "sys/objetos#0900/nombre", "es": "Chupasangre"}
 {"key": "sys/objetos#0900/desc", "es": "Arma de dos manos que quita\nvigor y fuerza mental al enemigo\nObjeto raro\nEspecial: Absorción de PV y PM"}
@@ -290,8 +290,8 @@
 {"key": "sys/objetos#0914/desc", "es": "Hacha de guerra de hermosa\ndecoración, preferida por\nlos nobles\nEspecial: Reduce el peso"}
 {"key": "sys/objetos#0915/nombre", "es": "Hacha cortesana"}
 {"key": "sys/objetos#0915/desc", "es": "Hacha excelente hecha\nde metal de calidad"}
-{"key": "sys/objetos#0916/nombre", "es": "Gran hendedura"}
-{"key": "sys/objetos#0916/desc", "es": "Hacha de dos manos de combate\ncon poder mágico de ácido\nObjeto raro\nEspecial: Absorción de PV"}
+{"key": "sys/objetos#0916/nombre", "es": "Hendidura magna"}
+{"key": "sys/objetos#0916/desc", "es": "Hacha de dos manos de combate\ncon fuerte poder mágico de ácido\nObjeto raro\nEspecial: Absorción de PV"}
 {"key": "sys/objetos#0917/nombre", "es": "Hacha pesada"}
 {"key": "sys/objetos#0917/desc", "es": "Hacha de dos manos algo\npesada, pero de gran poder\npara aplastar"}
 {"key": "sys/objetos#0918/nombre", "es": "Hacha pesada"}
@@ -784,9 +784,9 @@
 {"key": "sys/objetos#0424/desc", "es": "Grebas plateadas de un metal\nraro\nEspecial: Resiste estados\nalterados"}
 {"key": "sys/objetos#0425/nombre", "es": "Grebas robustas"}
 {"key": "sys/objetos#0425/desc", "es": "Grebas negras de un metal\nraro\nEspecial: Resiste estados\nalterados"}
-{"key": "sys/objetos#0426/nombre", "es": "Nube nova"}
+{"key": "sys/objetos#0426/nombre", "es": "Nube de nova"}
 {"key": "sys/objetos#0426/desc", "es": "Grebas curativas con poder\nde luz, Objeto raro\nEspecial: Recup. de PV baja"}
-{"key": "sys/objetos#0427/nombre", "es": "Nube nova"}
+{"key": "sys/objetos#0427/nombre", "es": "Nube de nova"}
 {"key": "sys/objetos#0427/desc", "es": "Grebas curativas de luz\nbrillante, Objeto raro\nEspecial: Recup. de PV media"}
 {"key": "sys/objetos#0428/nombre", "es": "Gandharva"}
 {"key": "sys/objetos#0428/desc", "es": "Botas occidentales de cuero\ncon cadenas de hierro"}
@@ -806,7 +806,7 @@
 {"key": "sys/objetos#0435/desc", "es": "Botas oscuras con mayor\ndefensa física\nObjeto raro\nEspecial: Pérdida de PM baja"}
 {"key": "sys/objetos#0436/nombre", "es": "Botas de Hades firmes"}
 {"key": "sys/objetos#0436/desc", "es": "Botas oscuras con mayor\ndefensa mágica\nObjeto raro\nEspecial: Pérdida de PM baja"}
-{"key": "sys/objetos#0437/nombre", "es": "Doble Raise"}
+{"key": "sys/objetos#0437/nombre", "es": "Doble elevación"}
 {"key": "sys/objetos#0437/desc", "es": "Grebas de cadenas tejidas,\nligeras pero de gran defensa"}
 {"key": "sys/objetos#0438/nombre", "es": "Doble Raise rápido"}
 {"key": "sys/objetos#0438/desc", "es": "Grebas de cadenas tejidas\nresistentes al corte"}
@@ -857,10 +857,10 @@
 {"key": "sys/objetos#0516/nombre", "es": "Aro de hechizo sensible"}
 {"key": "sys/objetos#0516/desc", "es": "Brazalete de cerámica que\namplifica mucho la fuerza\nmental\nObjeto raro"}
 {"key": "sys/objetos#0517/nombre", "es": "Aro de hechizo"}
-{"key": "sys/objetos#0517/desc", "es": "Brazalete plateado que\namplifica la fuerza mental\nEspecial: Recup. de PM baja"}
-{"key": "sys/objetos#0518/nombre", "es": "Triple brazalete"}
+{"key": "sys/objetos#0517/desc", "es": "Brazalete de plata que\namplifica la fuerza mental\nEspecial: Recup. de PM baja"}
+{"key": "sys/objetos#0518/nombre", "es": "Triple bendición"}
 {"key": "sys/objetos#0518/desc", "es": "Triple brazalete resistente a\nlos estados alterados\nEspecial: Inmune a veneno,\nceguera y parálisis"}
-{"key": "sys/objetos#0519/nombre", "es": "Triple brazalete"}
+{"key": "sys/objetos#0519/nombre", "es": "Triple bendición"}
 {"key": "sys/objetos#0519/desc", "es": "Triple brazalete resistente a\nlos estados alterados\nEspecial: Inmune a maldición,\nsellado y lentitud"}
 {"key": "sys/objetos#0520/nombre", "es": "Triple brazalete robusto"}
 {"key": "sys/objetos#0520/desc", "es": "Triple brazalete muy resistente\na los estados alterados\nEspecial: Resiste estados\nalterados"}
@@ -878,11 +878,11 @@
 {"key": "sys/objetos#0526/desc", "es": "Brazalete con forma de monstruo\ncon poder mágico de oscuridad\nObjeto raro\nEspecial: Pérdida de PV baja"}
 {"key": "sys/objetos#0527/nombre", "es": "Daratome"}
 {"key": "sys/objetos#0527/desc", "es": "Brazalete que aumenta mucho\ntodas las capacidades físicas\nObjeto raro"}
-{"key": "sys/objetos#0528/nombre", "es": "Ruarune"}
+{"key": "sys/objetos#0528/nombre", "es": "Ruarún"}
 {"key": "sys/objetos#0528/desc", "es": "Brazalete que aumenta mucho\ntodas las capacidades mágicas\nObjeto raro"}
-{"key": "sys/objetos#0529/nombre", "es": "Luk Prakan"}
+{"key": "sys/objetos#0529/nombre", "es": "Luk Prakham"}
 {"key": "sys/objetos#0529/desc", "es": "Cuentas de oración que\naumentan mucho la defensa\nfísica, Objeto raro\nEspecial: Resiste daño físico"}
-{"key": "sys/objetos#0530/nombre", "es": "Luk Prakan"}
+{"key": "sys/objetos#0530/nombre", "es": "Luk Prakham"}
 {"key": "sys/objetos#0530/desc", "es": "Cuentas de oración que\naumentan mucho la defensa\nmágica, Objeto raro\nEspecial: Resiste magia"}
 {"key": "sys/objetos#0531/nombre", "es": "Pulsera tajante"}
 {"key": "sys/objetos#0531/desc", "es": "Aumenta las capacidades físicas\na cambio de la magia\nEspecial: Sellado"}
@@ -925,9 +925,9 @@
 {"key": "sys/objetos#0610/nombre", "es": "Flujo de lágrimas sensible"}
 {"key": "sys/objetos#0610/desc", "es": "Amuleto de gota bermellón\nque revive la mente\nObjeto raro\nEspecial: Recup. de PM baja"}
 {"key": "sys/objetos#0611/nombre", "es": "Cabeza de ira"}
-{"key": "sys/objetos#0611/desc", "es": "Amuleto de deidad maligna que\nresiste estados alterados\nEspecial: Resiste estados\nalterados"}
+{"key": "sys/objetos#0611/desc", "es": "Amuleto con forma de deidad\nmaligna que resiste estados\nEspecial: Resiste estados\nalterados"}
 {"key": "sys/objetos#0612/nombre", "es": "Cabeza de ira"}
-{"key": "sys/objetos#0612/desc", "es": "Amuleto de deidad maligna que\nresiste estados alterados\nEspecial: Resiste estados\nalterados"}
+{"key": "sys/objetos#0612/desc", "es": "Amuleto con forma de deidad\nmaligna que resiste estados\nEspecial: Resiste estados\nalterados"}
 {"key": "sys/objetos#0613/nombre", "es": "Cabeza de ira sensible"}
 {"key": "sys/objetos#0613/desc", "es": "Amuleto contra estados\nalterados, poder de disolución\nEspecial: Inmune a veneno\ny maldición"}
 {"key": "sys/objetos#0614/nombre", "es": "Cabeza de ira sensible"}
@@ -940,7 +940,7 @@
 {"key": "sys/objetos#0617/desc", "es": "Amuleto que cura el cuerpo a\ncosta de la fuerza mental\nEspecial: Recup. de PV media\nPérdida de PM baja"}
 {"key": "sys/objetos#0618/nombre", "es": "Amuleto de restauración"}
 {"key": "sys/objetos#0618/desc", "es": "Amuleto que cura el cuerpo a\ncosta de la fuerza mental\nObjeto raro, Recup. de PV alta\nPérdida de PM media"}
-{"key": "sys/objetos#0619/nombre", "es": "Otra pieza"}
+{"key": "sys/objetos#0619/nombre", "es": "Otro fragmento"}
 {"key": "sys/objetos#0619/desc", "es": "Cristal con poder mágico que\naumenta mucho el vigor\nObjeto raro"}
 {"key": "sys/objetos#0620/nombre", "es": "Polvo de aurora"}
 {"key": "sys/objetos#0620/desc", "es": "Cristal con poder mágico que\naumenta mucho el poder mágico\nObjeto raro"}
@@ -949,13 +949,13 @@
 {"key": "sys/objetos#0622/nombre", "es": "Señuelo nocturno"}
 {"key": "sys/objetos#0622/desc", "es": "Amuleto de hechicería que\naligera mucho a quien lo porta\nObjeto raro\nEspecial: Reduce el peso"}
 {"key": "sys/objetos#0623/nombre", "es": "Udyat"}
-{"key": "sys/objetos#0623/desc", "es": "Piedra con un mal de ojo\ndibujado que aumenta el poder\nmágico\nEspecial: Resiste magia"}
+{"key": "sys/objetos#0623/desc", "es": "Piedra con un ojo maligno\ndibujado que aumenta el poder\nmágico\nEspecial: Resiste magia"}
 {"key": "sys/objetos#0624/nombre", "es": "Udyat sensible"}
-{"key": "sys/objetos#0624/desc", "es": "Piedra con un mal de ojo\ndibujado, resiste partículas\nEspecial: Resiste magia"}
+{"key": "sys/objetos#0624/desc", "es": "Piedra con un ojo maligno\ndibujado, resiste partículas\nEspecial: Resiste magia"}
 {"key": "sys/objetos#0625/nombre", "es": "Udyat alerta"}
-{"key": "sys/objetos#0625/desc", "es": "Piedra con un mal de ojo\ndibujado, resiste espíritu\nEspecial: Resiste magia"}
+{"key": "sys/objetos#0625/desc", "es": "Piedra con un ojo maligno\ndibujado, resiste espíritu\nEspecial: Resiste magia"}
 {"key": "sys/objetos#0626/nombre", "es": "Udyat sabio"}
-{"key": "sys/objetos#0626/desc", "es": "Piedra con un mal de ojo\ndibujado que aumenta mucho\nel poder mágico, Objeto raro\nEspecial: Resiste magia"}
+{"key": "sys/objetos#0626/desc", "es": "Piedra con un ojo maligno\ndibujado que aumenta mucho\nel poder mágico, Objeto raro\nEspecial: Resiste magia"}
 {"key": "sys/objetos#0627/nombre", "es": "Ankh"}
 {"key": "sys/objetos#0627/desc", "es": "Amuleto antiguo de rituales\nObjeto raro\nEspecial: Recup. de PV/PM alta"}
 {"key": "sys/objetos#0628/nombre", "es": "Mensaje extraño"}
@@ -1061,3 +1061,150 @@
 {"key": "sys/objetos#0748/nombre", "es": "Hoja de sangre"}
 {"key": "sys/objetos#0748/desc", "es": "Gema luminosa de sangre\ncarmesí con una columna de\nfuego abrasador\nObjeto raro"}
 {"key": "sys/objetos#0749/nombre", "es": "Hoja de sangre"}
+{"key": "sys/objetos#0749/desc", "es": "Gema luminosa de sangre\ncarmesí con una lluvia de\nhielo de frío extremo\nObjeto raro"}
+{"key": "sys/objetos#0750/nombre", "es": "Devorador del caos"}
+{"key": "sys/objetos#0750/desc", "es": "Gema luminosa negra del\ncaos con un rayo de\noscuridad afilado\nObjeto raro"}
+{"key": "sys/objetos#0751/nombre", "es": "Oleada de vanidad"}
+{"key": "sys/objetos#0751/desc", "es": "Gema luminosa negra del\ncaos con una lanza de luz\nexplosiva\nObjeto raro"}
+{"key": "sys/objetos#0752/nombre", "es": "Escudo vicioso"}
+{"key": "sys/objetos#0752/desc", "es": "Anillo de poder mágico de ácido\ncon humo de ácido que\navanza por el suelo"}
+{"key": "sys/objetos#0753/nombre", "es": "Escudo vicioso"}
+{"key": "sys/objetos#0753/desc", "es": "Anillo de poder mágico de ácido\ncon humo de ácido que\navanza por el suelo\nObjeto raro"}
+{"key": "sys/objetos#0754/nombre", "es": "Garra del vacío"}
+{"key": "sys/objetos#0754/desc", "es": "Anillo de poder mágico de\nveneno con una columna de\nveneno que avanza por el suelo"}
+{"key": "sys/objetos#0755/nombre", "es": "Garra del vacío"}
+{"key": "sys/objetos#0755/desc", "es": "Anillo de poder mágico de\nveneno con una columna de\nveneno que avanza por el suelo\nObjeto raro"}
+{"key": "sys/objetos#0756/nombre", "es": "Bainarwen"}
+{"key": "sys/objetos#0756/desc", "es": "Sin magia, pero potencia todas\nlas capacidades, Objeto raro\nEspecial: Inmune a estados\nalterados"}
+{"key": "sys/objetos#0757/nombre", "es": "Marnrai"}
+{"key": "sys/objetos#0757/desc", "es": "Anillo de diseño siniestro\nsin magia\nObjeto raro\nEspecial: Resiste daño físico"}
+{"key": "sys/objetos#0758/nombre", "es": "Marnrai"}
+{"key": "sys/objetos#0758/desc", "es": "Anillo de diseño siniestro\nsin magia\nObjeto raro\nEspecial: Resiste magia"}
+{"key": "sys/objetos#0759/nombre", "es": "Anillo Netjer"}
+{"key": "sys/objetos#0759/desc", "es": "Anillo de poder mágico de\nluz con una esfera de rayo"}
+{"key": "sys/objetos#0760/nombre", "es": "Anillo Netjer robusto"}
+{"key": "sys/objetos#0760/desc", "es": "Anillo de poder mágico de\nluz con una esfera de rayo\nObjeto raro"}
+{"key": "sys/objetos#0761/nombre", "es": "Anillo Netjer"}
+{"key": "sys/objetos#0761/desc", "es": "Anillo de poder mágico de\nluz con un destello que\npersigue al enemigo"}
+{"key": "sys/objetos#0762/nombre", "es": "Teprou"}
+{"key": "sys/objetos#0762/desc", "es": "Anillo de poder mágico de\noscuridad con partículas de\noscuridad explosivas"}
+{"key": "sys/objetos#0763/nombre", "es": "Teprou"}
+{"key": "sys/objetos#0763/desc", "es": "Anillo de poder mágico de\noscuridad con partículas de\noscuridad explosivas\nObjeto raro"}
+{"key": "sys/objetos#0764/nombre", "es": "Teprou"}
+{"key": "sys/objetos#0764/desc", "es": "Anillo de sangre que oculta\noscuridad, con una calavera\nenvuelta en oscuridad"}
+{"key": "sys/objetos#0765/nombre", "es": "Anillo de tierra"}
+{"key": "sys/objetos#0765/desc", "es": "Anillo que oculta poder\nmágico de fuego con una\nflecha de fuego afilada"}
+{"key": "sys/objetos#0766/nombre", "es": "Anillo de tierra sólido"}
+{"key": "sys/objetos#0766/desc", "es": "Anillo que oculta poder\nmágico de fuego con una\nflecha de fuego afilada\nObjeto raro"}
+{"key": "sys/objetos#0767/nombre", "es": "Anillo de tierra"}
+{"key": "sys/objetos#0767/desc", "es": "Anillo que oculta poder\nmágico de hielo con\ninnumerables flechas de hielo"}
+{"key": "sys/objetos#0768/nombre", "es": "Anillo de géiser"}
+{"key": "sys/objetos#0768/desc", "es": "Anillo con poder mágico de\nácido y cuatro burbujas\nde ácido"}
+{"key": "sys/objetos#0769/nombre", "es": "Anillo de géiser firme"}
+{"key": "sys/objetos#0769/desc", "es": "Anillo con poder mágico de\nveneno y una bala de veneno"}
+{"key": "sys/objetos#0001/nombre", "es": "Cunes"}
+{"key": "sys/objetos#0001/desc", "es": "Fragmento de metal con un\nvalor similar al de una\nmoneda. Su uso original se\ndesconoce"}
+{"key": "sys/objetos#0002/nombre", "es": "Frasco de alma"}
+{"key": "sys/objetos#0002/desc", "es": "Vasija con un alma sellada\nAl liberarla, mejora tus\ncapacidades"}
+{"key": "sys/objetos#0003/nombre", "es": "Ceniza de Norma-Dorado"}
+{"key": "sys/objetos#0003/desc", "es": "Cenizas con gran poder mágico\nRestauran el 50% de la\ndurabilidad del equipo"}
+{"key": "sys/objetos#0004/nombre", "es": "Poción curativa"}
+{"key": "sys/objetos#0004/desc", "es": "Cura por completo\nel cuerpo herido"}
+{"key": "sys/objetos#0005/nombre", "es": "Poción mágica"}
+{"key": "sys/objetos#0005/desc", "es": "Restaura todo el poder\nmágico perdido"}
+{"key": "sys/objetos#0006/nombre", "es": "Licor antiveneno"}
+{"key": "sys/objetos#0006/desc", "es": "Licor de víboras en maceración\nPurifica el veneno que\ncorroe el cuerpo"}
+{"key": "sys/objetos#0007/nombre", "es": "Licor antiparálisis"}
+{"key": "sys/objetos#0007/desc", "es": "Licor de insectos venenosos en\nmaceración. Quita el\nentumecimiento del cuerpo"}
+{"key": "sys/objetos#0008/nombre", "es": "Ídolo de iluminación"}
+{"key": "sys/objetos#0008/desc", "es": "Objeto ritual de otro mundo\nque devuelve a la normalidad\nel cuerpo atrapado en la\noscuridad"}
+{"key": "sys/objetos#0009/nombre", "es": "Ídolo de purificación"}
+{"key": "sys/objetos#0009/desc", "es": "Objeto ritual de otro mundo\nque devuelve a la normalidad\nel cuerpo maldito"}
+{"key": "sys/objetos#0010/nombre", "es": "Piedra aligeradora"}
+{"key": "sys/objetos#0010/desc", "es": "Piedra rara de las cumbres\nAbsorbe la fuerza que\nvuelve pesados los pasos"}
+{"key": "sys/objetos#0011/nombre", "es": "Piedra liberadora"}
+{"key": "sys/objetos#0011/desc", "es": "Piedra rara de la selva\nAbsorbe la fuerza que sella\nel poder mágico"}
+{"key": "sys/objetos#0012/nombre", "es": "Polvo de corte"}
+{"key": "sys/objetos#0012/desc", "es": "Polvo refinado con una técnica\nsecreta. Aumenta de forma\ntemporal el poder de corte"}
+{"key": "sys/objetos#0013/nombre", "es": "Polvo de aplastamiento"}
+{"key": "sys/objetos#0013/desc", "es": "Polvo refinado con una técnica\nsecreta. Aumenta de forma\ntemporal el poder de golpe"}
+{"key": "sys/objetos#0014/nombre", "es": "Polvo de estocada"}
+{"key": "sys/objetos#0014/desc", "es": "Polvo refinado con una técnica\nsecreta. Aumenta de forma\ntemporal el poder de perforación"}
+{"key": "sys/objetos#0015/nombre", "es": "Talismán hielo-fuego"}
+{"key": "sys/objetos#0015/desc", "es": "Talismán con poder de partícula\nAumenta de forma temporal la\nresistencia al fuego y al hielo"}
+{"key": "sys/objetos#0016/nombre", "es": "Talismán ácido-veneno"}
+{"key": "sys/objetos#0016/desc", "es": "Talismán con poder de disolución\nAumenta de forma temporal la\nresistencia al veneno y al ácido"}
+{"key": "sys/objetos#0017/nombre", "es": "Talismán yin-yang"}
+{"key": "sys/objetos#0017/desc", "es": "Talismán con poder de espíritu\nAumenta de forma temporal la\nresistencia a la luz y a\nla oscuridad"}
+{"key": "sys/objetos#0018/nombre", "es": "Haz de flechas"}
+{"key": "sys/objetos#0018/desc", "es": "Flechas de arco común\nJuego de 10"}
+{"key": "sys/objetos#0019/nombre", "es": "Haz de virotes"}
+{"key": "sys/objetos#0019/desc", "es": "Flechas para ballesta\nJuego de 10"}
+{"key": "sys/objetos#0020/nombre", "es": "Munición de M1911"}
+{"key": "sys/objetos#0020/desc", "es": "Cargador de Government M1911\nJuego de 7 balas"}
+{"key": "sys/objetos#0021/nombre", "es": "Munición M3 Super 90"}
+{"key": "sys/objetos#0021/desc", "es": "Munición de M3 Super 90\nJuego de 7 cartuchos"}
+{"key": "sys/objetos#0022/nombre", "es": "Munición de SSG69"}
+{"key": "sys/objetos#0022/desc", "es": "Munición de SSG69\nJuego de 5 balas"}
+{"key": "sys/objetos#0023/nombre", "es": "Munición de granadas"}
+{"key": "sys/objetos#0023/desc", "es": "Munición de lanzagranadas\nJuego de 2 granadas"}
+{"key": "sys/objetos#0031/nombre", "es": "Colmillo de insecto raro"}
+{"key": "sys/objetos#0031/desc", "es": "Gran colmillo de un insecto que\nprotege el nido. Emite el mismo\npoder mágico que el insecto y\nabre la puerta del colmillo"}
+{"key": "sys/objetos#0032/nombre", "es": "Antena de insecto raro"}
+{"key": "sys/objetos#0032/desc", "es": "Antena de un insecto que detecta\nenemigos. Emite el mismo\npoder mágico que el insecto y\nabre la puerta de la antena"}
+{"key": "sys/objetos#0033/nombre", "es": "Ojo de insecto raro"}
+{"key": "sys/objetos#0033/desc", "es": "Gran ojo de un insecto que\ndistingue enemigos. Emite el mismo\npoder mágico que el insecto y\nabre la puerta del ojo"}
+{"key": "sys/objetos#0034/nombre", "es": "Colgante de ónix"}
+{"key": "sys/objetos#0034/desc", "es": "Objeto muy antiguo que no\nparece tener ningún valor"}
+{"key": "sys/objetos#0035/nombre", "es": "Perla de alma ofrecida"}
+{"key": "sys/objetos#0035/desc", "es": "Piedra que guarda poder mágico\nAbre el camino que desea\nsu dueño"}
+{"key": "sys/objetos#0036/nombre", "es": "Mineral mágico en bruto"}
+{"key": "sys/objetos#0036/desc", "es": "Mineral usado en mecanismos\nque funcionan con poder mágico"}
+{"key": "sys/objetos#0037/nombre", "es": "Cuarzo purificador"}
+{"key": "sys/objetos#0037/desc", "es": "Cristal de poder mágico que\nemite una luz pura y purifica\ntodo veneno"}
+{"key": "sys/objetos#0038/nombre", "es": "Llave antigua"}
+{"key": "sys/objetos#0038/desc", "es": "Llave vieja necesaria para abrir\nuna cerradura de acero"}
+{"key": "sys/objetos#0039/nombre", "es": "Fragmento de niebla"}
+{"key": "sys/objetos#0039/desc", "es": "Parte de una puerta enorme\nCuando se reúnan todos los\nfragmentos, la puerta se abrirá"}
+{"key": "sys/objetos#0040/nombre", "es": "Disco de travesía"}
+{"key": "sys/objetos#0040/desc", "es": "Llave que libera poder mágico\nAbre caminos interrumpidos"}
+{"key": "sys/objetos#0041/nombre", "es": "Llave aguda del vacío"}
+{"key": "sys/objetos#0041/desc", "es": "Abre la puerta del\nEstrato Flotante"}
+{"key": "sys/objetos#0042/nombre", "es": "Llave elevador ámbar"}
+{"key": "sys/objetos#0042/desc", "es": "Junto con la esfera del mismo\ncolor, controla el elevador de la\nplataforma flotante"}
+{"key": "sys/objetos#0043/nombre", "es": "Llave elevador esmeralda"}
+{"key": "sys/objetos#0043/desc", "es": "Junto con la esfera del mismo\ncolor, controla el elevador de la\nplataforma flotante"}
+{"key": "sys/objetos#0044/nombre", "es": "Llave elevador rubí"}
+{"key": "sys/objetos#0044/desc", "es": "Junto con la esfera del mismo\ncolor, controla el elevador de la\nplataforma flotante"}
+{"key": "sys/objetos#0045/nombre", "es": "Llave elevador amatista"}
+{"key": "sys/objetos#0045/desc", "es": "Junto con la esfera del mismo\ncolor, controla el elevador de la\nplataforma flotante"}
+{"key": "sys/objetos#0046/nombre", "es": "Fragmento de niebla"}
+{"key": "sys/objetos#0046/desc", "es": "Parte de una puerta enorme\nCuando se reúnan todos los\nfragmentos, la puerta se abrirá"}
+{"key": "sys/objetos#0047/nombre", "es": "Fragmento de niebla"}
+{"key": "sys/objetos#0047/desc", "es": "Parte de una puerta enorme\nCuando se reúnan todos los\nfragmentos, la puerta se abrirá"}
+{"key": "sys/objetos#0048/nombre", "es": "Fragmento de niebla"}
+{"key": "sys/objetos#0048/desc", "es": "Parte de una puerta enorme\nCuando se reúnan todos los\nfragmentos, la puerta se abrirá"}
+{"key": "sys/objetos#0049/nombre", "es": "Ansia maldita"}
+{"key": "sys/objetos#0049/desc", "es": "Gema de maldición que revela\nla verdadera forma que duerme\nen el corazón de quien la porta"}
+{"key": "sys/objetos#0061/nombre", "es": "Munición de Derringer"}
+{"key": "sys/objetos#0061/desc", "es": "Munición de Derringer\nJuego de 6 balas"}
+{"key": "sys/objetos#0062/nombre", "es": "Munición Nambu Tipo 14"}
+{"key": "sys/objetos#0062/desc", "es": "Cargador de Nambu Tipo 14\nJuego de 8 balas"}
+{"key": "sys/objetos#0063/nombre", "es": "Munición Blackhawk"}
+{"key": "sys/objetos#0063/desc", "es": "Munición de Super Blackhawk\nJuego de 18 balas"}
+{"key": "sys/objetos#0064/nombre", "es": "Munición de S&W No.2"}
+{"key": "sys/objetos#0064/desc", "es": "Munición de S&W No.2\nJuego de 18 balas"}
+{"key": "sys/objetos#0065/nombre", "es": "Balas de pistola de chispa"}
+{"key": "sys/objetos#0065/desc", "es": "Munición de pistola de chispa\nJuego de 10 balas"}
+{"key": "sys/objetos#0066/nombre", "es": "Munición Ingram M11"}
+{"key": "sys/objetos#0066/desc", "es": "Cargador de Ingram M11\nJuego de 32 balas"}
+{"key": "sys/objetos#0067/nombre", "es": "Munición de RPK"}
+{"key": "sys/objetos#0067/desc", "es": "Cargador de RPK\nJuego de 40 balas"}
+{"key": "sys/objetos#0068/nombre", "es": "Munición de AR-15"}
+{"key": "sys/objetos#0068/desc", "es": "Cargador de AR-15\nJuego de 20 balas"}
+{"key": "sys/objetos#0069/nombre", "es": "Munición de M14"}
+{"key": "sys/objetos#0069/desc", "es": "Cargador de M14\nJuego de 20 balas"}
+{"key": "sys/objetos#0070/nombre", "es": "Munición Panzerfaust"}
+{"key": "sys/objetos#0070/desc", "es": "Munición Panzerfaust"}
+{"key": "sys/objetos#0080/nombre", "es": "Frasco de alma"}
+{"key": "sys/objetos#0080/desc", "es": "Vasija con un alma sellada\nAl liberarla, mejora mucho\ntus capacidades"}
