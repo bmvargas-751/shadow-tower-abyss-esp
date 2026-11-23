@@ -64,3 +64,17 @@ Lo que mostró la fase 1 (2026-11-20). Lo que dice *por confirmar* todavía no s
   - Unos 40 textos ya están en inglés en el original japonés (equipo, `OK`, `CANCEL` y las líneas de botones como `○：OK　×：QUIT`, con `：` y espacio de ancho completo). Se traducen.
 - **T-7** Solo se traducen los textos que ve el jugador. Los nombres internos (archivos, etiquetas) no se exportan y no se tocan.
 - **T-8** Toda línea del lote se traduce completa: ninguna queda vacía, igual al original ni con frases del original (o del inglés de apoyo) mezcladas. (`vacia`, `sin_traducir`, `ingles_mezclado`, `japones_mezclado`)
+
+## Avisos conocidos de `loc.py check`
+
+Quedan a propósito y no hay que «corregirlos» [DECISIONS 2026-11-23]:
+
+- **`caja` (T-3):** los nombres de objetos que llevan el término completo del glosario y pasan de 215. Se ven en el juego (PENDING.md).
+- **`glosario` (G-3):**
+  - «Recup. de PV/PM», donde la forma entera no entra en la caja.
+  - Las formas cortas de 魔力 (`sys/objetos#0613` a `#0615` y `#0036`).
+  - «Protector de brazo» (`#0344`).
+  - Falsos positivos anotados en su fila de GLOSSARY.md: ・強 en «・・・強い», パラ en «Pallasch», フィール en «Chaqueta de campaña» y ドクロ en «Garra del vacío».
+- **`regional` (E-13):** «plata» es el metal (銀), no el dinero.
+- **`largo` (E-3):** descripciones más largas que el japonés, que entran en la caja.
+

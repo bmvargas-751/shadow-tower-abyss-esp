@@ -20,7 +20,7 @@
 {"key": "sys/menu#0041", "es": "Cambiar la configuración de pantalla"}
 {"key": "sys/menu#0042", "es": "Configurar los controles"}
 {"key": "sys/menu#0043", "es": "Interrumpir la partida\ny volver a la pantalla de título"}
-{"key": "sys/menu#0044", "es": "Configura las opciones\nde juego"}
+{"key": "sys/menu#0044", "es": "Configurar las opciones\nde juego"}
 {"key": "sys/menu#0045", "es": "Volverás a la pantalla de título\n¿Deseas continuar?"}
 {"key": "sys/menu#0046", "es": "Guardar los datos de partida completada"}
 {"key": "sys/menu#0050", "es": "Cambiar el formato de salida de audio"}
@@ -86,7 +86,7 @@
 {"key": "sys/menu#0141", "es": "Vender objetos"}
 {"key": "sys/menu#0142", "es": "Depositar objetos"}
 {"key": "sys/menu#0143", "es": "Retirar objetos"}
-{"key": "sys/menu#0145", "es": "Recuperación de PV y recuperación de PM"}
+{"key": "sys/menu#0145", "es": "Recuperación de PV y PM"}
 {"key": "sys/menu#0146", "es": "Reparar objetos"}
 {"key": "sys/menu#0150", "es": "En venta"}
 {"key": "sys/menu#0151", "es": "Comprar"}
@@ -96,7 +96,7 @@
 {"key": "sys/menu#0155", "es": "¿Está bien así?"}
 {"key": "sys/menu#0156", "es": "Se venderá el objeto\n¿Deseas continuar?"}
 {"key": "sys/menu#0157", "es": "Se tomará como pago\n¿Deseas continuar?"}
-{"key": "sys/menu#0158", "es": "Costo en PV"}
+{"key": "sys/menu#0158", "es": "Consumo de PV"}
 {"key": "sys/menu#0160", "es": "No puedes comprar más"}
 {"key": "sys/menu#0161", "es": "No puedes depositar más"}
 {"key": "sys/menu#0162", "es": "No puedes retirar más"}
@@ -128,4 +128,4 @@
 {"key": "sys/menu#0331", "es": "○：OK　×：SALIR"}
 {"key": "sys/menu#0334", "es": "←→：CAMBIAR　○：OK　△：GUÍA　□：DATOS　×：SALIR"}
 {"key": "sys/menu#0335", "es": "←→：CAMBIAR　○：OK　□：DATOS　△×：SALIR"}
-{"key": "sys/menu#0400", "es": "Este software de demostración es distinto de la\nversión comercial del producto. Además, al ser una\nversión en desarrollo, pueden aparecer fallos\nimprevistos, como que no funcione con normalidad.\n\nAun si llegara a producirse un mal funcionamiento, no\nse podrá cambiar el disco ni reparar la consola,\netc. Agradecemos de antemano su comprensión."}
+{"key": "sys/menu#0400", "es": "Este software de demostración es distinto de la\nversión comercial del producto. Además, al ser una\nversión en desarrollo, pueden aparecer fallos\nimprevistos, como que no funcione con normalidad.\n\nAun si llegara a producirse un mal funcionamiento,\nno se podrá cambiar el disco ni reparar la consola,\netc. Agradecemos de antemano su comprensión."}
