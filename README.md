@@ -1,7 +1,7 @@
 # Shadow Tower Abyss en español
 
-Traducción fan al español neutro de *Shadow Tower Abyss*, desde el japonés, para PlayStation 2 (japonesa, SLPS-25217).
-Quedan en japonés, por ahora: los subtítulos de los videos y las imágenes con texto.
+Traducción fan al español neutro de *Shadow Tower Abyss*, basada en la versión original en japonés, para PlayStation 2 (japonesa, SLPS-25217).
+Los subtítulos de los videos y las imágenes con texto permanecen, por ahora, en japonés.
 
 > Proyecto de fans, sin relación con FromSoftware. **No incluye el juego**: necesitas tu propia copia.
 
@@ -19,8 +19,6 @@ Necesitas tu propia copia de Shadow Tower Abyss para PlayStation 2, versión jap
 <details>
 <summary>Linux o macOS</summary>
 
-**Linux o macOS:**
-
 1. Descarga el .zip de la [última versión](https://github.com/bmvargas-751/shadow-tower-abyss-esp/releases/latest), descomprímelo y, en su carpeta, con tu ISO al lado:
 
 ```sh
@@ -33,7 +31,8 @@ xdelta3 -d -s "Shadow Tower Abyss.iso" shadow-tower-abyss-esp-*.xdelta "Shadow T
 ## Avance
 
 <!-- loc:progress -->
-Versión 0.9.0 (23 nov 2026) · Etapa: Prueba en el juego · Actualizado el 23 nov 2026 · [Cambios](CHANGELOG.md)
+Versión 0.9.0, publicada el 23 nov 2026 · [Cambios](CHANGELOG.md)\
+Etapa: Prueba en el juego · actualizado el 23 nov 2026
 
 | Sección | Líneas | Traducidas | Avance |
 |---|---:|---:|---:|
@@ -45,6 +44,9 @@ Versión 0.9.0 (23 nov 2026) · Etapa: Prueba en el juego · Actualizado el 23 n
 | **Total** | **1.719** | **1.719** | **100,0 %** |
 <!-- /loc:progress -->
 
-## Para colaborar
+## Documentación
 
-[Plan](PLAN.md) · [Decisiones](DECISIONS.md) · [Estilo](STYLE.md) · [Glosario](GLOSSARY.md) · [Personajes](characters/) · [Técnica](TECH.md) · [Pendientes](PENDING.md) · [Cambios](CHANGELOG.md) · [Herramientas](tools/README.md)
+<!-- loc:docs -->
+Localización: [Glosario](GLOSSARY.md) · [Personajes](characters/) · [Estilo](STYLE.md) · [Decisiones](DECISIONS.md)\
+Desarrollo: [Plan](PLAN.md) · [Técnica](TECH.md) · [Herramientas](tools/README.md) · [Pendientes](PENDING.md)
+<!-- /loc:docs -->
