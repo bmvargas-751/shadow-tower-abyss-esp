@@ -21,7 +21,7 @@
 {"key": "sys/menu#0042", "es": "Configurar los controles"}
 {"key": "sys/menu#0043", "es": "Interrumpir la partida\ny volver a la pantalla de título"}
 {"key": "sys/menu#0044", "es": "Configurar las opciones\nde juego"}
-{"key": "sys/menu#0045", "es": "Volverás a la pantalla de título\n¿Deseas continuar?"}
+{"key": "sys/menu#0045", "es": "Volverás a la pantalla de título.\n¿Deseas continuar?"}
 {"key": "sys/menu#0046", "es": "Guardar los datos de partida completada"}
 {"key": "sys/menu#0050", "es": "Cambiar el formato de salida de audio"}
 {"key": "sys/menu#0051", "es": "Cambiar el volumen de la música de fondo"}
@@ -53,35 +53,35 @@
 {"key": "sys/menu#0104", "es": "REINTENTAR"}
 {"key": "sys/menu#0105", "es": "　Archivo dañado"}
 {"key": "sys/menu#0106", "es": "Sin usar"}
-{"key": "sys/menu#0107", "es": "Cargando datos\nNo saques la\nmemory card (PS2)"}
-{"key": "sys/menu#0108", "es": "Los datos están dañados\nNo se pueden leer los datos guardados"}
+{"key": "sys/menu#0107", "es": "Cargando datos.\nNo saques la\nmemory card (PS2)"}
+{"key": "sys/menu#0108", "es": "Los datos están dañados.\nNo se pueden leer los datos guardados"}
 {"key": "sys/menu#0109", "es": "Carga completada"}
-{"key": "sys/menu#0110", "es": "Guardando datos\nNo saques la\nmemory card (PS2)"}
+{"key": "sys/menu#0110", "es": "Guardando datos.\nNo saques la\nmemory card (PS2)"}
 {"key": "sys/menu#0111", "es": "Error al guardar"}
 {"key": "sys/menu#0112", "es": "Guardado completado"}
-{"key": "sys/menu#0113", "es": "Se cargarán estos datos\n¿Deseas continuar?"}
-{"key": "sys/menu#0114", "es": "Se sobrescribirán estos datos\n¿Deseas continuar?"}
-{"key": "sys/menu#0115", "es": "Se guardarán estos datos\n¿Deseas continuar?"}
+{"key": "sys/menu#0113", "es": "Se cargarán estos datos.\n¿Deseas continuar?"}
+{"key": "sys/menu#0114", "es": "Se sobrescribirán estos datos.\n¿Deseas continuar?"}
+{"key": "sys/menu#0115", "es": "Se guardarán estos datos.\n¿Deseas continuar?"}
 {"key": "sys/menu#0116", "es": "Formateo completado"}
-{"key": "sys/menu#0117", "es": "Formateando\nNo saques la\nmemory card (PS2)"}
-{"key": "sys/menu#0118", "es": "Esta memory card (PS2)\nno está formateada\n¿Deseas formatearla?"}
+{"key": "sys/menu#0117", "es": "Formateando.\nNo saques la\nmemory card (PS2)"}
+{"key": "sys/menu#0118", "es": "Esta memory card (PS2)\nno está formateada.\n¿Deseas formatearla?"}
 {"key": "sys/menu#0119", "es": "No hay ninguna\nmemory card (PS2)"}
 {"key": "sys/menu#0120", "es": "No hay datos de\n\"Shadow Tower Abyss\""}
 {"key": "sys/menu#0121", "es": "Se retiró la\nmemory card (PS2)"}
-{"key": "sys/menu#0122", "es": "Revisando la memory card (PS2)\nNo saques la\nmemory card (PS2)"}
-{"key": "sys/menu#0123", "es": "Se retiró la memory card (PS2)\ndurante el guardado\nNo se garantizan los datos\nguardados de \"Shadow Tower Abyss\""}
-{"key": "sys/menu#0124", "es": "No hay espacio suficiente\nen la memory card (PS2)\nPara guardar datos de\n\"Shadow Tower Abyss\"\nse necesitan al menos 111KB libres"}
-{"key": "sys/menu#0125", "es": "En la ranura para memory card\nno hay memory card (PS2)\nPara guardar datos de\n\"Shadow Tower Abyss\"\nse necesitan al menos 111KB libres\n¿Deseas empezar el juego así?"}
+{"key": "sys/menu#0122", "es": "Revisando la memory card (PS2).\nNo saques la\nmemory card (PS2)"}
+{"key": "sys/menu#0123", "es": "Se retiró la memory card (PS2)\ndurante el guardado.\nNo se garantizan los datos\nguardados de \"Shadow Tower Abyss\""}
+{"key": "sys/menu#0124", "es": "No hay espacio suficiente\nen la memory card (PS2).\nPara guardar datos de\n\"Shadow Tower Abyss\"\nse necesitan al menos 111KB libres"}
+{"key": "sys/menu#0125", "es": "En la ranura para memory card\nno hay memory card (PS2).\nPara guardar datos de\n\"Shadow Tower Abyss\"\nse necesitan al menos 111KB libres.\n¿Deseas empezar el juego así?"}
 {"key": "sys/menu#0126", "es": "No hay memory card"}
 {"key": "sys/menu#0127", "es": "No hay datos"}
 {"key": "sys/menu#0129", "es": "No hay memory card (PS2)\nen la ranura para\nmemory card 1"}
 {"key": "sys/menu#0130", "es": "No hay memory card (PS2)\nen la ranura para\nmemory card 2"}
-{"key": "sys/menu#0131", "es": "La memory card (PS2) de la\nranura para memory card 1\nno tiene espacio suficiente\nPara guardar datos de\n\"Shadow Tower Abyss\"\nse necesitan al menos 111KB libres\n¿Deseas empezar el juego así?"}
-{"key": "sys/menu#0132", "es": "La memory card (PS2) de la\nranura para memory card 2\nno tiene espacio suficiente\nPara guardar datos de\n\"Shadow Tower Abyss\"\nse necesitan al menos 111KB libres\n¿Deseas empezar el juego así?"}
-{"key": "sys/menu#0133", "es": "La memory card (PS2) de la\nranura para memory card 1\nno tiene espacio suficiente\nPara guardar datos de\n\"Shadow Tower Abyss\"\nse necesitan al menos 111KB libres"}
-{"key": "sys/menu#0134", "es": "La memory card (PS2) de la\nranura para memory card 2\nno tiene espacio suficiente\nPara guardar datos de\n\"Shadow Tower Abyss\"\nse necesitan al menos 111KB libres"}
-{"key": "sys/menu#0135", "es": "Las memory cards (PS2) de la ranura\npara memory card 1 y de la ranura\npara memory card 2\nno tienen espacio suficiente\nPara guardar datos de\n\"Shadow Tower Abyss\"\nse necesitan al menos 111KB libres\n¿Deseas empezar el juego así?"}
-{"key": "sys/menu#0137", "es": "No hay espacio suficiente\nen la memory card (PS2)\nPara guardar datos de\n\"Shadow Tower Abyss\"\nse necesitan al menos 36KB libres"}
+{"key": "sys/menu#0131", "es": "La memory card (PS2) de la\nranura para memory card 1\nno tiene espacio suficiente.\nPara guardar datos de\n\"Shadow Tower Abyss\"\nse necesitan al menos 111KB libres.\n¿Deseas empezar el juego así?"}
+{"key": "sys/menu#0132", "es": "La memory card (PS2) de la\nranura para memory card 2\nno tiene espacio suficiente.\nPara guardar datos de\n\"Shadow Tower Abyss\"\nse necesitan al menos 111KB libres.\n¿Deseas empezar el juego así?"}
+{"key": "sys/menu#0133", "es": "La memory card (PS2) de la\nranura para memory card 1\nno tiene espacio suficiente.\nPara guardar datos de\n\"Shadow Tower Abyss\"\nse necesitan al menos 111KB libres"}
+{"key": "sys/menu#0134", "es": "La memory card (PS2) de la\nranura para memory card 2\nno tiene espacio suficiente.\nPara guardar datos de\n\"Shadow Tower Abyss\"\nse necesitan al menos 111KB libres"}
+{"key": "sys/menu#0135", "es": "Las memory cards (PS2) de la ranura\npara memory card 1 y de la ranura\npara memory card 2\nno tienen espacio suficiente.\nPara guardar datos de\n\"Shadow Tower Abyss\"\nse necesitan al menos 111KB libres.\n¿Deseas empezar el juego así?"}
+{"key": "sys/menu#0137", "es": "No hay espacio suficiente\nen la memory card (PS2).\nPara guardar datos de\n\"Shadow Tower Abyss\"\nse necesitan al menos 36KB libres"}
 {"key": "sys/menu#0140", "es": "Comprar objetos"}
 {"key": "sys/menu#0141", "es": "Vender objetos"}
 {"key": "sys/menu#0142", "es": "Depositar objetos"}
@@ -94,15 +94,15 @@
 {"key": "sys/menu#0153", "es": "Retirar"}
 {"key": "sys/menu#0154", "es": "Depositar"}
 {"key": "sys/menu#0155", "es": "¿Está bien así?"}
-{"key": "sys/menu#0156", "es": "Se venderá el objeto\n¿Deseas continuar?"}
-{"key": "sys/menu#0157", "es": "Se tomará como pago\n¿Deseas continuar?"}
+{"key": "sys/menu#0156", "es": "Se venderá el objeto.\n¿Deseas continuar?"}
+{"key": "sys/menu#0157", "es": "Se tomará como pago.\n¿Deseas continuar?"}
 {"key": "sys/menu#0158", "es": "Consumo de PV"}
 {"key": "sys/menu#0160", "es": "No puedes comprar más"}
 {"key": "sys/menu#0161", "es": "No puedes depositar más"}
 {"key": "sys/menu#0162", "es": "No puedes retirar más"}
 {"key": "sys/menu#0163", "es": "No tienes suficientes cunes"}
 {"key": "sys/menu#0164", "es": "No tienes suficientes PV"}
-{"key": "sys/menu#0165", "es": "Tienes demasiados cunes\nNo puedes vender más"}
+{"key": "sys/menu#0165", "es": "Tienes demasiados cunes.\nNo puedes vender más"}
 {"key": "sys/menu#0200", "es": "No pasó nada"}
 {"key": "sys/menu#0201", "es": "No se abre"}
 {"key": "sys/menu#0202", "es": "Sin vida"}

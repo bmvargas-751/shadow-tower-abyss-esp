@@ -115,6 +115,7 @@ Aquí no se agrega ninguna regla sin fuente.
 - **E-57** Porcentajes sin espacio: `50%`. [THL]
 - **E-58** Comillas donde el original las usa para una cita. El punto final va fuera de las comillas; `?`, `!` y `...` van dentro si son de lo citado. Qué comillas se usan depende de la fuente del juego (TECH.md, T-5). [THL]
 - **E-59** Lugares y términos comunes del juego van en minúscula a media frase. Llevan mayúscula al inicio de la oración, en las etiquetas de menú y mapa, y en los nombres propios. [THL]
+- **E-64** Dos oraciones en el mismo texto se separan con punto (o con coma, si van unidas), aunque el japonés no ponga 「。」 y solo cambie de renglón: «Gracias.\nEsta es la recompensa». El final del texto queda como esté (con o sin punto, como sus vecinos). [DECISIONS 2026-11-23]
 - **E-62** Separador decimal: punto, como el inglés («daño x2.5», «1.7 billones» por *1.7 trillion*). [IVA]
 - **E-63** Medidas en sistema métrico, aproximadas como el original («three feet» → «unos 90 centímetros»). [IVA]
 
