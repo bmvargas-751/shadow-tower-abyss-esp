@@ -52,3 +52,4 @@ Lo que el usuario decidió, con fecha, para no volver a discutirlo. Una regla de
   - Quedan las formas cortas de 魔力 y «Protector de brazo/pierna».
 - **2026-11-23** Puntuación: punto (o coma) entre dos oraciones del mismo texto, aunque el japonés no ponga 「。」. El final del texto queda como está. Lo aplica un editor en los mapas y el menú.
 - **2026-11-23** Release 0.9.0: paquete como Eternal Ring. Lleva un .zip con el parche .xdelta, un instalador para Windows y LEEME.txt.
+- **2026-11-23** 装弾数: «Capacidad: N disparos», como en toda la traducción. El glosario decía «balas» en el ejemplo.
