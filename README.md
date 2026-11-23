@@ -10,13 +10,30 @@ Quedan en japonés, por ahora: los subtítulos de los videos y las imágenes con
 <!-- loc:install -->
 Necesitas tu propia copia de Shadow Tower Abyss para PlayStation 2, versión japonesa (SLPS-25217), en una imagen .iso.
 
-Todavía no hay una versión para descargar.
+**Windows:**
+
+1. Descarga el .zip de la [última versión](https://github.com/bmvargas-751/shadow-tower-abyss-esp/releases/latest) y descomprímelo.
+2. Abre **Instalar Shadow Tower Abyss en español.exe**, arrastra tu .iso a la ventana y presiona Enter. Si Windows avisa que protegió tu equipo, elige **Más información** y **Ejecutar de todas formas** (el programa no está firmado).
+3. Al lado de tu copia aparece otra, traducida: «Shadow Tower Abyss (Español).iso». Ábrela en PCSX2. La original no se toca.
+
+<details>
+<summary>Linux o macOS</summary>
+
+**Linux o macOS:**
+
+1. Descarga el .zip de la [última versión](https://github.com/bmvargas-751/shadow-tower-abyss-esp/releases/latest), descomprímelo y, en su carpeta, con tu ISO al lado:
+
+```sh
+xdelta3 -d -s "Shadow Tower Abyss.iso" shadow-tower-abyss-esp-*.xdelta "Shadow Tower Abyss (Español).iso"
+```
+
+</details>
 <!-- /loc:install -->
 
 ## Avance
 
 <!-- loc:progress -->
-Etapa: Prueba en el juego · Actualizado el 22 nov 2026
+Versión 0.9.0 (23 nov 2026) · Etapa: Prueba en el juego · Actualizado el 23 nov 2026 · [Cambios](CHANGELOG.md)
 
 | Sección | Líneas | Traducidas | Avance |
 |---|---:|---:|---:|

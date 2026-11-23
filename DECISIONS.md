@@ -24,3 +24,31 @@ Lo que el usuario decidió, con fecha, para no volver a discutirlo. Una regla de
 - **2026-11-22** El kit ya acepta el japonés como original: `source.jsonl` lleva el original en el campo `ja` (antes iba en `en`), y el inglés fan (`ref_en.jsonl`, campo `en`) pasa a ser la versión de apoyo (`support` de `loc.json`), así que llega a cada línea del lote. Sigue siendo solo de consulta (E-1). STYLE.md suma E-31 (honoríficos) de la plantilla del kit.
 - **2026-11-22** Set de oro otra vez, por los prompts nuevos del kit y el inglés de apoyo en el lote: oro-003, 16 de 16.
 - **2026-11-22** PENDING.md se resuelve al final de la traducción, no lote por lote: lo provisional queda como está hasta entonces.
+- **2026-11-23** PENDING, revisado uno por uno con el usuario. Se aplicó a mano en `translation/` (65 textos), porque `loc.py edits` solo acepta cambios de hallazgos:
+  - Nombres de equipo:
+    - ローソード / ハイソード → «Espada menor / mayor» (y sus variantes).
+    - ホーンドマリス → «Malicia astada». エペ → «Épée».
+    - 天風 / 冥雷 → «Viento del cielo / Rayo del averno».
+    - 月牙穿 / 影牙穿 → «Colmillo lunar / umbrío», sin 穿, para que entren en la caja.
+    - ノヴァクラウド → «Nube nova». ダブルレイズ → «Doble elevación» (y «rápida», «aria»).
+    - トリプルブレス → «Brazalete triple» (y «robusto»; también en las descripciones).
+    - ルークプラカン → «Luk Prakham», ピト・タヌー → «Phit Thanu» (tailandés).
+    - アナザーピース → «Otra paz».
+  - Quedan como estaban: «Espada aguja», «Ráfaga cortante», «Colmillo maligno», «Sai», «Hendidura magna», «Arco de reverencia», «Kamasa», «Daratome», «Ruarún», «Escudo vicioso», «Bainarwen», «Marnrai», «Teprou», «Devorador del caos», «Oleada de vanidad», los ídolos, los talismanes, «Ansia maldita» y «Anillo Netjer».
+  - Mapas:
+    - `mapa/2264#0090` → «Dios, hacer cosa para ustedes».
+    - `mapa/2289#0001`: quien llega es el jugador («Llegas aquí por tu propia vida»).
+    - Quedan como estaban `2276#0020`, `2278#0000`, `2280#0001`, `2283#0001` y `2289#0012`.
+  - Criaturas sin ficha: masculino genérico.
+  - 使い手 → «portador» en todos los objetos.
+  - Los grados concuerdan con el efecto («Consumo de PV medio»).
+  - 消費HP → «Consumo de PV», como HP消費.
+  - «Rey» con mayúscula siempre que nombra a ese rey.
+  - Compuestos: «Recuperación de PV y PM» y «Absorción de PV y PM». «Recup.» solo donde la forma entera no entra (T-3).
+  - Al glosario, como estaban: destructor, hondura insondable, gema luminosa, cuentas de oración, bermellón, grebas, voluntad (意思).
+  - Munición: sin «de» delante del modelo («Munición M1911»). Los que no son modelo lo conservan («Munición de granadas»).
+  - `sys/menu#0044` en infinitivo.
+  - Saltos movidos en `sys/menu#0400` y `mapa/2253#0120`.
+  - Quedan las formas cortas de 魔力 y «Protector de brazo/pierna».
+- **2026-11-23** Puntuación: punto (o coma) entre dos oraciones del mismo texto, aunque el japonés no ponga 「。」. El final del texto queda como está. Lo aplica un editor en los mapas y el menú.
+- **2026-11-23** Release 0.9.0: paquete como Eternal Ring. Lleva un .zip con el parche .xdelta, un instalador para Windows y LEEME.txt.

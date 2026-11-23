@@ -67,8 +67,10 @@ Lo que lleva un paréntesis en «Original» no lo controla `loc.py check` (ese t
 | 耐久 | durabilidad | Shadow Tower PS1 | Del equipo. ST1: DURA → DUR (forma larga). También 耐久値, 耐久力 y 耐久性. |
 | HP吸収 | absorción de PV | Shadow Tower PS1 | Efecto: quita PV al enemigo. ST1: HP DRAIN. |
 | MP吸収 | absorción de PM | Shadow Tower PS1 | Efecto: quita PM al enemigo. ST1: MP DRAIN. |
-| HP回復 | recuperación de PV | Shadow Tower PS1 | Efecto del equipo. ST1: HP RECOVERY. El grado (・弱/中/強) está en PENDING. |
-| MP回復 | recuperación de PM | Shadow Tower PS1 | Efecto del equipo. ST1: MP RECOVERY. |
+| HP回復 | recuperación de PV | Shadow Tower PS1 | Efecto del equipo. ST1: HP RECOVERY. El grado va detrás (・弱/中/強). Si la forma entera no entra en la caja, «Recup. de PV» (T-3); el chequeo avisa igual [DECISIONS 2026-11-23]. |
+| MP回復 | recuperación de PM | Shadow Tower PS1 | Efecto del equipo. ST1: MP RECOVERY. Si no entra en la caja, «Recup. de PM» (T-3) [DECISIONS 2026-11-23]. |
+| HP・MP回復 | recuperación de PV y PM | decidido 2026-11-23 | Compuesto: una sola «recuperación». Si no entra, «Recup. de PV/PM» (T-3). |
+| HP・MP吸収 | absorción de PV y PM | decidido 2026-11-23 | Compuesto: una sola «absorción». |
 | バランス | equilibrio | Shadow Tower PS1 | ST1: BALANCE. En las descripciones: «バランスよく整えられた» → bien equilibrado. |
 
 ### Equipo: familias (Shadow Tower PS1)
@@ -78,6 +80,12 @@ Lo que lleva un paréntesis en «Original» no lo controla `loc.py check` (ese t
 | 片手 | de una mano | Shadow Tower PS1 | ST1: ONE-HANDED. 片手剣 → espada de una mano. |
 | 両手 | de dos manos | Shadow Tower PS1 | ST1: TWO-HANDED. 両手剣, 両手用, 両手持ち. |
 | ソード | espada | Shadow Tower PS1 | ST1: SWORD (LONG SWORD → ESPADA LARGA). Familia: ローソード, ハイソード, ウォーソード… |
+| ローソード | Espada menor | decidido 2026-11-23 | Grado de la familia; su par es ハイソード → «Espada mayor» (y sus variantes). |
+| ハイソード | Espada mayor | decidido 2026-11-23 | Ver ローソード. |
+| 輝石 | gema luminosa | decidido 2026-11-23 | `sys/objetos#0746` a `#0751`. |
+| 数珠 | cuentas de oración | decidido 2026-11-23 | |
+| (朱) | bermellón | decidido 2026-11-23 | Kanji suelto, con paréntesis: sin control. |
+| 具足 | grebas | decidido 2026-11-23 | |
 | 長剣 | espada larga | Shadow Tower PS1 | ST1: LONG SWORD. 片手長剣 → espada larga de una mano. |
 | 大剣 | mandoble | Shadow Tower PS1 | ST1: GREAT SWORD. |
 | 幅広剣 | espada ancha | Shadow Tower PS1 | ST1: BROAD SWORD. |
@@ -105,7 +113,7 @@ Lo que lleva un paréntesis en «Original» no lo controla `loc.py check` (ese t
 | リング | anillo | Shadow Tower PS1 | ST1: RING. ネチェルリング, アースリング, ゲイザーリング. |
 | 指輪 | anillo | Shadow Tower PS1 | ST1: RING. |
 | アミュレット | amuleto | Shadow Tower PS1 | ST1: AMULET. |
-| ドクロ | calavera | Shadow Tower PS1 | ST1: SKULL (ACID SKULL → CALAVERA ÁCIDA). |
+| ドクロ | calavera | Shadow Tower PS1 | ST1: SKULL (ACID SKULL → CALAVERA ÁCIDA). `loc.py check` da un falso positivo en `sys/objetos#0754/nombre` y `#0755` (ヴォイドクロウ, «Garra del vacío»): queda como está. |
 
 ### Lugares (decidido)
 
@@ -140,7 +148,7 @@ Lo que lleva un paréntesis en «Original» no lo controla `loc.py check` (ese t
 | Original | Español | Fuente | Nota |
 |---|---|---|---|
 | ガレ | Gare | decidido 2026-11-20 | Prefijo de 10 criaturas, casi todas «de cuerpo robusto» (頑強な身体). Se aparta del inglés fan («Grey»): ガレ se lee «gare»; gris sería グレイ. También dentro de ウィガレ → «Wigare» y ミガレ → «Migare». |
-| パラ | Para | decidido 2026-11-20 | Prefijo de 4 criaturas (y de パラフェルム). Se aparta del inglés fan («Bara»): パ es «pa». `loc.py check` da un falso positivo en `sys/objetos#0989/nombre` (パラッシュ, «Pallasch»): queda como está. |
+| パラ | Para | decidido 2026-11-20 | Prefijo de 4 criaturas (y de パラフェルム). Se aparta del inglés fan («Bara»): パ es «pa». `loc.py check` da un falso positivo en `sys/objetos#0989/nombre` y `#0990` (パラッシュ, «Pallasch»): queda como está. |
 | クィドル | Quiddle | decidido 2026-11-20 | Forma del inglés fan, fiel a «kuidoru» [DECISIONS 2026-11-20]. |
 | クィドリィ | Quiddly | decidido 2026-11-20 | Forma del inglés fan, fiel a «kuidoru» [DECISIONS 2026-11-20]. |
 | ガープ | Galp | decidido 2026-11-20 | Inglés fan, salvo los prefijos ガレ y パラ. |
@@ -223,6 +231,11 @@ Lo que lleva un paréntesis en «Original» no lo controla `loc.py check` (ese t
 | 高位支配者 | soberano supremo | decidido 2026-11-20 | 支配者 sigue a ST1 (RULER → SOBERANO, que se mantenía distinto de LORD → SEÑOR); 高位支配者 aparece en 5 descripciones de criaturas. No se puede confirmar que sea el mismo concepto que en ST1. |
 | 意志 | voluntad | decidido 2026-11-20 | Entidad que nombran algunos habitantes de la torre (mapas, la descripción de オーブ y la de 煌珠の層). 意志 de una persona («貴様の意志») es «voluntad» común, en minúscula. |
 | 偉大なる意志 | Gran Voluntad | decidido 2026-11-20 | Entidad que nombran algunos habitantes de la torre (mapas, la descripción de オーブ y la de 煌珠の層). 意志 de una persona («貴様の意志») es «voluntad» común, en minúscula. |
+| 意思 | voluntad | decidido 2026-11-23 | Lo que uno quiere; en minúscula, frente a 意志 → «Voluntad» con mayúscula cuando es la entidad (`mapa/2283#0001`). |
+| (王, el de la lanza) | Rey | decidido 2026-11-23 | Con mayúscula siempre que nombra a ese rey («el Rey», «nuestro Rey»). 伝承の王 (`mapa/2272#0081`) es otro: «el rey de la leyenda». Con paréntesis, sin control. |
+| 破壊者 | destructor | decidido 2026-11-23 | `mapa/2253#0101`. |
+| 千尋 | hondura insondable | decidido 2026-11-23 | `mapa/2253#0030`. |
+| 使い手 | portador | decidido 2026-11-23 | Quien empuña o lleva el objeto, en las descripciones («protege a su portador»). Como el glosario para los efectos sobre quien lo lleva. |
 | ボス | jefe | decidido 2026-11-20 | Cómo llaman unas criaturas a quien las manda (8 textos, `mapa/2262` a `mapa/2265`). Con mayúscula si lo usan como nombre («Jefe... dijo...»). |
 | 異形 | aberrante | decidido 2026-11-20 | Adjetivo; como sustantivo, «aberración». 14 textos: criaturas, objetos («異形の斧», «異形の鎧»), lugares y mapas. Alternativa «deforme». |
 | シャドウタワー　アビス | Shadow Tower Abyss | decidido 2026-11-20 | Título del juego en los mensajes de la memory card (10 textos). Queda como en el logo. ST1 tradujo el lugar y el nombre de los datos guardados (TORRE DE LAS SOMBRAS); aquí es el título del producto entre comillas, no un lugar. |
@@ -238,7 +251,7 @@ Lo que lleva un paréntesis en «Original» no lo controla `loc.py check` (ese t
 | 溶 (clase de magia) | disolución | decidido 2026-11-20 | Las tres clases de magia: 粒 rige fuego e hielo, 溶 veneno y ácido, 霊 luz y oscuridad (呪符 de `sys/objetos#0015` a `#0017`). Son los términos de ST1 (SPIRIT, PARTICLE, MELTING), que coinciden con el kanji, pero no se puede confirmar que sean las mismas categorías de ST1. El fan dice «Spirit / Element / Solvent». Con paréntesis en la tabla, sin control. |
 | 光 (elemento) | luz | decidido 2026-11-20 | Pareja de 闇 (陰陽の呪符: «光・闇»). ST1 tenía HOLY → SAGRADO, que es otra palabra; aquí el japonés dice «luz». Sin control: 光 está en 蒼光, 光輪, 閃光. |
 | 雷 | rayo | decidido 2026-11-20 | 7 textos («刀身に雷をまとった», «球状の雷», 冥雷). Alternativa «relámpago». |
-| 魔力 | poder mágico | decidido 2026-11-20 | 90 textos («魔力を宿した»). Distinto de 魔法 → magia (fila de ST1). Alternativa: «magia» para los dos. |
+| 魔力 | poder mágico | decidido 2026-11-20 | 90 textos («魔力を宿した»). Distinto de 魔法 → magia (fila de ST1). Alternativa: «magia» para los dos. Donde «poder mágico» no entra, «poder de partícula / disolución / espíritu» (`sys/objetos#0613`-`#0615`) y «Mineral mágico en bruto» (`#0036`); el chequeo avisa igual [DECISIONS 2026-11-23]. |
 | 精神力 | fuerza mental | decidido 2026-11-20 | El fan usa «spirit» para 精神力, que chocaría con 霊 → espíritu; 体力 es lo que baja con HP減少 («体力を奪う»). «Vigor» coincide con el prefijo ヴィガー. |
 | 精神 | mente | decidido 2026-11-20 | El fan usa «spirit» para 精神力, que chocaría con 霊 → espíritu; 体力 es lo que baja con HP減少 («体力を奪う»). «Vigor» coincide con el prefijo ヴィガー. |
 | 体力 | vigor | decidido 2026-11-20 | El fan usa «spirit» para 精神力, que chocaría con 霊 → espíritu; 体力 es lo que baja con HP減少 («体力を奪う»). «Vigor» coincide con el prefijo ヴィガー. |
@@ -255,9 +268,9 @@ Lo que lleva un paréntesis en «Original» no lo controla `loc.py check` (ese t
 | 暗闇 (sobre quien lo lleva) | Ceguera | decidido 2026-11-20 | Efectos negativos para el portador (17 textos). |
 | 〜耐性 | Resiste X | decidido 2026-11-20 | 魔法耐性 → «Resiste magia»; 物理耐性 → «Resiste daño físico»; 状態異常耐性 → «Resiste estados alterados»; 麻痺無効 → «Inmune a parálisis». 70 y 44 textos. |
 | 〜無効 | Inmune a X | decidido 2026-11-20 | 魔法耐性 → «Resiste magia»; 物理耐性 → «Resiste daño físico»; 状態異常耐性 → «Resiste estados alterados»; 麻痺無効 → «Inmune a parálisis». 70 y 44 textos. |
-| ・弱 | baja | decidido 2026-11-20 | Grado de los efectos: HP回復・弱 → «Recuperación de PV baja». El fan, «Low / Mid / Fast». |
-| ・中 | media | decidido 2026-11-20 | Grado de los efectos: HP回復・弱 → «Recuperación de PV baja». El fan, «Low / Mid / Fast». |
-| ・強 | alta | decidido 2026-11-20 | Grado de los efectos: HP回復・弱 → «Recuperación de PV baja». El fan, «Low / Mid / Fast». `loc.py check` da un falso positivo en `mapa/2264#0130` («・・・強い», puntos suspensivos): esa línea queda como está. |
+| ・弱 | baja | decidido 2026-11-20 | Grado de los efectos: HP回復・弱 → «Recuperación de PV baja». El fan, «Low / Mid / Fast». Concuerda con el efecto: «Recuperación de PV baja», pero «Consumo de PV bajo» [DECISIONS 2026-11-23]. |
+| ・中 | media | decidido 2026-11-20 | Grado de los efectos: HP回復・弱 → «Recuperación de PV baja». El fan, «Low / Mid / Fast». Concuerda con el efecto: «Recuperación de PV media», pero «Consumo de PV medio» [DECISIONS 2026-11-23]. |
+| ・強 | alta | decidido 2026-11-20 | Grado de los efectos: HP回復・弱 → «Recuperación de PV baja». El fan, «Low / Mid / Fast». `loc.py check` da un falso positivo en `mapa/2264#0130` («・・・強い», puntos suspensivos): esa línea queda como está. Concuerda con el efecto: «Recuperación de PV alta», pero «Consumo de PV alto» [DECISIONS 2026-11-23]. |
 | HP減少 | Pérdida de PV | decidido 2026-11-20 | El equipo le quita PV o PM a quien lo lleva. El fan dice «Drain», que chocaría con 吸収 → absorción (ST1 DRAIN). |
 | MP減少 | Pérdida de PM | decidido 2026-11-20 | El equipo le quita PV o PM a quien lo lleva. El fan dice «Drain», que chocaría con 吸収 → absorción (ST1 DRAIN). |
 | HP消費 | Consumo de PV | decidido 2026-11-20 | El equipo le quita PV o PM a quien lo lleva. El fan dice «Drain», que chocaría con 吸収 → absorción (ST1 DRAIN). |
@@ -288,7 +301,7 @@ Lo que lleva un paréntesis en «Original» no lo controla `loc.py check` (ese t
 | 手甲 | guantelete | decidido 2026-11-20 | Como GAUNTLET → GUANTELETE y ARM GUARD → BRAZAL de ST1; en japonés son dos piezas distintas (13 y 16 textos). |
 | 篭手 | brazal | decidido 2026-11-20 | Como GAUNTLET → GUANTELETE y ARM GUARD → BRAZAL de ST1; en japonés son dos piezas distintas (13 y 16 textos). |
 | ハンド | guanteletes | decidido 2026-11-20 | メタルハンド se describe como 手甲, y スチールアーム como 篭手: así queda igual que en las descripciones. El fan, «Hands / Arms / Wrist Guard». |
-| アーム | brazales | decidido 2026-11-20 | メタルハンド se describe como 手甲, y スチールアーム como 篭手: así queda igual que en las descripciones. El fan, «Hands / Arms / Wrist Guard». |
+| アーム | brazales | decidido 2026-11-20 | メタルハンド se describe como 手甲, y スチールアーム como 篭手: así queda igual que en las descripciones. El fan, «Hands / Arms / Wrist Guard». アームプロテクター → «Protector de brazo» (`sys/objetos#0344`), y レッグプロテクター → «Protector de pierna» (`#0443`); el chequeo avisa igual [DECISIONS 2026-11-23]. |
 | リストガード | muñequeras | decidido 2026-11-20 | メタルハンド se describe como 手甲, y スチールアーム como 篭手: así queda igual que en las descripciones. El fan, «Hands / Arms / Wrist Guard». |
 | シンガーダー | grebas | decidido 2026-11-20 | Su descripción dice すねあて, que es «grebas» (fila de ST1). |
 | タリスマン | talismán | decidido 2026-11-20 | Las タリスマン se describen como お守り; 護符 es el resto de lo que va en la ranura de amuleto. |
@@ -379,7 +392,7 @@ Concuerdan con el objeto. El afijo de ST1 con el mismo elemento (coherencia de l
 | パンツァーファウスト | Panzerfaust | decidido 2026-11-20 | Modelos reales: quedan [DECISIONS 2026-11-20]. Se repiten en las municiones. |
 | フリントロック銃 | pistola de chispa | decidido 2026-11-20 | No son modelos: se traducen. «Munición de Government M1911» mide 299: forma corta en el lote. |
 | グレネードランチャー | lanzagranadas | decidido 2026-11-20 | No son modelos: se traducen. «Munición de Government M1911» mide 299: forma corta en el lote. |
-| 〜の弾 | munición de X | decidido 2026-11-20 | No son modelos: se traducen. «Munición de Government M1911» mide 299: forma corta en el lote. |
+| 〜の弾 | munición X | decidido 2026-11-23 | Sin «de» delante del modelo: «Munición M1911», «Munición Nambu Tipo 14». Lo que no es modelo lleva «de»: «Munición de granadas», «Munición de lanzagranadas», «Munición de pistola de chispa» [DECISIONS 2026-11-23]. |
 | マガジン | cargador | decidido 2026-11-20 | Neutro (E-10): «subfusil» es de España. |
 | サブマシンガン | subametralladora | decidido 2026-11-20 | Neutro (E-10): «subfusil» es de España. |
 | アサルトライフル | fusil de asalto | decidido 2026-11-20 | Neutro (E-10): «subfusil» es de España. |
@@ -417,7 +430,7 @@ Concuerdan con el objeto. El afijo de ST1 con el mismo elemento (coherencia de l
 | 所有数 | Tienes | decidido 2026-11-20 | Contadores de la tienda. |
 | 引出数 | Retirar | decidido 2026-11-20 | Contadores de la tienda. |
 | 預け数 | Depositar | decidido 2026-11-20 | Contadores de la tienda. |
-| 消費HP | Costo en PV | decidido 2026-11-20 | Lo que se paga con PV en la tienda; como MP USED → COSTO DE PM de ST1. |
+| 消費HP | Consumo de PV | decidido 2026-11-23 | Lo que se paga con PV en la tienda; como MP USED → COSTO DE PM de ST1. Unificado con HP消費 [DECISIONS 2026-11-23]. |
 | メモリーカードスロット | ranura para memory card | decidido 2026-11-20 | 9 textos. |
 | フォーマット | formatear | decidido 2026-11-20 |  |
 | ファイル | archivo | decidido 2026-11-20 | Ranuras de la memory card. ST1 llamaba NUEVO ARCHIVO a la ranura vacía; alternativa para 未使用. |

@@ -10,5 +10,6 @@ Se corren desde la raíz del repo con `python3 tools/NOMBRE.py`. Hace falta la I
 | `stz.py` | Lee y rearma el contenedor `STAZ.STZ` con entradas de otro tamaño. |
 | `ps2iso.py` | `ps2iso.py ISO_ORIGINAL STAZ_NUEVO ISO_SALIDA`: mete el contenedor nuevo en una copia de la ISO (ISO9660 y UDF). |
 | `pseudo.py` | `pseudo.py ISO_ORIGINAL ISO_SALIDA`: ISO de prueba con todo el texto pseudolocalizado, para ver cortes y glifos que faltan en el juego. |
+| `release.py` | `release.py VERSIÓN ISO_ORIGINAL`: arma el paquete de una versión en `../shadow-tower-abyss-esp-local/dist/`. Incluye el parche `.xdelta`, el instalador para Windows (`release/patcher.cs`, compilado con el `csc.exe` de .NET Framework) y `LEEME.txt` (`release/LEEME.txt`). Comprueba el parche y el instalador contra la ISO traducida. Necesita `xdelta3`. |
 
-La entrega será un parche xdelta sobre la ISO japonesa.
+La entrega es un parche xdelta sobre la ISO japonesa, con un instalador para Windows (`release.py`).
