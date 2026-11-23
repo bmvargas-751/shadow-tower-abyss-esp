@@ -31,9 +31,6 @@ xdelta3 -d -s "Shadow Tower Abyss.iso" shadow-tower-abyss-esp-*.xdelta "Shadow T
 ## Avance
 
 <!-- loc:progress -->
-Versión 0.9.0, publicada el 23 nov 2026 · [Cambios](CHANGELOG.md)\
-Etapa: Prueba en el juego · actualizado el 23 nov 2026
-
 | Sección | Líneas | Traducidas | Avance |
 |---|---:|---:|---:|
 | Interfaz | 131 | 131 | 100,0 % |
