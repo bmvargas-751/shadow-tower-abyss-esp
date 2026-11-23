@@ -2,9 +2,9 @@
   "name": "Shadow Tower Abyss",
   "source_language": "ja",
   "target_language": "es",
-  "source": "../shadow-tower-abyss-esp-local/source.jsonl",
+  "source": "../local/shadow-tower-abyss/source.jsonl",
   "support": {
-    "file": "../shadow-tower-abyss-esp-local/ref_en.jsonl",
+    "file": "../local/shadow-tower-abyss/ref_en.jsonl",
     "field": "en"
   },
   "translation": "translation",

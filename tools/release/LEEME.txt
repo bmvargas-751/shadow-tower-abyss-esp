@@ -1,7 +1,7 @@
 SHADOW TOWER ABYSS EN ESPAÑOL — versión {VERSION}
 Traducción fan al español neutro de Shadow Tower Abyss (PlayStation 2, versión
 japonesa, SLPS-25217), hecha desde el japonés.
-https://github.com/bmvargas-751/shadow-tower-abyss-esp
+https://github.com/nox-traducciones/shadow-tower-abyss
 
 Esta es una versión de prueba: todo el texto del juego está traducido, pero
 todavía no se jugó entero con la traducción. Si algo se ve cortado, se sale de
