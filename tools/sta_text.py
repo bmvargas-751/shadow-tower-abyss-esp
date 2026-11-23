@@ -183,15 +183,19 @@ def export():
 # ---------------------------------------------------------------- import
 
 def load_translation():
-    """Une translation/*.json (clave -> texto). Vacío si todavía no hay nada."""
+    """Une translation/**/*.jsonl, el formato del kit: una línea {key, es} por texto.
+    Vacío si todavía no hay nada."""
     out = {}
     if not os.path.isdir(TRANSLATION):
         return out
     for dp, _dn, fn in os.walk(TRANSLATION):
         for name in sorted(fn):
-            if name.endswith(".json"):
+            if name.endswith(".jsonl"):
                 with open(os.path.join(dp, name), encoding="utf-8") as f:
-                    out.update(json.load(f))
+                    for line in f:
+                        if line.strip():
+                            d = json.loads(line)
+                            out[d["key"]] = d["es"]
     return out
 
 

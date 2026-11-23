@@ -140,7 +140,7 @@ Lo que lleva un paréntesis en «Original» no lo controla `loc.py check` (ese t
 | Original | Español | Fuente | Nota |
 |---|---|---|---|
 | ガレ | Gare | decidido 2026-11-20 | Prefijo de 10 criaturas, casi todas «de cuerpo robusto» (頑強な身体). Se aparta del inglés fan («Grey»): ガレ se lee «gare»; gris sería グレイ. También dentro de ウィガレ → «Wigare» y ミガレ → «Migare». |
-| パラ | Para | decidido 2026-11-20 | Prefijo de 4 criaturas (y de パラフェルム). Se aparta del inglés fan («Bara»): パ es «pa». |
+| パラ | Para | decidido 2026-11-20 | Prefijo de 4 criaturas (y de パラフェルム). Se aparta del inglés fan («Bara»): パ es «pa». `loc.py check` da un falso positivo en `sys/objetos#0989/nombre` (パラッシュ, «Pallasch»): queda como está. |
 | クィドル | Quiddle | decidido 2026-11-20 | Forma del inglés fan, fiel a «kuidoru» [DECISIONS 2026-11-20]. |
 | クィドリィ | Quiddly | decidido 2026-11-20 | Forma del inglés fan, fiel a «kuidoru» [DECISIONS 2026-11-20]. |
 | ガープ | Galp | decidido 2026-11-20 | Inglés fan, salvo los prefijos ガレ y パラ. |
@@ -257,7 +257,7 @@ Lo que lleva un paréntesis en «Original» no lo controla `loc.py check` (ese t
 | 〜無効 | Inmune a X | decidido 2026-11-20 | 魔法耐性 → «Resiste magia»; 物理耐性 → «Resiste daño físico»; 状態異常耐性 → «Resiste estados alterados»; 麻痺無効 → «Inmune a parálisis». 70 y 44 textos. |
 | ・弱 | baja | decidido 2026-11-20 | Grado de los efectos: HP回復・弱 → «Recuperación de PV baja». El fan, «Low / Mid / Fast». |
 | ・中 | media | decidido 2026-11-20 | Grado de los efectos: HP回復・弱 → «Recuperación de PV baja». El fan, «Low / Mid / Fast». |
-| ・強 | alta | decidido 2026-11-20 | Grado de los efectos: HP回復・弱 → «Recuperación de PV baja». El fan, «Low / Mid / Fast». |
+| ・強 | alta | decidido 2026-11-20 | Grado de los efectos: HP回復・弱 → «Recuperación de PV baja». El fan, «Low / Mid / Fast». `loc.py check` da un falso positivo en `mapa/2264#0130` («・・・強い», puntos suspensivos): esa línea queda como está. |
 | HP減少 | Pérdida de PV | decidido 2026-11-20 | El equipo le quita PV o PM a quien lo lleva. El fan dice «Drain», que chocaría con 吸収 → absorción (ST1 DRAIN). |
 | MP減少 | Pérdida de PM | decidido 2026-11-20 | El equipo le quita PV o PM a quien lo lleva. El fan dice «Drain», que chocaría con 吸収 → absorción (ST1 DRAIN). |
 | HP消費 | Consumo de PV | decidido 2026-11-20 | El equipo le quita PV o PM a quien lo lleva. El fan dice «Drain», que chocaría con 吸収 → absorción (ST1 DRAIN). |
@@ -324,7 +324,7 @@ Van detrás del sustantivo y concuerdan con él, como los afijos de ST1. Muchos 
 | ソリッド | sólido | decidido 2026-11-20 | Solid. 14 objetos. |
 | ラピッド | rápido | decidido 2026-11-20 | Rapid. 10 objetos («veloz» ya es SWIFT en ST1). |
 | ヴィガー | de vigor | decidido 2026-11-20 | Vigor. 8 objetos; suben el 体力 (vigor) o la defensa física. |
-| フィール | sensible | decidido 2026-11-20 | Se aparta del inglés fan («Fear»): フィール es «feel» (fear sería フィア). 12 objetos que suben la fuerza mental o la magia (フィールドジャケット es otra palabra: field). Alternativa «perceptivo». |
+| フィール | sensible | decidido 2026-11-20 | Se aparta del inglés fan («Fear»): フィール es «feel» (fear sería フィア). 12 objetos que suben la fuerza mental o la magia (フィールドジャケット es otra palabra: field). Alternativa «perceptivo». `loc.py check` da un falso positivo en `sys/objetos#0260/nombre` (フィールドジャケット, «Chaqueta de campaña»): queda como está. |
 | アリア | aria | decidido 2026-11-20 | Aria (pieza musical), sin traducción más clara; invariable, en aposición («Botas de acero aria»). 3 objetos. Alternativa «melodioso». |
 | セヴァー | tajante | decidido 2026-11-20 | Sever. 9 armas que destacan en el corte, y セヴァバングル (sin ー). Invariable. |
 | セヴァ | tajante | decidido 2026-11-20 | Sever. 9 armas que destacan en el corte, y セヴァバングル (sin ー). Invariable. |

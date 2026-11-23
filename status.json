@@ -1,27 +1,27 @@
 {
  "updated": "2026-11-22",
- "status": "translation",
- "stage": "Piloto",
+ "status": "beta",
+ "stage": "Prueba en el juego",
  "version": null,
  "lines": 1719,
- "done": 184,
+ "done": 1719,
  "sections": [
   {
    "name": "Interfaz",
    "lines": 131,
-   "done": 10,
+   "done": 131,
    "common": true
   },
   {
    "name": "Objetos y equipo",
    "lines": 1210,
-   "done": 60,
+   "done": 1210,
    "common": true
   },
   {
    "name": "Criaturas",
    "lines": 136,
-   "done": 40,
+   "done": 136,
    "common": true
   },
   {
@@ -33,7 +33,7 @@
   {
    "name": "Historia",
    "lines": 212,
-   "done": 44,
+   "done": 212,
    "common": true
   }
  ],
@@ -71,14 +71,14 @@
   {
    "n": 5,
    "name": "Piloto",
-   "state": "in_progress",
+   "state": "done",
    "note": null
   },
   {
    "n": 6,
    "name": "Traducción",
-   "state": "in_progress",
-   "note": "10,7 %"
+   "state": "done",
+   "note": "100,0 %"
   },
   {
    "n": 7,
