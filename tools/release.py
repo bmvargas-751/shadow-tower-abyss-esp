@@ -5,7 +5,7 @@ Uso:
 
 1. Arma la ISO traducida: sta_text.import_ escribe STAZ.STZ con translation/ y la
    fuente con las letras españolas, y ps2iso.build lo mete en una copia de la ISO
-   (en ../shadow-tower-abyss-esp-local/dist/; al final se borra: solo queda el
+   (en ../local/shadow-tower-abyss/dist/; al final se borra: solo queda el
    paquete).
 2. Crea el parche con xdelta3 (`-S none` para que el instalador lo lea, y una
    ventana de 2 GB para que STAZ.STZ, que se corre unos sectores, salga como
@@ -15,7 +15,7 @@ Uso:
    la variable CSC cambia la ruta). Lo prueba con la ISO original: la ISO que
    escribe tiene que ser idéntica.
 4. Empaqueta shadow-tower-abyss-esp-VERSIÓN.zip (instalador, parche y LEEME.txt)
-   en ../shadow-tower-abyss-esp-local/dist/.
+   en ../local/shadow-tower-abyss/dist/.
 
 Copiado de tools/release.py de Eternal Ring; cambia solo cómo se arma la ISO.
 Necesita xdelta3 (la variable XDELTA3 cambia la ruta).
@@ -27,7 +27,7 @@ sys.path.insert(0, os.path.join(ROOT, 'tools'))
 import ps2iso
 import sta_text
 
-LOCAL = os.path.normpath(os.path.join(ROOT, '..', 'shadow-tower-abyss-esp-local'))
+LOCAL = os.path.normpath(os.path.join(ROOT, '..', 'local', 'shadow-tower-abyss'))
 DIST = os.path.join(LOCAL, 'dist')
 REL = os.path.join(ROOT, 'tools', 'release')
 XDELTA3 = os.environ.get('XDELTA3') or shutil.which('xdelta3') or 'xdelta3'

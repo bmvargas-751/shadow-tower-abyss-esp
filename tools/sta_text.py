@@ -13,7 +13,7 @@ Comandos (desde la raíz del repo):
     python3 tools/sta_text.py import      # translation/ -> build/STAZ.STZ
     python3 tools/sta_text.py roundtrip   # export + import sin cambios == original
 
-Los archivos del juego y lo que se genera van en ../shadow-tower-abyss-esp-local/.
+Los archivos del juego y lo que se genera van en ../local/shadow-tower-abyss/.
 """
 import json
 import os
@@ -25,7 +25,7 @@ from stz import Stz  # noqa: E402
 import sta_font  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-LOCAL = os.path.join(os.path.dirname(ROOT), "shadow-tower-abyss-esp-local")
+LOCAL = os.path.join(os.path.dirname(ROOT), "local", "shadow-tower-abyss")
 STZ = os.path.join(LOCAL, "iso-jp", "TARGET", "STAZ.STZ")
 PPF = "/mnt/d/Emulation/roms/ps2/Shadow Tower Abyss/STATest0.3.ppf"
 ISO_STZ_LBA = 525217  # sector de STAZ.STZ en la ISO japonesa

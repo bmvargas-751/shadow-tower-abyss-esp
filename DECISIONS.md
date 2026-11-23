@@ -53,3 +53,4 @@ Lo que el usuario decidió, con fecha, para no volver a discutirlo. Una regla de
 - **2026-11-23** Puntuación: punto (o coma) entre dos oraciones del mismo texto, aunque el japonés no ponga 「。」. El final del texto queda como está. Lo aplica un editor en los mapas y el menú.
 - **2026-11-23** Release 0.9.0: paquete como Eternal Ring. Lleva un .zip con el parche .xdelta, un instalador para Windows y LEEME.txt.
 - **2026-11-23** 装弾数: «Capacidad: N disparos», como en toda la traducción. El glosario decía «balas» en el ejemplo.
+- **2026-11-23** El repo pasa a la organización de GitHub de las traducciones: `nox-traducciones/shadow-tower-abyss` (antes `bmvargas-751/shadow-tower-abyss-esp`). Los enlaces viejos redirigen solos; los del repo ya apuntan a la dirección nueva.
