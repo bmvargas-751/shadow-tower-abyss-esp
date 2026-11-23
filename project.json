@@ -31,5 +31,11 @@
       "label": "Descargar",
       "primary": true
     }
-  ]
+  ],
+  "art": {
+    "cover": "art/cover.jpg",
+    "wide": "art/wide.jpg",
+    "card": "cover",
+    "fill": "#2c271c"
+  }
 }
