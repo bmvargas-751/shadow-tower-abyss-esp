@@ -48,9 +48,19 @@ def _advances():
 SLOTS = {"sys/menu#%04d" % i for i in range(79, 91)}
 
 
+# Rótulos del ejecutable (exe_text.py): cada barra o botón tiene su ancho, sin
+# medir. Aviso si un renglón crece más que esto respecto del original, para
+# verlo en el juego (TECH.md, T-3).
+EXE_GROWTH = 1.25
+
+
 def box(key, en):
     """(ancho máximo, renglones máximos o None, nota) de la caja del texto.
     Unidades de la fuente = píxeles del cuadro de 512 de ancho (TECH.md, T-3)."""
+    if key.startswith("exe#"):
+        widest = max(sta_font.width(ln, _advances()) for ln in en.split("\n"))
+        return int(widest * EXE_GROWTH), en.count("\n") + 1, \
+            "rótulo del ejecutable: el original mide %d; ver en el juego" % widest
     if key.startswith("mapa/"):
         return 300, 3, "provisional: falta ver un diálogo de mapa"
     if key.startswith(("sys/objetos#", "sys/criaturas#", "sys/lugares#")):
