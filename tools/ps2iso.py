@@ -9,7 +9,10 @@ El juego abre el archivo por nombre (`\\TARGET\\STAZ.STZ`), no por sector.
 Se actualizan los dos sistemas de archivos de la imagen: ISO9660 (registros de
 directorio) y UDF (File Entry, con su CRC).
 
-    python3 tools/ps2iso.py ISO_ORIGINAL STAZ_NUEVO ISO_SALIDA
+    python3 tools/ps2iso.py ISO_ORIGINAL STAZ_NUEVO ISO_SALIDA [EJECUTABLE_NUEVO]
+
+El ejecutable (`SLPS_252.17`, con los rótulos de exe_text.py) tiene el mismo
+tamaño: se escribe en su lugar.
 """
 import os
 import shutil
@@ -110,7 +113,8 @@ def patch_iso_rec(f, pos, lba, size):
     f.write(both32(size))
 
 
-def build(iso_in, stz_path, iso_out):
+def build(iso_in, stz_path, iso_out, exe_path=None):
+    """Con `exe_path`, también escribe el ejecutable (mismo tamaño, en su lugar)."""
     new = open(stz_path, "rb").read()
     if os.path.abspath(iso_in) != os.path.abspath(iso_out):
         shutil.copyfile(iso_in, iso_out)
@@ -140,11 +144,17 @@ def build(iso_in, stz_path, iso_out):
         if k:
             patch_iso_rec(f, dpos, dlba, ndsize)
             patch_udf_fe(f, fe_d, dlba - pstart, ndsize)
+        if exe_path:
+            exe = open(exe_path, "rb").read()
+            _epos, elba, esize = recs["/SLPS_252.17"]
+            assert len(exe) == esize, "el ejecutable cambió de tamaño"
+            f.seek(elba * S)
+            f.write(exe)
     print("ISO: STAZ.STZ en el sector %d (%+d), %d bytes -> %s" % (nlba, -k, len(new), iso_out))
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 4:
+    if len(sys.argv) not in (4, 5):
         print(__doc__)
         sys.exit(2)
     build(*sys.argv[1:])

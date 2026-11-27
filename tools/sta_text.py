@@ -7,10 +7,13 @@ Todo el texto del juego está en `TARGET/STAZ.STZ`, en tablas `STA `:
   lugares y ayudas del menú.
 - 34 tablas dentro del bloque `MSGa` de cada mapa (`STAM`, entradas 2248+).
 
+Los rótulos del ejecutable (`exe#...`) los maneja exe_text.py; export y
+roundtrip los incluyen.
+
 Comandos (desde la raíz del repo):
 
     python3 tools/sta_text.py export      # original -> source.jsonl ({key, ja}) + ref_en.jsonl ({key, en}: versión de apoyo)
-    python3 tools/sta_text.py import      # translation/ -> build/STAZ.STZ
+    python3 tools/sta_text.py import      # translation/ -> build/STAZ.STZ y build/SLPS_252.17
     python3 tools/sta_text.py roundtrip   # export + import sin cambios == original
 
 Los archivos del juego y lo que se genera van en ../local/shadow-tower-abyss/.
@@ -22,12 +25,17 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from stz import Stz  # noqa: E402
+import exe_text  # noqa: E402
 import sta_font  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LOCAL = os.path.join(os.path.dirname(ROOT), "local", "shadow-tower-abyss")
 STZ = os.path.join(LOCAL, "iso-jp", "TARGET", "STAZ.STZ")
-PPF = "/mnt/d/Emulation/roms/ps2/Shadow Tower Abyss/STATest0.3.ppf"
+# Inglés fan (versión de apoyo): el primero que exista, o la variable STA_PPF.
+PPF = next((p for p in (os.environ.get("STA_PPF", ""),
+                        "/mnt/d/Emulation/roms/ps2/Shadow Tower Abyss/STATest0.3.ppf",
+                        "/mnt/c/Users/Bryan/Downloads/STATest0.3.ppf") if p and os.path.exists(p)),
+           "STATest0.3.ppf")
 ISO_STZ_LBA = 525217  # sector de STAZ.STZ en la ISO japonesa
 SOURCE = os.path.join(LOCAL, "source.jsonl")
 REF_EN = os.path.join(LOCAL, "ref_en.jsonl")
@@ -164,7 +172,10 @@ def export():
             if key in speakers:
                 d["speaker"] = speakers[key]
             f.write(json.dumps(d, ensure_ascii=False) + "\n")
-    print("source: %d textos en %d tablas -> %s" % (len(rows), len(tables), SOURCE))
+        exe = exe_text.items()
+        for d in exe:
+            f.write(json.dumps(d, ensure_ascii=False) + "\n")
+    print("source: %d textos en %d tablas y %d del ejecutable -> %s" % (len(rows), len(tables), len(exe), SOURCE))
     if os.path.exists(PPF):
         en = apply_ppf_to_stz(stz)
         ref = dict((k, t) for k, t, _ in read_texts(en, tables))
@@ -176,8 +187,11 @@ def export():
                     same += 1
                     continue
                 f.write(json.dumps({"key": key, "en": e}, ensure_ascii=False) + "\n")
-        print("ref_en: %d de %d textos con inglés del PPF (%d sin traducir) -> %s"
-              % (len(rows) - same, len(rows), same, REF_EN))
+            exe_en = exe_text.english(PPF)
+            for key, e in exe_en.items():
+                f.write(json.dumps({"key": key, "en": e}, ensure_ascii=False) + "\n")
+        print("ref_en: %d de %d textos con inglés del PPF (%d sin traducir), %d del ejecutable -> %s"
+              % (len(rows) - same, len(rows), same, len(exe_en), REF_EN))
 
 
 # ---------------------------------------------------------------- import
@@ -280,13 +294,17 @@ def build_stz(texts, font=True):
     return c.build(bodies), free
 
 
-def import_(out=OUT, texts=None, font=True):
+def import_(out=OUT, texts=None, font=True, exe_out=None):
+    """Escribe STAZ.STZ en `out` y, con `exe_out`, el ejecutable con los rótulos."""
     if texts is None:
         texts = load_translation()
-    new, free = build_stz(texts, font)
+    new, free = build_stz({k: v for k, v in texts.items() if not k.startswith("exe#")}, font)
     os.makedirs(os.path.dirname(out), exist_ok=True)
     with open(out, "wb") as f:
         f.write(new)
+    if exe_out:
+        with open(exe_out, "wb") as f:
+            f.write(exe_text.build(texts, font))
     grow = {k: -v for k, v in free.items() if v < 0}
     print("import: %d textos -> %s" % (len(texts), out))
     if grow:
@@ -306,7 +324,10 @@ def roundtrip():
     out, _free = import_(os.path.join(LOCAL, "build", "roundtrip.STZ"), texts, font=False)
     ok = open(out, "rb").read() == open(STZ, "rb").read()
     print("ida y vuelta:", "IDÉNTICA" if ok else "DISTINTA")
-    return ok
+    exe = exe_text.build({k: v for k, v in texts.items() if k.startswith("exe#")}, font=False)
+    ok_exe = exe == open(exe_text.EXE, "rb").read()
+    print("ejecutable, ida y vuelta:", "IDÉNTICO" if ok_exe else "DISTINTO")
+    return ok and ok_exe
 
 
 if __name__ == "__main__":
@@ -314,7 +335,7 @@ if __name__ == "__main__":
     if cmd == "export":
         export()
     elif cmd == "import":
-        import_()
+        import_(exe_out=exe_text.OUT)
     elif cmd == "roundtrip":
         sys.exit(0 if roundtrip() else 1)
     else:

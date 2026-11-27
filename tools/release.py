@@ -4,7 +4,8 @@ Uso:
   python3 -I tools/release.py VERSIÓN ISO_ORIGINAL [--sin-exe] [--sin-prueba-exe]
 
 1. Arma la ISO traducida: sta_text.import_ escribe STAZ.STZ con translation/ y la
-   fuente con las letras españolas, y ps2iso.build lo mete en una copia de la ISO
+   fuente con las letras españolas, y el ejecutable con sus rótulos (exe_text.py);
+   ps2iso.build los mete en una copia de la ISO
    (en ../local/shadow-tower-abyss/dist/; al final se borra: solo queda el
    paquete).
 2. Crea el parche con xdelta3 (`-S none` para que el instalador lo lea, y una
@@ -60,6 +61,7 @@ def main():
     name = 'shadow-tower-abyss-esp-%s' % version
     iso = os.path.join(DIST, name + '.iso')
     stz = os.path.join(DIST, 'STAZ.STZ')
+    exe_new = os.path.join(DIST, 'SLPS_252.17')
     patch = os.path.join(DIST, name + '.xdelta')
     exe_name = 'Instalar Shadow Tower Abyss en español.exe'
 
@@ -69,8 +71,8 @@ def main():
         sys.exit('No es la ISO esperada: %s' % o)
     try:
         print('Armando la ISO traducida...')
-        sta_text.import_(stz)
-        ps2iso.build(orig, stz, iso)
+        sta_text.import_(stz, exe_out=exe_new)
+        ps2iso.build(orig, stz, iso, exe_new)
         n = sums(iso)
         print('Creando el parche...')
         subprocess.check_call([XDELTA3, '-e', '-9', '-S', 'none', '-B', str(1 << 31), '-f', '-s', orig, iso, patch])
@@ -130,7 +132,7 @@ def main():
         print('Original:  ', o)
         print('Traducida: ', n)
     finally:
-        for f in (iso, stz):
+        for f in (iso, stz, exe_new):
             if os.path.exists(f):
                 os.remove(f)
 

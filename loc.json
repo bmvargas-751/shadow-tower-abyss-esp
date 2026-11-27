@@ -13,7 +13,8 @@
     {
       "name": "Interfaz",
       "prefixes": [
-        "sys/menu#"
+        "sys/menu#",
+        "exe#"
       ]
     },
     {
@@ -71,7 +72,9 @@
     "sys/menu#0341",
     "sys/menu#0401"
   ],
-  "codes": [],
+  "codes": [
+    "%[-+0-9.]*[sdifxXu]"
+  ],
   "fixed_break": null,
   "encoding": "cp932",
   "spanish_checks": true,
