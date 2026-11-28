@@ -67,3 +67,5 @@ Lo que el usuario decidió, con fecha, para no volver a discutirlo. Una regla de
 - **2026-11-28** La ñ se dibuja con una virgulilla ondulada de dos píxeles de grueso (la de uno se veía punteada).
 - **2026-11-28** Descripciones de objetos en la ventana de datos del equipo y de la tienda: el juego las estrecha a lo ancho si el renglón más ancho no entra a la izquierda de las estadísticas (TECH, «Ejecutable»), en vez de volver a partir cientos de descripciones.
 - **2026-11-28** Los kanji emblema de las estadísticas (身, 地, 甲… y 総重量) quedan como están por ahora: así es el original (el kanji con el nombre encima, que ya va en español).
+- **2026-11-28** Video de apertura: los subtítulos van con los tramos de la voz medidos en el audio (1,1 a 9 s, 9,3 a 14 s, 14,5 a 17,8 s y 38,3 a 47,2 s), no con los tiempos del inglés fan, que no coincidían con la voz.
+- **2026-11-28** Tildes, diéresis y ñ (fuente y videos): se trazan suaves, dibujadas a 4 veces el tamaño y reducidas; las de píxeles sueltos dejaban ver la sombra del juego como puntitos negros.

@@ -48,7 +48,10 @@ QUALITY = 2            # cuantizador fijo de ffmpeg (2 = casi sin pérdida); los
 # Bloques: (primer cuadro, último cuadro, español).
 # Prólogo: los cuadros salen de la medida del texto japonés (umbral de 60
 # píxeles); los fundidos se buscan hasta el bloque vecino (windows).
-# Apertura: los cuadros de los subtítulos del inglés fan (cortes secos).
+# Apertura: los tramos de la voz, medidos en el audio (PCM): la voz cambia de
+# tono a cada momento y la música lo sostiene; cada subtítulo empieza con su
+# tramo y dura hasta poco antes del siguiente (los del inglés fan no iban con
+# la voz: prueba del 2026-11-28).
 VIDEOS = {
     "PROLOGUE": dict(
         path="/TARGET/PROLOGUE.PSS", frames=2075, mode="cover",
@@ -66,12 +69,12 @@ VIDEOS = {
     "OPENING": dict(
         path="/TARGET/OPENING.PSS", frames=2265, mode="overlay", center_y=418,
         subs=[
-            (60, 329, "En lo profundo del bosque sombrío, un viejo guía llevó\n"
+            (33, 270, "En lo profundo del bosque sombrío, un viejo guía llevó\n"
                       "a un joven hasta un pequeño santuario abandonado y en ruinas"),
-            (330, 569, "Desde la entrada abismal, entre las ruinas desmoronadas\n"
+            (279, 420, "Desde la entrada abismal, entre las ruinas desmoronadas\n"
                        "del santuario, brotaba la oscuridad"),
-            (570, 749, "El viejo guía hizo una reverencia\nmientras el joven entraba con cautela"),
-            (750, 989, "Y una vez más, la oscuridad\nse tragó a un ser humano"),
+            (435, 534, "El viejo guía hizo una reverencia\nmientras el joven entraba con cautela"),
+            (1149, 1416, "Y una vez más, la oscuridad\nse tragó a un ser humano"),
         ]),
 }
 ISO_PATHS = {name: v["path"] for name, v in VIDEOS.items()}
@@ -79,7 +82,7 @@ FADE_OVERLAY = 6       # apertura: fundido de entrada y salida, en cuadros
 TEXT_BAND = (300, 440)            # prólogo: filas donde va el texto japonés
 FAINT_MIN = 8                     # prólogo: píxeles grises que todavía cuentan como texto
 MARGIN = 6                        # prólogo: cuadros de más que se tapan a cada lado del tramo
-SMOOTH = 15                       # prólogo: cuadros del promedio de la opacidad del español
+RAMP = 15                         # prólogo: cuadros del fundido del español
 LINE_H = 30                       # renglón del español, en píxeles
 WHITE = (235, 235, 235)
 
@@ -191,15 +194,14 @@ def analyze(pss, subs, total):
                 e = ImageChops.subtract(e, core[j].filter(ImageFilter.MaxFilter(5)))
         excl[k] = e
     win = windows(subs, total)
-    seen, lit = {}, {}
+    seen = {}
     for n, im in enumerate(frames(pss)):
         f = None
         for k, (lo, hi) in enumerate(win):
             if lo <= n <= hi:
                 if f is None:
-                    f, wt = faint(im), white(im)
+                    f = faint(im)
                 seen[(n, k)] = ImageChops.multiply(f, excl[k]).histogram()[255]
-                lit[(n, k)] = ImageChops.multiply(wt, excl[k]).histogram()[255]
     spans = []
     for k, (a, b, _t) in enumerate(subs):
         lo, hi = win[k]
@@ -210,13 +212,12 @@ def analyze(pss, subs, total):
         while b2 + 1 <= hi and seen.get((b2 + 1, k), 0) > FAINT_MIN:
             b2 += 1
         a2, b2 = max(lo, a2 - MARGIN), min(hi, b2 + MARGIN)
-        peak = max(lit.get((n, k), 0) for n in range(a, b + 1)) or 1
-        # opacidad del español: lo claro que se ve el japonés (sube y baja con él)
-        raw = [min(1.0, lit.get((n, k), 0) / peak * 1.15) for n in range(a2, b2 + 1)]
-        # promedio de SMOOTH cuadros: el brillo medido salta un poco de un cuadro a otro
-        r = SMOOTH // 2
-        alpha = {a2 + i: sum(raw[max(0, i - r):i + r + 1]) / len(raw[max(0, i - r):i + r + 1])
-                 for i in range(len(raw))}
+        # opacidad del español: entera mientras el japonés se ve claro (a..b,
+        # la medida por umbral), con un fundido de RAMP cuadros a cada lado. La
+        # medida del brillo cuadro a cuadro se confundía con las cuchillas de
+        # la lanza y dejaba el español gris (prueba del 2026-11-28).
+        alpha = {n: max(0.0, min(1.0, (n - (a - RAMP)) / RAMP, ((b + RAMP) - n) / RAMP))
+                 for n in range(a2, b2 + 1)}
         spans.append((a2, b2, alpha))
     return spans, masks
 

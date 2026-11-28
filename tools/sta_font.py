@@ -127,26 +127,47 @@ def _dot(bm, x, y, v):
         bm[y][x] = max(bm[y][x], v)
 
 
+SS = 4            # supermuestreo de los signos
+
+
+def _stroke(bm, points, width):
+    """Traza una línea suave (con antialias) por `points` (en píxeles de la
+    celda, con decimales) y la suma a la celda. Se dibuja a SS veces el tamaño
+    y se reduce: los signos trazados píxel a píxel se veían como cuentas, y la
+    sombra que el juego pone abajo a la derecha asomaba entre ellas como
+    puntitos negros (prueba del 2026-11-28)."""
+    from PIL import Image, ImageDraw
+    w = len(bm[0])
+    im = Image.new("L", (w * SS, H * SS), 0)
+    d = ImageDraw.Draw(im)
+    pts = [(x * SS + SS / 2, y * SS + SS / 2) for x, y in points]
+    r = width * SS / 2
+    d.line(pts, fill=255, width=max(1, round(width * SS)), joint="curve")
+    for x, y in (pts[0], pts[-1]):
+        d.ellipse((x - r, y - r, x + r, y + r), fill=255)
+    small = im.resize((w, H), Image.BOX).load()
+    for y in range(H):
+        for x in range(w):
+            v = small[x, y] * SOLID // 255
+            if v:
+                bm[y][x] = max(bm[y][x], v)
+
+
 def _acute(bm, cx, top, steps=4):
     # trazo inclinado como la cursiva de la fuente: de abajo a la izquierda a arriba a la derecha
-    for k in range(steps):
-        dx, dy = k, steps - 1 - k
-        _dot(bm, cx + dx, top + dy, SOLID)
-        _dot(bm, cx + dx + 1, top + dy, EDGE)
+    _stroke(bm, [(cx - 0.3, top + steps - 1), (cx + steps - 0.7, top)], 1.6)
 
 
 def _diaeresis(bm, cx, top):
     for x in (cx - 2, cx + 2):
-        for dx, dy in ((0, 0), (1, 0), (0, 1), (1, 1)):
-            _dot(bm, x + dx, top + 1 + dy, SOLID)
+        _stroke(bm, [(x + 0.5, top + 1.5), (x + 0.5, top + 1.6)], 1.9)
 
 
 def _tilde(bm, cx, top):
-    # virgulilla ondulada de 9 px centrada en cx, con un borde debajo para que el
-    # trazo tenga cuerpo (de un píxel se veía punteada: prueba del 2026-11-28)
-    for px, py in ((0, 2), (1, 1), (2, 0), (3, 0), (4, 1), (5, 2), (6, 2), (7, 1), (8, 0)):
-        _dot(bm, cx - 4 + px, top + py, SOLID)
-        _dot(bm, cx - 4 + px, top + py + 1, EDGE)
+    # virgulilla ondulada de 9 px centrada en cx (una onda entera)
+    import math
+    pts = [(cx - 4 + 8 * t / 16, top + 1.2 - 0.9 * math.sin(2 * math.pi * t / 16)) for t in range(17)]
+    _stroke(bm, pts, 1.9)
 
 
 def make_glyph(font, ch):

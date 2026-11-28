@@ -22,7 +22,7 @@ Se deciden al ver la pantalla, con la versión 0.9.0.
 - [ ] Descripciones en la ventana de datos (técnico): se estrechan a lo ancho si el renglón más ancho pasa de 290 (`exe_text.DESC_WIDTH`). Ver con una descripción larga (por ejemplo, el cargador de la Government M1911) que no pise las estadísticas y se lea.
 - [ ] Guardar y cargar (técnico): el lugar va estrechado al 75% y el tiempo al 83%, siempre. Ver que entren en su franja y se lean.
 - [ ] Texturas (`tools/sta_tex.py`, provisional): «Aplastar» (砕, Break) como verbo, porque «Aplastamiento» no entra en 39 píxeles; «Colección» para `収集率`; «NUEVO» en dos renglones. Ver en la enciclopedia y el equipo si se leen. Los kanji de las estadísticas quedan como emblemas.
-- [ ] `OPENING.PSS`: subtítulos traducidos del inglés fan [DECISIONS 2026-11-28]. Ver que vayan a tiempo con la voz; si algún día aparece el texto japonés, revisarlos contra él.
+- [ ] `OPENING.PSS`: subtítulos traducidos del inglés fan [DECISIONS 2026-11-28], en los tramos de la voz medidos en el audio (no se pudo escuchar). Ver que vayan a tiempo con la voz; si algún día aparece el texto japonés, revisarlos contra él.
 - [ ] `PROLOGUE.PSS` y `OPENING.PSS`: ver en el juego que los videos se reproducen bien (fluido, con sonido) y que no queda nada del japonés.
 
 ## De los lotes

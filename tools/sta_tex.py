@@ -160,7 +160,9 @@ def render(font, text, w, h, cap):
         im.putdata([v for row in m for v in row])
         nw = max(1, round(im.width * s))
         nw = min(nw, w - 1)
-        im = im.resize((nw, line_h), Image.LANCZOS)
+        # BOX: promedio simple. LANCZOS dejaba píxeles más claros dentro del trazo
+        # que, mezclados con la sombra, salían como puntitos oscuros (prueba del 2026-11-28)
+        im = im.resize((nw, line_h), Image.BOX)
         out.paste(im, ((w - 1 - nw) // 2, y0 + n * line_h))
     return out
 
@@ -181,6 +183,9 @@ def _ink_colors(b, t, pal, u, v, w, h):
     fg = max(solid, key=lambda p: p[0] + p[1] + p[2])
     sh = min(solid, key=lambda p: p[0] + p[1] + p[2])
     return fg, sh
+
+
+SOLIDIFY = 1.3   # cuánto se refuerza la opacidad (el centro del trazo queda opaco)
 
 
 def draw(b, t, font, u, v, w, h, text, cap, bold=False):
@@ -204,20 +209,20 @@ def draw(b, t, font, u, v, w, h, text, cap, bold=False):
     cache = {}
     for y in range(h):
         for x in range(w):
-            a = m[x, y] / 255
-            s = m[x - 1, y - 1] / 255 if x and y else 0
-            # sombra debajo, letra encima (alfa del GS: 0x80 = opaco)
-            alpha_s = s * sh[3]
-            col = [0, 0, 0, 0]
-            if alpha_s:
-                col = [sh[0], sh[1], sh[2], alpha_s]
-            if a:
-                aa = a * fg[3] / 0x80
-                base_a = col[3] / 0x80
-                out_a = aa + base_a * (1 - aa)
-                for k in range(3):
-                    col[k] = (fg[k] * aa + col[k] * base_a * (1 - aa)) / out_a if out_a else 0
-                col[3] = out_a * 0x80
+            # la fuente llega a 238 en el centro del trazo: se lleva a opaco
+            a = min(1.0, m[x, y] / 255 * SOLIDIFY)
+            s = min(1.0, m[x - 1, y - 1] / 255 * SOLIDIFY) if x and y else 0
+            # sin mezclar la letra con su sombra: esa mezcla daba tonos oscuros
+            # que la paleta ponía como puntitos dentro del trazo. Letra, sombra o
+            # borde de la letra contra el fondo (alfa del GS: 0x80 = opaco).
+            if a >= 0.5:
+                col = [fg[0], fg[1], fg[2], fg[3]]
+            elif s >= 0.35:
+                col = [sh[0], sh[1], sh[2], sh[3] * min(1.0, s * 1.2)]
+            elif a > 0.1:
+                col = [fg[0], fg[1], fg[2], fg[3] * a * 1.5]
+            else:
+                col = [0, 0, 0, 0]
             rgba = tuple(int(round(c)) for c in col)
             put(b, t, u + x, v + y, 0 if rgba[3] < 8 else _nearest(pal, rgba, cache))
 
