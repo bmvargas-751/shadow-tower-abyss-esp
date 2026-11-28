@@ -73,8 +73,8 @@ VIDEOS = {
                       "a un joven hasta un pequeño santuario abandonado y en ruinas"),
             (279, 420, "Desde la entrada abismal, entre las ruinas desmoronadas\n"
                        "del santuario, brotaba la oscuridad"),
-            (435, 534, "El viejo guía hizo una reverencia\nmientras el joven entraba con cautela"),
-            (1149, 1416, "Y una vez más, la oscuridad\nse tragó a un ser humano"),
+            (435, 600, "El viejo guía hizo una reverencia\nmientras el joven entraba con cautela"),
+            (834, 1020, "Y una vez más, la oscuridad\nse tragó a un ser humano"),
         ]),
 }
 ISO_PATHS = {name: v["path"] for name, v in VIDEOS.items()}
