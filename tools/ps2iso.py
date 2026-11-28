@@ -113,8 +113,10 @@ def patch_iso_rec(f, pos, lba, size):
     f.write(both32(size))
 
 
-def build(iso_in, stz_path, iso_out, exe_path=None):
-    """Con `exe_path`, también escribe el ejecutable (mismo tamaño, en su lugar)."""
+def build(iso_in, stz_path, iso_out, exe_path=None, files=None):
+    """Con `exe_path`, también escribe el ejecutable (mismo tamaño, en su lugar).
+    `files` = {ruta en la ISO: archivo local} con otros archivos del mismo
+    tamaño que se escriben en su lugar (el video del prólogo, pss_sub.py)."""
     new = open(stz_path, "rb").read()
     if os.path.abspath(iso_in) != os.path.abspath(iso_out):
         shutil.copyfile(iso_in, iso_out)
@@ -150,6 +152,12 @@ def build(iso_in, stz_path, iso_out, exe_path=None):
             assert len(exe) == esize, "el ejecutable cambió de tamaño"
             f.seek(elba * S)
             f.write(exe)
+        for path, local in (files or {}).items():
+            data = open(local, "rb").read()
+            _p, lba, size = recs[path]
+            assert len(data) == size, "%s cambió de tamaño" % path
+            f.seek(lba * S)
+            f.write(data)
     print("ISO: STAZ.STZ en el sector %d (%+d), %d bytes -> %s" % (nlba, -k, len(new), iso_out))
 
 

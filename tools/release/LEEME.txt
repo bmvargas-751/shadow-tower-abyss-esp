@@ -16,9 +16,8 @@ QUÉ ESTÁ TRADUCIDO
 - Menús, ayudas y mensajes del sistema (memory card incluida).
 - Nombres y descripciones de objetos, armas, armaduras y criaturas.
 - Nombres y descripciones de lugares.
-
-Quedan en japonés, por ahora: los subtítulos de los videos y las imágenes con
-texto. Vendrán en una próxima versión.
+- Subtítulos en español en el video de apertura y en el del prólogo.
+- Las imágenes con texto (estadísticas, enciclopedia).
 
 
 QUÉ NECESITAS

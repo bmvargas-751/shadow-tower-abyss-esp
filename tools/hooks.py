@@ -12,6 +12,7 @@ import struct
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import exe_text  # noqa: E402
 import sta_font  # noqa: E402
 import sta_text  # noqa: E402
 
@@ -53,10 +54,18 @@ SLOTS = {"sys/menu#%04d" % i for i in range(79, 91)}
 # verlo en el juego (TECH.md, T-3).
 EXE_GROWTH = 1.25
 
+# Rótulos de la configuración de botones: el juego (con el ajuste de
+# exe_text.FIT_CODE) estrecha a lo ancho el primer renglón hasta que entra en su
+# recuadro; el límite es lo que se sigue leyendo. El segundo renglón no se mide.
+FIT = {exe_text.key(a) for a in exe_text.FIT_LABELS}
+
 
 def box(key, en):
     """(ancho máximo, renglones máximos o None, nota) de la caja del texto.
     Unidades de la fuente = píxeles del cuadro de 512 de ancho (TECH.md, T-3)."""
+    if key in FIT:
+        return int(exe_text.FIT_WIDTH / exe_text.FIT_MIN), en.count("\n") + 1, \
+            "rótulo de botones: se estrecha hasta entrar en %d; más de la mitad no se lee" % exe_text.FIT_WIDTH
     if key.startswith("exe#"):
         widest = max(sta_font.width(ln, _advances()) for ln in en.split("\n"))
         return int(widest * EXE_GROWTH), en.count("\n") + 1, \
@@ -65,7 +74,11 @@ def box(key, en):
         return 300, 3, "provisional: falta ver un diálogo de mapa"
     if key.startswith(("sys/objetos#", "sys/criaturas#", "sys/lugares#")):
         if key.endswith("/nombre"):
-            return 215, 1, "barra de la lista"
+            if key.startswith("sys/lugares#"):
+                # también en guardar y cargar: al 90% y estrechado a lo ancho (SAVE_PLACE), franja de ~150
+                return int(150 / (0.9 * exe_text.SAVE_PLACE)), 1, "lugar en guardar y cargar"
+            return int(exe_text.LIST_WIDTH / exe_text.FIT_MIN), 1, \
+                "barra de la lista: se estrecha hasta entrar en %d; más de la mitad no se lee" % exe_text.LIST_WIDTH
         lines = 4 if key.startswith("sys/objetos#") else 3
         return 320, lines, "descripción"
     if key in SLOTS:

@@ -2,6 +2,16 @@
 
 Una entrada por versión, de la más nueva a la más vieja (REPO.md del kit, «Versiones»). La web de las traducciones la muestra en «Cambios»: el título es la primera línea, y cada viñeta, un cambio. Sin spoilers.
 
+## 0.9.1 — 2026-11-28
+
+Versión de prueba: segunda ronda en el juego, con los videos y las imágenes en español.
+
+- Subtítulos en español en el video de apertura y en el del prólogo, donde ya no se ve el japonés.
+- Las imágenes con texto, en español: los nombres de las estadísticas, «Colección», «Peso» y la marca de las entradas nuevas de la enciclopedia.
+- Botones, opciones, pausa, guardar y cargar, tienda, título y pantalla de equipo en español.
+- Los rótulos y nombres largos se estrechan para entrar en su recuadro, sin cambiar de altura: botones, listas, guardar y cargar, y las descripciones de la ventana de datos.
+- Las tildes y la ñ, redibujadas: se veían punteadas.
+
 ## 0.9.0 — 2026-11-23
 
 Primera versión de prueba: todo el texto del juego en español.

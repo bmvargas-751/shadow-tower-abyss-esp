@@ -1,5 +1,13 @@
 {"key": "exe#1f3380", "es": "NUEVA PARTIDA"}
 {"key": "exe#1f3390", "es": "CARGAR PARTIDA"}
+{"key": "exe#1fc980", "es": "Veneno"}
+{"key": "exe#1fc988", "es": "Parálisis"}
+{"key": "exe#1fc998", "es": "Ceguera"}
+{"key": "exe#1fc9a8", "es": "Lento"}
+{"key": "exe#1fc9b0", "es": "Maldito"}
+{"key": "exe#1fc9b8", "es": "Sellado"}
+{"key": "exe#1fcb08", "es": "PV %4d/%4d"}
+{"key": "exe#1fcb18", "es": "PM %4d/%4d"}
 {"key": "exe#1fcd00", "es": "DATOS %d"}
 {"key": "exe#1fcd10", "es": "PV %4d/%4d"}
 {"key": "exe#1fcd20", "es": "PM %4d/%4d"}
@@ -29,29 +37,29 @@
 {"key": "exe#1fcf68", "es": "TIPO 4"}
 {"key": "exe#1fcf80", "es": "TIPO 4 INVERTIDO"}
 {"key": "exe#1fcf98", "es": "MOVER"}
-{"key": "exe#1fcfa0", "es": "MOVER/GIRAR"}
-{"key": "exe#1fcfb0", "es": "MOVER/MIRAR"}
+{"key": "exe#1fcfa0", "es": "MOV./GIRO"}
+{"key": "exe#1fcfb0", "es": "MOV./VISTA"}
 {"key": "exe#1fcfc0", "es": "GIRAR"}
-{"key": "exe#1fcfc8", "es": "LATERAL IZQ."}
-{"key": "exe#1fcfd8", "es": "LATERAL DER."}
+{"key": "exe#1fcfc8", "es": "LATERAL ←"}
+{"key": "exe#1fcfd8", "es": "LATERAL →"}
 {"key": "exe#1fcfe8", "es": "VER ↑"}
 {"key": "exe#1fcff0", "es": "VER ↓"}
 {"key": "exe#1fcff8", "es": "MAGIA"}
-{"key": "exe#1fd000", "es": "CAMBIAR ARMA"}
+{"key": "exe#1fd000", "es": "CAMB. ARMA"}
 {"key": "exe#1fd010", "es": "EVENTO"}
 {"key": "exe#1fd020", "es": "MENÚ"}
 {"key": "exe#1fd030", "es": "ATAJO"}
 {"key": "exe#1fd040", "es": "PAUSA"}
 {"key": "exe#1fd050", "es": "ATAQUE"}
 {"key": "exe#1fd058", "es": "ATAC./\nENFUNDAR"}
-{"key": "exe#1fd068", "es": "ATAQUE/DISPARO"}
-{"key": "exe#1fd078", "es": "GIRAR/MIRAR"}
+{"key": "exe#1fd068", "es": "DISPARO"}
+{"key": "exe#1fd078", "es": "GIRO/VISTA"}
 {"key": "exe#1fd088", "es": "GIRO ←"}
 {"key": "exe#1fd090", "es": "GIRO →"}
 {"key": "exe#1fd098", "es": "ACTIVO"}
 {"key": "exe#1fd0a0", "es": "INACTIVO"}
-{"key": "exe#1fd120", "es": "MÁXIMO"}
-{"key": "exe#1fd128", "es": "DATOS%d"}
+{"key": "exe#1fd120", "es": "MAX"}
+{"key": "exe#1fd128", "es": "DATOS %d"}
 {"key": "exe#1fd138", "es": "PV %4d/%4d"}
 {"key": "exe#1fd148", "es": "PM %4d/%4d"}
 {"key": "exe#1fd158", "es": "LUGAR"}
@@ -63,8 +71,8 @@
 {"key": "exe#1fd288", "es": "OBJETO"}
 {"key": "exe#1fd330", "es": "PV %d"}
 {"key": "exe#1fd338", "es": "PV ----"}
-{"key": "exe#1fd3a0", "es": " ELIMINACIÓN"}
-{"key": "exe#1fd3d0", "es": " MÁXIMA ELIM."}
+{"key": "exe#1fd3a0", "es": " Eliminación"}
+{"key": "exe#1fd3d0", "es": " Máx. elim."}
 {"key": "exe#1fd408", "es": "PV"}
 {"key": "exe#1fd420", "es": "PM"}
 {"key": "exe#1fd610", "es": "OBJETO"}

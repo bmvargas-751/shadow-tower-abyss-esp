@@ -4,8 +4,9 @@ Uso:
   python3 -I tools/release.py VERSIÓN ISO_ORIGINAL [--sin-exe] [--sin-prueba-exe]
 
 1. Arma la ISO traducida: sta_text.import_ escribe STAZ.STZ con translation/ y la
-   fuente con las letras españolas, y el ejecutable con sus rótulos (exe_text.py);
-   ps2iso.build los mete en una copia de la ISO
+   fuente con las letras españolas y las texturas con texto (sta_tex.py), y el
+   ejecutable con sus rótulos y cambios de código (exe_text.py); pss_sub.py arma
+   los videos con subtítulos; ps2iso.build los mete en una copia de la ISO
    (en ../local/shadow-tower-abyss/dist/; al final se borra: solo queda el
    paquete).
 2. Crea el parche con xdelta3 (`-S none` para que el instalador lo lea, y una
@@ -26,6 +27,7 @@ import hashlib, os, re, shutil, subprocess, sys, zipfile, zlib
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, 'tools'))
 import ps2iso
+import pss_sub
 import sta_text
 
 LOCAL = os.path.normpath(os.path.join(ROOT, '..', 'local', 'shadow-tower-abyss'))
@@ -72,7 +74,9 @@ def main():
     try:
         print('Armando la ISO traducida...')
         sta_text.import_(stz, exe_out=exe_new)
-        ps2iso.build(orig, stz, iso, exe_new)
+        videos = {pss_sub.ISO_PATHS[v]: pss_sub.build(orig, v, os.path.join(DIST, v + '.PSS'))
+                  for v in pss_sub.VIDEOS}
+        ps2iso.build(orig, stz, iso, exe_new, videos)
         n = sums(iso)
         print('Creando el parche...')
         subprocess.check_call([XDELTA3, '-e', '-9', '-S', 'none', '-B', str(1 << 31), '-f', '-s', orig, iso, patch])
@@ -132,7 +136,7 @@ def main():
         print('Original:  ', o)
         print('Traducida: ', n)
     finally:
-        for f in (iso, stz, exe_new):
+        for f in [iso, stz, exe_new] + [os.path.join(DIST, v + '.PSS') for v in pss_sub.VIDEOS]:
             if os.path.exists(f):
                 os.remove(f)
 
