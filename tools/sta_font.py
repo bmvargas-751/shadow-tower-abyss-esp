@@ -155,7 +155,8 @@ def _stroke(bm, points, width):
 
 def _acute(bm, cx, top, steps=4):
     # trazo inclinado como la cursiva de la fuente: de abajo a la izquierda a arriba a la derecha
-    _stroke(bm, [(cx - 0.3, top + steps - 1), (cx + steps - 0.7, top)], 1.6)
+    # grosor 2: como los trazos de las letras (con 1.6 se veía más fina y clara)
+    _stroke(bm, [(cx - 0.3, top + steps - 1), (cx + steps - 0.7, top)], 2.0)
 
 
 def _diaeresis(bm, cx, top):

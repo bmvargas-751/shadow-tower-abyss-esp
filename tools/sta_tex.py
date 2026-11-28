@@ -34,9 +34,6 @@ ENTRY = 29     # TTIX con KOKUTI, STFE_010..014, STFE_110..120 y STSH_004
 LAYOUT = 22
 COLLECTION_W = 76
 WIDEN = {("STFE_012", 58, 56, 58, 28): COLLECTION_W}
-# Texturas cuyas letras van más gruesas (un píxel más a lo ancho). Probado con
-# «Colección»: se empastaba; queda vacío.
-BOLD = set()
 
 # {textura: [(u, v, ancho, alto, texto)]} (\\n separa renglones). Rectángulos de la
 # plantilla de la enciclopedia y el equipo (entrada 22). Las de STFE_014 son
@@ -72,7 +69,7 @@ WORDS = {
 }
 # Alto de la letra (de la línea de base al tope de las mayúsculas, en píxeles de
 # la textura) por textura, como el original.
-CAP = {"STFE_014": 11, "STFE_012": 14, "STSH_004": 11}
+CAP = {"STFE_014": 11, "STFE_012": 15, "STSH_004": 11}
 
 
 def parse(b):
@@ -160,17 +157,15 @@ def render(font, text, w, h, cap):
         im.putdata([v for row in m for v in row])
         nw = max(1, round(im.width * s))
         nw = min(nw, w - 1)
-        # BOX: promedio simple. LANCZOS dejaba píxeles más claros dentro del trazo
-        # que, mezclados con la sombra, salían como puntitos oscuros (prueba del 2026-11-28)
-        im = im.resize((nw, line_h), Image.BOX)
+        im = im.resize((nw, line_h), Image.LANCZOS)
         out.paste(im, ((w - 1 - nw) // 2, y0 + n * line_h))
     return out
 
 
-def _nearest(pal, rgba, cache):
+def _nearest(pal, rgba, cache, among=range(256)):
     if rgba not in cache:
         r, g, b, a = rgba
-        cache[rgba] = min(range(256), key=lambda k: (pal[k][3] - a) ** 2 * 4 + (pal[k][0] - r) ** 2
+        cache[rgba] = min(among, key=lambda k: (pal[k][3] - a) ** 2 * 4 + (pal[k][0] - r) ** 2
                           + (pal[k][1] - g) ** 2 + (pal[k][2] - b) ** 2)
     return cache[rgba]
 
@@ -185,46 +180,89 @@ def _ink_colors(b, t, pal, u, v, w, h):
     return fg, sh
 
 
-SOLIDIFY = 1.3   # cuánto se refuerza la opacidad (el centro del trazo queda opaco)
+def _clear(b, t, u, v, w, h):
+    for y in range(h):
+        for x in range(w):
+            put(b, t, u + x, v + y, 0)
 
 
-def draw(b, t, font, u, v, w, h, text, cap, bold=False):
-    from PIL import Image, ImageChops
+def draw(b, t, font, u, v, w, h, text, cap):
+    """Palabra con los colores de la textura (letra y sombra del original),
+    como quedó bien en la prueba 6 (nombres de las estadísticas, «NUEVO»)."""
     pal = palette(b, t)
     fg, sh = _ink_colors(b, t, pal, u, v, w, h)
     if not text:   # solo se borra
-        for y in range(h):
-            for x in range(w):
-                put(b, t, u + x, v + y, 0)
+        _clear(b, t, u, v, w, h)
         return
-    if bold:   # un píxel más a lo ancho: la letra y su copia corrida un píxel
-        m = render(font, text, w - 1, h, cap)
-        a, c = Image.new("L", (w, h)), Image.new("L", (w, h))
-        a.paste(m, (0, 0))
-        c.paste(m, (1, 0))
-        mask = ImageChops.lighter(a, c)
-    else:
-        mask = render(font, text, w, h, cap)
-    m = mask.load()
+    m = render(font, text, w, h, cap).load()
     cache = {}
     for y in range(h):
         for x in range(w):
-            # la fuente llega a 238 en el centro del trazo: se lleva a opaco
-            a = min(1.0, m[x, y] / 255 * SOLIDIFY)
-            s = min(1.0, m[x - 1, y - 1] / 255 * SOLIDIFY) if x and y else 0
-            # sin mezclar la letra con su sombra: esa mezcla daba tonos oscuros
-            # que la paleta ponía como puntitos dentro del trazo. Letra, sombra o
-            # borde de la letra contra el fondo (alfa del GS: 0x80 = opaco).
-            if a >= 0.5:
-                col = [fg[0], fg[1], fg[2], fg[3]]
-            elif s >= 0.35:
-                col = [sh[0], sh[1], sh[2], sh[3] * min(1.0, s * 1.2)]
-            elif a > 0.1:
-                col = [fg[0], fg[1], fg[2], fg[3] * a * 1.5]
-            else:
-                col = [0, 0, 0, 0]
+            a = m[x, y] / 255
+            s = m[x - 1, y - 1] / 255 if x and y else 0
+            # sombra debajo, letra encima
+            alpha_s = s * sh[3]
+            col = [0, 0, 0, 0]
+            if alpha_s:
+                col = [sh[0], sh[1], sh[2], alpha_s]
+            if a:
+                aa = a * fg[3] / 0x80
+                base_a = col[3] / 0x80
+                out_a = aa + base_a * (1 - aa)
+                for k in range(3):
+                    col[k] = (fg[k] * aa + col[k] * base_a * (1 - aa)) / out_a if out_a else 0
+                col[3] = out_a * 0x80
             rgba = tuple(int(round(c)) for c in col)
             put(b, t, u + x, v + y, 0 if rgba[3] < 8 else _nearest(pal, rgba, cache))
+
+
+# Letra blanca con sombra, como el texto que dibuja el juego («Eliminación»):
+# para las texturas cuyos colores son de otro tono (STFE_012 es verde menta).
+# Se usan colores libres de la paleta (los que ningún píxel usa): una rejilla de
+# TEXT_GREYS grises × TEXT_ALPHAS opacidades, y cada píxel toma el más parecido
+# de esa rejilla (nunca un verde de la textura, que daba puntitos oscuros:
+# prueba del 2026-11-28).
+TEXT = {"STFE_012"}
+TEXT_WHITE = 235
+TEXT_SHADOW = 0.75       # opacidad de la sombra (negra, un píxel abajo a la derecha)
+TEXT_GREYS, TEXT_ALPHAS = 8, 10
+TEXT_OPAQUE = 250        # alfa del opaco en estas paletas (el original usa 232-255)
+
+
+def _text_palette(b, t):
+    """Escribe la rejilla de grises en colores libres; devuelve sus índices."""
+    used = set(b[t["pix"]:t["pix"] + t["w"] * t["h"]])
+    free = [k for k in range(1, 256) if k not in used]
+    need = TEXT_GREYS * TEXT_ALPHAS
+    assert len(free) >= need, "%d colores libres, hacen falta %d" % (len(free), need)
+    out = []
+    for i in range(TEXT_GREYS):
+        g = round(TEXT_WHITE * i / (TEXT_GREYS - 1))
+        for j in range(1, TEXT_ALPHAS + 1):
+            k = free.pop(0)
+            o = t["clut"] + 4 * _csm1(k)      # la paleta va en orden CSM1
+            b[o:o + 4] = bytes([g, g, g, round(TEXT_OPAQUE * j / TEXT_ALPHAS)])
+            out.append(k)
+    return out
+
+
+def draw_text(b, t, font, u, v, w, h, text, cap, among):
+    if not text:
+        _clear(b, t, u, v, w, h)
+        return
+    pal = palette(b, t)
+    m = render(font, text, w, h, cap).load()
+    cache = {}
+    for y in range(h):
+        for x in range(w):
+            a = min(1.0, m[x, y] / 238)                     # 238: el centro del trazo de la fuente
+            s = min(1.0, m[x - 1, y - 1] / 238) * TEXT_SHADOW if x and y else 0
+            A = a + s * (1 - a)                              # blanco sobre sombra negra
+            if A < 0.06:
+                put(b, t, u + x, v + y, 0)
+                continue
+            g = TEXT_WHITE * a / A
+            put(b, t, u + x, v + y, _nearest(pal, (round(g), round(g), round(g), round(TEXT_OPAQUE * A)), cache, among))
 
 
 def widen(layout):
@@ -253,8 +291,12 @@ def apply(body, font_table, font_tex):
     font = sta_font.Font(font_table, font_tex)
     for name, words in WORDS.items():
         t = tex[name]
+        among = _text_palette(b, t) if name in TEXT else None
         for u, v, w, h, text in words:
-            draw(b, t, font, u, v, w, h, text, CAP[name], name in BOLD)
+            if among:
+                draw_text(b, t, font, u, v, w, h, text, CAP[name], among)
+            else:
+                draw(b, t, font, u, v, w, h, text, CAP[name])
     return bytes(b)
 
 
