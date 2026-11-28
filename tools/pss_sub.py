@@ -6,7 +6,8 @@ Los dos son MPEG-2 (640×448, 30 cuadros por segundo) con audio aparte (TECH.md,
 
 - **Prólogo** (2075 cuadros): trae el texto japonés dibujado en la imagen, en 8
   bloques de dos renglones. Para cada bloque, mide cuadro por cuadro cuánto
-  texto japonés se ve (píxeles blancos sin color) para seguir sus fundidos; lo
+  texto japonés se ve (su brillo contra el de alrededor) para seguir sus
+  fundidos, hasta el bloque vecino; lo
   tapa rellenando una máscara del texto (los píxeles que están en la mitad de
   los cuadros del centro del bloque, porque el texto no se mueve) con los
   colores de alrededor, difuminados; y escribe el español donde estaba.
@@ -46,7 +47,7 @@ QUALITY = 2            # cuantizador fijo de ffmpeg (2 = casi sin pérdida); los
 
 # Bloques: (primer cuadro, último cuadro, español).
 # Prólogo: los cuadros salen de la medida del texto japonés (umbral de 60
-# píxeles); se amplían FADE cuadros a cada lado para los fundidos.
+# píxeles); los fundidos se buscan hasta el bloque vecino (windows).
 # Apertura: los cuadros de los subtítulos del inglés fan (cortes secos).
 VIDEOS = {
     "PROLOGUE": dict(
@@ -74,10 +75,11 @@ VIDEOS = {
         ]),
 }
 ISO_PATHS = {name: v["path"] for name, v in VIDEOS.items()}
-FADE = 20              # prólogo: cuadros de más a cada lado del bloque
 FADE_OVERLAY = 6       # apertura: fundido de entrada y salida, en cuadros
 TEXT_BAND = (300, 440)            # prólogo: filas donde va el texto japonés
-SPEAR = (290, 360)                # prólogo: columna de la lanza (no cuenta al medir)
+FAINT_MIN = 8                     # prólogo: píxeles grises que todavía cuentan como texto
+MARGIN = 6                        # prólogo: cuadros de más que se tapan a cada lado del tramo
+SMOOTH = 15                       # prólogo: cuadros del promedio de la opacidad del español
 LINE_H = 30                       # renglón del español, en píxeles
 WHITE = (235, 235, 235)
 
@@ -125,17 +127,41 @@ def block_of(subs, n, fade):
     return None
 
 
-def analyze(pss, subs):
-    """Prólogo, por bloque: la máscara del japonés y cuánto se ve en cada cuadro.
+def windows(subs, total):
+    """Prólogo: cuadros donde se busca cada bloque, hasta el anterior y el
+    siguiente: los fundidos del japonés son largos y un bloque se funde con el
+    siguiente (se ven los dos a la vez)."""
+    out = []
+    for k, (a, b, _t) in enumerate(subs):
+        lo = subs[k - 1][0] if k else max(0, a - 90)
+        hi = subs[k + 1][1] if k + 1 < len(subs) else min(total - 1, b + 120)
+        out.append((lo, hi))
+    return out
+
+
+def faint(im):
+    """Máscara (L) de los píxeles grises algo claros: el texto japonés, también
+    cuando está casi apagado en un fundido."""
+    from PIL import ImageChops
+    _h, s, v = im.convert("HSV").split()
+    return ImageChops.multiply(v.point(lambda x: 255 if x > 40 else 0), s.point(lambda x: 255 if x < 60 else 0))
+
+
+def analyze(pss, subs, total):
+    """Prólogo, por bloque: la máscara del japonés, el tramo donde se ve y la
+    opacidad del español en cada cuadro del tramo.
 
     La máscara son los píxeles blancos en al menos la mitad de los cuadros del
-    centro del bloque (uno de cada 3): el texto no se mueve y la lanza sí. Lo que
-    se ve de él en cada cuadro se mide dentro de esa máscara."""
+    centro del bloque (uno de cada 3): el texto no se mueve y la lanza sí. El
+    tramo va desde el bloque hacia atrás y hacia adelante mientras queden más
+    de FAINT_MIN píxeles grises (umbral bajo) en la parte de la máscara que no
+    es de los bloques vecinos: así cubre los fundidos enteros, hasta que el texto
+    se apaga."""
     from PIL import ImageChops, ImageFilter
     y0, y1 = TEXT_BAND
     acc, cnt = {}, {}
     for n, im in enumerate(frames(pss)):
-        k = block_of(subs, n, FADE)
+        k = block_of(subs, n, 0)
         if k is None:
             continue
         a, b, _t = subs[k]
@@ -151,18 +177,48 @@ def analyze(pss, subs):
         band = m.crop((0, y0, W, y1))
         m = m.point(lambda x: 0)
         m.paste(band, (0, y0))
-        core[k] = m
+        core[k] = m.filter(ImageFilter.MaxFilter(3))
         hole = m.filter(ImageFilter.MaxFilter(11))
         full = hole.filter(ImageFilter.GaussianBlur(2))
         masks[k] = (full, m.getbbox(), hole)
-    amounts, peak = {}, [1] * len(subs)
+    # para medir, solo los píxeles de cada bloque que no son de sus vecinos
+    # (en los fundidos cruzados se ven los dos)
+    excl = {}
+    for k in core:
+        e = core[k]
+        for j in (k - 1, k + 1):
+            if j in core:
+                e = ImageChops.subtract(e, core[j].filter(ImageFilter.MaxFilter(5)))
+        excl[k] = e
+    win = windows(subs, total)
+    seen, lit = {}, {}
     for n, im in enumerate(frames(pss)):
-        k = block_of(subs, n, FADE)
-        if k is None:
-            continue
-        amounts[n] = ImageChops.multiply(white(im), core[k]).histogram()[255]
-        peak[k] = max(peak[k], amounts[n])
-    return amounts, peak, masks
+        f = None
+        for k, (lo, hi) in enumerate(win):
+            if lo <= n <= hi:
+                if f is None:
+                    f, wt = faint(im), white(im)
+                seen[(n, k)] = ImageChops.multiply(f, excl[k]).histogram()[255]
+                lit[(n, k)] = ImageChops.multiply(wt, excl[k]).histogram()[255]
+    spans = []
+    for k, (a, b, _t) in enumerate(subs):
+        lo, hi = win[k]
+        a2 = a
+        while a2 - 1 >= lo and seen.get((a2 - 1, k), 0) > FAINT_MIN:
+            a2 -= 1
+        b2 = b
+        while b2 + 1 <= hi and seen.get((b2 + 1, k), 0) > FAINT_MIN:
+            b2 += 1
+        a2, b2 = max(lo, a2 - MARGIN), min(hi, b2 + MARGIN)
+        peak = max(lit.get((n, k), 0) for n in range(a, b + 1)) or 1
+        # opacidad del español: lo claro que se ve el japonés (sube y baja con él)
+        raw = [min(1.0, lit.get((n, k), 0) / peak * 1.15) for n in range(a2, b2 + 1)]
+        # promedio de SMOOTH cuadros: el brillo medido salta un poco de un cuadro a otro
+        r = SMOOTH // 2
+        alpha = {a2 + i: sum(raw[max(0, i - r):i + r + 1]) / len(raw[max(0, i - r):i + r + 1])
+                 for i in range(len(raw))}
+        spans.append((a2, b2, alpha))
+    return spans, masks
 
 
 def text_layer(font, text, center_y):
@@ -208,16 +264,17 @@ def _text(im, layer, p):
     return Image.composite(Image.new("RGB", (W, H), WHITE), out, text.point(lambda x: int(x * p)))
 
 
-def cover(im, k, amount_n, peak, masks, layers):
-    """Prólogo: el japonés tapado y el español encima, según cuánto se ve."""
+def cover(im, on, masks, layers):
+    """Prólogo: tapa el japonés de los bloques que se ven (en los fundidos
+    cruzados, dos) y escribe encima el español de cada uno, con su opacidad.
+    [(bloque, opacidad)]"""
     from PIL import Image
-    p = max(0.0, min(1.0, amount_n / max(1, peak[k]) * 1.15))
-    if p <= 0.01:
-        return im
-    mask, _box, hole = masks[k]
-    c = min(1.0, p * 3)
-    out = Image.composite(_fill(im, hole), im, mask.point(lambda x: int(x * c)))
-    return _text(out, layers[k], p)
+    for k, _p in on:
+        mask, _box, hole = masks[k]
+        im = Image.composite(_fill(im, hole), im, mask)   # tapado entero en todo el tramo
+    for k, p in on:
+        im = _text(im, layers[k], p)
+    return im
 
 
 def font():
@@ -231,7 +288,7 @@ def render(pss, name, only=None):
     subs = v["subs"]
     f = font()
     if v["mode"] == "cover":
-        amounts, peak, masks = analyze(pss, subs)
+        spans, masks = analyze(pss, subs, v["frames"])
         layers = {}
         for k, (_a, _b, t) in enumerate(subs):
             box = masks[k][1]
@@ -242,9 +299,11 @@ def render(pss, name, only=None):
         if only is not None and n not in only:
             continue
         if v["mode"] == "cover":
-            k = block_of(subs, n, FADE)
-            if k is not None:
-                im = cover(im, k, amounts[n], peak, masks, layers)
+            on = []
+            for k, (a2, b2, alpha) in enumerate(spans):
+                if a2 <= n <= b2:
+                    on.append((k, alpha[n]))
+            im = cover(im, on, masks, layers)
         else:
             k = block_of(subs, n, 0)
             if k is not None:
