@@ -283,6 +283,7 @@ def build_stz(texts, font=True):
         bodies[sta_font.FONT_TABLE], bodies[sta_font.FONT_TEX] = t, x
         bodies[sta_tex.ENTRY] = sta_tex.apply(c.body(sta_tex.ENTRY), c.body(sta_font.FONT_TABLE),
                                               c.body(sta_font.FONT_TEX))
+        bodies[sta_tex.LAYOUT] = sta_tex.widen(c.body(sta_tex.LAYOUT))
     for name, o, kind in find_tables(data):
         if kind == "suelta":
             i = next(i for i, n in LOOSE.items() if n == name)

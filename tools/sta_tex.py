@@ -27,6 +27,17 @@ import sta_font  # noqa: E402
 
 ENTRY = 29     # TTIX con KOKUTI, STFE_010..014, STFE_110..120 y STSH_004
 
+# Recortes que se ensanchan en la plantilla (entrada 22), porque el español no
+# entra: {(textura, u, v, ancho, alto): ancho nuevo}. A la derecha de 収集率 la
+# textura está libre. El registro guarda el tamaño en pantalla (+16, +20) y el
+# recorte (u, v, ancho, alto en +24..+36), en float, detrás del nombre.
+LAYOUT = 22
+COLLECTION_W = 76
+WIDEN = {("STFE_012", 58, 56, 58, 28): COLLECTION_W}
+# Texturas cuyas letras van más gruesas (un píxel más a lo ancho). Probado con
+# «Colección»: se empastaba; queda vacío.
+BOLD = set()
+
 # {textura: [(u, v, ancho, alto, texto)]} (\\n separa renglones). Rectángulos de la
 # plantilla de la enciclopedia y el equipo (entrada 22). Las de STFE_014 son
 # los nombres de las estadísticas (el original ya los trae en inglés, T-6).
@@ -47,11 +58,12 @@ WORDS = {
         (164, 32, 50, 16, "Disolución"),      # Solvent (溶, clase de magia)
         (214, 32, 38, 16, "Espíritu"),        # Spirit (霊, clase de magia)
         (0, 48, 68, 16, "Durabilidad"),       # Durability (耐)
-        (68, 48, 48, 16, "Peso"),             # Weight (重量)
+        (68, 48, 48, 16, ""),                 # Weight: vacío, porque el emblema 重量 ya dice «Peso»
         (116, 48, 82, 16, "Peso total"),      # Total weight (総重量)
     ],
     "STFE_012": [
-        (58, 56, 58, 28, "Colección"),        # 収集率 (porcentaje de la enciclopedia)
+        (58, 56, COLLECTION_W, 28, "Colección"),   # 収集率 (porcentaje de la enciclopedia), recorte ensanchado
+        (168, 28, 40, 28, "Peso"),            # 重量 (emblema del peso; en la pantalla del objeto va solo)
         (208, 28, 40, 20, "Máx."),            # Max (sin rectángulo en las plantillas)
     ],
     "STSH_004": [
@@ -60,7 +72,7 @@ WORDS = {
 }
 # Alto de la letra (de la línea de base al tope de las mayúsculas, en píxeles de
 # la textura) por textura, como el original.
-CAP = {"STFE_014": 11, "STFE_012": 15, "STSH_004": 11}
+CAP = {"STFE_014": 11, "STFE_012": 14, "STSH_004": 11}
 
 
 def parse(b):
@@ -171,10 +183,23 @@ def _ink_colors(b, t, pal, u, v, w, h):
     return fg, sh
 
 
-def draw(b, t, font, u, v, w, h, text, cap):
+def draw(b, t, font, u, v, w, h, text, cap, bold=False):
+    from PIL import Image, ImageChops
     pal = palette(b, t)
     fg, sh = _ink_colors(b, t, pal, u, v, w, h)
-    mask = render(font, text, w, h, cap)
+    if not text:   # solo se borra
+        for y in range(h):
+            for x in range(w):
+                put(b, t, u + x, v + y, 0)
+        return
+    if bold:   # un píxel más a lo ancho: la letra y su copia corrida un píxel
+        m = render(font, text, w - 1, h, cap)
+        a, c = Image.new("L", (w, h)), Image.new("L", (w, h))
+        a.paste(m, (0, 0))
+        c.paste(m, (1, 0))
+        mask = ImageChops.lighter(a, c)
+    else:
+        mask = render(font, text, w, h, cap)
     m = mask.load()
     cache = {}
     for y in range(h):
@@ -197,6 +222,24 @@ def draw(b, t, font, u, v, w, h, text, cap):
             put(b, t, u + x, v + y, 0 if rgba[3] < 8 else _nearest(pal, rgba, cache))
 
 
+def widen(layout):
+    """Plantilla (entrada LAYOUT) con los recortes de WIDEN ensanchados."""
+    b = bytearray(layout)
+    for (name, u, v, w, h), nw in WIDEN.items():
+        hits = []
+        o = b.find(name.encode())
+        while o >= 0:
+            if struct.unpack_from("<4f", b, o + 24) == (u, v, w, h):
+                hits.append(o)
+            o = b.find(name.encode(), o + 1)
+        assert len(hits) == 1, "plantilla: %s %r aparece %d veces" % (name, (u, v, w, h), len(hits))
+        o = hits[0]
+        assert struct.unpack_from("<2f", b, o + 16) == (w, h)
+        struct.pack_into("<f", b, o + 16, nw)
+        struct.pack_into("<f", b, o + 32, nw)
+    return bytes(b)
+
+
 def apply(body, font_table, font_tex):
     """Devuelve la entrada ENTRY con las palabras en español. La fuente es la
     original (las letras españolas se arman como en sta_font)."""
@@ -206,7 +249,7 @@ def apply(body, font_table, font_tex):
     for name, words in WORDS.items():
         t = tex[name]
         for u, v, w, h, text in words:
-            draw(b, t, font, u, v, w, h, text, CAP[name])
+            draw(b, t, font, u, v, w, h, text, CAP[name], name in BOLD)
     return bytes(b)
 
 

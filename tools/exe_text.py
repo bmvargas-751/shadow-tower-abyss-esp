@@ -258,9 +258,123 @@ LIST_CODE = [
 assert hscale(LIST_WIDTH) == LIST_CODE[30] & 0xffff
 LIST_CALL = 0x180edc   # jal 0x1875c0 -> jal LIST_AT
 
+# Descripciones en la ventana de datos del equipo y de la tienda (0x1df360, que
+# llaman 0x1993f0 y 0x1a16f0): van a escala 1.1, alineadas a la derecha en
+# x = 598, a la izquierda de las estadísticas. El japonés entra (su renglón más
+# ancho mide 223); el español no: se encimaba con las estadísticas (prueba del
+# 2026-11-28). Una rutina nueva (DESC_AT, en una función que nada usa, justo
+# después de la de las listas) mide cada renglón como el dibujador y, si el más
+# ancho pasa de DESC_WIDTH, deja en t1 la escala a lo ancho que lo hace entrar;
+# 0x1df360 la guarda en +0x24 en vez de 1.0. La escala queda en 1.1016 (lui)
+# para que entre la llamada sin mover nada.
+DESC_AT = 0x1026b4
+DESC_WIDTH = 290.0     # las estadísticas terminan en x ≈ 290; medida con su +2 por letra
+DESC_ORIG = [
+    0x35083820, 0x00149202, 0x3c0a1000, 0x8de40000, 0x354a3850, 0x24020001, 0xae640014, 0x8e030000,
+    0xae630018, 0x8dc40000, 0xae64001c, 0x8e230000, 0xae630020, 0x8d840000, 0xae640024, 0x8d630000,
+    0xae630028, 0x8da40000, 0x8cc30000, 0x8ce50000, 0x8d260000, 0x8d070000, 0xa663002e, 0xa664002c,
+    0xa6650030, 0xa6660032, 0xa2670034, 0xa2740035, 0xa2720036, 0x8d430000, 0xa2630037, 0xdfbf0050,
+    0xdfb40040, 0xdfb30030, 0xdfb20020, 0xdfb10010, 0xdfb00000, 0x03e00008, 0x27bd0060, 0x0000382d,
+    0x10a00013, 0x24a3ffff, 0x3c061000, 0x3c051000, 0x34c63800, 0x3c091000, 0x34a54000, 0x2408ffff,
+    0x00000000, 0x8cc20000, 0x00491024, 0x50400003, 0x78820000, 0x03e00008, 0x00e0102d, 0x24e70001,
+]
+DESC_CODE = [
+    0x27bdffc0,  # addiu sp,sp,-64
+    0xffbf0000,  # sd    ra,0(sp)
+    0x7fb00010,  # sq    s0,16(sp)
+    0x7fb10020,  # sq    s1,32(sp)
+    0xe7b40030,  # swc1  $f20,48(sp)
+    0x0080802d,  # daddu s0,a0,zero       texto
+    0x0c049780,  # jal   0x125e00         largo -> v0
+    0x0200202d,  # daddu a0,s0,zero
+    0x3c040049,  # lui   a0,0x49
+    0x2484d360,  # addiu a0,a0,-11424     búfer 0x48d360
+    0x24050800,  # addiu a1,zero,2048
+    0x0200302d,  # daddu a2,s0,zero
+    0x0c079718,  # jal   0x1e5c60         convierte el texto (como el dibujador)
+    0x0040382d,  # daddu a3,v0,zero
+    0x3c110049,  # lui   s1,0x49
+    0x2631d360,  # addiu s1,s1,-11424     s1 = comienzo del renglón
+    0x4480a000,  # mtc1  zero,$f20        $f20 = el renglón más ancho
+    0x0220202d,  # daddu a0,s1,zero       (renglón)
+    0x0000282d,  # daddu a1,zero,zero
+    0x3c023f80,  # lui   v0,0x3f80
+    0x44826800,  # mtc1  v0,$f13          a lo ancho, 1.0
+    0x3c023f8d,  # lui   v0,0x3f8d
+    0x44826000,  # mtc1  v0,$f12          escala 1.1016
+    0x0c062278,  # jal   0x1889e0         ancho hasta el salto -> $f0
+    0x00000000,  # nop
+    0x4600a034,  # c.lt.s $f20,$f0
+    0x45000002,  # bc1f  0x102728
+    0x00000000,  # nop
+    0x46000506,  # mov.s $f20,$f0
+    0x96230000,  # lhu   v1,0(s1)         busca el salto o el final
+    0x10600007,  # beq   v1,zero,0x10274c
+    0x2402000a,  # addiu v0,zero,10
+    0x10620003,  # beq   v1,v0,0x102744
+    0x00000000,  # nop
+    0x1000fffa,  # b     0x102728
+    0x26310002,  # addiu s1,s1,2
+    0x1000ffec,  # b     0x1026f8         siguiente renglón
+    0x26310002,  # addiu s1,s1,2
+    0x3c024391,  # lui   v0,0x4391        290.0 (DESC_WIDTH)
+    0x44820800,  # mtc1  v0,$f1
+    0x3c093f80,  # lui   t1,0x3f80        t1 = 1.0
+    0x46140834,  # c.lt.s $f1,$f20
+    0x45000007,  # bc1f  0x10277c         si entra, 1.0
+    0x00000000,  # nop
+    0x46140843,  # div.s $f1,$f1,$f20
+    0x00000000,  # nop
+    0x44090800,  # mfc1  t1,$f1           t1 = 290 / ancho
+    0x00000000,  # nop
+    0x000948c2,  # srl   t1,t1,3
+    0x000948c0,  # sll   t1,t1,3
+    0xdfbf0000,  # ld    ra,0(sp)
+    0x7bb00010,  # lq    s0,16(sp)
+    0x7bb10020,  # lq    s1,32(sp)
+    0xc7b40030,  # lwc1  $f20,48(sp)
+    0x03e00008,  # jr    ra
+    0x27bd0040,  # addiu sp,sp,64
+]
+assert hscale(DESC_WIDTH) == DESC_CODE[38] & 0xffff
+DESC_CALL = 0x1df3a4
+DESC_CALL_ORIG = [
+    0x3c02438f, 0x3c034415, 0xafa20034, 0x2404fff8, 0x34628000, 0x93a60038, 0xafa20030, 0x3c033f80,
+    0x3c023f8c, 0xafa30054, 0x3442cccd, 0x64050002, 0xafa20050, 0x3c024580, 0xafa20044, 0x00c41824,
+    0x24020064, 0x00651825, 0xa7a2003e, 0x3c028080, 0xa3a30038, 0x34428080, 0x1200000a, 0xafa2006c,
+]
+DESC_CALL_CODE = [
+    0x0c0409ad,  # jal   DESC_AT          t1 = escala a lo ancho
+    0x0220202d,  # daddu a0,s1,zero       el texto
+    0x3c02438f,  # lui   v0,0x438f        y = 286
+    0xafa20034,  # sw    v0,52(sp)
+    0x3c024415,  # lui   v0,0x4415
+    0x34428000,  # ori   v0,v0,0x8000     x = 598
+    0xafa20030,  # sw    v0,48(sp)
+    0x2404fff8,  # addiu a0,zero,-8
+    0x93a60038,  # lbu   a2,56(sp)
+    0xafa90054,  # sw    t1,84(sp)        +0x24: a lo ancho (antes 1.0)
+    0x3c023f8d,  # lui   v0,0x3f8d        escala 1.1016 (antes 1.1)
+    0xafa20050,  # sw    v0,80(sp)
+    0x64050002,  # daddiu a1,zero,2       a la derecha
+    0x3c024580,  # lui   v0,0x4580
+    0xafa20044,  # sw    v0,68(sp)
+    0x00c41824,  # and   v1,a2,a0
+    0x24020064,  # addiu v0,zero,100
+    0x00651825,  # or    v1,v1,a1
+    0xa7a2003e,  # sh    v0,62(sp)
+    0x3c028080,  # lui   v0,0x8080
+    0xa3a30038,  # sb    v1,56(sp)
+    0x34428080,  # ori   v0,v0,0x8080
+    0x1200000a,  # beq   s0,zero,0x1df428
+    0xafa2006c,  # sw    v0,108(sp)
+]
+assert DESC_CALL_CODE[0] == 0x0c000000 | DESC_AT >> 2
+
 # Todos los cambios de código: {dirección: (original, nuevo)}.
 PATCHES = {DRAW_AT: (DRAW_ORIG, DRAW_CODE), FIT_AT: (FIT_ORIG, FIT_CODE), **SAVE_PATCHES,
-           LIST_AT: (LIST_ORIG, LIST_CODE), LIST_CALL: ([0x0c061d70], [0x0c000000 | LIST_AT >> 2])}
+           LIST_AT: (LIST_ORIG, LIST_CODE), LIST_CALL: ([0x0c061d70], [0x0c000000 | LIST_AT >> 2]),
+           DESC_AT: (DESC_ORIG, DESC_CODE), DESC_CALL: (DESC_CALL_ORIG, DESC_CALL_CODE)}
 for _o, _n in PATCHES.values():
     assert len(_o) == len(_n)
 assert len(FIT_CODE) == len(FIT_ORIG)

@@ -142,9 +142,11 @@ def _diaeresis(bm, cx, top):
 
 
 def _tilde(bm, cx, top):
-    # virgulilla de 7 px centrada en cx
-    for px, py in ((0, 2), (1, 1), (2, 0), (3, 1), (4, 2), (5, 1), (6, 0)):
-        _dot(bm, cx - 3 + px, top + py, SOLID)
+    # virgulilla ondulada de 9 px centrada en cx, con un borde debajo para que el
+    # trazo tenga cuerpo (de un píxel se veía punteada: prueba del 2026-11-28)
+    for px, py in ((0, 2), (1, 1), (2, 0), (3, 0), (4, 1), (5, 2), (6, 2), (7, 1), (8, 0)):
+        _dot(bm, cx - 4 + px, top + py, SOLID)
+        _dot(bm, cx - 4 + px, top + py + 1, EDGE)
 
 
 def make_glyph(font, ch):
