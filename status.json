@@ -1,15 +1,15 @@
 {
- "updated": "2026-11-27",
+ "updated": "2026-11-28",
  "status": "beta",
  "stage": "Prueba en el juego",
  "version": "0.9.0",
- "lines": 1806,
- "done": 1806,
+ "lines": 1814,
+ "done": 1814,
  "sections": [
   {
    "name": "Interfaz",
-   "lines": 218,
-   "done": 218,
+   "lines": 226,
+   "done": 226,
    "common": true
   },
   {
@@ -54,7 +54,7 @@
    "n": 2,
    "name": "Inventario y presupuesto",
    "state": "done",
-   "note": "1.806 líneas"
+   "note": "1.814 líneas"
   },
   {
    "n": 3,

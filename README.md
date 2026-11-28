@@ -33,12 +33,12 @@ xdelta3 -d -s "Shadow Tower Abyss.iso" shadow-tower-abyss-esp-*.xdelta "Shadow T
 <!-- loc:progress -->
 | Sección | Líneas | Traducidas | Avance |
 |---|---:|---:|---:|
-| Interfaz | 218 | 218 | 100,0 % |
+| Interfaz | 226 | 226 | 100,0 % |
 | Objetos y equipo | 1.210 | 1.210 | 100,0 % |
 | Criaturas | 136 | 136 | 100,0 % |
 | Lugares | 30 | 30 | 100,0 % |
 | Historia | 212 | 212 | 100,0 % |
-| **Total** | **1.806** | **1.806** | **100,0 %** |
+| **Total** | **1.814** | **1.814** | **100,0 %** |
 <!-- /loc:progress -->
 
 ## Documentación

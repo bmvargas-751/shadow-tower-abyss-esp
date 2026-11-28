@@ -27,6 +27,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from stz import Stz  # noqa: E402
 import exe_text  # noqa: E402
 import sta_font  # noqa: E402
+import sta_tex  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LOCAL = os.path.join(os.path.dirname(ROOT), "local", "shadow-tower-abyss")
@@ -272,13 +273,16 @@ def rebuild_map_table(body, o, name, texts, font=True):
 def build_stz(texts, font=True):
     """STAZ.STZ con los textos dados. Las tablas sueltas y las de los mapas
     pueden crecer (se reconstruye el contenedor).
-    Con `font`, agrega las letras españolas a la fuente (sta_font.py)."""
+    Con `font`, agrega las letras españolas a la fuente (sta_font.py) y redibuja
+    las texturas con texto (sta_tex.py)."""
     data = open(STZ, "rb").read()
     c = Stz(data)
     bodies, free = {}, {}
     if font:
         t, x = sta_font.apply(c.body(sta_font.FONT_TABLE), c.body(sta_font.FONT_TEX))
         bodies[sta_font.FONT_TABLE], bodies[sta_font.FONT_TEX] = t, x
+        bodies[sta_tex.ENTRY] = sta_tex.apply(c.body(sta_tex.ENTRY), c.body(sta_font.FONT_TABLE),
+                                              c.body(sta_font.FONT_TEX))
     for name, o, kind in find_tables(data):
         if kind == "suelta":
             i = next(i for i, n in LOOSE.items() if n == name)

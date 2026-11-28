@@ -14,6 +14,11 @@ registro de ese glifo pasa a apuntar a la letra nueva, dibujada en el espacio
 libre de la página 2 con las medidas de su letra base. No se toca el ejecutable
 ni cambia el tamaño de ningún archivo.
 
+Cada página tiene su propia paleta de 16 tonos (RGBA, todos del mismo gris y
+con distinta opacidad), guardada detrás de sus píxeles y en otro orden que las
+demás. Por eso la letra se copia por opacidad, no por índice: cada píxel toma
+el tono de la página 2 más parecido al de la página de origen.
+
     python3 tools/sta_font.py preview SALIDA.png   # muestra los glifos nuevos
 """
 import struct
@@ -29,6 +34,7 @@ BASE = {"á": "a", "é": "e", "í": "i", "ó": "o", "ú": "u", "ü": "u", "ñ": 
 
 FONT_TABLE, FONT_TEX = 5, 6
 PAGE_PIX = (0x100 + 0x80, 0x20280 + 0x80, 0x40400 + 0x80)
+CLUT = 0x20000 + 0x80   # paleta (16 × RGBA) desde los píxeles de cada página
 H = 22            # alto de celda
 FREE_Y = 336      # primera fila libre usada en la página 2
 U = 511.0
@@ -63,6 +69,8 @@ class Font:
         self.nr, self.ng = struct.unpack_from("<HH", self.t, 0x10)
         self.ro, self.go = struct.unpack_from("<II", self.t, 0x14)
         self.ranges = [struct.unpack_from("<3H", self.t, self.ro + 6 * i) for i in range(self.nr)]
+        self.alpha = [[self.x[o + CLUT + 4 * i + 3] for i in range(16)] if len(self.x) > o + CLUT + 64
+                      else None for o in PAGE_PIX]
 
     def glyph_index(self, ch):
         u = ord(ch)
@@ -86,14 +94,31 @@ class Font:
         v = self.x[o]
         self.x[o] = (v & 0x0F) | (val << 4) if x & 1 else (v & 0xF0) | val
 
+    def opacity(self, page, x, y):
+        """Opacidad del píxel (0–255), según la paleta de su página."""
+        return self.alpha[page][self.px(page, x, y)]
+
+    def put_opacity(self, page, x, y, a):
+        """Escribe el tono de la página con la opacidad más parecida a `a`."""
+        pal = self.alpha[page]
+        self.put(page, x, y, 0 if a <= 0 else min(range(1, 16), key=lambda i: abs(pal[i] - a)))
+
     def bitmap(self, ch):
+        """Opacidades (0–255) de la celda del glifo, y su registro."""
         r = self.rec(self.glyph_index(ch))
         x0, y0, w = round(r[0] * U), round(r[1] * U), round((r[2] - r[0]) * U)
-        return [[self.px(r[7], x0 + x, y0 + y) for x in range(w)] for y in range(H)], r
+        return [[self.opacity(r[7], x0 + x, y0 + y) for x in range(w)] for y in range(H)], r
+
+
+# Opacidades (0–255): desde cuánto cuenta como tinta, y los tonos de los signos
+# (el centro del trazo de la fuente es casi opaco; el borde, intermedio).
+INK = 70
+SOLID = 238
+EDGE = 115
 
 
 def _ink_cols(bm, rows):
-    cols = [x for x in range(len(bm[0])) if any(bm[y][x] > 4 for y in rows)]
+    cols = [x for x in range(len(bm[0])) if any(bm[y][x] > INK for y in rows)]
     return (min(cols), max(cols)) if cols else (0, len(bm[0]) - 1)
 
 
@@ -106,20 +131,20 @@ def _acute(bm, cx, top, steps=4):
     # trazo inclinado como la cursiva de la fuente: de abajo a la izquierda a arriba a la derecha
     for k in range(steps):
         dx, dy = k, steps - 1 - k
-        _dot(bm, cx + dx, top + dy, 12)
-        _dot(bm, cx + dx + 1, top + dy, 7)
+        _dot(bm, cx + dx, top + dy, SOLID)
+        _dot(bm, cx + dx + 1, top + dy, EDGE)
 
 
 def _diaeresis(bm, cx, top):
     for x in (cx - 2, cx + 2):
         for dx, dy in ((0, 0), (1, 0), (0, 1), (1, 1)):
-            _dot(bm, x + dx, top + 1 + dy, 12)
+            _dot(bm, x + dx, top + 1 + dy, SOLID)
 
 
 def _tilde(bm, cx, top):
     # virgulilla de 7 px centrada en cx
     for px, py in ((0, 2), (1, 1), (2, 0), (3, 1), (4, 2), (5, 1), (6, 0)):
-        _dot(bm, cx - 3 + px, top + py, 12)
+        _dot(bm, cx - 3 + px, top + py, SOLID)
 
 
 def make_glyph(font, ch):
@@ -136,7 +161,7 @@ def make_glyph(font, ch):
         mark_top = 3
     else:
         # mayúscula: se achica en vertical para dejar 4 filas arriba
-        ink = [y for y in range(H) if any(v > 2 for v in bm[y])]
+        ink = [y for y in range(H) if any(v > 40 for v in bm[y])]
         y0, y1 = min(ink), max(ink)
         new_top = 4
         out = [[0] * w for _ in range(H)]
@@ -172,7 +197,7 @@ def apply(table, tex):
             x = 0
         for yy in range(H):
             for xx in range(w):
-                f.put(2, x + xx, y + yy, bm[yy][xx])
+                f.put_opacity(2, x + xx, y + yy, bm[yy][xx])
         g = f.glyph_index(CHARMAP[ch])
         f.set_rec(g, [x / U, y / U, (x + w) / U, (y + H) / U, r[4], r[5], r[6], 2])
         x += w + 1
@@ -227,7 +252,7 @@ if __name__ == "__main__":
         crop = Image.new("L", (512, 26))
         for yy in range(26):
             for xx in range(512):
-                crop.putpixel((xx, yy), f.px(2, xx, FREE_Y - 2 + yy) * 17)
+                crop.putpixel((xx, yy), f.opacity(2, xx, FREE_Y - 2 + yy))
         img.paste(crop, (4, 4))
         for i, wd in enumerate(words):
             pen = 8
@@ -236,10 +261,10 @@ if __name__ == "__main__":
                 x0, y0, w = round(r[0] * U), round(r[1] * U), round((r[2] - r[0]) * U)
                 for yy in range(H):
                     for xx in range(w):
-                        v = f.px(r[7], x0 + xx, y0 + yy)
+                        v = f.opacity(r[7], x0 + xx, y0 + yy)
                         if v:
                             p = (pen + r[4] + xx, 36 + 30 * i + yy)
-                            img.putpixel(p, max(img.getpixel(p), v * 17))
+                            img.putpixel(p, max(img.getpixel(p), v))
                 pen += r[6]
         img = img.resize((img.width * 2, img.height * 2), Image.NEAREST)
         img.save(sys.argv[2])
