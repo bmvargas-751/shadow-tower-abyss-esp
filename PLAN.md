@@ -77,7 +77,7 @@ Obligatorio: sin él, `loc.py prepare` no arma lotes.
 - [x] Criaturas
 - [x] Lugares
 - [x] Historia
-- [x] Imágenes con texto (`tools/sta_tex.py`) y subtítulos del video del prólogo (`tools/pss_sub.py`) [DECISIONS 2026-11-28]
+- [x] Imágenes con texto (`tools/sta_tex.py`) y subtítulos de los videos de apertura y del prólogo (`tools/pss_sub.py`) [DECISIONS 2026-11-28]
 
 ### Fase 7. Prueba en el juego
 

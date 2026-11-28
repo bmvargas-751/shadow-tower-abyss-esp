@@ -21,7 +21,7 @@ Se deciden al ver la pantalla, con la versión 0.9.0.
 - [ ] Nombres de las listas (técnico): el juego los estrecha a lo ancho si pasan de 176 (`exe_text.LIST_WIDTH`; la barra mide unos 192). Ver en la enciclopedia, el inventario y la tienda que entren y se lean.
 - [ ] Guardar y cargar (técnico): el lugar va estrechado al 75% y el tiempo al 83%, siempre. Ver que entren en su franja y se lean.
 - [ ] Texturas (`tools/sta_tex.py`, provisional): «Aplastar» (砕, Break) como verbo, porque «Aplastamiento» no entra en 39 píxeles; «Colección» para `収集率`; «NUEVO» en dos renglones. Ver en la enciclopedia y el equipo si se leen. Los kanji de las estadísticas quedan como emblemas.
-- [ ] `OPENING.PSS`: no trae texto en pantalla, pero tiene audio. Si hay una voz en japonés, harían falta su transcripción y subtítulos (el inglés fan pone los suyos).
-- [ ] `PROLOGUE.PSS`: ver en el juego que el video se reproduce bien (fluido, con sonido) y que no queda nada del japonés.
+- [ ] `OPENING.PSS`: subtítulos traducidos del inglés fan [DECISIONS 2026-11-28]. Ver que vayan a tiempo con la voz; si algún día aparece el texto japonés, revisarlos contra él.
+- [ ] `PROLOGUE.PSS` y `OPENING.PSS`: ver en el juego que los videos se reproducen bien (fluido, con sonido) y que no queda nada del japonés.
 
 ## De los lotes

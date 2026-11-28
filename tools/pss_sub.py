@@ -1,28 +1,32 @@
 #!/usr/bin/env python3
-"""Subtítulos en español del video del prólogo (`TARGET/PROLOGUE.PSS`).
+"""Subtítulos en español de los videos (`TARGET/OPENING.PSS` y `PROLOGUE.PSS`).
 
-El video (MPEG-2, 640×448, 30 cuadros por segundo, 2075 cuadros) trae el texto
-japonés dibujado en la imagen, en 8 bloques de dos renglones (TECH.md, «Otro
-texto»). Para cada bloque:
+Los dos son MPEG-2 (640×448, 30 cuadros por segundo) con audio aparte (TECH.md,
+«Videos»). Cada uno se trata distinto:
 
-1. Mide, cuadro por cuadro, cuánto texto japonés se ve (píxeles blancos sin
-   color, fuera de la columna de la lanza): así sigue sus fundidos.
-2. Tapa el japonés: rellena una máscara hecha con los píxeles del texto
-   (los que están en la mitad de los cuadros del centro del bloque, porque el
-   texto no se mueve) con los colores de alrededor, difuminados.
-3. Escribe el español encima, centrado donde estaba el japonés, con la fuente
-   del juego (sta_font, con las letras españolas) [DECISIONS 2026-11-28].
+- **Prólogo** (2075 cuadros): trae el texto japonés dibujado en la imagen, en 8
+  bloques de dos renglones. Para cada bloque, mide cuadro por cuadro cuánto
+  texto japonés se ve (píxeles blancos sin color) para seguir sus fundidos; lo
+  tapa rellenando una máscara del texto (los píxeles que están en la mitad de
+  los cuadros del centro del bloque, porque el texto no se mueve) con los
+  colores de alrededor, difuminados; y escribe el español donde estaba.
+- **Apertura** (2265 cuadros): no trae texto, pero tiene una narración en
+  japonés. No hay transcripción, así que el español sale de los subtítulos del
+  inglés fan [DECISIONS 2026-11-28]; va abajo, en la franja negra, con los
+  tiempos de esos subtítulos y fundidos cortos.
 
-El video se vuelve a codificar con ffmpeg (MPEG-2, sin cuadros B) y se mete en
-los mismos paquetes del PSS: el audio (0xBD) y los paquetes de sistema quedan
-idénticos, y cada paquete de video conserva su largo y su cabecera de 10 bytes;
-solo cambian los datos y el PTS/DTS de los cuadros. Un paquete de video no
-adelanta más de LEAD cuadros al original (si se adelantaría, va de relleno
-0xBE), para que el video llegue al mismo ritmo que el audio. Lo que sobra al
-final también va de relleno. El archivo conserva su tamaño.
+El español va con la fuente del juego (sta_font, con las letras españolas)
+[DECISIONS 2026-11-28]. El video se vuelve a codificar con ffmpeg (MPEG-2, sin
+cuadros B) y se mete en los mismos paquetes del PSS: el audio (0xBD) y los
+paquetes de sistema quedan idénticos, y cada paquete de video conserva su largo
+y su cabecera de 10 bytes; solo cambian los datos y el PTS/DTS de los cuadros.
+Un paquete de video no adelanta más de LEAD cuadros al original (si se
+adelantaría, va de relleno 0xBE), para que el video llegue al mismo ritmo que el
+audio. Lo que sobra al final también va de relleno. El archivo conserva su
+tamaño.
 
-    python3 tools/pss_sub.py build ISO_ORIGINAL SALIDA.PSS
-    python3 tools/pss_sub.py preview ISO_ORIGINAL CARPETA   # un cuadro de cada bloque
+    python3 tools/pss_sub.py build ISO_ORIGINAL VIDEO SALIDA.PSS     # VIDEO: OPENING o PROLOGUE
+    python3 tools/pss_sub.py preview ISO_ORIGINAL VIDEO CARPETA      # un cuadro de cada bloque
 """
 import os
 import struct
@@ -36,47 +40,69 @@ import sta_text  # noqa: E402
 import sta_tex  # noqa: E402
 from stz import Stz  # noqa: E402
 
-ISO_PATH = "/TARGET/PROLOGUE.PSS"
 W, H, FPS = 640, 448, 30
-FRAMES = 2075
-PTS0 = 3986            # PTS del primer cuadro (el del original; el audio empieza igual)
 LEAD = 2               # cuadros que el video nuevo puede adelantarse al original
-QUALITY = 2            # cuantizador fijo de ffmpeg (2 = casi sin pérdida); el original va a 6 Mb/s
+QUALITY = 2            # cuantizador fijo de ffmpeg (2 = casi sin pérdida); los originales van a 6 Mb/s
 
-# Bloques: (primer cuadro, último cuadro con texto, español). Los cuadros salen
-# de la medida del texto japonés (umbral de 60 píxeles); se amplían FADE cuadros
-# a cada lado para los fundidos. El japonés de cada bloque, en DECISIONS.
-FADE = 20
-SUBS = [
-    (88, 232, "Antaño, en lo profundo de aquel bosque,\nexistía un reino"),
-    (293, 438, "El rey que gobernaba a su pueblo\ncon poderes y ritos misteriosos"),
-    (459, 590, "llevaba a su lado, según se dice,\nuna \"lanza\" aberrante"),
-    (648, 792, "Con el poder de la lanza,\nel rey sometió a los reinos vecinos"),
-    (820, 935, "y le dio a su reino\nuna prosperidad sin precedentes,"),
-    (949, 1173, "pero nadie supo de los ritos\nque en su sombra se celebraban en secreto"),
-    (1259, 1547, "Hoy, al cabo de los siglos, cuando incluso en las leyendas\nel nombre del Rey de la Lanza se ha vuelto difuso,"),
-    (1560, 1950, "un hombre guiado por un anciano\nllegó a aquella tierra"),
-]
-TEXT_BAND = (300, 440)            # filas donde va el texto japonés
-SPEAR = (290, 360)                # columna de la lanza (no cuenta al medir)
+# Bloques: (primer cuadro, último cuadro, español).
+# Prólogo: los cuadros salen de la medida del texto japonés (umbral de 60
+# píxeles); se amplían FADE cuadros a cada lado para los fundidos.
+# Apertura: los cuadros de los subtítulos del inglés fan (cortes secos).
+VIDEOS = {
+    "PROLOGUE": dict(
+        path="/TARGET/PROLOGUE.PSS", frames=2075, mode="cover",
+        subs=[
+            (88, 232, "Antaño, en lo profundo de aquel bosque,\nexistía un reino"),
+            (293, 438, "El rey que gobernaba a su pueblo\ncon poderes y ritos misteriosos"),
+            (459, 590, "llevaba a su lado, según se dice,\nuna \"lanza\" aberrante"),
+            (648, 792, "Con el poder de la lanza,\nel rey sometió a los reinos vecinos"),
+            (820, 935, "y le dio a su reino\nuna prosperidad sin precedentes,"),
+            (949, 1173, "pero nadie supo de los ritos\nque en su sombra se celebraban en secreto"),
+            (1259, 1547, "Hoy, al cabo de los siglos, cuando incluso en las leyendas\n"
+                         "el nombre del Rey de la Lanza se ha vuelto difuso,"),
+            (1560, 1950, "un hombre guiado por un anciano\nllegó a aquella tierra"),
+        ]),
+    "OPENING": dict(
+        path="/TARGET/OPENING.PSS", frames=2265, mode="overlay", center_y=418,
+        subs=[
+            (60, 329, "En lo profundo del bosque sombrío, un viejo guía llevó\n"
+                      "a un joven hasta un pequeño santuario abandonado y en ruinas"),
+            (330, 569, "Desde la entrada abismal, entre las ruinas desmoronadas\n"
+                       "del santuario, brotaba la oscuridad"),
+            (570, 749, "El viejo guía hizo una reverencia\nmientras el joven entraba con cautela"),
+            (750, 989, "Y una vez más, la oscuridad\nse tragó a un ser humano"),
+        ]),
+}
+ISO_PATHS = {name: v["path"] for name, v in VIDEOS.items()}
+FADE = 20              # prólogo: cuadros de más a cada lado del bloque
+FADE_OVERLAY = 6       # apertura: fundido de entrada y salida, en cuadros
+TEXT_BAND = (300, 440)            # prólogo: filas donde va el texto japonés
+SPEAR = (290, 360)                # prólogo: columna de la lanza (no cuenta al medir)
 LINE_H = 30                       # renglón del español, en píxeles
 WHITE = (235, 235, 235)
 
 
-def read_pss(iso):
+def read_pss(iso, name):
     with open(iso, "rb") as f:
-        _pos, lba, size = ps2iso.iso_records(f)[ISO_PATH]
+        _pos, lba, size = ps2iso.iso_records(f)[VIDEOS[name]["path"]]
         f.seek(lba * ps2iso.S)
         return f.read(size)
 
 
 def frames(pss):
     """Cuadros RGB (PIL) del video original."""
+    import threading
     from PIL import Image
     p = subprocess.Popen(["ffmpeg", "-v", "error", "-i", "-", "-f", "rawvideo", "-pix_fmt", "rgb24", "-"],
                          stdin=subprocess.PIPE, stdout=subprocess.PIPE)
-    import threading
-    threading.Thread(target=lambda: (p.stdin.write(pss), p.stdin.close()), daemon=True).start()
+
+    def feed():
+        try:
+            p.stdin.write(pss)
+            p.stdin.close()
+        except BrokenPipeError:
+            pass
+    threading.Thread(target=feed, daemon=True).start()
     while True:
         buf = p.stdout.read(W * H * 3)
         if len(buf) < W * H * 3:
@@ -92,20 +118,15 @@ def white(im):
     return ImageChops.multiply(v.point(lambda x: 255 if x > 90 else 0), s.point(lambda x: 255 if x < 60 else 0))
 
 
-def amount(mask):
-    y0, y1 = TEXT_BAND
-    return mask.crop((100, y0, SPEAR[0], y1)).histogram()[255] + mask.crop((SPEAR[1], y0, 540, y1)).histogram()[255]
-
-
-def block_of(n):
-    for k, (a, b, _t) in enumerate(SUBS):
-        if a - FADE <= n <= b + FADE:
+def block_of(subs, n, fade):
+    for k, (a, b, _t) in enumerate(subs):
+        if a - fade <= n <= b + fade:
             return k
     return None
 
 
-def analyze(pss):
-    """Por bloque: la máscara del japonés y cuánto se ve en cada cuadro (0 a 1).
+def analyze(pss, subs):
+    """Prólogo, por bloque: la máscara del japonés y cuánto se ve en cada cuadro.
 
     La máscara son los píxeles blancos en al menos la mitad de los cuadros del
     centro del bloque (uno de cada 3): el texto no se mueve y la lanza sí. Lo que
@@ -114,10 +135,10 @@ def analyze(pss):
     y0, y1 = TEXT_BAND
     acc, cnt = {}, {}
     for n, im in enumerate(frames(pss)):
-        k = block_of(n)
+        k = block_of(subs, n, FADE)
         if k is None:
             continue
-        a, b, _t = SUBS[k]
+        a, b, _t = subs[k]
         if not (a + (b - a) * 0.15 <= n <= a + (b - a) * 0.85) or (n - a) % 3:
             continue
         m = white(im).point(lambda x: 1 if x else 0)
@@ -134,9 +155,9 @@ def analyze(pss):
         hole = m.filter(ImageFilter.MaxFilter(11))
         full = hole.filter(ImageFilter.GaussianBlur(2))
         masks[k] = (full, m.getbbox(), hole)
-    amounts, peak = {}, [1] * len(SUBS)
+    amounts, peak = {}, [1] * len(subs)
     for n, im in enumerate(frames(pss)):
-        k = block_of(n)
+        k = block_of(subs, n, FADE)
         if k is None:
             continue
         amounts[n] = ImageChops.multiply(white(im), core[k]).histogram()[255]
@@ -145,7 +166,7 @@ def analyze(pss):
 
 
 def text_layer(font, text, center_y):
-    """(capa RGBA del español, centrada en x = W/2 y en `center_y`)."""
+    """(máscara del español y de su sombra, centrada en x = W/2 y en `center_y`)."""
     from PIL import Image, ImageFilter
     lines = text.split("\n")
     layer = Image.new("L", (W, H), 0)
@@ -180,20 +201,23 @@ def _fill(im, hole):
     return out
 
 
-def compose(im, k, amount_n, peak, masks, layers):
-    """Cuadro con el japonés tapado y el español encima, según cuánto se ve."""
+def _text(im, layer, p):
+    from PIL import Image
+    text, shadow = layer
+    out = Image.composite(Image.new("RGB", (W, H)), im, shadow.point(lambda x: int(x * p * 0.8)))
+    return Image.composite(Image.new("RGB", (W, H), WHITE), out, text.point(lambda x: int(x * p)))
+
+
+def cover(im, k, amount_n, peak, masks, layers):
+    """Prólogo: el japonés tapado y el español encima, según cuánto se ve."""
     from PIL import Image
     p = max(0.0, min(1.0, amount_n / max(1, peak[k]) * 1.15))
     if p <= 0.01:
         return im
     mask, _box, hole = masks[k]
-    cover = min(1.0, p * 3)
-    out = Image.composite(_fill(im, hole), im, mask.point(lambda x: int(x * cover)))
-    black = Image.new("RGB", (W, H), (0, 0, 0))
-    text, shadow = layers[k]
-    out = Image.composite(black, out, shadow.point(lambda x: int(x * p * 0.8)))
-    out = Image.composite(Image.new("RGB", (W, H), WHITE), out, text.point(lambda x: int(x * p)))
-    return out
+    c = min(1.0, p * 3)
+    out = Image.composite(_fill(im, hole), im, mask.point(lambda x: int(x * c)))
+    return _text(out, layers[k], p)
 
 
 def font():
@@ -201,44 +225,53 @@ def font():
     return sta_font.Font(c.body(sta_font.FONT_TABLE), c.body(sta_font.FONT_TEX))
 
 
-def render(pss, out_raw=None, only=None):
-    """Genera los cuadros traducidos (para ffmpeg, o solo los de `only`)."""
-    amounts, peak, masks = analyze(pss)
+def render(pss, name, only=None):
+    """Genera los cuadros traducidos (todos, o solo los de `only`)."""
+    v = VIDEOS[name]
+    subs = v["subs"]
     f = font()
-    layers = {}
-    for k, (_a, _b, t) in enumerate(SUBS):
-        box = masks[k][1]
-        cy = (box[1] + box[3]) / 2 if box else 380
-        layers[k] = text_layer(f, t, cy)
+    if v["mode"] == "cover":
+        amounts, peak, masks = analyze(pss, subs)
+        layers = {}
+        for k, (_a, _b, t) in enumerate(subs):
+            box = masks[k][1]
+            layers[k] = text_layer(f, t, (box[1] + box[3]) / 2 if box else 380)
+    else:
+        layers = {k: text_layer(f, t, v["center_y"]) for k, (_a, _b, t) in enumerate(subs)}
     for n, im in enumerate(frames(pss)):
-        k = block_of(n)
-        if k is not None:
-            im = compose(im, k, amounts[n], peak, masks, layers)
-        if only is not None:
-            if n in only:
-                yield n, im
+        if only is not None and n not in only:
+            continue
+        if v["mode"] == "cover":
+            k = block_of(subs, n, FADE)
+            if k is not None:
+                im = cover(im, k, amounts[n], peak, masks, layers)
         else:
-            yield n, im
+            k = block_of(subs, n, 0)
+            if k is not None:
+                a, b, _t = subs[k]
+                p = min(1.0, (n - a + 1) / FADE_OVERLAY, (b - n + 1) / FADE_OVERLAY)
+                im = _text(im, layers[k], p)
+        yield n, im
 
 
-def encode(pss):
+def encode(pss, name):
     """Video MPEG-2 nuevo (elemental), sin cuadros B."""
+    import threading
     p = subprocess.Popen([
         "ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", "%dx%d" % (W, H),
         "-r", str(FPS), "-i", "-", "-c:v", "mpeg2video", "-pix_fmt", "yuv420p", "-q:v", str(QUALITY),
         "-maxrate", "9000k", "-bufsize", "1835k", "-g", "18", "-bf", "0", "-flags", "+cgop",
         "-sc_threshold", "1000000000", "-aspect", "%d:%d" % (W, H), "-f", "mpeg2video", "-"],
         stdin=subprocess.PIPE, stdout=subprocess.PIPE)
-    import threading
     out = []
     t = threading.Thread(target=lambda: out.append(p.stdout.read()))
     t.start()
-    n = 0
-    for n, im in render(pss):
+    n = -1
+    for n, im in render(pss, name):
         p.stdin.write(im.tobytes())
     p.stdin.close()
     t.join()
-    assert p.wait() == 0 and n + 1 == FRAMES, "ffmpeg falló o faltan cuadros (%d)" % (n + 1)
+    assert p.wait() == 0 and n + 1 == VIDEOS[name]["frames"], "ffmpeg falló o faltan cuadros (%d)" % (n + 1)
     return out[0]
 
 
@@ -247,25 +280,31 @@ def _ts(prefix, v):
                   (((v >> 15) & 0x7f) << 1) | 1, (v >> 7) & 0xff, ((v & 0x7f) << 1) | 1])
 
 
+def _pts(b):
+    return (((b[0] >> 1) & 7) << 30) | (b[1] << 22) | ((b[2] >> 1) << 15) | (b[3] << 7) | (b[4] >> 1)
+
+
 def _padding(n):
     assert n >= 6
     return b"\0\0\1\xbe" + struct.pack(">H", n - 6) + b"\xff" * (n - 6)
 
 
-def mux(pss, es):
-    """PSS nuevo: los paquetes del original, con el video `es` en lugar del viejo."""
+def mux(pss, es, frames_n):
+    """PSS nuevo: los paquetes del original, con el video `es` en lugar del viejo.
+    El primer cuadro conserva el PTS del original (el audio empieza igual)."""
     pics = []
     i = es.find(b"\0\0\1\0")
     while i >= 0:
         pics.append(i)
         i = es.find(b"\0\0\1\0", i + 4)
-    assert len(pics) == FRAMES, "el video nuevo tiene %d cuadros" % len(pics)
+    assert len(pics) == frames_n, "el video nuevo tiene %d cuadros" % len(pics)
     out = bytearray()
     d = pss
     i = 0
     pos = 0             # posición en el video nuevo
     nxt = 0             # próximo cuadro nuevo que empieza
     orig = 0            # cuadros del original que ya empezaron
+    pts0 = None
     while i < len(d):
         assert d[i:i + 3] == b"\0\0\1"
         sid = d[i + 3]
@@ -286,6 +325,8 @@ def mux(pss, es):
         hl = d[i + 8]
         if d[i + 7] & 0x80:
             orig += 1
+            if pts0 is None:
+                pts0 = _pts(d[i + 9:i + 14])
         cap = L - 3 - hl
         total = 6 + L
         chunk_end = min(pos + cap, len(es))
@@ -298,7 +339,7 @@ def mux(pss, es):
         flags = bytearray(d[i + 6:i + 9])
         head = b""
         if starts:
-            v = PTS0 + 3000 * starts[0]
+            v = pts0 + 3000 * starts[0]
             head = _ts(3, v) + _ts(1, v)
             flags[1] = 0xc0
             nxt = starts[-1] + 1
@@ -324,31 +365,32 @@ def mux(pss, es):
     return bytes(out)
 
 
-def build(iso, out):
-    pss = read_pss(iso)
-    es = encode(pss)
-    new = mux(pss, es)
+def build(iso, name, out):
+    pss = read_pss(iso, name)
+    es = encode(pss, name)
+    new = mux(pss, es, VIDEOS[name]["frames"])
     with open(out, "wb") as f:
         f.write(new)
     print("video: %s (%d bytes, video %d bytes)" % (out, len(new), len(es)))
     return out
 
 
-def preview(iso, folder):
-    pss = read_pss(iso)
+def preview(iso, name, folder):
+    pss = read_pss(iso, name)
     os.makedirs(folder, exist_ok=True)
-    want = {round((a + b) / 2) for a, b, _t in SUBS} | {SUBS[0][0] + 4}
-    for n, im in render(pss, only=want):
-        p = os.path.join(folder, "prologo_%04d.png" % n)
+    subs = VIDEOS[name]["subs"]
+    want = {round((a + b) / 2) for a, b, _t in subs} | {subs[0][0] + 2}
+    for n, im in render(pss, name, only=want):
+        p = os.path.join(folder, "%s_%04d.png" % (name.lower(), n))
         im.save(p)
         print(p)
 
 
 if __name__ == "__main__":
-    if len(sys.argv) == 4 and sys.argv[1] == "build":
-        build(sys.argv[2], sys.argv[3])
-    elif len(sys.argv) == 4 and sys.argv[1] == "preview":
-        preview(sys.argv[2], sys.argv[3])
+    if len(sys.argv) == 5 and sys.argv[1] == "build":
+        build(sys.argv[2], sys.argv[3], sys.argv[4])
+    elif len(sys.argv) == 5 and sys.argv[1] == "preview":
+        preview(sys.argv[2], sys.argv[3], sys.argv[4])
     else:
         print(__doc__)
         sys.exit(2)
