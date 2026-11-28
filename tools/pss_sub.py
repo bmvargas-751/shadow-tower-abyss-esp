@@ -49,7 +49,7 @@ QUALITY = 2            # cuantizador fijo de ffmpeg (2 = casi sin pérdida); los
 # Prólogo: los cuadros salen de la medida del texto japonés (umbral de 60
 # píxeles); los fundidos se buscan hasta el bloque vecino (windows).
 # Apertura: los tiempos de los subtítulos del inglés fan, ajustados por el
-# usuario contra la voz en las pruebas 8 a 11 (2026-11-28): 1,5–11 s,
+# usuario contra la voz en las pruebas 8 a 12 (2026-11-28): 1,5–10,8 s,
 # 11,5–19 s, 20,3–25 s y 25–34,7 s.
 VIDEOS = {
     "PROLOGUE": dict(
@@ -68,7 +68,7 @@ VIDEOS = {
     "OPENING": dict(
         path="/TARGET/OPENING.PSS", frames=2265, mode="overlay", center_y=418,
         subs=[
-            (45, 329, "En lo profundo del bosque sombrío, un viejo guía llevó\n"
+            (45, 323, "En lo profundo del bosque sombrío, un viejo guía llevó\n"
                       "a un joven hasta un pequeño santuario abandonado y en ruinas"),
             (345, 569, "Desde la entrada abismal, entre las ruinas desmoronadas\n"
                        "del santuario, brotaba la oscuridad"),
