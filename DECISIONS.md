@@ -74,3 +74,4 @@ Lo que el usuario decidió, con fecha, para no volver a discutirlo. Una regla de
 - **2026-11-28** Apertura: tiempos ajustados por el usuario contra la voz (prueba 8): el subtítulo 1 empieza 0,25 s antes (1,75 s), el 2 0,5 s después (11,5 s), el 3 0,25 s después (19,25 s) y el 4 termina 0,25 s después (33,25 s).
 - **2026-11-28** Apertura, segundo ajuste del usuario (prueba 9): los subtítulos empiezan en 1,65 s, 11,4 s, 19,75 s y 25 s, y el último termina en 33,5 s.
 - **2026-11-28** Apertura, tercer ajuste del usuario (prueba 10): 1,5–11 s, 11,2–19 s, 20–25 s y 25–34,5 s.
+- **2026-11-28** Apertura, cuarto ajuste del usuario (prueba 11): 1,5–11 s, 11,5–19 s, 20,3–25 s y 25–34,7 s.
