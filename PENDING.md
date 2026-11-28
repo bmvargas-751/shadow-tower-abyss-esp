@@ -17,6 +17,5 @@ Se deciden al ver la pantalla, con la versión 0.9.0.
 - [ ] `exe#1fc980` a `exe#1fc9b8` estados alterados de la pantalla de equipo (estaban en inglés en el original, T-6): provisional «Veneno», «Parálisis», «Ceguera», «Lento», «Maldito», «Sellado», con los términos del glosario. Mezclan sustantivos y adjetivos porque Gravity, Curse y Seal tienen campos de 7 bytes («Lentitud» y «Maldición» no entran). Ver en el juego si caben (aviso `caja` en «Maldito» y «Sellado») y cómo se leen.
 - [ ] `exe#1fd660` GAME OVER: «ＦＩＮ ＤＥ ＬＡ ＰＡＲＴＩＤＡ» con espacios normales (con ideográficos no entra en 31 bytes). Ver si se lee bien.
 
-- [ ] `OPENING.PSS`: subtítulos traducidos del inglés fan, con los tiempos ajustados por el usuario [DECISIONS 2026-11-28]. Confirmar en la prueba 9 que van con la voz. Si algún día aparece el texto japonés, revisarlos contra él.
 
 ## De los lotes

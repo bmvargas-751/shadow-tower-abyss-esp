@@ -76,3 +76,4 @@ Lo que el usuario decidió, con fecha, para no volver a discutirlo. Una regla de
 - **2026-11-28** Apertura, tercer ajuste del usuario (prueba 10): 1,5–11 s, 11,2–19 s, 20–25 s y 25–34,5 s.
 - **2026-11-28** Apertura, cuarto ajuste del usuario (prueba 11): 1,5–11 s, 11,5–19 s, 20,3–25 s y 25–34,7 s.
 - **2026-11-28** Apertura, ajuste final del usuario (pruebas 12 y 13): el primer subtítulo termina en 10,6 s (1,5–10,6 s, 11,5–19 s, 20,3–25 s y 25–34,7 s).
+- **2026-11-28** Apertura aprobada en el juego (prueba 14) con los tiempos 1,5–10,6 s, 11,5–19 s, 20,3–25 s y 25–34,7 s. Si algún día aparece el texto japonés de la narración, revisar los subtítulos contra él.

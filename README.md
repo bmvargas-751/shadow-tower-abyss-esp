@@ -1,7 +1,6 @@
 # Shadow Tower Abyss en español
 
 Traducción fan al español neutro de *Shadow Tower Abyss*, basada en la versión original en japonés, para PlayStation 2 (japonesa, SLPS-25217).
-Los subtítulos de los videos y las imágenes con texto permanecen, por ahora, en japonés.
 
 > Proyecto de fans, sin relación con FromSoftware. **No incluye el juego**: necesitas tu propia copia.
 
